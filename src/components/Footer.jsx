@@ -1,18 +1,23 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
 export function Footer() {
+	const { isDarkTheme } = useTheme();
 	return (
-		<section className="bg-white">
-			<div className="px-32">
-				<div className="flex flex-col items-center gap-4 rounded bg-indigo-600 p-6 shadow-lg sm:flex-row sm:justify-between">
-					<strong className="text-xl text-white sm:text-xl">
-						Creamos la máquina ideal, para tu tipo de Negocio.
+		<section
+			className={`bg-${
+				isDarkTheme ? "black" : "white"
+			} flex justify-center `}>
+			<div className="">
+				<div className=" flex flex-col items-center gap-4 rounded bg-blue-900 p-4 shadow-lg sm:flex-row sm:justify-between">
+					<strong className=" text-white sm:text-l">
+						Creamos la máquina ideal, para tu tipo de Negocio
 					</strong>
 					<a
-						className="inline-flex items-center gap-2 rounded border border-white bg-white px-8 py-3 text-indigo-600 shadow-md transition-all hover:bg-indigo-700 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-opacity-50 active:bg-white/90"
+						className="flex items-center gap-2 rounded border border-white bg-white px-8 py-3 text-blue-800 shadow-md transition-all hover:bg-blue-800 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-opacity-50 active:bg-white/90"
 						href="/">
 						<span className="text-sm font-medium">
-							Iniciemos el proyecto
+							Iniciemos tu proyecto
 						</span>
 						<svg
 							className="h-5 w-5 rtl:rotate-180"
@@ -39,7 +44,7 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-indigo-600 transition hover:text-indigo-600/75">
+								className="text-black transition hover:text-black/75">
 								<FaFacebookF />
 							</a>
 						</li>
@@ -48,7 +53,7 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-indigo-600 transition hover:text-indigo-600/75">
+								className="text-black transition hover:text-black/75">
 								<FaInstagram />
 							</a>
 						</li>
@@ -57,7 +62,7 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-indigo-600 transition hover:text-indigo-600/75">
+								className="text-black transition hover:text-black/75">
 								<FaTwitter />
 							</a>
 						</li>
@@ -66,7 +71,7 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-indigo-600 transition hover:text-indigo-600/75">
+								className="text-black transition hover:text-black/75">
 								<FaGithub />
 							</a>
 						</li>

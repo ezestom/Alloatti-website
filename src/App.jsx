@@ -1,21 +1,16 @@
-import { WithClose } from "../src/components/WithClose";
-import { HeaderDesktop } from "../src/components/HeaderDesktop";
-import { Footer } from "../src/components/Footer";
-import { Main } from "../src/components/Main";
-
+import { Inicio } from "./pages/Inicio.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Error } from "./pages/Error.jsx";
+import { Nosotros } from "./pages/Nosotros.jsx";
 function App() {
 	return (
-		<>
-			<div className="h-screen flex flex-col justify-between ">
-				<WithClose />
-				<main className="flex">
-					<HeaderDesktop />
-					<Main />
-				</main>
-
-				<Footer />
-			</div>
-		</>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Inicio />} />
+				<Route path="/:id" element={<Error />} />
+				<Route path="/nosotros" element={<Nosotros />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
