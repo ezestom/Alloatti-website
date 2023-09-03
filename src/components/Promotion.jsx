@@ -5,9 +5,9 @@ export function Promotion() {
 	return (
 		<div
 			className={`text-${
-				isDarkTheme ? "white" : "black"
+				isDarkTheme ? "white z-0"  : "black"
 			} `}>
-			<marquee behavior="scroll" direction="left" className="">
+			<marquee behavior="scroll" direction="left" className=" bg-slate-400 z-0">
 				Más eficiencia, más calidad. Nuestras máquinas envasadoras y
 				lavadoras hacen la diferencia. ¡Aprovecha el descuento! -
 				Envasado perfecto, producción eficiente. Descubre nuestras

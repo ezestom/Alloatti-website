@@ -1,50 +1,57 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section
 			className={`bg-${
-				isDarkTheme ? "black" : "white"
-			} flex justify-center `}>
+				isDarkTheme ? "bg-gray-800" : "bg-gray-100"
+			} flex justify-center z-20`}>
 			<div className="">
-				<div className=" flex flex-col items-center gap-4 rounded bg-blue-900 p-4 shadow-lg sm:flex-row sm:justify-between">
-					<strong className=" text-white sm:text-l">
-						Creamos la máquina ideal, para tu tipo de Negocio
-					</strong>
-					<a
-						className="flex items-center gap-2 rounded border border-white bg-white px-8 py-3 text-blue-800 shadow-md transition-all hover:bg-blue-800 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-opacity-50 active:bg-white/90"
-						href="/">
-						<span className="text-sm font-medium">
-							Iniciemos tu proyecto
-						</span>
-						<svg
-							className="h-5 w-5 rtl:rotate-180"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor">
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={2}
-								d="M17 8l4 4m0 0l-4 4m4-4H3"
-							/>
-						</svg>
-					</a>
-				</div>
-				<div className=" max-h-0 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-					{/* ... Rest of the content ... */}
-				</div>
 				<div className="m-2">
+					<ul
+						className={`flex gap-5 justify-center pb-2  ${
+							isDarkTheme ? "text-white" : "text-black"
+						}`}>
+						<li>
+							<Link className="hover:underline text-sm ">
+								Compania
+							</Link>
+						</li>
+						<li>
+							<Link className="hover:underline text-sm ">
+								Normas
+							</Link>
+						</li>
+						<li>
+							<Link className="hover:underline text-sm ">
+								Referencia
+							</Link>
+						</li>
+						<li>
+							<Link className="hover:underline text-sm ">
+								Soporte
+							</Link>
+						</li>
+						<li>
+							<Link className="hover:underline text-sm ">
+								Licencia
+							</Link>
+						</li>
+					</ul>
 					<ul className="flex justify-center gap-6 sm:justify-end">
 						<li>
 							<a
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-black transition hover:text-black/75">
+								className={`${
+									isDarkTheme
+										? "text-gray-100 hover:text-red-200"
+										: "text-black hover:text-red-600"
+								}`}>
 								<FaFacebookF />
 							</a>
 						</li>
@@ -53,7 +60,11 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-black transition hover:text-black/75">
+								className={`${
+									isDarkTheme
+										? "text-gray-100 hover:text-red-200"
+										: "text-black hover:text-red-600"
+								}`}>
 								<FaInstagram />
 							</a>
 						</li>
@@ -62,7 +73,11 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-black transition hover:text-black/75">
+								className={`${
+									isDarkTheme
+										? "text-gray-100 hover:text-red-200"
+										: "text-black hover:text-red-600"
+								}`}>
 								<FaTwitter />
 							</a>
 						</li>
@@ -71,7 +86,11 @@ export function Footer() {
 								href="/"
 								rel="noreferrer"
 								target="_blank"
-								className="text-black transition hover:text-black/75">
+								className={`${
+									isDarkTheme
+										? "text-gray-100 hover:text-red-200"
+										: "text-black hover:text-red-600"
+								}`}>
 								<FaGithub />
 							</a>
 						</li>

@@ -1,22 +1,18 @@
-
 import maquina2 from "../../src/assets/img/waterjet.jpg";
 import { useTheme } from "../context/ThemeContext";
 import mujer from "../../src/assets/img/mujer-bidon.png";
 
 export function Principal() {
-	const { isDarkTheme} = useTheme();
+	const { isDarkTheme } = useTheme();
 
 	return (
 		<section
-			className={
-				isDarkTheme
-					? "bg-black h-auto grid items-center"
-					: "bg-white h-auto grid items-center absolute"
-			}>
+			className={`absolute bottom-10 right-20 w-2/3 h-2/3 ${
+				isDarkTheme ? "bg-gray-800" : "bg-gray-100"
+			}`}>
 			{/* Marquee Text */}
 			<article>
-
-				<div className="mx-auto px-4 py-8 sm:px-6 lg:px-8">
+				<div className="  sm:px-6 lg:px-8">
 					<div className="grid  grid-cols-1 gap-4 md:grid-cols-2">
 						<div
 							className={
@@ -48,11 +44,7 @@ export function Principal() {
 								<div className="mt-4 md:mt-8">
 									<a
 										href="#"
-										className={
-											isDarkTheme
-												? "flex gap-1 rounded text-black border border-white bg-white px-12 py-3 text-sm font-medium text-back transition hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:ring-blue-900"
-												: "flex gap-1 rounded border border-black bg-black px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-black focus:outline-none focus:ring focus:ring-blue-900"
-										}>
+										className={`flex items-center gap-2 rounded-lg border border-white bg-white px-8 py-2 text-gray-800 shadow-md transition-all hover:bg-gray-900 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-opacity-50 active:	bg-gray-100/90"`}>
 										Ver formulario del producto
 										<svg
 											className="h-5 w-5 rtl:rotate-180"

@@ -4,8 +4,8 @@ import { Principal } from "../../src/components/Principal";
 export function Inicio() {
 	return (
 		<>
-			<Base />
 			<Principal />
+			<Base />
 		</>
 	);
 }

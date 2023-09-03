@@ -8,16 +8,16 @@ export function Navbar() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<div
-			className={`h-screen flex flex-col w-screen justify-start itres-start border-e  max-w-xs bg-${
-				isDarkTheme ? "black" : "white"
+			className={`z-10 px-8 border-r border-gray-200 h-screen fixed top-0 w-screen  max-w-xs bg-${
+				isDarkTheme ? "bg-gray-800  " : "gray-100"
 			}`}>
-			<div className="p-8 h-auto ">
+			<div className=" h-auto ">
 				<span>
 					<Link to="./">
 						<img
 							src={logo}
 							alt="logo-alloatti"
-							className="rounded"
+							className="rounded-lg pt-5"
 						/>
 					</Link>
 				</span>
@@ -26,7 +26,7 @@ export function Navbar() {
 					<Link>
 						<Link
 							to="/"
-							className="block rounded-lg bg-gray-100 px-4 py-2 text-m font-medium text-gray-700">
+							className="block rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
 							Inicio
 							{RiHomeLine}
 						</Link>
@@ -34,7 +34,7 @@ export function Navbar() {
 
 					<li>
 						<details className="group [&_summary::-webkit-details-marker]:hidden">
-							<summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+							<summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<span className="text-m font-medium">
 									Máquinas
 								</span>
@@ -47,21 +47,21 @@ export function Navbar() {
 								<li>
 									<Link
 										to="Automaticas"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Automáticas
 									</Link>
 								</li>
 								<li>
 									<Link
 										to="/Semiautomaticas"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Semiautomáticas
 									</Link>
 								</li>
 								<li>
 									<Link
 										to="Automaticas-especiales"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Automáticas Especiales
 									</Link>
 								</li>
@@ -69,7 +69,7 @@ export function Navbar() {
 								<li>
 									<Link
 										to="bidones-descartables"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Para bidones descartables
 									</Link>
 								</li>
@@ -80,7 +80,7 @@ export function Navbar() {
 					<li>
 						<Link
 							to="/nosotros"
-							className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+							className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							Nosotros
 						</Link>
 					</li>
@@ -88,14 +88,14 @@ export function Navbar() {
 					<li>
 						<Link
 							to="/servicios"
-							className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+							className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							Servicios
 						</Link>
 					</li>
 
 					<li>
 						<details className="group [&_summary::-webkit-details-marker]:hidden">
-							<summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+							<summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<span className="text-m font-medium">
 									Ventas
 								</span>
@@ -108,21 +108,21 @@ export function Navbar() {
 								<li>
 									<Link
 										to=""
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Normas IVESS
 									</Link>
 								</li>
 								<li>
 									<Link
 										to=""
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Últimas noticias
 									</Link>
 								</li>
 								<li>
 									<Link
 										to=""
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Soluciones
 									</Link>
 								</li>
@@ -131,7 +131,7 @@ export function Navbar() {
 						<li>
 							<Link
 								to=""
-								className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+								className="block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								Contacto
 							</Link>
 						</li>

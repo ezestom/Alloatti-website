@@ -10,13 +10,11 @@ export function Base() {
 		<>
 			<div
 				className={`bg-${
-					isDarkTheme ? "black" : "white"
-				} h-screen flex  flex-col justify-between`}>
+					isDarkTheme ? " bg-gray-800" : "gray-100"
+				} h-screen flex  flex-col `}>
+				<Navbar />
 				<WithClose />
 				<Promotion />
-				<main className="flex">
-					<Navbar />
-				</main>
 				<Footer />
 			</div>
 		</>

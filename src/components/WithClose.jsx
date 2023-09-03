@@ -1,10 +1,15 @@
-
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { ThemeButton } from "./ThemeButton";
+import { useTheme } from "../context/ThemeContext";
 
 export function WithClose() {
+	const { isDarkTheme } = useTheme();
+
 	return (
-		<div className="bg-blue-900 px-3 py-3 text-white flex items-center justify-center">
+		<div
+			className={`white  px-3 py-3 ${
+				isDarkTheme ? "text-white bg-gray-800" : " text-gray-900 "
+			} bg-gray-100 flex items-center justify-center z-10`}>
 			<p className="text-center text-sm font-sm flex items-center justify-center gap-2">
 				No te pierdas nuestras máquinas semiautomáticas y automáticas!
 				<a
