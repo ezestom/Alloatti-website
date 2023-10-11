@@ -1,4 +1,4 @@
-import logo from "../../src/assets/img/logo.jpg";
+import logo from "../../src/assets/img/logoFinal.png";
 import { FaChevronDown } from "react-icons/fa";
 import { RiHomeLine } from "react-icons/ri";
 import { useTheme } from "../context/ThemeContext";
@@ -6,18 +6,25 @@ import { Link } from "react-router-dom";
 
 export function Navbar() {
 	const { isDarkTheme } = useTheme();
+
+	const logoTurnTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 	return (
 		<div
-			className={`z-10 px-8 border-r border-gray-200 h-screen fixed top-0 w-screen  max-w-xs bg-${
-				isDarkTheme ? "bg-gray-800  " : "gray-100"
+			className={` z-10 px-8 border-r border-gray-200 h-screen fixed top-0 w-screen  max-w-xs bg-${
+				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
 			}`}>
 			<div className=" h-auto ">
 				<span>
-					<Link to="./">
+					<Link onClick={logoTurnTop} to="./">
 						<img
 							src={logo}
 							alt="logo-alloatti"
-							className="rounded-lg pt-5"
+							className="mx-auto h-30 w-auto pt-5"
 						/>
 					</Link>
 				</span>
