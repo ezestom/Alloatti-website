@@ -3,7 +3,7 @@ import logoLight from "../../src/assets/img/logoFinalLight.png";
 import { FaChevronDown } from "react-icons/fa";
 import { RiHomeLine } from "react-icons/ri";
 import { useTheme } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ThemeButton } from "./ThemeButton";
 import { AiFillHome } from "react-icons/ai";
 import { GiFactory, GiNetworkBars } from "react-icons/gi";
@@ -22,26 +22,31 @@ export function Navbar() {
 			behavior: "smooth",
 		});
 	};
+	const navigate = useNavigate();
 	return (
 		<div
-			className={` z-10 px-8 border-gray-200 h-screen fixed   w-screen  max-w-xs bg-${
+			className={` z-10 px-8 h-screen fixed   w-screen  max-w-xs bg-${
 				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
-			}`}>
+			} `}>
 			<ThemeButton />
 			<div className=" h-auto  ">
-				<span className="">
-					<Link onClick={logoTurnTop} to="./">
+				<span
+					onClick={() => {
+						navigate("/");
+					}}
+					className="">
+					<Link onClick={logoTurnTop}>
 						{isDarkTheme ? (
 							<img
 								src={logoDark}
 								alt="logo"
-								className="mx-auto h-30 w-auto py-5"
+								className="mx-auto h-50 w-auto py-10"
 							/>
 						) : (
 							<img
 								src={logoLight}
 								alt="logo"
-								className="mx-auto h-30 w-auto pt-5"
+								className="mx-auto h-50 w-auto py-10"
 							/>
 						)}
 					</Link>
@@ -73,31 +78,16 @@ export function Navbar() {
 							<ul className="mt-2 space-y-1 px-4">
 								<li>
 									<Link
-										to="Automaticas"
+										to="/Automatica"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Automáticas
+										Automática
 									</Link>
 								</li>
 								<li>
 									<Link
-										to="/Semiautomaticas"
+										to="/ControlPorCelular"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Semiautomáticas
-									</Link>
-								</li>
-								<li>
-									<Link
-										to="Automaticas-especiales"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Automáticas Especiales
-									</Link>
-								</li>
-
-								<li>
-									<Link
-										to="bidones-descartables"
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Para bidones descartables
+										Control por celular
 									</Link>
 								</li>
 							</ul>
@@ -144,23 +134,16 @@ export function Navbar() {
 								</li>
 								<li>
 									<Link
-										to=""
+										to="/UltimasNoticias"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Últimas noticias
-									</Link>
-								</li>
-								<li>
-									<Link
-										to=""
-										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Soluciones
 									</Link>
 								</li>
 							</ul>
 						</details>
 						<li>
 							<Link
-								to=""
+								to="/Contacto"
 								className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<BsFillChatRightTextFill />
 								Contacto

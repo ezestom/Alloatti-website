@@ -8,7 +8,7 @@ export function Base() {
 		<>
 			<div
 				className={`relative bg-${
-					isDarkTheme ? " bg-gray-800" : "gray-50"
+					isDarkTheme ? " bg-gray-900" : "gray-50"
 				} h-screen flex  flex-col `}>
 				<Navbar />
 			</div>

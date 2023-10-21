@@ -6,39 +6,11 @@ export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section
-			className={`flex justify-center items-center ${
-				isDarkTheme ? "bg-gray-800 " : "bg-gray-50 "
+			className={`fixed bottom-3 left-8 z-10  ${
+				isDarkTheme ? "bg-gray-900 " : "bg-gray-50 "
 			}`}>
 			<div className=" ">
-				<ul
-					className={`flex gap-5 justify-center pb-2  ${
-						isDarkTheme ? "text-white" : "text-black"
-					}`}>
-					<li>
-						<Link className="hover:underline text-sm ">
-							Compania
-						</Link>
-					</li>
-					<li>
-						<Link className="hover:underline text-sm ">Normas</Link>
-					</li>
-					<li>
-						<Link className="hover:underline text-sm ">
-							Referencia
-						</Link>
-					</li>
-					<li>
-						<Link className="hover:underline text-sm ">
-							Soporte
-						</Link>
-					</li>
-					<li>
-						<Link className="hover:underline text-sm ">
-							Licencia
-						</Link>
-					</li>
-				</ul>
-				<ul className="flex justify-center gap-6 sm:justify-end">
+				<ul className="flex justify-around py-1">
 					<li>
 						<a
 							href="/"
@@ -91,10 +63,10 @@ export function Footer() {
 							<FaGithub />
 						</a>
 					</li>
-					<p className="mt-1 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
-						Copyright &copy; 2023. All rights reserved.
-					</p>
 				</ul>
+				<p className="mt-1 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
+					Copyright &copy; 2023. All rights reserved.
+				</p>
 			</div>
 		</section>
 	);
