@@ -1,7 +1,6 @@
 import { Base } from "../components/Base";
 import { ImageGallery } from "../components/ImageGallery";
 import { useTheme } from "../context/ThemeContext";
-import file from "../pdf/Catalogo.pdf";
 import imgCatalogo from "../assets/img/imgPDF.png";
 
 export function UltimasNoticias() {
@@ -45,7 +44,7 @@ export function UltimasNoticias() {
 						</p>
 						<a
 							download
-							href={file}
+							// href={file}
 							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center ">
 							<svg
 								className="w-4 h-6 mr-2"

@@ -52,7 +52,10 @@ export function Base() {
 					</button>
 				</div>
 			</div>
-			<footer className="w-full flex justify-center items-center bg-gray-900 text-white h-10">
+			<footer
+				className={`w-full flex justify-center items-center ${
+					isDarkTheme ? "bg-gray-900 text-white" : ""
+				} `}>
 				<p className="text-xs">
 					© 2021 Fresh Water Project. All rights reserved.
 				</p>
