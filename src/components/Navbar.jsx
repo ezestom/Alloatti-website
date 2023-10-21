@@ -12,6 +12,7 @@ import {
 	BsFillChatRightTextFill,
 	BsNutFill,
 } from "react-icons/bs";
+import { Footer } from "../components/Footer";
 
 export function Navbar() {
 	const { isDarkTheme } = useTheme();
@@ -23,9 +24,15 @@ export function Navbar() {
 		});
 	};
 	const navigate = useNavigate();
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 	return (
 		<div
-			className={` z-10 px-8 h-screen fixed   w-screen  max-w-xs bg-${
+			className={` z-10 px-8 h-screen fixed  w-screen  max-w-xs bg-${
 				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
 			} `}>
 			<ThemeButton />
@@ -55,6 +62,7 @@ export function Navbar() {
 				<ul className="mt-6 space-y-1">
 					<Link>
 						<Link
+							onClick={scrollToTop}
 							to="/"
 							className=" flex items-center justify-start gap-1 block rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
 							<AiFillHome />
@@ -105,10 +113,10 @@ export function Navbar() {
 
 					<li>
 						<Link
-							to="/servicios"
+							to="/PreguntasFrecuentes"
 							className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsNutFill />
-							Servicios
+							Preguntas Frecuentes
 						</Link>
 					</li>
 
@@ -127,7 +135,7 @@ export function Navbar() {
 							<ul className="mt-2 space-y-1 px-4">
 								<li>
 									<Link
-										to=""
+										to="/NormasIvess"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Normas IVESS
 									</Link>
@@ -152,6 +160,7 @@ export function Navbar() {
 					</li>
 				</ul>
 			</div>
+			<Footer />
 		</div>
 	);
 }

@@ -19,8 +19,8 @@ export function Home() {
 				className={`w-full absolute top-10 flex justify-center items-center ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
-					<div className="flex-col px-10 my-5 ">
+				<article className="w-3/5 lg:ml-[320px] sm:ml-0">
+					<div className="flex-col lg:px-10 lg:my-5 ">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"

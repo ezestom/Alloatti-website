@@ -14,7 +14,7 @@ export function UltimasNoticias() {
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="w-3/5 ml-[320px]">
-					<div className="flex-col px-10 my-5 ">
+					<div className="flex-col  my-5 ">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
@@ -40,7 +40,8 @@ export function UltimasNoticias() {
 							className="max-w-md rounded-lg my-5 h-auto"
 						/>
 						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-5">
-							Descarga nuestro catálogo en PDF para conocer más de nuestros productos y servicios.
+							Descarga nuestro catálogo en PDF para conocer más de
+							nuestros productos y servicios.
 						</p>
 						<a
 							download
