@@ -1,20 +1,23 @@
-import { useTheme } from "../context/ThemeContext";
 import { Link } from "react-router-dom";
 
 import { ThemeButton } from "./ThemeButton";
 
 export function NavbarMobile() {
-	const { isDarkTheme } = useTheme();
-
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 	return (
-		<div className=" z-10  h-screen fixed p-1 max-w-xs bg-slate-100">
+		<div className=" z-10 fixed w-screen bottom-8 flex justify-around items-center">
 			<ThemeButton />
 			<div>
-				<ul className="">
+				<ul className="flex w-screen justify-around  bg-white rounded-lg">
 					<li className="list-none">
 						<Link
 							to="/"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -26,14 +29,11 @@ export function NavbarMobile() {
 							<span className="text-xs">Home</span>
 						</Link>
 					</li>
-					<h6 className="text-xs grid place-content-center bg-slate-200 rounded-md py-1 border-gray-300 border">
-						Máquinas
-					</h6>
 
 					<li className="list-none">
 						<Link
 							to="/ControlPorCelular"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -52,7 +52,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/ControlPorCelular"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -67,13 +67,11 @@ export function NavbarMobile() {
 							</span>
 						</Link>
 					</li>
-					<h6 className="text-xs grid place-content-center bg-slate-200 rounded-md py-1 border-gray-300 border">
-						Empresa
-					</h6>
+
 					<li className="list-none">
 						<Link
 							to="/nosotros"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -85,14 +83,11 @@ export function NavbarMobile() {
 							<span className="text-xs">Nosotros</span>
 						</Link>
 					</li>
-					<h6 className="text-xs grid place-content-center bg-slate-200 rounded-md py-1 border-gray-300 border">
-						Ventas
-					</h6>
 
 					<li className="list-none">
 						<Link
 							to="/PreguntasFrecuentes"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -111,7 +106,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/NormasIvess"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -130,7 +125,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/UltimasNoticias"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -145,14 +140,11 @@ export function NavbarMobile() {
 							</span>
 						</Link>
 					</li>
-					<h6 className="text-xs grid place-content-center bg-slate-200 rounded-md py-1 border-gray-300 border">
-						Consultas
-					</h6>
 
 					<li className="list-none">
 						<Link
 							to="/Contacto"
-							className="block rounded-lg px-1 py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<svg
 								className="w-6 h-6 text-gray-800 dark:text-white"
 								aria-hidden="true"
@@ -165,6 +157,27 @@ export function NavbarMobile() {
 						</Link>
 					</li>
 				</ul>
+			</div>
+			<div className="fixed bottom-[110px] bg-red- right-3 z-10">
+				<button
+					onClick={scrollToTop}
+					type="button"
+					className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 -rotate-90 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+					<svg
+						className="w-5 h-5"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 14 10">
+						<path
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M1 5h12m0 0L9 1m4 4L9 9"
+						/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	);

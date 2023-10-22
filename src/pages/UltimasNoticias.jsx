@@ -9,10 +9,10 @@ export function UltimasNoticias() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex flex-col justify-center items-center ${
+				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<div className="flex-col  my-5 ">
 						<h1
 							className={`${
@@ -70,9 +70,8 @@ export function UltimasNoticias() {
 							long-term value and drive economic growth.
 						</p>
 					</div>
+					<ImageGallery />
 				</article>
-
-				<ImageGallery />
 			</section>
 		</>
 	);

@@ -8,10 +8,10 @@ export function NormasIvess() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center ${
+				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<span
 						href="#"
 						className="bg-violet-100 text-violet-800 text-xs font-medium flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">

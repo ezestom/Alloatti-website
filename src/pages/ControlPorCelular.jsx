@@ -9,13 +9,13 @@ export function ControlPorCelular() {
 		<section>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center ${
+				className={`w-full absolute top-10 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<span
 						href="#"
-						className="bg-blue-100 text-blue-800 text-xs font-medium flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
+						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
 						<svg
 							className="w-2.5 h-2.5 mr-1.5"
 							aria-hidden="true"
@@ -26,10 +26,10 @@ export function ControlPorCelular() {
 						</svg>
 						Inovación
 					</span>
-					<h1 className="text-5xl py-2 mb-5 text-blue-700 bg-gray-200 pl-3 rounded-lg font-extrabold">
+					<h1 className="text-5xl p-2 mb-5 text-blue-700 bg-gray-200 rounded-lg font-extrabold">
 						Control por celular
 					</h1>
-					<p className="mb-3 text-lg text-gray-500 md:text-xl dark:text-gray-400">
+					<p className="mb-3 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
 						Deliver great service experiences fast - without the
 						complexity of traditional ITSM solutions.Accelerate
 						critical development work and deploy.
@@ -54,7 +54,7 @@ export function ControlPorCelular() {
 						incidents, and changes.
 					</p>
 					<figure className="flex-col  items-center inline-flex py-10">
-						<img src={ninos} alt="" className="max-w-md " />
+						<img src={ninos} alt="" className="max-w-md  rounded-lg " />
 						<p className="text-gray-500 dark:text-gray-400 ">
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Quisquam voluptatum, quae, laboriosam,

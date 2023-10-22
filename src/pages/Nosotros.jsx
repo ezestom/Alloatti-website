@@ -8,10 +8,10 @@ export function Nosotros() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center ${
+				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<span
 						href="#"
 						className="bg-red-100 text-red-800 text-xs font-medium flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
@@ -32,7 +32,7 @@ export function Nosotros() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
+							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl `}>
 							Fresh water son creadas por{" "}
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
 								Alloatti SRL

@@ -8,10 +8,10 @@ export function Contacto() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center ${
+				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="w-3/5 ml-[320px]">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<span
 						href="#"
 						className="bg-blue-100 text-green-500 text-xs font-medium flex items-center px-2.5 py-0.5 rounded-md bg-green-100 mb-2">

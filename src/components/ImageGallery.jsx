@@ -33,7 +33,7 @@ export function ImageGallery() {
 	}
 
 	return (
-		<div className="w-3/5 ml-[320px] grid grid-cols-2 md:grid-cols-4 gap-4 mx-w">
+		<div className=" grid grid-cols-2 md:grid-cols-4 gap-4 mx-w">
 			<div className=" grid gap-4">
 				<div>
 					<img
