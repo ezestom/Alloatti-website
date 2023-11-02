@@ -6,12 +6,12 @@ export function WithClose() {
 	const { isDarkTheme } = useTheme();
 
 	return (
-		<section className="w-full absolute top-1 flex justify-center items-center z-0">
+		<section className="w-full absolute top-1  flex justify-center items-center z-0">
 			<div
-				className={` lg:w-3/5 lg:ml-[320px]  ${
+				className={` lg:w-3/5 lg:ml-[320px]   ${
 					isDarkTheme ? "text-white bg-gray-800" : " text-gray-900 "
 				} bg-transparent flex items-center justify-center z-10  `}>
-				<p className="text-center text-sm font-semibold  font-sm flex items-center justify-center gap-1 opacity-80  ">
+				<p className="text-center text-sm font-semibold  font-sm  flex flex-row-reverse gap-1 opacity-80  ">
 					Contactate con nosotros, te brindaremos el mejor servicio
 					<Link
 						href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO"

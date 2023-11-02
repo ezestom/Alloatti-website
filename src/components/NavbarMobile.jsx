@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
 import { ThemeButton } from "./ThemeButton";
+import { AiFillHome } from "react-icons/ai";
+import { GiFactory, GiNetworkBars } from "react-icons/gi";
+import { BiMobile } from "react-icons/bi";
+import {
+	BsBriefcaseFill,
+	BsFillChatRightTextFill,
+	BsFillQuestionSquareFill,
+} from "react-icons/bs";
+import { SiPagseguro } from "react-icons/si";
 
 export function NavbarMobile() {
 	const scrollToTop = () => {
@@ -10,76 +19,43 @@ export function NavbarMobile() {
 		});
 	};
 	return (
-		<div className=" z-10 fixed w-screen bottom-8 flex justify-around items-center">
+		<div className=" z-10 fixed w-screen bottom-0 flex justify-around items-center">
 			<ThemeButton />
+
 			<div>
 				<ul className="flex w-screen justify-around  bg-white rounded-lg">
 					<li className="list-none">
 						<Link
 							to="/"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 20 20">
-								<path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-							</svg>
-							<span className="text-xs">Home</span>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<AiFillHome />
+							<span className="text-xs">Inicio</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							to="/ControlPorCelular"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
-							<span className="text-xs ">
-								Control <br />
-								Celular
-							</span>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<GiFactory />
+							<span className="text-xs ">Automática</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							to="/ControlPorCelular"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
-							<span className="text-xs ">
-								Control <br />
-								Celular
-							</span>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<BiMobile />
+							<span className="text-xs ">Control</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							to="/nosotros"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<BsBriefcaseFill />
 							<span className="text-xs">Nosotros</span>
 						</Link>
 					</li>
@@ -87,38 +63,18 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/PreguntasFrecuentes"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
-							<span className="text-xs">
-								Preguntas <br />
-								frecuentes
-							</span>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<BsFillQuestionSquareFill />
+							<span className="text-xs">Preguntas</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							to="/NormasIvess"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
-							<span className="text-xs">
-								Normas <br />
-								IVESS
-							</span>
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<SiPagseguro />
+							<span className="text-xs">Normas</span>
 						</Link>
 					</li>
 
@@ -126,18 +82,8 @@ export function NavbarMobile() {
 						<Link
 							to="/UltimasNoticias"
 							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
-							<span className="text-xs">
-								Últimas <br />
-								noticias
-							</span>
+							<GiNetworkBars />
+							<span className="text-xs">Noticias</span>
 						</Link>
 					</li>
 
@@ -145,14 +91,7 @@ export function NavbarMobile() {
 						<Link
 							to="/Contacto"
 							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<svg
-								className="w-6 h-6 text-gray-800 dark:text-white"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 14 20">
-								<path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z" />
-							</svg>
+							<BsFillChatRightTextFill />
 							<span className="text-xs">Contacto</span>
 						</Link>
 					</li>

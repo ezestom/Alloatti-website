@@ -10,6 +10,7 @@ import { GiFactory, GiNetworkBars } from "react-icons/gi";
 import {
 	BsBriefcaseFill,
 	BsFillChatRightTextFill,
+	BsFillQuestionSquareFill,
 	BsNutFill,
 } from "react-icons/bs";
 import { Footer } from "../components/Footer";
@@ -42,7 +43,7 @@ export function Navbar() {
 						navigate("/");
 					}}
 					className="">
-					<Link onClick={logoTurnTop}>
+					<Link onClick={scrollToTop}>
 						{isDarkTheme ? (
 							<img
 								src={logoDark}
@@ -60,15 +61,13 @@ export function Navbar() {
 				</span>
 
 				<ul className="mt-6 space-y-1">
-					<Link>
-						<Link
-							onClick={scrollToTop}
-							to="/"
-							className=" flex items-center justify-start gap-1 block rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
-							<AiFillHome />
-							Inicio
-							{RiHomeLine}
-						</Link>
+					<Link
+						onClick={scrollToTop}
+						to="/"
+						className=" flex items-center justify-start gap-1 block rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
+						<AiFillHome />
+						Inicio
+						{RiHomeLine}
 					</Link>
 
 					<li>
@@ -86,6 +85,7 @@ export function Navbar() {
 							<ul className="mt-2 space-y-1 px-4">
 								<li>
 									<Link
+										onClick={scrollToTop}
 										to="/Automatica"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Automática
@@ -93,6 +93,7 @@ export function Navbar() {
 								</li>
 								<li>
 									<Link
+										onClick={scrollToTop}
 										to="/ControlPorCelular"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Control por celular
@@ -104,6 +105,7 @@ export function Navbar() {
 
 					<li>
 						<Link
+							onClick={scrollToTop}
 							to="/nosotros"
 							className=" flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsBriefcaseFill />
@@ -113,9 +115,10 @@ export function Navbar() {
 
 					<li>
 						<Link
+							onClick={scrollToTop}
 							to="/PreguntasFrecuentes"
 							className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BsNutFill />
+							<BsFillQuestionSquareFill />
 							Preguntas Frecuentes
 						</Link>
 					</li>
@@ -135,6 +138,7 @@ export function Navbar() {
 							<ul className="mt-2 space-y-1 px-4">
 								<li>
 									<Link
+										onClick={scrollToTop}
 										to="/NormasIvess"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Normas IVESS
@@ -142,6 +146,7 @@ export function Navbar() {
 								</li>
 								<li>
 									<Link
+										onClick={scrollToTop}
 										to="/UltimasNoticias"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Últimas noticias
@@ -151,6 +156,7 @@ export function Navbar() {
 						</details>
 						<li>
 							<Link
+								onClick={scrollToTop}
 								to="/Contacto"
 								className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<BsFillChatRightTextFill />
