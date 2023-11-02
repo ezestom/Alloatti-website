@@ -11,7 +11,6 @@ import {
 	BsBriefcaseFill,
 	BsFillChatRightTextFill,
 	BsFillQuestionSquareFill,
-	BsNutFill,
 } from "react-icons/bs";
 import { Footer } from "../components/Footer";
 
@@ -48,13 +47,13 @@ export function Navbar() {
 							<img
 								src={logoDark}
 								alt="logo"
-								className="mx-auto h-50 w-auto py-10"
+								className="mx-auto w-[180px] py-10"
 							/>
 						) : (
 							<img
 								src={logoLight}
 								alt="logo"
-								className="mx-auto h-50 w-auto py-10"
+								className="mx-auto  w-[180px] py-10"
 							/>
 						)}
 					</Link>

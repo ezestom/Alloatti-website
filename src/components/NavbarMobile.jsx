@@ -26,6 +26,7 @@ export function NavbarMobile() {
 				<ul className="flex w-screen justify-around  bg-white rounded-lg">
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<AiFillHome className="text-2xl" />
@@ -35,6 +36,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/ControlPorCelular"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<GiFactory className="text-2xl" />
@@ -44,6 +46,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/ControlPorCelular"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BiMobile className="text-2xl" />
@@ -53,6 +56,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/nosotros"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsBriefcaseFill className="text-2xl" />
@@ -62,6 +66,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/PreguntasFrecuentes"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsFillQuestionSquareFill className="text-2xl" />
@@ -71,6 +76,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/NormasIvess"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<SiPagseguro className="text-2xl" />
@@ -80,6 +86,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/UltimasNoticias"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<GiNetworkBars className="text-2xl" />
@@ -89,6 +96,7 @@ export function NavbarMobile() {
 
 					<li className="list-none">
 						<Link
+							onClick={scrollToTop}
 							to="/Contacto"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsFillChatRightTextFill className="text-2xl" />

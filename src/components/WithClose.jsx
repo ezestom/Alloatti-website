@@ -14,14 +14,13 @@ export function WithClose() {
 				<p className="text-center text-sm font-semibold  font-sm  flex flex-row-reverse gap-1 opacity-80  ">
 					Contactate con nosotros, te brindaremos el mejor servicio
 					<Link
-						href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO"
+						href="https://api.whatsapp.com/send?phone=5491168641122"
 						target="_blank"
 						rel="noopener noreferrer"
-						className=" flex gap-1 items-center hover:text-green-500">
-						<span className=" flex justify-center items-center gap-1 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded hover:bg-green-200 dark:text-green-300">
-							<IoLogoWhatsapp />
-							Contactanos por WhatsApp
-						</span>{" "}
+						className="flex gap-1 items-center hover:text-green-500">
+						<span className="flex justify-center items-center gap-1 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded hover:bg-green-200 dark:text-green-300">
+							<IoLogoWhatsapp /> Contactanos por WhatsApp
+						</span>
 					</Link>
 				</p>
 			</div>
