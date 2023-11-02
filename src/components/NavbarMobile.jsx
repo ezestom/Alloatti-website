@@ -19,7 +19,7 @@ export function NavbarMobile() {
 		});
 	};
 	return (
-		<div className=" z-10 fixed w-screen bottom-0 flex justify-around items-center">
+		<div className=" z-10 fixed w-screen  bottom-0 flex justify-around items-center">
 			<ThemeButton />
 
 			<div>
