@@ -28,7 +28,7 @@ export function NavbarMobile() {
 						<Link
 							to="/"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<AiFillHome />
+							<AiFillHome className="text-2xl" />
 							<span className="text-xs">Inicio</span>
 						</Link>
 					</li>
@@ -37,8 +37,8 @@ export function NavbarMobile() {
 						<Link
 							to="/ControlPorCelular"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<GiFactory />
-							<span className="text-xs ">Automática</span>
+							<GiFactory className="text-2xl" />
+							<span className="text-xs ">Auto</span>
 						</Link>
 					</li>
 
@@ -46,7 +46,7 @@ export function NavbarMobile() {
 						<Link
 							to="/ControlPorCelular"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BiMobile />
+							<BiMobile className="text-2xl" />
 							<span className="text-xs ">Control</span>
 						</Link>
 					</li>
@@ -55,7 +55,7 @@ export function NavbarMobile() {
 						<Link
 							to="/nosotros"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BsBriefcaseFill />
+							<BsBriefcaseFill className="text-2xl" />
 							<span className="text-xs">Nosotros</span>
 						</Link>
 					</li>
@@ -64,7 +64,7 @@ export function NavbarMobile() {
 						<Link
 							to="/PreguntasFrecuentes"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BsFillQuestionSquareFill />
+							<BsFillQuestionSquareFill className="text-2xl" />
 							<span className="text-xs">Preguntas</span>
 						</Link>
 					</li>
@@ -73,7 +73,7 @@ export function NavbarMobile() {
 						<Link
 							to="/NormasIvess"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<SiPagseguro />
+							<SiPagseguro className="text-2xl" />
 							<span className="text-xs">Normas</span>
 						</Link>
 					</li>
@@ -81,8 +81,8 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/UltimasNoticias"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<GiNetworkBars />
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<GiNetworkBars className="text-2xl" />
 							<span className="text-xs">Noticias</span>
 						</Link>
 					</li>
@@ -90,8 +90,8 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							to="/Contacto"
-							className="block rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BsFillChatRightTextFill />
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							<BsFillChatRightTextFill className="text-2xl" />
 							<span className="text-xs">Contacto</span>
 						</Link>
 					</li>
