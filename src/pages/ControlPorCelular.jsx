@@ -1,5 +1,4 @@
 import { Base } from "../components/Base";
-import { MovilMockup } from "../components/MovilMockup";
 import { useTheme } from "../context/ThemeContext";
 import ninos from "../assets/img/ninos.png";
 
@@ -42,9 +41,7 @@ export function ControlPorCelular() {
 						contextual information to rapidly respond to requests,
 						incidents, and changes.
 					</p>
-					<aside className="py-10">
-						<MovilMockup />
-					</aside>
+					<aside className="py-10">aca nose que ira</aside>
 					<p className="text-gray-500 dark:text-gray-400">
 						Track work across the enterprise through an open,
 						collaborative platform. Link issues across Jira and
@@ -54,7 +51,11 @@ export function ControlPorCelular() {
 						incidents, and changes.
 					</p>
 					<figure className="flex-col  items-center inline-flex py-10">
-						<img src={ninos} alt="" className="max-w-md  rounded-lg " />
+						<img
+							src={ninos}
+							alt=""
+							className="max-w-md  rounded-lg "
+						/>
 						<p className="text-gray-500 dark:text-gray-400 ">
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Quisquam voluptatum, quae, laboriosam,

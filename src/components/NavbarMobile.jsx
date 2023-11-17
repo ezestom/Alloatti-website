@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 import { ThemeButton } from "./ThemeButton";
 import { AiFillHome } from "react-icons/ai";
-import { GiFactory, GiNetworkBars } from "react-icons/gi";
-import { BiMobile } from "react-icons/bi";
+import { GiNetworkBars } from "react-icons/gi";
+import { FaPrescriptionBottle } from "react-icons/fa";
+import { CiPillsBottle1 } from "react-icons/ci";
 import {
 	BsBriefcaseFill,
 	BsFillChatRightTextFill,
@@ -28,7 +29,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<AiFillHome className="text-2xl" />
 							<span className="text-xs">Inicio</span>
 						</Link>
@@ -37,20 +38,20 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/ControlPorCelular"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<GiFactory className="text-2xl" />
-							<span className="text-xs ">Auto</span>
+							to="/BidonesRetornables"
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
+							<FaPrescriptionBottle className="text-2xl" />
+							<span className="text-xs ">Retornable</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/ControlPorCelular"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-							<BiMobile className="text-2xl" />
-							<span className="text-xs ">Control</span>
+							to="/BidonesNoRetornables"
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
+							<CiPillsBottle1 className="text-2xl" />
+							<span className="text-xs ">No Retornable</span>
 						</Link>
 					</li>
 
@@ -58,7 +59,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/nosotros"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<BsBriefcaseFill className="text-2xl" />
 							<span className="text-xs">Nosotros</span>
 						</Link>
@@ -68,7 +69,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/PreguntasFrecuentes"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<BsFillQuestionSquareFill className="text-2xl" />
 							<span className="text-xs">Preguntas</span>
 						</Link>
@@ -78,7 +79,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/NormasIvess"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<SiPagseguro className="text-2xl" />
 							<span className="text-xs">Normas</span>
 						</Link>
@@ -88,7 +89,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/UltimasNoticias"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<GiNetworkBars className="text-2xl" />
 							<span className="text-xs">Noticias</span>
 						</Link>
@@ -98,7 +99,7 @@ export function NavbarMobile() {
 						<Link
 							onClick={scrollToTop}
 							to="/Contacto"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<BsFillChatRightTextFill className="text-2xl" />
 							<span className="text-xs">Contacto</span>
 						</Link>

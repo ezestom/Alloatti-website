@@ -1,5 +1,5 @@
-import logoDark from "../../src/assets/img/logoFinalDark.png";
-import logoLight from "../../src/assets/img/logoFinalLight.png";
+import LogoLigth from "../assets/img/Alloatti-logo-light.png";
+import LogoDark from "../assets/img/Alloatti-logo-dark.png";
 import { FaChevronDown } from "react-icons/fa";
 import { RiHomeLine } from "react-icons/ri";
 import { useTheme } from "../context/ThemeContext";
@@ -32,9 +32,9 @@ export function Navbar() {
 	};
 	return (
 		<div
-			className={` z-10 px-8 h-screen fixed  w-screen  max-w-xs bg-${
+			className={` z-10 px-8 fixed  w-screen  max-w-xs bg-${
 				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
-			} `}>
+			} overflow-y-auto  `}>
 			<ThemeButton />
 			<div className=" h-auto  ">
 				<span
@@ -45,21 +45,21 @@ export function Navbar() {
 					<Link onClick={scrollToTop}>
 						{isDarkTheme ? (
 							<img
-								src={logoDark}
+								src={LogoDark}
 								alt="logo"
-								className="mx-auto w-[180px] py-10"
+								className="pt-20 pb-5 "
 							/>
 						) : (
 							<img
-								src={logoLight}
+								src={LogoLigth}
 								alt="logo"
-								className="mx-auto  w-[180px] py-10"
+								className="pt-20 pb-5 "
 							/>
 						)}
 					</Link>
 				</span>
 
-				<ul className="mt-6 space-y-1">
+				<ul className="mt-6 space-y-1  ">
 					<Link
 						onClick={scrollToTop}
 						to="/"
@@ -85,9 +85,9 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/Automatica"
+										to="/BidonesRetornables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Automática
+										Bidones Retornables
 									</Link>
 								</li>
 								<li>
