@@ -1,6 +1,12 @@
 import { Base } from "../components/Base";
 import { Details } from "../components/Details";
 import { useTheme } from "../context/ThemeContext";
+import image from "../img/1.jpg";
+import image2 from "../img/2.jpg";
+import image5 from "../img/5.jpg";
+import image6 from "../img/7.jpg";
+import image7 from "../img/9.jpg";
+import image12 from "../img/12.jpg";
 
 export function PreguntasFrecuentes() {
 	const { isDarkTheme } = useTheme();
@@ -13,42 +19,117 @@ export function PreguntasFrecuentes() {
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
-					<div className="flex-col  my-5 ">
-						<span
-							href="#"
-							className="bg-blue-100 text-blue-800 text-xs font-medium inline-flex w-full items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
-							<svg
-								className="w-2.5 h-2.5 mr-1.5"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="currentColor"
-								viewBox="0 0 20 14">
-								<path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z" />
-							</svg>
-							Preguntas frecuentes
-						</span>
+					<div className="flex-col px-2">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
-							Preguntas frequentes y{" "}
+							{" "}
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
-								respuestas
+								Preguntas y respuestas
 							</span>{" "}
-							para que puedas quietarte tus dudas{" "}
+							frecuentes de nuestros clientes{" "}
 						</h1>
 						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-							Te brindamos preguntas y respuestas para que puedas
-							conocer más sobre nuestros productos y servicios. Y
-							así puedas tener una mejor experiencia con nosotros.
+							Explora nuestras{" "}
+							<strong>preguntas frecuentes</strong> y{" "}
+							<strong>respuestas</strong> para obtener información
+							detallada sobre nuestros productos y servicios.
+							Nuestra intención es proporcionarte una comprensión
+							completa para que disfrutes de una experiencia aún
+							más enriquecedora con nosotros.
 						</p>
+						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-2 shadow-md p-5 ">
+							<img
+								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden"
+								src={image12}
+								alt="máquina trabajando"
+							/>
+							<img
+								className=" rounded-lg  max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								src={image2}
+								alt="máquina trabajando"
+							/>
+							<img
+								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								src={image5}
+								alt="máquina trabajando"
+							/>
+							<img
+								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								src={image6}
+								alt="máquina trabajando"
+							/>
+							<img
+								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								src={image7}
+								alt="máquina trabajando"
+							/>
+							<img
+								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								src={image}
+								alt="máquina trabajando"
+							/>
+						</figure>
 					</div>
 
-					<div className="bg-gray-100 p-4 rounded-lg shadow-sm mt-10 ">
-						<Details />
-						<Details />
-						<Details />
-						<Details />
+					<p className="text-lg border-l-4 border-blue-400 px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+						Nuestro{" "}
+						<strong>centro de preguntas y respuestas</strong> es una
+						valiosa herramienta diseñada para proporcionar
+						respuestas rápidas y precisas a las preguntas más
+						comunes sobre nuestra empresa y maquinaria. En esta
+						sección, encontrarás información detallada sobre
+						nuestros productos, procesos y servicios, abordando
+						inquietudes frecuentes. Ya sea que estés interesado en
+						conocer las características técnicas de nuestras
+						máquinas, los plazos de entrega, o cómo contactarnos
+						para consultas específicas, nuestro{" "}
+						<strong>centro de preguntas y respuestas</strong> está
+						aquí para facilitar tu experiencia y brindarte la
+						información que necesitas de manera fácil y accesible.
+					</p>
+					<div className="bg-gray-100 p-4 rounded-lg shadow-md my-10 ">
+						<Details
+							question={
+								"Pregunta: ¿Cuánto tiempo lleva Alloatti SRL en el mercado de maquinaria para bidones?"
+							}
+							answer={
+								"Respuesta: Alloatti SRL tiene más de 20 años de experiencia en el mercado, brindando maquinaria de calidad para el procesamiento de bidones retornables y descartables."
+							}
+						/>
+						<Details
+							question={
+								"Pregunta: ¿Cuáles son algunas de las características destacadas de las máquinas ofrecidas por Alloatti SRL?"
+							}
+							answer={
+								"Respuesta: Nuestras máquinas cuentan con características como tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente, soportes abiertos para bidones, pantalla táctil para operación y control, entre otras."
+							}
+						/>
+						<Details
+							question={
+								"Pregunta: ¿Qué capacidad de producción tienen las líneas de producción de Alloatti SRL?"
+							}
+							answer={
+								"Respuesta: Ofrecemos líneas de producción que abarcan un rango de 50 hasta 480 bidones por hora. Además, podemos desarrollar líneas de mayor capacidad según los requerimientos específicos de nuestros clientes."
+							}
+						/>
+						<Details
+							question={
+								" ¿Qué novedades ha incorporado Alloatti SRL en los últimos dos años?"
+							}
+							answer={
+								"Respuesta: En los últimos dos años, hemos incorporado un departamento de automación y presentado nuevos productos, como sacatapas automático y manual, alimentador automático para 500 tapas, cargador automático de bidones vacíos, precintador automático, cargador automático de bidones en racks y lavadora con cepillos automática."
+							}
+						/>
+						<Details
+							question={
+								"Pregunta: ¿Cómo garantiza Alloatti SRL la calidad e higiene en el procesamiento de bidones?"
+							}
+							answer={
+								"Respuesta: En Alloatti, garantizamos un tiempo de lavado total de 120 segundos para cada bidón, asegurando una limpieza completa tanto en el interior como en el exterior, incluyendo la boca del bidón. Nuestras máquinas están diseñadas para prevenir el contacto directo entre la boca del bidón y el pico de llenado, eliminando cualquier posibilidad de contaminación del bidón. Además, contamos con un proceso de saneado, registro de producción y saneado, y diagnóstico inteligente de eventuales fallas para asegurar la máxima eficiencia y estándares de higiene."
+							}
+						/>
 					</div>
 				</article>
 			</section>

@@ -1,5 +1,5 @@
-import LogoLigth from "../assets/img/Alloatti-logo-light.png";
-import LogoDark from "../assets/img/Alloatti-logo-dark.png";
+import LogoLigth from "../img/Alloatti-logo-light.png";
+import LogoDark from "../img/Alloatti-logo-dark.png";
 import { FaChevronDown } from "react-icons/fa";
 import { RiHomeLine } from "react-icons/ri";
 import { useTheme } from "../context/ThemeContext";
@@ -47,13 +47,13 @@ export function Navbar() {
 							<img
 								src={LogoDark}
 								alt="logo"
-								className="pt-20 pb-5 "
+								className="pt-10 pb-5 "
 							/>
 						) : (
 							<img
 								src={LogoLigth}
 								alt="logo"
-								className="pt-20 pb-5 "
+								className="pt-10 pb-5 "
 							/>
 						)}
 					</Link>
@@ -87,15 +87,23 @@ export function Navbar() {
 										onClick={scrollToTop}
 										to="/BidonesRetornables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Bidones Retornables
+										~ Bidones Retornables
 									</Link>
 								</li>
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/ControlPorCelular"
+										to="/BidonesDescartables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Control por celular
+										~ Bidones Descartables
+									</Link>
+								</li>
+								<li>
+									<Link
+										onClick={scrollToTop}
+										to="/Accesorios"
+										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+										~ Accesorios
 									</Link>
 								</li>
 							</ul>

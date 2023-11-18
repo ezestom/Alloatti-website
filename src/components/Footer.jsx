@@ -15,9 +15,9 @@ export function Footer() {
 					target="_blank"
 					rel="noopener noreferrer"
 					className=" flex w-full items-center hover:text-green-500">
-					<span className=" flex w-full justify-center items-center gap-1 bg-green-100 text-green-800 text-sm font-medium px-2.5 py-1  rounded hover:bg-green-200 dark:text-green-300">
+					<span className=" flex w-full justify-center items-center gap-1 bg-green-200 text-green-800 text-sm font-medium px-2.5 py-1  rounded hover:bg-green-300 dark:text-black">
 						<IoLogoWhatsapp />
-						Escribinos por WhatsApp
+						Resuelve tus dudas por WhatsApp
 					</span>{" "}
 				</Link>
 				<ul className="flex justify-around py-1">

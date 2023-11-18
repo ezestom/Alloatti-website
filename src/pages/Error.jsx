@@ -1,4 +1,4 @@
-import bidon from "../assets/img/bidon404.png";
+import bidon from "../img/bidon404.png";
 import { BackButton } from "../components/BackButton";
 
 export function Error(handleClick) {

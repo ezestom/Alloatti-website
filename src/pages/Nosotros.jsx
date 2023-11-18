@@ -8,78 +8,103 @@ export function Nosotros() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
+				className={`w-full absolute top-10 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<span
 						href="#"
-						className="bg-red-100 text-red-800 text-xs font-medium flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
+						className="bg-violet-100 pl-2 text-violet-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-violet-400 mb-2">
 						<svg
-							className="w-2.5 h-2.5 mr-1.5"
-							aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="currentColor"
-							viewBox="0 0 20 14">
-							<path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z" />
+							className="m-1"
+							width="15"
+							height="15"
+							viewBox="0 0 24 24">
+							<path
+								fill="#7c3aed"
+								d="M12 10a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm-6.5 3a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5ZM21 10.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm-9 .5a5 5 0 0 1 5 5v6H7v-6a5 5 0 0 1 5-5Zm-7 5c0-.693.1-1.362.288-1.994l-.17.014A3.5 3.5 0 0 0 2 17.5V22h3v-6Zm17 6v-4.5a3.5 3.5 0 0 0-3.288-3.494c.187.632.288 1.301.288 1.994v6h3Z"
+							/>
 						</svg>
-						Compañia
+						Nosotros
 					</span>
-					<h1 className="text-5xl py-2 mb-5 text-blue-700 bg-gray-200 pl-3 rounded-lg font-extrabold">
-						Sobre nosotros
+					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
+						<svg
+							className="mx-1"
+							width="45"
+							height="45"
+							viewBox="0 0 24 24">
+							<path
+								fill="#000"
+								d="M1.05 21v-2.8q0-.825.425-1.55t1.175-1.1q1.275-.65 2.875-1.1T9.05 14q1.925 0 3.525.45t2.875 1.1q.75.375 1.175 1.1t.425 1.55V21h-16Zm8-8q-1.65 0-2.825-1.175T5.05 9H4.8q-.225 0-.362-.138T4.3 8.5q0-.225.138-.363T4.8 8h.25q0-1.125.55-2.025T7.05 4.55v.95q0 .225.138.363T7.55 6q.225 0 .363-.138T8.05 5.5V4.15q.225-.075.475-.113T9.05 4q.275 0 .525.038t.475.112V5.5q0 .225.138.363T10.55 6q.225 0 .363-.138t.137-.362v-.95q.9.525 1.45 1.425T13.05 8h.25q.225 0 .363.138t.137.362q0 .225-.138.363T13.3 9h-.25q0 1.65-1.175 2.825T9.05 13Zm0-2q.825 0 1.413-.588T11.05 9h-4q0 .825.588 1.413T9.05 11Zm7.5 4l-.15-.75q-.15-.05-.287-.113t-.263-.187l-.7.25l-.5-.9l.55-.5v-.6l-.55-.5l.5-.9l.7.25q.1-.1.25-.175t.3-.125l.15-.75h1l.15.75q.15.05.3.125t.25.175l.7-.25l.5.9l-.55.5v.6l.55.5l-.5.9l-.7-.25q-.125.125-.263.188t-.287.112l-.15.75h-1Zm.5-1.75q.3 0 .525-.225t.225-.525q0-.3-.225-.525t-.525-.225q-.3 0-.525.225t-.225.525q0 .3.225.525t.525.225Zm1.8-3.25l-.2-1.05q-.225-.075-.412-.188T17.9 8.5l-1.05.35l-.7-1.2l.85-.75q-.05-.125-.05-.2v-.4q0-.075.05-.2l-.85-.75l.7-1.2l1.05.35q.15-.15.338-.263t.412-.187l.2-1.05h1.4l.2 1.05q.225.075.413.188t.337.262l1.05-.35l.7 1.2l-.85.75q.05.125.05.2v.4q0 .075-.05.2l.85.75l-.7 1.2l-1.05-.35q-.15.15-.337.263t-.413.187l-.2 1.05h-1.4Zm.7-2.25q.525 0 .888-.363T20.8 6.5q0-.525-.363-.888t-.887-.362q-.525 0-.888.363T18.3 6.5q0 .525.363.888t.887.362Z"
+							/>
+						</svg>
+						Nuestra empresa
 					</h1>
 					<div className="flex-col mt-5 ">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl `}>
-							Fresh water son creadas por{" "}
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
-								Alloatti SRL
+								<strong>Alloatti SRL:</strong>
 							</span>{" "}
-							estas innovadoras maquinas, para sanitizar y
-							rellenar bidones de agua{" "}
+							nuestra empresa está dirigida por{" "}
+							<strong>ingenieros</strong>, aportando una amplia
+							experiencia técnica y soluciones{" "}
+							<strong>innovadoras</strong> a la vanguardia de
+							nuestras operaciones.
 						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-							Estas máquinas pueden ser utilizadas por empresas
-							que se dedican a la distribución de agua embotellada
-							o purificada, así como por aquellas que operan en
-							áreas donde se requiere una fuente de agua confiable
-							y segura. Garantizar la higiene y la calidad del
-							agua es esencial para cumplir con estándares y
-							regulaciones de salud y seguridad.
-						</p>
+						<blockquote className="p-4  my-4 border-l-4 border-blue-400 rounded-lg bg-gray-50">
+							<p className="text-xl italic font-medium  text-gray-900 ">
+								La visión liderada por ingenieros impulsa cada
+								aspecto de nuestras operaciones. Nuestro equipo,
+								compuesto por mentes creativas y expertos
+								técnicos, está dedicado a superar desafíos y
+								ofrecer soluciones que definen la industria.
+							</p>
+						</blockquote>
 					</div>
 					<div className="flex justify-center flex-col items-center">
 						<aside className="gap-5 h-auto">
-							<div className="mt-5 ">
+							<div className="mt-10 ">
 								<Card
-									title="Misión"
-									text="Nuestra misión es brindar soluciones innovadoras y de calidad para el envasado de agua purificada, con el objetivo de satisfacer las necesidades de nuestros clientes."
+									name={"Ing. Hector Alloatti"}
+									university={
+										"Universidad Tecnológica Nacional"
+									}
+									description={
+										"Fundador y Director de Alloatti SRL, con más de 30 años de experiencia en la industria del agua. Especialista en ingeniería mecánica y eléctrica, con un enfoque en el diseño y fabricación de maquinaria para el procesamiento de agua. "
+									}
+									position={"Director"}
+									date={"2023"}
+									location={"Buenos Aires, Argentina"}
 								/>
 							</div>
-							<div className="mt-5">
+							<div className="my-10">
 								<Card
-									title="Misión"
-									text="Nuestra misión es brindar soluciones innovadoras y de calidad para el envasado de agua purificada, con el objetivo de satisfacer las necesidades de nuestros clientes."
+									name={"Ing. Marías Alloatti"}
+									university={
+										"Universidad Tecnológica Nacional"
+									}
+									description={
+										"Co-Fundador y Director de Lógistica de Alloatti SRL, con más de 10 años de experiencia. Especialista en ingeniería mecánica y eléctrica, con un enfoque en el diseño y fabricación de maquinaria para el procesamiento de agua. "
+									}
+									position={"Co-Director"}
+									date={"2023"}
+									location={"Buenos Aires, Argentina"}
 								/>
 							</div>
 						</aside>
 
-						<blockquote className="p-4 my-4 border-l-4 border-gray-300 rounded-lg bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
-							<p className="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">
-								Si tienes más información o preguntas
-								específicas sobre las máquinas{"Fresh Water"}de
-								Alloatti SRL, estaré encantado de ayudarte.
+						<blockquote className="p-4  mb-10 border-r-4 border-blue-400 rounded-lg bg-gray-50 ">
+							<p className="text-xl italic font-medium  text-gray-900 ">
+								La combinación de pasión por la ingeniería y el
+								compromiso con la calidad nos coloca a la
+								vanguardia de la innovación, garantizando que
+								cada producto y servicio refleje la excelencia
+								que caracteriza a nuestra empresa.
 							</p>
 						</blockquote>
-						<p className="text-gray-500 dark:text-gray-400">
-							First of all you need to understand how Flowbite
-							works. This library is not another framework.
-							Rather, it is a set of components based on Tailwind
-							CSS that you can just copy-paste from the
-							documentation.
-						</p>
 					</div>
 				</article>
 			</section>

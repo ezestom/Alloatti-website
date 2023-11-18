@@ -1,7 +1,7 @@
 import { Base } from "../components/Base";
 import { ImageGallery } from "../components/ImageGallery";
 import { useTheme } from "../context/ThemeContext";
-import imgCatalogo from "../assets/img/imgPDF.png";
+import imgCatalogo from "../img/imgPDF.png";
 
 export function UltimasNoticias() {
 	const { isDarkTheme } = useTheme();

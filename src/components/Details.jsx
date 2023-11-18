@@ -1,13 +1,9 @@
-export function Details() {
+export function Details({ question, answer }) {
 	return (
 		<>
-			<details
-				className="group [&_summary::-webkit-details-marker]:hidden"
-				open>
+			<details className="group [&_summary::-webkit-details-marker]:hidden my-2">
 				<summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
-					<h2 className="font-medium">
-						Lorem ipsum dolor sit amet consectetur adipisicing?
-					</h2>
+					<h2 className="font-medium">{question}</h2>
 
 					<svg
 						className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -25,10 +21,7 @@ export function Details() {
 				</summary>
 
 				<p className="mt-4 px-4 leading-relaxed text-gray-700">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
-					hic veritatis molestias culpa in, recusandae laboriosam
-					neque aliquid libero nesciunt voluptate dicta quo officiis
-					explicabo consequuntur distinctio corporis earum similique!
+					{answer}
 				</p>
 			</details>
 		</>

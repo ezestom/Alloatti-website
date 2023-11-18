@@ -1,35 +1,11 @@
 import { Base } from "../components/Base";
 import { useTheme } from "../context/ThemeContext";
-import { Table } from "../components/Table";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
-import { maquinaRetornables } from "../machines_info/maquinaRetornables";
 
-export function BidonesRetornables() {
+export function Accesorios() {
 	const { isDarkTheme } = useTheme();
-	const [isLoading, setIsLoading] = useState(false);
-
-	const {
-		sectionData1,
-		sectionData2,
-		sectionData3,
-		sectionData4,
-		sectionData5,
-		sectionData6,
-		sectionData7,
-		sectionData8,
-	} = maquinaRetornables;
-
-	const sectionDataArray = [
-		sectionData1,
-		sectionData2,
-		sectionData3,
-		sectionData4,
-		sectionData5,
-		sectionData6,
-		sectionData7,
-		sectionData8,
-	];
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -50,6 +26,7 @@ export function BidonesRetornables() {
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
 						<svg
+							xmlns="http://www.w3.org/2000/svg"
 							className="icon icon-tabler icon-tabler-building-factory-2"
 							width="24"
 							height="24"
@@ -63,20 +40,20 @@ export function BidonesRetornables() {
 							<path d="M9 17h1" />
 							<path d="M14 17h1" />
 						</svg>
-						Máquinas automáticas {">"} Bidones Retornables
+						Máquinas automáticas {">"} Accesorios
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
+					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
 						<svg
 							className="mx-1"
 							width="45"
 							height="45"
-							viewBox="0 0 32 32">
+							viewBox="0 0 24 24">
 							<path
 								fill="#000000"
-								d="M26 9.37V3a1 1 0 0 0-1-1h-3v2h2v6.72s3 .507 3 4.28v13h-3v2h4a1 1 0 0 0 1-1V15c0-3.452-1.933-5.024-3-5.63zm-7 0V3a1 1 0 0 0-1-1h-3v2h2v6.72s3 .507 3 4.28v13h-3v2h4a1 1 0 0 0 1-1V15c0-3.452-1.933-5.024-3-5.63zm-7 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v6.37c-1.067.606-3 2.178-3 5.63v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V15c0-3.452-1.933-5.024-3-5.63zM13 28H5V15c0-3.772 3-4.28 3-4.28V4h2v6.72s3 .508 3 4.28v13z"
+								d="M6.27 17.05A2.991 2.991 0 0 1 4 22c-1.66 0-3-1.34-3-3s1.34-3 3-3c.18 0 .36 0 .53.05l3.07-5.36l-1.74-.99l4.09-1.12l1.12 4.09l-1.74-.99l-3.06 5.37M20 16c-1.3 0-2.4.84-2.82 2H11v-2l-3 3l3 3v-2h6.18c.42 1.16 1.52 2 2.82 2c1.66 0 3-1.34 3-3s-1.34-3-3-3m-8-8c.18 0 .36 0 .53-.05l3.07 5.36l-1.74.99l4.09 1.12l1.12-4.09l-1.74.99l-3.06-5.37A2.991 2.991 0 0 0 12 2c-1.66 0-3 1.34-3 3s1.34 3 3 3Z"
 							/>
 						</svg>
-						Para Bidones Retornables
+						Accesorios mecanizados
 					</h1>
 					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
 						Nuestras avanzadas líneas para bidones retornables
@@ -114,11 +91,7 @@ export function BidonesRetornables() {
 						a ofrecer soluciones de calidad que garanticen la
 						seguridad y pureza de cada bidón procesado.
 					</p>
-					<figure className="my-10">
-						{sectionDataArray.map((section, index) => (
-							<Table key={index} data={section} />
-						))}
-					</figure>
+					<figure className="my-10">{/* <Table />{" "} */}</figure>
 				</article>
 			</section>
 		</section>

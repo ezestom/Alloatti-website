@@ -8,6 +8,13 @@ export function Home() {
 	const { isDarkTheme } = useTheme();
 	const [isLoading, setIsLoading] = useState(true);
 
+	const handleClick = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+
 	useEffect(() => {
 		setTimeout(() => {
 			setIsLoading(false);
@@ -21,18 +28,18 @@ export function Home() {
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
-					<div className="flex-col p-6 lg:my-5 ">
+					<div className="flex-col px-2 mt-1">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
 							Revolucionamos tu producción: líderes en innovación
 							de{" "}
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+							<span className="underline underline-offset-3 decoration-8 decoration-blue-400">
 								{" "}
-								máquinas lavadoras, sanitizadoras y llenadoras
+								máquinas lavadoras, sanitizadoras y envasadoras{" "}
 							</span>{" "}
-							de bidones de agua{" "}
+							de bidones de agua potable{" "}
 						</h1>
 						<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
 							Elevando estándares, garantizando pureza: tu socio
@@ -183,8 +190,9 @@ export function Home() {
 
 									<Link
 										to="/BidonesRetornables"
+										onClick={handleClick}
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-										Más información
+										Ir a máquinas de bidones retornables
 										<svg
 											className="w-3.5 h-3.5 ml-2"
 											aria-hidden="true"
@@ -253,12 +261,19 @@ export function Home() {
 											&#8226; Lavadora con cepillos
 											automática
 										</p>
+										<p className="mb-2">
+											<br />
+										</p>
+										<p className="mb-2">
+											<br />
+										</p>
 									</div>
 
 									<Link
+										onClick={handleClick}
 										to="#"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-										Ir a nuestras normas Ivess
+										Ir a máquinas accesorios
 										<svg
 											className="w-3.5 h-3.5 ml-2"
 											aria-hidden="true"
