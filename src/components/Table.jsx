@@ -1,10 +1,22 @@
-export function Table({ data }) {
+import machine from "../img/gallon-water.jpg";
 
-	
+
+export function Table({ data }) {
+	const openDialog = () => {
+		const dialog = document.getElementById("dialog");
+		dialog.showModal();
+	};
+	const closeDialog = () => {
+		const dialog = document.getElementById("dialog");
+		dialog.close();
+	};
 	return (
-		<div className="relative overflow-x-auto shadow-md sm:rounded-lg my-2 ">
-			<table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400  ">
-				<caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white hover:bg-blue-100 cursor-pointer ">
+		<div className="relative overflow-x-auto shadow-md rounded-lg my-10 border-2 border-blue-400 table-container">
+			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto  ">
+				<caption
+					onClick={openDialog}
+					id="open-dialog"
+					className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white hover:bg-blue-200 cursor-pointer  ">
 					La{" "}
 					<strong className="underline underline-offset-3 decoration-4 decoration-blue-400 ">
 						{data[0].modelo}{" "}
@@ -19,9 +31,9 @@ export function Table({ data }) {
 						accesorios y construcción.
 					</p>
 					<svg
-						className="absolute top-5 right-5 fill-current text-gray-400 dark:text-gray-500"
-						width="40"
-						height="40"
+						className="absolute top-5 right-5 fill-current text-gray-400 dark:text-gray-500 bg-gray-100 rounded-lg p-2"
+						width="50"
+						height="50"
 						viewBox="0 0 24 24">
 						<path
 							fill="#000000"
@@ -54,6 +66,70 @@ export function Table({ data }) {
 									{value}
 								</td>
 							))}
+							<dialog
+								id="dialog"
+								className="w-full h-full max-w-[75%] max-h-[75%] m-auto rounded-lg shadow-lg">
+								<div className="flex flex-col justify-center items-center ">
+									<caption
+										id="open-dialog"
+										className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white hover:bg-blue-100 cursor-pointer w-full ">
+										La{" "}
+										<strong className="underline underline-offset-3 decoration-4 decoration-blue-400 ">
+											{data[0].modelo}{" "}
+										</strong>{" "}
+										es una máquina de producción de{" "}
+										<strong className="underline underline-offset-3 decoration-4 decoration-blue-400">
+											{data[0].producción_max}
+										</strong>
+										.
+										<p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+											Características de la{" "}
+											{data[0].modelo}, procesos,
+											accesorios y construcción.
+										</p>
+									</caption>
+									<thead className="text-xs px-2 text-gray-700 uppercase flex-wrap bg-gray-50 dark:bg-gray-700 dark:text-gray-400 w-full ">
+										<tr className="w-full flex justify-between ">
+											{Object.keys(data[0]).map(
+												(column, index) => (
+													<th
+														key={index}
+														scope="col"
+														className="py-5 w-24 text-center">
+														{column}
+													</th>
+												)
+											)}
+										</tr>
+									</thead>
+									<div className="w-full">
+										{data.map((row, index) => (
+											<tr
+												key={index}
+												className="bg-white border-b w-full flex justify-between text-center px-2">
+												{Object.values(row).map(
+													(value, colIndex) => (
+														<td
+															key={colIndex}
+															className="py-5 w-24 font-medium text-gray-900 ">
+															{value}
+														</td>
+													)
+												)}
+											</tr>
+										))}
+									</div>
+									<picture className="aspect-video">
+										<img src={machine} alt="" />
+									</picture>
+									<button
+										className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 absolute bottom-0 right-0 left-0 m-auto text-lg"
+										id="close-dialog"
+										onClick={closeDialog}>
+										Cerrar
+									</button>
+								</div>
+							</dialog>
 						</tr>
 					))}
 				</tbody>

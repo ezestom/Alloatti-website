@@ -54,7 +54,7 @@ export function BidonesDescartables() {
 						</svg>
 						Máquinas automáticas {">"} Bidones descartables
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
+					<h1 className="md:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
 						<svg
 							className="mx-1"
 							width="45"

@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io5";
@@ -7,7 +7,7 @@ export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section
-			className={`fixed bottom-3 left-8 z-10  ${
+			className={`fixed bottom-0 left-8 z-10  ${
 				isDarkTheme ? "bg-gray-900 " : "bg-gray-50 "
 			}`}>
 			<div className=" text-center">
@@ -15,8 +15,8 @@ export function Footer() {
 					href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO"
 					target="_blank"
 					rel="noopener noreferrer"
-					className=" flex w-full items-center hover:text-green-500">
-					<span className=" flex w-full justify-center items-center gap-1 bg-green-300 text-black text-sm font-medium px-2.5 py-1  rounded hover:bg-green-400">
+					className=" flex w-full items-center hover:text-green-500  justify-center">
+					<span className=" flex w-auto justify-center text-center items-center gap-1 bg-green-300 text-black text-xs font-medium p-2  rounded-lg hover:bg-green-400">
 						<IoLogoWhatsapp />
 						Estamos para brindarte información
 					</span>{" "}
@@ -30,7 +30,7 @@ export function Footer() {
 							className={`${
 								isDarkTheme
 									? "text-gray-100 hover:text-blue-200"
-									: "text-black hover:text-blue-800"
+									: "text-black hover:text-blue-900"
 							}`}>
 							<FaFacebookF />
 						</a>
@@ -43,7 +43,7 @@ export function Footer() {
 							className={`${
 								isDarkTheme
 									? "text-gray-100 hover:text-blue-200"
-									: "text-black hover:text-violet-600"
+									: "text-black hover:text-pink-600"
 							}`}>
 							<FaInstagram />
 						</a>
@@ -62,10 +62,10 @@ export function Footer() {
 						</a>
 					</li>
 				</ul>
-				<p className="mt-1 text-center text-sm text-gray-500 sm:mt-0 ">
+				<p className="mt-1 text-center text-xs text-gray-500 sm:mt-0 ">
 					Copyright &copy; 2023. All rights reserved.
 				</p>
-				<code className="mt-1 text-center text-sm text-gray-500 sm:mt-0 sm:text-right text-slate-600">
+				<code className="mt-1 text-center text-sm  sm:mt-0 sm:text-right text-slate-600">
 					Designed and Developed by{" "}
 					<a
 						href="https://ezestom.github.io/portfolio/"

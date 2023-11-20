@@ -3,6 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
+import logo from "../img/Alloatti-logo-dark.png";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -112,7 +113,7 @@ export function Home() {
 									href="https://www.youtube.com/@AlloattiSRL"
 									rel="noopener noreferrer"
 									target="_blank"
-									className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+									className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
 									Ver más videos en YouTube
 									<svg
 										className="w-3.5 h-3.5 ml-2"
@@ -131,6 +132,7 @@ export function Home() {
 								</a>
 							</div>
 							<div className="grid md:grid-cols-2 gap-8">
+								{/* sección 1 */}
 								<div className=" flex-col flex justify-between  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 md:p-12">
 									<span
 										href="#"
@@ -209,6 +211,7 @@ export function Home() {
 										</svg>
 									</Link>
 								</div>
+								{/* sección 2 */}
 								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
 									<span
 										href="#"
@@ -290,9 +293,179 @@ export function Home() {
 										</svg>
 									</Link>
 								</div>
+								{/* sección 3 */}
+								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+									<span
+										href="#"
+										className="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2">
+										<svg
+											className="w-2.5 h-2.5 mr-1.5"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 20 16">
+											<path
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
+											/>
+										</svg>
+										Novedades
+									</span>
+									<h2
+										className={`${
+											isDarkTheme
+												? "text-white"
+												: "text-gray-900"
+										} text-3xl font-extrabold mb-2`}>
+										Nuevos maquinaria en desarrollo
+									</h2>
+									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
+										<p className="mb-2">
+											&#8226; Sacatapas automático y
+											sacatapas manual
+										</p>
+										<p className="mb-2">
+											&#8226; Alimentador automático para
+											500 tapas
+										</p>
+										<p className="mb-2">
+											&#8226; Cargador automático de
+											bidones vacíos
+										</p>
+										<p className="mb-2">
+											&#8226; Precintador automático
+										</p>
+										<p className="mb-2">
+											&#8226; Cargador automático de
+											bidones en racks
+										</p>
+										<p className="mb-2">
+											&#8226; Lavadora con cepillos
+											automática
+										</p>
+										<p className="mb-2">
+											<br />
+										</p>
+										<p className="mb-2">
+											<br />
+										</p>
+									</div>
+
+									<Link
+										onClick={handleClick}
+										to="#"
+										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+										Más información
+										<svg
+											className="w-3.5 h-3.5 ml-2"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 14 10">
+											<path
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M1 5h12m0 0L9 1m4 4L9 9"
+											/>
+										</svg>
+									</Link>
+								</div>
+								{/* sección 4 */}
+								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+									<span
+										href="#"
+										className="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
+										<svg
+											className="w-2.5 h-2.5 mr-1.5"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 20 16">
+											<path
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
+											/>
+										</svg>
+										Próximanente
+									</span>
+									<h2
+										className={`${
+											isDarkTheme
+												? "text-white"
+												: "text-gray-900"
+										} text-3xl font-extrabold mb-2`}>
+										Sección en desarrollo...
+									</h2>
+									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
+										{/* <p className="mb-2">
+											&#8226; Sacatapas automático y
+											sacatapas manual
+										</p>
+										<p className="mb-2">
+											&#8226; Alimentador automático para
+											500 tapas
+										</p>
+										<p className="mb-2">
+											&#8226; Cargador automático de
+											bidones vacíos
+										</p>
+										<p className="mb-2">
+											&#8226; Precintador automático
+										</p>
+										<p className="mb-2">
+											&#8226; Cargador automático de
+											bidones en racks
+										</p>
+										<p className="mb-2">
+											&#8226; Lavadora con cepillos
+											automática
+										</p>
+										<p className="mb-2">
+											<br />
+										</p>
+										<p className="mb-2">
+											<br />
+										</p> */}
+										<picture className=" opacity-20 h-full w-full flex justify-center items-center">
+											<img
+												className="py-20 w-auto h-auto"
+												src={logo}
+												alt=""
+											/>
+										</picture>{" "}
+									</div>
+
+									<Link
+										onClick={handleClick}
+										to="#"
+										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+										Más información
+										<svg
+											className="w-3.5 h-3.5 ml-2"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 14 10">
+											<path
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M1 5h12m0 0L9 1m4 4L9 9"
+											/>
+										</svg>
+									</Link>
+								</div>
 							</div>
 						</div>
-						<div className="w-full flex justify-center items-center "></div>
 					</div>
 				</article>
 			</section>

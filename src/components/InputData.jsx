@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
-import chat from "../img/chat.webp";
 
-function InputField({ label, id, iconPath, darkMode = false, placeholder }) {
-	const inputClasses = darkMode
-		? "dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-		: "";
-
+function InputField({ label, id, iconPath, placeholder }) {
 	return (
 		<div>
 			<label
@@ -27,7 +22,7 @@ function InputField({ label, id, iconPath, darkMode = false, placeholder }) {
 				<input
 					type="text"
 					id={id}
-					className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 ${inputClasses}`}
+					className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 `}
 					placeholder={placeholder}
 				/>
 			</div>
@@ -41,13 +36,15 @@ function TextArea() {
 			<form>
 				<div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
 					<div className="px-4 py-2 bg-white rounded-t-lg dark-bg-gray-800">
-						<label for="comment" className="sr-only ">
+						<label
+							htmlFor="comment"
+							className=" text-black sr-only ">
 							Your comment
 						</label>
 						<textarea
 							id="comment"
 							rows="4"
-							className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+							className="w-full px-0 text-sm text-gray-900 border-0 focus:outline-blue-400 "
 							placeholder="Escribinos tu consulta..."
 							required></textarea>
 					</div>
@@ -78,17 +75,6 @@ function TextArea() {
 function InputData() {
 	return (
 		<div className="my-20">
-			<figure className="w-full flex justify-between items-center my-10 shadow-lg rounded-lg">
-				<figcaption className="w-1/2 text-center p-10 flex-wrap">
-					<h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-						Nuestras asesores
-					</h1>
-					<p className="text-gray-500 dark:text-gray-400">
-						Están para ayudarte en lo que necesites.
-					</p>
-				</figcaption>
-				<img className="w-1/2 rounded-lg" src={chat} alt="" />
-			</figure>
 			<InputField
 				label=" Email"
 				id="input-group-1"

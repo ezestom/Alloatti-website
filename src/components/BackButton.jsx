@@ -4,10 +4,10 @@ export function BackButton() {
 	}
 	return (
 		<button
-			className="inline-flex items-center gap-2 rounded-lg  bg-white px-8 py-2 text-gray-800 shadow-md transition-all hover:bg-gray-900 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-opacity-50 active:	bg-gray-100/90"
+			className="nline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
 			onClick={handleClick}>
-			{" "}
-			volver atrás
+			{" <-"}
+			Volver atrás
 		</button>
 	);
 }

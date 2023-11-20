@@ -41,38 +41,32 @@ export function PreguntasFrecuentes() {
 						</p>
 						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-2 shadow-md p-5 ">
 							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none"
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80 "
 								src={image12}
 								alt="máquina trabajando"
 							/>
 							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
 								src={image2}
 								alt="máquina trabajando"
 							/>
 							<img
-								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none "
+								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
 								src={image5}
 								alt="máquina trabajando"
 							/>
 							<img
-								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none "
+								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
 								src={image6}
 								alt="máquina trabajando"
 							/>
 							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
 								src={image7}
 								alt="máquina trabajando"
 							/>
 							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
-								  transition-all duration-300  blur-sm hover:blur-none "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
 								src={image}
 								alt="máquina trabajando"
 							/>

@@ -4,6 +4,7 @@ import { Table } from "../components/Table";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
 import { maquinaRetornables } from "../machines_info/maquinaRetornables";
+import "./Table.css";
 
 export function BidonesRetornables() {
 	const { isDarkTheme } = useTheme();
@@ -45,7 +46,7 @@ export function BidonesRetornables() {
 				className={`w-full absolute top-10 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 ">
 					<span
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
@@ -65,7 +66,7 @@ export function BidonesRetornables() {
 						</svg>
 						Máquinas automáticas {">"} Bidones Retornables
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
+					<h1 className="lg:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
 						<svg
 							className="mx-1"
 							width="45"
@@ -114,11 +115,11 @@ export function BidonesRetornables() {
 						a ofrecer soluciones de calidad que garanticen la
 						seguridad y pureza de cada bidón procesado.
 					</p>
-					<figure className="my-10">
+					<div className="table-container ">
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}
-					</figure>
+					</div>
 				</article>
 			</section>
 		</section>
