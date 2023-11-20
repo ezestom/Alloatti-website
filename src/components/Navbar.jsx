@@ -32,7 +32,7 @@ export function Navbar() {
 	};
 	return (
 		<div
-			className={` z-10 px-8 fixed  w-screen  max-w-xs bg-${
+			className={` z-10 px-8 fixed min-h-screen max-w-xs bg-${
 				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
 			} overflow-y-auto  `}>
 			<ThemeButton />
@@ -44,17 +44,9 @@ export function Navbar() {
 					className="">
 					<Link onClick={scrollToTop}>
 						{isDarkTheme ? (
-							<img
-								src={LogoDark}
-								alt="logo"
-								className="pt-10 pb-5 "
-							/>
+							<img src={LogoDark} alt="logo" className="pt-5" />
 						) : (
-							<img
-								src={LogoLigth}
-								alt="logo"
-								className="pt-10 pb-5 "
-							/>
+							<img src={LogoLigth} alt="logo" className="pt-5" />
 						)}
 					</Link>
 				</span>
@@ -103,7 +95,7 @@ export function Navbar() {
 										onClick={scrollToTop}
 										to="/Accesorios"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										~ Accesorios
+										~ Accesorios mecanizados
 									</Link>
 								</li>
 							</ul>
@@ -148,7 +140,7 @@ export function Navbar() {
 										onClick={scrollToTop}
 										to="/NormasIvess"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-										Normas IVESS
+										Normas de calidad
 									</Link>
 								</li>
 								<li>

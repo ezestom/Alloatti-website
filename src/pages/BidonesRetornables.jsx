@@ -78,7 +78,7 @@ export function BidonesRetornables() {
 						</svg>
 						Para Bidones Retornables
 					</h1>
-					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
+					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl ">
 						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
 						lavado, enjuague, llenado y tapado de bidones.

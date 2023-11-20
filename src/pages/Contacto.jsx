@@ -42,7 +42,7 @@ export function Contacto() {
 								d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Zm4 0h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
 							/>
 						</svg>
-						Contactenos
+						Contactanos
 					</h1>
 					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
 						¿Tiene alguna pregunta sobre nuestra maquinaria para el

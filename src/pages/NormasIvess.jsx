@@ -61,11 +61,13 @@ export function NormasIvess() {
 						de calidad determinadas por AySA.
 					</p>
 					<div className="flex flex-col justify-center  items-center ">
-						<img
-							src={familia}
-							alt="Imagen ivess"
-							className="h-auto rounded-lg my-10 "
-						/>
+						<figure className="w-full flex justify-center bg-gray-100 rounded-lg shadow-lg my-10">
+							<img
+								src={familia}
+								alt="Imagen ivess"
+								className="h-auto rounded-lg my-5 "
+							/>
+						</figure>
 						<p className="my-8 text-lg text-gray-500 md:text-xl dark:text-gray-400">
 							Las estrictas NORMAS IVESS, creadas por el
 							prestigioso grupo de profesionales sanitaristas,

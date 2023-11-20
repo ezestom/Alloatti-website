@@ -192,7 +192,7 @@ export function Home() {
 										to="/BidonesRetornables"
 										onClick={handleClick}
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-										Ir a máquinas de bidones retornables
+										Más información
 										<svg
 											className="w-3.5 h-3.5 ml-2"
 											aria-hidden="true"
@@ -273,7 +273,7 @@ export function Home() {
 										onClick={handleClick}
 										to="#"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-										Ir a máquinas accesorios
+										Más información
 										<svg
 											className="w-3.5 h-3.5 ml-2"
 											aria-hidden="true"

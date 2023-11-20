@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
-import { ImageGallery } from "../components/ImageGallery";
 import { useTheme } from "../context/ThemeContext";
 import imgCatalogo from "../img/imgPDF.png";
+import infobae from "../img/infobae.png";
 
 export function UltimasNoticias() {
 	const { isDarkTheme } = useTheme();
@@ -18,33 +19,31 @@ export function UltimasNoticias() {
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
-							Diseñamos máquinas{" "}
+							Obtén más detalles sobre nuestra estrategia de
+							ventas{" "}
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
-								innovadoras y capaces
+								descargando nuestro catálogo de productos{" "}
 							</span>{" "}
-							de sanitizar y rellenar tus bidones, para su
-							reutilización{" "}
 						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-							Here at Flowbite we focus on markets where
-							technology, innovation, and capital can unlock
-							long-term value and drive economic growth.
+						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400  px-2">
+							Descubre una amplia gama de información que te
+							permitirá explorar a fondo lo que ofrecemos.
 						</p>
 					</div>
-					<figure className="w-full flex flex-col justify-center items-center p-10 bg-gray-100 rounded-lg">
+					<figure className="w-full flex flex-col justify-center items-center p-5 my-10 bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={imgCatalogo}
 							alt="Imagen del catálogo"
-							title="Catálogo"
-							className="max-w-md rounded-lg my-5 h-auto"
+							title="Catálogo de productos"
+							className="max-w-lg rounded-lg my-5 h-auto shadow-lg my-10"
 						/>
 						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-5">
-							Descarga nuestro catálogo en PDF para conocer más de
-							nuestros productos y servicios.
+							Ver presentación con información detallada de los
+							productos que ofrecemos y sus características.
 						</p>
-						<a
-							download
-							// href={file}
+						<Link
+							target="_blank"
+							to="https://docs.google.com/presentation/d/1V037vKTmnGZCmRs8LkFWctZsFL3bLrEUZFudSfnOZbA/edit?usp=sharing"
 							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center ">
 							<svg
 								className="w-4 h-6 mr-2"
@@ -61,16 +60,44 @@ export function UltimasNoticias() {
 								/>
 							</svg>
 							Descargar catálogo PDF
-						</a>
+						</Link>
 					</figure>
-					<div className="flex-col px-10 my-5 ">
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-							Here at Flowbite we focus on markets where
-							technology, innovation, and capital can unlock
-							long-term value and drive economic growth.
+					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2">
+						Además, te invitamos a leer la nota que nos realizó el
+						periódico Infobae sobre la importancia del agua en
+						nuestras vidas.
+					</p>
+					<figure className="w-full flex flex-col justify-center items-center p-5 my-10 bg-gray-100 rounded-lg shadow-lg">
+						<img
+							src={infobae}
+							alt="Imagen de la noticia"
+							title="Catálogo de productos"
+							className="max-w-lg rounded-lg my-5 h-auto shadow-lg my-10"
+						/>
+						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-5">
+							Vea la nota completa en el siguiente enlace
 						</p>
-					</div>
-					<ImageGallery />
+						<Link
+							target="_blank"
+							to="https://www.infobae.com/def/desarrollo/2019/12/21/agua-envasada-verdadera-fuente-de-salud-o-solo-marketing/"
+							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center ">
+							<svg
+								className="w-4 h-6 mr-2"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 16 18">
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
+								/>
+							</svg>
+							Ir a la noticia {"->"}
+						</Link>
+					</figure>
 				</article>
 			</section>
 		</>

@@ -1,5 +1,6 @@
 import { Base } from "../components/Base";
 import { Card } from "../components/Card";
+import { Data } from "../components/Data";
 import { useTheme } from "../context/ThemeContext";
 
 export function Nosotros() {
@@ -54,18 +55,19 @@ export function Nosotros() {
 							<strong>innovadoras</strong> a la vanguardia de
 							nuestras operaciones.
 						</h1>
-						<blockquote className="p-4  my-4 border-l-4 border-blue-400 rounded-lg bg-gray-50">
-							<p className="text-xl italic font-medium  text-gray-900 ">
+						<Data />
+						<p className="p-4  my-4 border-l-4 border-blue-400 rounded-lg bg-gray-50">
+							<p className="text-xl  font-medium  text-gray-500">
 								La visión liderada por ingenieros impulsa cada
 								aspecto de nuestras operaciones. Nuestro equipo,
 								compuesto por mentes creativas y expertos
 								técnicos, está dedicado a superar desafíos y
 								ofrecer soluciones que definen la industria.
 							</p>
-						</blockquote>
+						</p>
 					</div>
 					<div className="flex justify-center flex-col items-center">
-						<aside className="gap-5 h-auto">
+						<aside className="gap-5 h-auto w-full flex flex-wrap justify-around ">
 							<div className="mt-10 ">
 								<Card
 									name={"Ing. Hector Alloatti"}
@@ -97,7 +99,7 @@ export function Nosotros() {
 						</aside>
 
 						<blockquote className="p-4  mb-10 border-r-4 border-blue-400 rounded-lg bg-gray-50 ">
-							<p className="text-xl italic font-medium  text-gray-900 ">
+							<p className="text-xl  font-medium  text-gray-500 ">
 								La combinación de pasión por la ingeniería y el
 								compromiso con la calidad nos coloca a la
 								vanguardia de la innovación, garantizando que

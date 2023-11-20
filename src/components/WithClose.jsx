@@ -18,7 +18,7 @@ export function WithClose() {
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex gap-1 items-center hover:text-green-600">
-						<span className="flex justify-center items-center gap-1 bg-green-300 text-black text-xs font-medium px-2.5 py-0.5 rounded hover:bg-green-400 dark:text-green-500">
+						<span className="flex justify-center items-center gap-1 bg-green-300 text-black text-xs font-medium px-2.5 py-0.5 rounded hover:bg-green-400 ">
 							<IoLogoWhatsapp /> Contactanos por WhatsApp
 						</span>
 					</Link>

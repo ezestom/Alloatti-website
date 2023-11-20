@@ -41,32 +41,38 @@ export function PreguntasFrecuentes() {
 						</p>
 						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-2 shadow-md p-5 ">
 							<img
-								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden"
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none"
 								src={image12}
 								alt="máquina trabajando"
 							/>
 							<img
-								className=" rounded-lg  max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none "
 								src={image2}
 								alt="máquina trabajando"
 							/>
 							<img
-								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none "
 								src={image5}
 								alt="máquina trabajando"
 							/>
 							<img
-								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none "
 								src={image6}
 								alt="máquina trabajando"
 							/>
 							<img
-								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none "
 								src={image7}
 								alt="máquina trabajando"
 							/>
 							<img
-								className=" rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden "
+								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio overflow-hidden
+								  transition-all duration-300  blur-sm hover:blur-none "
 								src={image}
 								alt="máquina trabajando"
 							/>
