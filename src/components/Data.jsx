@@ -4,12 +4,12 @@ export function Data() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section className="bg-transparent">
-			<div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+			<div className="mx-auto max-w-screen-xl my-10 py-12 sm:px-6 md:py-16 lg:px-8 border border-gray-100 rounded-lg">
 				<div
 					className={`${
 						isDarkTheme ? "text-white" : "text-gray-900"
-					} mx-auto text-center max-w-4xl  my-10 '}`}>
-					<h2 className=" font-bold md:text-4xl">
+					} mx-auto text-center max-w-4xl  my-10  '}`}>
+					<h2 className=" font-bold md:text-5xl">
 						Manteniendo la confianza de nuestros clientes
 					</h2>
 					<p className="mt-4 text-gray-500 sm:text-xl">
