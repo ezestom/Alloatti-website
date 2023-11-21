@@ -15,7 +15,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Inicio />} />
 				<Route path="*" element={<Error />} />
-				<Route path="/nosotros" element={<Nosotros />} />
+				<Route path="/Nosotros" element={<Nosotros />} />
 				<Route
 					path="/BidonesRetornables"
 					element={<BidonesRetornables />}

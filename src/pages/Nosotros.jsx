@@ -9,7 +9,7 @@ export function Nosotros() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center  ${
+				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
