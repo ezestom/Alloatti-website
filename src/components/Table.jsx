@@ -31,9 +31,9 @@ export function Table({ data }) {
 						accesorios y construcción.
 					</p>
 					<svg
-						className="absolute top-3 right-3  bg-green-100 rounded-lg p-2"
-						width="60"
-						height="60"
+						className="absolute top-5 right-5  bg-blue-50 rounded-lg p-2"
+						width="50"
+						height="50"
 						viewBox="0 0 24 24">
 						<path
 							fill="#303030"
