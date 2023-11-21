@@ -74,7 +74,7 @@ function TextArea() {
 
 function InputData() {
 	return (
-		<div className="my-20">
+		<div className="my-20 px-1">
 			<InputField
 				label=" Email"
 				id="input-group-1"

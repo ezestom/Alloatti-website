@@ -28,7 +28,7 @@ export function Nosotros() {
 						</svg>
 						Nosotros
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
+					<h1 className="md:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md ">
 						<svg
 							className="mx-1"
 							width="45"
@@ -41,7 +41,7 @@ export function Nosotros() {
 						</svg>
 						Nuestra empresa
 					</h1>
-					<div className="flex-col mt-5 ">
+					<div className="flex-col mt-5 px-1 ">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"

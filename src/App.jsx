@@ -6,9 +6,9 @@ import { BidonesRetornables } from "./pages/BidonesRetornables.jsx";
 import { UltimasNoticias } from "./pages/UltimasNoticias.jsx";
 import { BidonesDescartables } from "./pages/BidonesDescartables.jsx";
 import { Contacto } from "./pages/Contacto.jsx";
-import { NormasIvess } from "./pages/NormasIvess.jsx";
 import { PreguntasFrecuentes } from "./pages/PreguntasFrecuentes.jsx";
 import { Accesorios } from "./pages/Accesorios.jsx";
+import { Normas } from "./pages/Normas.jsx";
 function App() {
 	return (
 		<BrowserRouter>
@@ -25,7 +25,7 @@ function App() {
 					element={<BidonesDescartables />}
 				/>
 				<Route path="/Accesorios" element={<Accesorios />} />
-				<Route path="/NormasIvess" element={<NormasIvess />} />
+				<Route path="/Normas" element={<Normas />} />
 				<Route path="UltimasNoticias" element={<UltimasNoticias />} />
 				<Route path="/Contacto" element={<Contacto />} />
 				<Route

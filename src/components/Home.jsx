@@ -4,6 +4,7 @@ import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
+import { LogoMobile } from "./logoMobile";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -25,11 +26,12 @@ export function Home() {
 		<>
 			<WithClose />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
+				className={`w-full absolute top-8 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<div className="flex-col px-2 mt-1">
+						<LogoMobile />
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"

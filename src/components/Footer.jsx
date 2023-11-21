@@ -18,7 +18,7 @@ export function Footer() {
 					className=" flex w-full items-center hover:text-green-500  justify-center">
 					<span className=" flex w-auto justify-center text-center items-center gap-1 bg-green-300 text-black text-xs font-medium p-2  rounded-lg hover:bg-green-400">
 						<IoLogoWhatsapp />
-						Estamos para brindarte información
+						Te responederemos a la brevedad
 					</span>{" "}
 				</Link>
 				<ul className="flex justify-around py-1">

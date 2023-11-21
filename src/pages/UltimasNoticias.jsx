@@ -14,7 +14,7 @@ export function UltimasNoticias() {
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
-					<div className="flex-col  my-5 ">
+					<div className="flex-col px-2">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
@@ -30,14 +30,14 @@ export function UltimasNoticias() {
 							permitirá explorar a fondo lo que ofrecemos.
 						</p>
 					</div>
-					<figure className="w-full flex flex-col justify-center items-center p-5 my-10 bg-gray-100 rounded-lg shadow-lg">
+					<figure className="w-full py-20 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={imgCatalogo}
 							alt="Imagen del catálogo"
 							title="Catálogo de productos"
-							className="max-w-lg rounded-lg my-5 h-auto shadow-lg my-10"
+							className=" rounded-lg  h-auto shadow-lg "
 						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-5">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl  py-5">
 							Ver presentación con información detallada de los
 							productos que ofrecemos y sus características.
 						</p>
@@ -67,14 +67,14 @@ export function UltimasNoticias() {
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.
 					</p>
-					<figure className="w-full flex flex-col justify-center items-center p-5 my-10 bg-gray-100 rounded-lg shadow-lg">
+					<figure className="w-full py-20 my-10 flex flex-col justify-center items-center  bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={infobae}
 							alt="Imagen de la noticia"
 							title="Catálogo de productos"
-							className="max-w-lg rounded-lg my-5 h-auto shadow-lg my-10"
+							className=" rounded-lg  h-auto  shadow-lg "
 						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-5">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl  py-5">
 							Vea la nota completa en el siguiente enlace
 						</p>
 						<Link

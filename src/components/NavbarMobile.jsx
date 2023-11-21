@@ -41,24 +41,24 @@ export function NavbarMobile() {
 							to="/BidonesRetornables"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<FaPrescriptionBottle className="text-2xl" />
-							<span className="text-xs ">Retornable</span>
+							<span className="text-xs ">Retornables</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/BidonesNoRetornables"
+							to="/BidonesDescartables"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<CiPillsBottle1 className="text-2xl" />
-							<span className="text-xs ">No Retornable</span>
+							<span className="text-xs ">Descartables</span>
 						</Link>
 					</li>
 
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/nosotros"
+							to="/Nosotros"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<BsBriefcaseFill className="text-2xl" />
 							<span className="text-xs">Nosotros</span>
@@ -78,7 +78,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/NormasIvess"
+							to="/Normas"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<SiPagseguro className="text-2xl" />
 							<span className="text-xs">Normas</span>

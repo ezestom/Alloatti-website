@@ -2,7 +2,7 @@ import { Base } from "../components/Base";
 import { useTheme } from "../context/ThemeContext";
 import familia from "../img/familia.avif";
 
-export function NormasIvess() {
+export function Normas() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<>
@@ -27,7 +27,7 @@ export function NormasIvess() {
 						</svg>
 						Normas Eras para consumo de agua
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
+					<h1 className="md:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
 						<svg
 							className="mx-1"
 							width="45"
