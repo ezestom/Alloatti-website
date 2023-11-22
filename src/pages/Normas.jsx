@@ -68,7 +68,7 @@ export function Normas() {
 								className="h-auto rounded-lg my-5 "
 							/>
 						</figure>
-						<p className="my-8 text-lg text-gray-500 md:text-xl dark:text-gray-400">
+						<p className="mt-8 mb-20 text-lg text-gray-500 md:text-xl dark:text-gray-400 p-2 ">
 							Las estrictas NORMAS IVESS, creadas por el
 							prestigioso grupo de profesionales sanitaristas,
 							químicos y arquitectos, incursionaron en todas las

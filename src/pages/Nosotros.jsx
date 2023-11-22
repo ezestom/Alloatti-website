@@ -45,7 +45,7 @@ export function Nosotros() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl `}>
+							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl px-1 `}>
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
 								<strong>Alloatti SRL:</strong>
 							</span>{" "}
@@ -84,7 +84,7 @@ export function Nosotros() {
 							</div>
 							<div className="my-10">
 								<Card
-									name={"Ing. Marías Alloatti"}
+									name={"Ing. Matías Alloatti"}
 									university={
 										"Universidad Tecnológica Nacional"
 									}
@@ -98,7 +98,7 @@ export function Nosotros() {
 							</div>
 						</aside>
 
-						<blockquote className="p-4  mb-10 border-r-4 border-blue-400 rounded-lg bg-gray-50 ">
+						<blockquote className="p-4 border-r-4 border-blue-400 rounded-lg bg-gray-50 mb-20">
 							<p className="text-xl  font-medium  text-gray-500 ">
 								La combinación de pasión por la ingeniería y el
 								compromiso con la calidad nos coloca a la

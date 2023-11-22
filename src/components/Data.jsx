@@ -21,7 +21,7 @@ export function Data() {
 
 				<div className="mt-8 sm:mt-12 ">
 					<dl className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md ">
+						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8  ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Ventas Anuales
 							</dt>
@@ -31,7 +31,7 @@ export function Data() {
 							</dd>
 						</div>
 
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md">
+						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8 ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Máquinas Vendidas
 							</dt>
@@ -41,7 +41,7 @@ export function Data() {
 							</dd>
 						</div>
 
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md">
+						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8 ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Clientes Satisfechos
 							</dt>
