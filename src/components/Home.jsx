@@ -4,7 +4,7 @@ import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
-import { LogoMobile } from "./LogoMobile.jsx";
+import LogoMobile from "../components/LogoMobile.jsx";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();

@@ -1,6 +1,7 @@
 import logoLigth from "../img/Alloatti-logo-light.png";
 
-export function LogoMobile() {
+
+ function LogoMobile() {
 	return (
 		<div className=" flex items-center justify-center w-full my-2 sm:block  md:hidden">
 			<img
@@ -11,3 +12,5 @@ export function LogoMobile() {
 		</div>
 	);
 }
+
+export default LogoMobile;
