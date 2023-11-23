@@ -4,7 +4,8 @@ import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
-import LogoMobile from "../components/LogoMobile.jsx";
+import { LogoCelular } from "./LogoCelular";
+
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -31,7 +32,8 @@ export function Home() {
 				}`}>
 				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
 					<div className="flex-col px-2 mt-1">
-						<LogoMobile />
+						<LogoCelular />
+		
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
