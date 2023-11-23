@@ -4,7 +4,7 @@ import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
-import { LogoMobile } from "./logoMobile";
+import { LogoMobile } from "./LogoMobile";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -36,11 +36,11 @@ export function Home() {
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
-							Revolucionamos tu producción: líderes en innovación
-							de{" "}
+							Líderes en innovación de{" "}
 							<span className="underline underline-offset-3 decoration-8 decoration-blue-400">
 								{" "}
-								máquinas lavadoras, sanitizadoras y envasadoras{" "}
+								máquinas lavadoras, enjuagadoras, llenadoras y
+								tapadoras{" "}
 							</span>{" "}
 							de bidones de agua potable{" "}
 						</h1>
@@ -147,7 +147,8 @@ export function Home() {
 											viewBox="0 0 18 18">
 											<path d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
 										</svg>
-										Carácteristicas de las máquinas de bidones retornables
+										Carácteristicas de las máquinas de
+										bidones retornables
 									</span>
 									<h2
 										className={`${
@@ -232,8 +233,7 @@ export function Home() {
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
-										Carácteristicas de las máquinas de
-										bidones descartables
+										Accesorios
 									</span>
 									<h2
 										className={`${
@@ -241,7 +241,8 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Nuevos maquinaria en desarrollo
+										Potencie al máximo su máquina con estos
+										imprescindibles accesorios
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
@@ -257,15 +258,15 @@ export function Home() {
 											bidones vacíos
 										</p>
 										<p className="mb-2">
-											&#8226; Precintador automático
+											{/* &#8226; Precintador automático */}
 										</p>
 										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones en racks
+											&#8226; Pantalla con conectividad a
+											internet y app de celular
 										</p>
 										<p className="mb-2">
-											&#8226; Lavadora con cepillos
-											automática
+											&#8226; Pre lavadora con cepillos
+											automáticos
 										</p>
 										<p className="mb-2">
 											<br />
@@ -277,7 +278,7 @@ export function Home() {
 
 									<Link
 										onClick={handleClick}
-										to="#"
+										to="/Accesorios"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
 										<svg
@@ -315,7 +316,8 @@ export function Home() {
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
-										Carácteristicas de los accesorios mecanizados
+										Carácteristicas de los accesorios
+										mecanizados
 									</span>
 									<h2
 										className={`${

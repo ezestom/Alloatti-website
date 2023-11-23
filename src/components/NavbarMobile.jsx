@@ -139,7 +139,7 @@ export function NavbarMobile() {
 					</li>
 				</ul>
 			</div>
-			<div className="fixed bottom-[110px] bg-red- right-3 z-10">
+			<div className="fixed bottom-20 bg-red- right-0 z-10">
 				<button
 					onClick={scrollToTop}
 					type="button"

@@ -24,7 +24,7 @@ export function Footer() {
 				<ul className="flex justify-around py-1">
 					<li>
 						<a
-							href="/"
+							href="https://www.facebook.com/alloatti.srl/"
 							rel="noreferrer"
 							target="_blank"
 							className={`${

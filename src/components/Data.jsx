@@ -23,11 +23,11 @@ export function Data() {
 					<dl className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
 						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8  ">
 							<dt className="order-last text-lg font-medium text-gray-500">
-								Ventas Anuales
+								Países Alcanzados
 							</dt>
 
 							<dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-								+$4.8m
+								+5
 							</dd>
 						</div>
 
@@ -37,7 +37,7 @@ export function Data() {
 							</dt>
 
 							<dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-								+300
+								+600
 							</dd>
 						</div>
 
@@ -47,7 +47,7 @@ export function Data() {
 							</dt>
 
 							<dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-								+500
+								+400
 							</dd>
 						</div>
 					</dl>

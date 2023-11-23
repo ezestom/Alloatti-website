@@ -111,15 +111,15 @@ export function PreguntasFrecuentes() {
 								"Pregunta: ¿Qué capacidad de producción tienen las líneas de producción de Alloatti SRL?"
 							}
 							answer={
-								"Respuesta: Ofrecemos líneas de producción que abarcan un rango de 50 hasta 480 bidones por hora. Además, podemos desarrollar líneas de mayor capacidad según los requerimientos específicos de nuestros clientes."
+								"Respuesta: Ofrecemos líneas de producción que abarcan un rango de 50 hasta 1000 bidones por hora. Además, podemos desarrollar líneas de mayor capacidad según los requerimientos específicos de nuestros clientes."
 							}
 						/>
 						<Details
 							question={
-								" ¿Qué novedades ha incorporado Alloatti SRL en los últimos dos años?"
+								"Pregunta: ¿Qué novedades ha incorporado Alloatti SRL?"
 							}
 							answer={
-								"Respuesta: En los últimos dos años, hemos incorporado un departamento de automación y presentado nuevos productos, como sacatapas automático y manual, alimentador automático para 500 tapas, cargador automático de bidones vacíos, precintador automático, cargador automático de bidones en racks y lavadora con cepillos automática."
+								"Respuesta: Hemos fortalecido nuestra operación con la introducción de un departamento de automatización y el lanzamiento de productos innovadores, que incluyen sacatapas automático y manual, alimentador automático para 500 tapas, cargador automático de bidones vacíos, prelavadora con cepillos automáticos, y pantalla con conectividad a Internet y app móvil"
 							}
 						/>
 						<Details

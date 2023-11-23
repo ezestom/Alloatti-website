@@ -72,12 +72,12 @@ export function Nosotros() {
 								<Card
 									name={"Ing. Hector Alloatti"}
 									university={
-										"Universidad Tecnológica Nacional"
+										"Universidad Nacional de La Plata"
 									}
 									description={
-										"Fundador y Director de Alloatti SRL, con más de 30 años de experiencia en la industria del agua. Especialista en ingeniería mecánica y eléctrica, con un enfoque en el diseño y fabricación de maquinaria para el procesamiento de agua. "
+										"Fundador y Gerente de Alloatti SRL, con más de 30 años de experiencia en la industria del agua. Especialista en ingeniería mecánica y eléctrica, con un enfoque sobresaliente en el diseño y fabricación de maquinaria para el procesamiento de agua. "
 									}
-									position={"Director"}
+									position={"Fundador-Gerente"}
 									date={"2023"}
 									location={"Buenos Aires, Argentina"}
 								/>
@@ -89,9 +89,9 @@ export function Nosotros() {
 										"Universidad Tecnológica Nacional"
 									}
 									description={
-										"Co-Fundador y Director de Lógistica de Alloatti SRL, con más de 10 años de experiencia. Especialista en ingeniería mecánica y eléctrica, con un enfoque en el diseño y fabricación de maquinaria para el procesamiento de agua. "
+										"Director de Logística y Programación de maquinarias con más de 15 años de experiencia. Especialista en programación de PLC y pantallas táctiles, con un enfoque destacado en el diseño y fabricación de maquinaria para el procesamiento de agua. "
 									}
-									position={"Co-Director"}
+									position={"Director de Logística"}
 									date={"2023"}
 									location={"Buenos Aires, Argentina"}
 								/>
