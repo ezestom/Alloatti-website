@@ -1,4 +1,4 @@
-export const maquinaRetornables = {
+export const bidonesRetornables = {
 	sectionData1: [
 		{
 			modelo: "AT-120",

@@ -3,7 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 import { Table } from "../components/Table";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
-import { maquinaRetornables } from "../machines_info/maquinaRetornables";
+import { bidonesRetornables } from "../machines_info/bidonesRetornables";
 import "./Table.css";
 
 export function BidonesRetornables() {
@@ -19,7 +19,7 @@ export function BidonesRetornables() {
 		sectionData6,
 		sectionData7,
 		sectionData8,
-	} = maquinaRetornables;
+	} = bidonesRetornables;
 
 	const sectionDataArray = [
 		sectionData1,
@@ -85,7 +85,7 @@ export function BidonesRetornables() {
 						lavado, enjuague, llenado y tapado de bidones.
 						Construidas con acero inoxidable de alta calidad,
 						nuestras líneas de producción abarcan capacidades desde
-						120 bidones por hora hasta 960 bidones por hora.
+						120 bidones por hora hasta 1000 bidones por hora.
 					</p>
 					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5">
 						Garantizamos un tiempo de lavado total de 2 minutos para

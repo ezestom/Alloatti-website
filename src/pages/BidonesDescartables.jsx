@@ -3,22 +3,17 @@ import { useTheme } from "../context/ThemeContext";
 import { Table } from "../components/Table";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
+import { bidonesDescartables } from "../machines_info/bidonesDescartables";
+import "./Table.css";
 
 export function BidonesDescartables() {
 	const { isDarkTheme } = useTheme();
 
 	const [isLoading, setIsLoading] = useState(true);
-	const section1Data = [
-		{
-			model: "AT-480",
-			production: "480 bidones por hora",
-			washing: "2 minutos",
-			build: "Acero inoxidable",
-			size: "5,2 metros x 3,7 metros",
-			accesories: "Tolva, Carga automática, Jirafa",
-		},
-		// ... más datos según sea necesario
-	];
+
+	const { sectionData1, sectionData2 } = bidonesDescartables;
+
+	const sectionDataArray = [sectionData1, sectionData2];
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -103,9 +98,11 @@ export function BidonesDescartables() {
 						a ofrecer soluciones de calidad que garanticen la
 						seguridad y pureza de cada bidón procesado.
 					</p>
-					<figure className="my-10">
-						<Table data={section1Data} />{" "}
-					</figure>
+					<div className="table-container ">
+						{sectionDataArray.map((section, index) => (
+							<Table key={index} data={section} />
+						))}
+					</div>
 				</article>
 			</section>
 		</section>

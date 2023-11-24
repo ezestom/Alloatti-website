@@ -2,6 +2,8 @@ import { Base } from "../components/Base";
 import { useTheme } from "../context/ThemeContext";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
+import { TableAccesories } from "../components/TableAccesories";
+import { CardAccesories } from "../components/CardAccesories";
 
 export function Accesorios() {
 	const { isDarkTheme } = useTheme();
@@ -15,7 +17,7 @@ export function Accesorios() {
 	}, []);
 
 	return (
-		<section>
+		<>
 			<Base />
 			<section
 				className={`w-full absolute top-12 flex justify-center items-center  ${
@@ -91,9 +93,12 @@ export function Accesorios() {
 						a ofrecer soluciones de calidad que garanticen la
 						seguridad y pureza de cada bidón procesado.
 					</p>
-					<figure className="my-10">{/* <Table />{" "} */}</figure>
+					<figure className="my-10">
+						<TableAccesories />
+					</figure>
+					{/* <CardAccesories /> */}
 				</article>
 			</section>
-		</section>
+		</>
 	);
 }

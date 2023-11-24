@@ -29,7 +29,7 @@ export function Footer() {
 							target="_blank"
 							className={`${
 								isDarkTheme
-									? "text-gray-100 hover:text-blue-200"
+									? "text-gray-100 hover:text-blue-900"
 									: "text-black hover:text-blue-900"
 							}`}>
 							<FaFacebookF />
@@ -42,7 +42,7 @@ export function Footer() {
 							target="_blank"
 							className={`${
 								isDarkTheme
-									? "text-gray-100 hover:text-blue-200"
+									? "text-gray-100 hover:text-pink-600"
 									: "text-black hover:text-pink-600"
 							}`}>
 							<FaInstagram />
@@ -55,7 +55,7 @@ export function Footer() {
 							rel="noreferrer"
 							className={`${
 								isDarkTheme
-									? "text-gray-100 hover:text-blue-200"
+									? "text-gray-100 hover:text-red-600"
 									: "text-black hover:text-red-600"
 							}`}>
 							<BsYoutube />
