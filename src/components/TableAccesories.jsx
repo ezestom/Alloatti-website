@@ -40,7 +40,7 @@ export function TableAccesories() {
 	};
 
 	return (
-		<div className="overflow-x-auto overflow-auto my-20 px-1">
+		<div className="overflow-x-auto overflow-auto my-20 rounded-lg">
 			<table className="w-full border-2 borde bg-white text-sm">
 				<thead className="ltr:text-left rtl:text-right bg-blue-100">
 					<tr>
@@ -71,7 +71,7 @@ export function TableAccesories() {
 									onClick={() =>
 										handleCardOpen(sectionData[0])
 									}
-									className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">
+									className="inline-block rounded bg-blue-500 px-4 py-2 text-xs font-medium text-white hover:bg-blue-700">
 									Ver más
 								</button>
 							</td>

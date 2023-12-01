@@ -120,7 +120,7 @@ export function Table({ data }) {
 							, procesos, accesorios y construcción.
 						</p>
 						<span
-							className="absolute right-3 top-3 text-2xl hover:cursor-pointer  hover:outline outline-2 outline-blue-400 p-1 rounded-lg"
+							className="absolute right-3 top-3 text-2xl hover:cursor-pointer  hover:bg-gray-200 p-1 rounded-lg"
 							onClick={closeDialog}>
 							✖️
 						</span>
