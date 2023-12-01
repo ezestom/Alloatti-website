@@ -12,7 +12,7 @@ export function WithClose() {
 					isDarkTheme ? "text-white bg-gray-800" : " text-gray-900 "
 				} bg-transparent  `}>
 				<Link
-					href="https://api.whatsapp.com/send?phone=5491168641122"
+					to="https://wa.me/+5491168641122"
 					target="_blank"
 					rel="noopener noreferrer"
 					className=" gap-1  hover:text-green-600 flex justify-center items-center">

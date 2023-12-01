@@ -59,9 +59,12 @@ function TextArea() {
 			</form>
 			<p className="ml-auto text-xs text-gray-500 dark:text-gray-400">
 				Rellene el formulario con sus consultas y en breve nos pondremos
-				en contacto.{" "}
-				<Link href="#" className="text-green-500 hover:underline">
-					Contactarme por WhatsApp{" "}
+				en contacto o escribanos por {" "}
+				<Link
+					to="https://wa.me/+5491168641122"
+					target="_blank"
+					className="text-green-500 hover:underline">
+					WhatsApp{" "}
 					<span className="text-green-500  hover:underline">
 						+54 9 11 1234-5678
 					</span>

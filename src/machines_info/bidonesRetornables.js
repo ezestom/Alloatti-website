@@ -1,6 +1,7 @@
 export const bidonesRetornables = {
 	sectionData1: [
 		{
+			id: 1,
 			modelo: "AT-120",
 			producción_max: "120 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -11,6 +12,7 @@ export const bidonesRetornables = {
 	],
 	sectionData2: [
 		{
+			id: 2,
 			modelo: "AT-180",
 			producción_max: "180 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -21,6 +23,7 @@ export const bidonesRetornables = {
 	],
 	sectionData3: [
 		{
+			id: 3,
 			modelo: "AT-240",
 			producción_max: "240 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -31,6 +34,7 @@ export const bidonesRetornables = {
 	],
 	sectionData4: [
 		{
+			id: 4,
 			modelo: "AT-360",
 			producción_max: "360 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -41,6 +45,7 @@ export const bidonesRetornables = {
 	],
 	sectionData5: [
 		{
+			id: 5,
 			modelo: "AT-480",
 			producción_max: "480 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -51,6 +56,7 @@ export const bidonesRetornables = {
 	],
 	sectionData6: [
 		{
+			id: 6,
 			modelo: "AT-600",
 			producción_max: "600 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -61,6 +67,7 @@ export const bidonesRetornables = {
 	],
 	sectionData7: [
 		{
+			id: 7,
 			modelo: "AT-720",
 			producción_max: "720 bidones por hora",
 			tiempo_lavado: "2 minutos",
@@ -71,6 +78,7 @@ export const bidonesRetornables = {
 	],
 	sectionData8: [
 		{
+			id: 8,
 			modelo: "AT-960",
 			producción_max: "1000 bidones por hora",
 			tiempo_lavado: "2 minutos",

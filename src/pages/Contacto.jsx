@@ -57,7 +57,7 @@ export function Contacto() {
 					</p>
 					<figure className="w-full flex justify-between items-center my-10 shadow-lg rounded-lg">
 						<figcaption className="w-1/2 text-center p-10 flex-wrap">
-							<h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
+							<h1 className="text-3xl font-bold text-gray-600 pb-2">
 								Nuestras asesores
 							</h1>
 							<p className="text-gray-500 dark:text-gray-400">

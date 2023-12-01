@@ -3,7 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
 import { TableAccesories } from "../components/TableAccesories";
-import { CardAccesories } from "../components/CardAccesories";
+import { accesorios } from "../machines_info/accesorios";
 
 export function Accesorios() {
 	const { isDarkTheme } = useTheme();
@@ -94,9 +94,8 @@ export function Accesorios() {
 						seguridad y pureza de cada bidón procesado.
 					</p>
 					<figure className="my-10">
-						<TableAccesories />
+						<TableAccesories accesories={accesorios} />
 					</figure>
-					{/* <CardAccesories /> */}
 				</article>
 			</section>
 		</>

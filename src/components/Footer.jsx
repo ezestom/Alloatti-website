@@ -12,7 +12,7 @@ export function Footer() {
 			}`}>
 			<div className=" text-center">
 				<Link
-					href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO"
+					to="https://wa.me/+5491168641122"
 					target="_blank"
 					rel="noopener noreferrer"
 					className=" flex w-full items-center hover:text-green-500  justify-center">
