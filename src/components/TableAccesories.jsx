@@ -71,7 +71,7 @@ export function TableAccesories() {
 									onClick={() =>
 										handleCardOpen(sectionData[0])
 									}
-									className="inline-block rounded bg-blue-500 px-4 py-2 text-xs font-medium text-white hover:bg-blue-700">
+									className="inline-block rounded bg-blue-700 px-4 py-2 text-xs font-medium text-white hover:bg-blue-800">
 									Ver más
 								</button>
 							</td>

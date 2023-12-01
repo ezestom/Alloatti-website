@@ -26,7 +26,7 @@ export function CardAccesories({ title, info, img, onClose }) {
 							✖️
 						</button>
 						<div className="flex flex-col justify-start  items-center  w-full  p-2 ">
-							<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900  bg-gray-100 flex w-full rounded-lg py-4 uppercase justify-center">
+							<h5 className="mb-1 text-2xl font-bold tracking-tight text-gray-900  bg-gray-100 flex w-full rounded-lg py-2 uppercase justify-center">
 								<span className="pr-1">
 									{" "}
 									<svg
@@ -41,7 +41,7 @@ export function CardAccesories({ title, info, img, onClose }) {
 								</span>
 								{title}
 							</h5>
-							<p className="mb-3 bg-gray-50 h-full w-full rounded-lg py-2  text-center font-semibold flex justify-center text-gray-700 dark:text-gray-400 text">
+							<p className="mb-1 bg-gray-50 h-full w-full rounded-lg py-2  text-center font-semibold flex  justify-center text-gray-700 dark:text-gray-400 text-xl">
 								<span className="pr-1">
 									<svg
 										width="25"

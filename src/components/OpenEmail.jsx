@@ -33,7 +33,7 @@ export const OpenEmail = ({ data }) => {
 	return (
 		<button
 			onClick={sendEmail}
-			className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full text-lg"
+			className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 w-full text-lg"
 			id="close-dialog">
 			✔️ Consultar por la {modelo} que produce {producción_max}
 		</button>
