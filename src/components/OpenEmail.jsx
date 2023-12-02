@@ -14,13 +14,12 @@ export const OpenEmail = ({ data }) => {
 		const destinatario = "ezequielstom@gmail.com";
 		const ccOculto = "ezequielstom@hotmail.com"; // Puedes cambiar esto a tu destinatario oculto
 		const asunto = `Estoy interesado en la ${modelo}`;
-		const cuerpo = `Buenos días, me contacto desde la página web y me gustaría recibir información sobre la máquina ${modelo} que ${producción_max}.
-		
+		const cuerpo = `Buenos días,\n\n Visité su página web recientemente y estoy interesado/a en obtener más información sobre ${modelo}. Agradecería recibir detalles adicionales sobre el producto, incluidos los precios y las opciones de entrega.\n
+		Quedo a la espera de su pronta respuesta.\n
+		Saludos cordiales,\n	
 		[Nombre y Apellido]
 		[Empresa]
-		[Localidad]
-		
-		Gracias!`;
+		[Localidad]`;
 
 		const mailtoLink = `mailto:${destinatario}?cc=${ccOculto}&subject=${encodeURIComponent(
 			asunto

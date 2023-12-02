@@ -327,7 +327,7 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Nuevos maquinaria en desarrollo
+										Nueva maquinaria en desarrollo
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
@@ -409,7 +409,7 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Sección en desarrollo...
+										Sección en producción...
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										{/* <p className="mb-2">

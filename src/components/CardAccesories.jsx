@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { OpenEmail } from "./OpenEmail";
+import tuerca from "../icons/tuerca.png";
 
-export function CardAccesories({ title, info, img, onClose }) {
+export function CardAccesories({ title, info, img, onClose, description }) {
 	const [isShow, setIsShow] = useState(true);
 
 	const handleClose = () => {
@@ -13,9 +14,13 @@ export function CardAccesories({ title, info, img, onClose }) {
 			{isShow && (
 				<div
 					id="card"
-					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-white/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl max-h-[85%] ">
-						<img className="rounded-b-none max-h-[250px] object-cover w-full rounded-t-lg" src={img} alt={title} />
+					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-[50%] max-h-[90%] ">
+						<img
+							className="rounded-b-none max-h-[250px] object-cover w-full rounded-t-lg"
+							src={img}
+							alt={title}
+						/>
 						<button
 							className="absolute top-0 right-0 bg-white rounded-md rounded-br-none  rounded-tl-none  p-2 hover:bg-gray-200 hover:cursor-pointer"
 							onClick={handleClose}>
@@ -38,15 +43,14 @@ export function CardAccesories({ title, info, img, onClose }) {
 								{title}
 							</h5>
 							<p className="mb-1 bg-gray-50 h-full w-full rounded-lg py-2  text-center font-semibold flex  justify-center text-gray-700 dark:text-gray-400 text-xl">
-								<span className="pr-1">
-									~{" "}
+								<span className="gap-2 flex items-center justify-center">
+									<img src={tuerca} alt="icon-tuerca" />
+									{info}
 								</span>
-								{info}
 							</p>
 							<p className="text-center bg-gray-50 h-full w-full rounded-lg p-4 ">
-								Aquí falta pasarme Texto sobre la máquina
-								seleccionada y que se abra el mail con los datos
-								de la máquina seleccionada bla bla .......
+								{description}
+								{"⚠️ En proceso de desarrollo... ⚠️"}
 							</p>
 							<div className="w-full absolute bottom-0 rounded-lg">
 								<OpenEmail
