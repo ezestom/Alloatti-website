@@ -1,6 +1,7 @@
 import { useState } from "react";
 import machine from "../img/gallon-water.jpg";
 import { OpenEmail } from "./OpenEmail";
+import PropTypes from "prop-types";
 
 export function Table({ data }) {
 	const [selectedMachine, setSelectedMachine] = useState({});
@@ -21,17 +22,24 @@ export function Table({ data }) {
 		// Si la máquina existe, la guardamos en el estado.
 		if (selectedMachineData) {
 			setSelectedMachine(selectedMachineData);
-			console.log("Selected Machine:", selectedMachine);
-
 			// Mostramos el diálogo.
 			const dialog = document.getElementById("dialog");
-			dialog.showModal({ mode: "modal" });
+			dialog.showModal();
 		}
 	};
 	const closeDialog = () => {
 		setSelectedMachine(null);
 		const dialog = document.getElementById("dialog");
 		dialog.close();
+	};
+	Table.propTypes = {
+		data: PropTypes.arrayOf(
+			PropTypes.shape({
+				id: PropTypes.string.isRequired,
+				modelo: PropTypes.string.isRequired,
+				producción_max: PropTypes.string.isRequired,
+			})
+		).isRequired,
 	};
 
 	return (
@@ -95,7 +103,7 @@ export function Table({ data }) {
 
 			<dialog
 				id="dialog"
-				className="z-50 w-full h-full sm:max-w-[100%]  md:max-w-[85vw] max-h-[85vh] m-auto rounded-lg shadow-lg border-4  border-blue-400 ">
+				className="z-50 w-full h-full sm:max-w-[100%]  md:max-w-[85vw] max-h-[85vh] m-auto rounded-lg shadow-lg">
 				<div className="flex flex-col justify-center items-center ">
 					<div
 						id="open-dialog"
@@ -159,7 +167,8 @@ export function Table({ data }) {
 							className="object-cover h-full w-full"
 						/>
 						<div className="h-full  w-full sticky bottom-0">
-							<OpenEmail data={data} />
+							<OpenEmail data={data}
+							/>
 							<button
 								className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-1 px-4  w-full text-lg"
 								id="close-dialog"

@@ -37,7 +37,7 @@ export function UltimasNoticias() {
 							title="Catálogo de productos"
 							className=" rounded-lg  h-auto shadow-lg "
 						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl  py-5">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl text-center py-5">
 							Ver presentación con información detallada de los
 							productos que ofrecemos y sus características.
 						</p>
@@ -63,7 +63,7 @@ export function UltimasNoticias() {
 						</Link>
 					</figure>
 					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2">
-						Además, te invitamos a leer la nota que nos realizó el
+						Además, te invitamos a leer la nota que realizó el
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.
 					</p>
@@ -74,7 +74,7 @@ export function UltimasNoticias() {
 							title="Catálogo de productos"
 							className=" rounded-lg  h-auto  shadow-lg "
 						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl  py-5">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl text-center py-5">
 							Vea la nota completa en el siguiente enlace
 						</p>
 						<Link
