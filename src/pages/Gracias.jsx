@@ -1,5 +1,3 @@
-import logo from "../../src/img/alloatti-logo-light.png";
-
 export function Gracias() {
 	return (
 		<section className="w-screen h-screen bg-gray-50 flex justify-center items-center flex-col">
@@ -10,15 +8,14 @@ export function Gracias() {
 				</h1>
 
 				<p className="text-md  text-gray-900 font-semibold ">
-					En breve nos pondremos en contacto con usted.
+					En breve le responderemos a su consulta.
 				</p>
 
 				<div className="flex justify-center w-full">
-					<img
-						className="max-w-[185px]"
-						src={logo}
-						alt="logo-alloatti"
-					/>
+					<p className="text-xl font-bold underline underline-offset-4 decoration-3 decoration-blue-400 ">
+						{" "}
+						Alloatti SRL
+					</p>
 				</div>
 			</article>
 		</section>
