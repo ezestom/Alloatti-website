@@ -1,7 +1,7 @@
 import machine from "../img/gallon-water.jpg";
 import PropTypes from "prop-types";
 import { CardAccesories } from "./CardAccesories";
-import { useState } from "react";
+import {  useState } from "react";
 
 export function Table({ data }) {
 	const [selectedBidones, setSelectedBidones] = useState(null);
@@ -11,8 +11,9 @@ export function Table({ data }) {
 	};
 	const handleClose = () => {
 		setSelectedBidones(null);
-		
 	};
+
+		
 
 	Table.propTypes = {
 		data: PropTypes.arrayOf(
@@ -86,8 +87,12 @@ export function Table({ data }) {
 				<div>
 					<CardAccesories
 						img={machine}
-						title={selectedBidones.modelo}
-						info={selectedBidones.producción_max}
+						model={selectedBidones.modelo}
+						production_max={selectedBidones.producción_max}
+						washing_time={selectedBidones.tiempo_lavado}
+						build={selectedBidones.construida}
+						size={selectedBidones.dimensiones}
+						accesories={selectedBidones.accesorios}
 						handleClose={handleClose}
 					/>
 				</div>
