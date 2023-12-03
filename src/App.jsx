@@ -9,7 +9,6 @@ import { Contacto } from "./pages/Contacto.jsx";
 import { PreguntasFrecuentes } from "./pages/PreguntasFrecuentes.jsx";
 import { Accesorios } from "./pages/Accesorios.jsx";
 import { Normas } from "./pages/Normas.jsx";
-import { Gracias } from "./pages/Gracias.jsx";
 function App() {
 	return (
 		<BrowserRouter>
@@ -33,7 +32,6 @@ function App() {
 					path="/preguntas-frecuentes"
 					element={<PreguntasFrecuentes />}
 				/>
-				<Route path="/gracias" element={<Gracias />} />
 			</Routes>
 		</BrowserRouter>
 	);
