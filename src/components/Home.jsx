@@ -65,11 +65,11 @@ export function Home() {
 										width="24"
 										height="24"
 										viewBox="0 0 30 30"
-										stroke-width="2"
 										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round">
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										fill="none">
 										<path
 											stroke="none"
 											d="M0 0h24v24H0z"
@@ -79,7 +79,7 @@ export function Home() {
 										<path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
 										<path d="M9.7 17l4.6 0" />
 									</svg>
-									Inovación
+									Innovación
 								</span>
 								<h1
 									className={`${
@@ -108,7 +108,6 @@ export function Home() {
 										className="w-full aspect-video py-5 rounded-lg "
 										src="https://www.youtube.com/embed/xYFHJshns2s?si=09RVGlF8yk2FxqWH"
 										title="YouTube video player"
-										frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
 										allowfullscreen></iframe>
 								)}
@@ -126,9 +125,9 @@ export function Home() {
 										viewBox="0 0 14 10">
 										<path
 											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											d="M1 5h12m0 0L9 1m4 4L9 9"
 										/>
 									</svg>
@@ -207,9 +206,9 @@ export function Home() {
 											viewBox="0 0 14 10">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M1 5h12m0 0L9 1m4 4L9 9"
 											/>
 										</svg>
@@ -228,9 +227,9 @@ export function Home() {
 											viewBox="0 0 20 16">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
@@ -290,9 +289,9 @@ export function Home() {
 											viewBox="0 0 14 10">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M1 5h12m0 0L9 1m4 4L9 9"
 											/>
 										</svg>
@@ -311,9 +310,9 @@ export function Home() {
 											viewBox="0 0 20 16">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
@@ -373,9 +372,9 @@ export function Home() {
 											viewBox="0 0 14 10">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M1 5h12m0 0L9 1m4 4L9 9"
 											/>
 										</svg>
@@ -394,9 +393,9 @@ export function Home() {
 											viewBox="0 0 20 16">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
@@ -462,9 +461,9 @@ export function Home() {
 											viewBox="0 0 14 10">
 											<path
 												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												d="M1 5h12m0 0L9 1m4 4L9 9"
 											/>
 										</svg>

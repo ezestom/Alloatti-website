@@ -8,7 +8,7 @@ function InputData() {
 			<form
 				className="w-full p-10 shadow-md rounded-lg bg-slate-100  border-l-4 border-blue-400 "
 				target="_blank"
-				action="https://formsubmit.co/ezequielstom@gmail.com"
+				action="https://formsubmit.co/ezequielstom@hotmail.com"
 				method="POST">
 				{/* input name and lastname */}
 				<div>
@@ -83,6 +83,15 @@ function InputData() {
 						value="https://alloatti.vercel.app/gracias"
 					/>
 					<input type="hidden" name="_captcha" value="false" />
+					<input
+						type="hidden"
+						name="_cc"
+						value="ezequielstom@gmail.com,ezequielstom@hotmail.com"
+					/>
+					<input
+						type="hidden"
+						name="_subject"
+						value="Mensaje Enviado!"></input>
 				</div>
 				<p className="ml-auto text-xs text-gray-500 dark:text-gray-400">
 					Rellene el formulario con sus consultas y en breve nos

@@ -73,7 +73,7 @@ export function Contacto() {
 						encargará de brindarte la información que necesitás para
 						tomar decisiones informadas.
 					</p>
-					<div className="w-full flex justify-center items-center px-1 my-20">
+					<div className="w-full flex justify-center items-center  my-20">
 						<InputData />
 					</div>
 				</article>
