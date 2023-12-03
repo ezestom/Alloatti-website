@@ -6,6 +6,7 @@ function InputData() {
 	return (
 		<>
 			<form
+				id="form"
 				className="w-full p-10 shadow-md rounded-lg bg-slate-100  border-l-4 border-blue-400 "
 				target="_blank"
 				action="https://formsubmit.co/ezequielstom@hotmail.com"
@@ -76,12 +77,6 @@ function InputData() {
 						</button>
 					</div>
 					{/* redirect */}
-					<input
-						type="hidden"
-						name="_next"
-						target="_blank"
-						value="https://alloatti.vercel.app/gracias"
-					/>
 					<input type="hidden" name="_captcha" value="false" />
 					<input
 						type="hidden"
@@ -91,7 +86,7 @@ function InputData() {
 					<input
 						type="hidden"
 						name="_subject"
-						value="Mensaje Enviado!"></input>
+						value="Mensaje -> Web Alloatti <-"></input>
 				</div>
 				<p className="ml-auto text-xs text-gray-500 dark:text-gray-400">
 					Rellene el formulario con sus consultas y en breve nos
