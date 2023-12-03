@@ -1,4 +1,4 @@
-import logo from "../img/alloatti-logo-light.png";
+import logo from "../../src/img/alloatti-logo-light.png";
 
 export function Gracias() {
 	return (
