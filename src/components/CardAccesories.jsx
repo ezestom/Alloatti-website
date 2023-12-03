@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { OpenEmail } from "./OpenEmail";
 import tuerca from "../icons/tuerca.png";
+import close from "../icons/close.png";
+import close2 from "../icons/close2.png";
 
 export function CardAccesories({ title, info, img, onClose, description }) {
 	const [isShow, setIsShow] = useState(true);
@@ -22,9 +24,9 @@ export function CardAccesories({ title, info, img, onClose, description }) {
 							alt={title}
 						/>
 						<button
-							className="absolute top-0 right-0 bg-white rounded-md rounded-br-none  rounded-tl-none  p-2 hover:bg-gray-200 hover:cursor-pointer"
+							className="absolute top-0 right-0 bg-white rounded-md rounded-br-none  rounded-tl-none  p-1 hover:bg-gray-200 hover:cursor-pointer"
 							onClick={handleClose}>
-							✖️
+							<img src={close} alt="close-icon" />
 						</button>
 						<div className="flex flex-col justify-start  items-center  w-full  p-2 overflow-y-auto  ">
 							<h5 className="mb-1 text-2xl font-bold tracking-tight text-gray-900  bg-gray-100 flex w-full rounded-lg py-2 uppercase justify-center items-center">
@@ -67,7 +69,10 @@ export function CardAccesories({ title, info, img, onClose, description }) {
 									className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-1 px-4  w-full text-lg rounded-lg rounded-t-none"
 									id="close-dialog"
 									onClick={handleClose}>
-									✖️ Cerrar ventana
+									<span className="flex items-center justify-center gap-1 font-nomal">
+										<img src={close2} alt=" close-icon" />{" "}
+										Cerrar ventana
+									</span>
 								</button>
 							</div>
 						</div>

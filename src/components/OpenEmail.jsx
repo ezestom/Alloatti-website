@@ -1,3 +1,5 @@
+import ok from "../icons/ok.png";
+
 export const OpenEmail = ({ data }) => {
 	if (!data || !data[0]) {
 		return (
@@ -34,8 +36,11 @@ export const OpenEmail = ({ data }) => {
 			onClick={sendEmail}
 			className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 w-full text-lg"
 			id="close-dialog">
-			✔️ Consultar por {"-> "}
-			{modelo}
+			<span className="flex items-center justify-center gap-1">
+				<img src={ok} alt=" ok-icon" />
+				Consultar por {"-> "}
+				{modelo}
+			</span>
 		</button>
 	);
 };

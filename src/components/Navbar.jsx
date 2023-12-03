@@ -77,7 +77,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/BidonesRetornables"
+										to="/bidones-retornables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Bidones Retornables
 									</Link>
@@ -85,7 +85,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/BidonesDescartables"
+										to="/bidones-descartables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Bidones Descartables
 									</Link>
@@ -93,7 +93,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/Accesorios"
+										to="/accesorios"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Accesorios
 									</Link>
@@ -115,7 +115,7 @@ export function Navbar() {
 					<li>
 						<Link
 							onClick={scrollToTop}
-							to="/PreguntasFrecuentes"
+							to="/preguntas-frecuentes"
 							className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsFillQuestionSquareFill />
 							Preguntas Frecuentes
@@ -138,7 +138,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/Normas"
+										to="/normas-de-calidad"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Normas de calidad
 									</Link>
@@ -146,7 +146,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/UltimasNoticias"
+										to="/ultimas-noticias"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										Últimas noticias
 									</Link>
@@ -156,7 +156,7 @@ export function Navbar() {
 						<li>
 							<Link
 								onClick={scrollToTop}
-								to="/Contacto"
+								to="/contacto"
 								className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<BsFillChatRightTextFill />
 								Contacto
@@ -173,14 +173,11 @@ export function Navbar() {
 					<svg
 						className="w-5 h-5"
 						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 14 10">
 						<path
 							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeWidth="1"
 							d="M1 5h12m0 0L9 1m4 4L9 9"
 						/>
 					</svg>

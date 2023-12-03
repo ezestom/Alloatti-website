@@ -1,15 +1,5 @@
 import { Link } from "react-router-dom";
-
 import { ThemeButton } from "./ThemeButton";
-import { GiNetworkBars } from "react-icons/gi";
-import { FaPrescriptionBottle } from "react-icons/fa";
-import { CiPillsBottle1 } from "react-icons/ci";
-import {
-	BsBriefcaseFill,
-	BsFillChatRightTextFill,
-	BsFillQuestionSquareFill,
-} from "react-icons/bs";
-import { SiPagseguro } from "react-icons/si";
 
 export function NavbarMobile() {
 	const scrollToTop = () => {
@@ -62,7 +52,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/Nosotros"
+							to="/nosotros"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<svg width="35" height="35" viewBox="0 0 24 24">
 								<path
@@ -77,13 +67,9 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/PreguntasFrecuentes"
+							to="/preguntas-frecuentes"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="35"
-								height="35"
-								viewBox="0 0 24 24">
+							<svg width="35" height="35" viewBox="0 0 24 24">
 								<path
 									fill="#666666"
 									d="M12 23q-2.8 0-5.15-1.275T3 18.325V21H1v-6h6v2H4.525q1.2 1.8 3.163 2.9T12 21q1.875 0 3.513-.713t2.85-1.924q1.212-1.213 1.925-2.85T21 12h2q0 2.275-.863 4.275t-2.362 3.5q-1.5 1.5-3.5 2.363T12 23ZM1 12q0-2.275.863-4.275t2.362-3.5q1.5-1.5 3.5-2.362T12 1q2.8 0 5.15 1.275t3.85 3.4V3h2v6h-6V7h2.475q-1.2-1.8-3.163-2.9T12 3q-1.875 0-3.513.713t-2.85 1.924Q4.426 6.85 3.714 8.488T3 12H1Zm11 6q.525 0 .888-.363t.362-.887q0-.525-.363-.9T12 15.475q-.525 0-.888.363t-.362.887q0 .525.363.9T12 18Zm-.9-3.8h1.825q0-.9.213-1.35t.862-1.1q.875-.875 1.163-1.413t.287-1.287q0-1.4-1-2.225T12 6q-1.25 0-2.15.65T8.55 8.5l1.65.7q.175-.65.663-1.075T12 7.7q.675 0 1.137.388t.463 1.037q0 .425-.2.85t-.85 1q-.825.725-1.137 1.413T11.1 14.2Z"
@@ -96,7 +82,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/Normas"
+							to="/normas-de-calidad"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<svg width="35" height="35" viewBox="0 0 24 24">
 								<path
@@ -111,7 +97,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/UltimasNoticias"
+							to="/ultimas-noticias"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<svg width="35" height="35" viewBox="0 0 24 24">
 								<path
@@ -126,7 +112,7 @@ export function NavbarMobile() {
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
-							to="/Contacto"
+							to="/contacto"
 							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
 							<svg width="35" height="35" viewBox="0 0 24 24">
 								<path
@@ -147,14 +133,11 @@ export function NavbarMobile() {
 					<svg
 						className="w-5 h-5"
 						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 14 10">
 						<path
 							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeWidth="1"
 							d="M1 5h12m0 0L9 1m4 4L9 9"
 						/>
 					</svg>

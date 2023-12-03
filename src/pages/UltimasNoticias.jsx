@@ -44,11 +44,11 @@ export function UltimasNoticias() {
 						<Link
 							target="_blank"
 							to="https://docs.google.com/presentation/d/1V037vKTmnGZCmRs8LkFWctZsFL3bLrEUZFudSfnOZbA/edit?usp=sharing"
-							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center ">
+							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center gap-1 ">
+							Descargar catálogo PDF{" "}
 							<svg
-								className="w-4 h-6 mr-2"
+								className="w-4 "
 								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 16 18">
 								<path
@@ -59,7 +59,6 @@ export function UltimasNoticias() {
 									d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
 								/>
 							</svg>
-							Descargar catálogo PDF
 						</Link>
 					</figure>
 					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2">

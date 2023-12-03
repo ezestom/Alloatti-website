@@ -37,28 +37,24 @@ export function Contacto() {
 							<path
 								fill="none"
 								stroke="#000000"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeWidth="2"
 								d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Zm4 0h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
 							/>
 						</svg>
 						Contactanos
 					</h1>
 					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
-						¿Tiene alguna pregunta sobre nuestra maquinaria para el
+						¿Tenés alguna pregunta sobre nuestra maquinaria para el
 						procesamiento de bidones retornables y descartables? No
-						dude en ponerse en contacto con nosotros. Estamos aquí
-						para ayudarlo a encontrar la solución que mejor se
-						adapte a sus necesidades. Complete el formulario a
-						continuación con su nombre, dirección de correo
-						electrónico y consulta, y nos comunicaremos con usted lo
-						antes posible.
+						dudes en ponerte en contacto con nosotros. Estamos aquí
+						para ayudarte a encontrar la solución que mejor se
+						adapte a tus necesidades. ¡Esperamos con interés
+						escuchar de vos!
 					</p>
 					<figure className="w-full flex justify-between items-center my-10 shadow-lg rounded-lg">
 						<figcaption className="w-1/2 text-center p-10 flex-wrap">
 							<h1 className="text-3xl font-bold text-gray-600 pb-2">
-								Nuestras asesores
+								Nuestras asesoras
 							</h1>
 							<p className="text-gray-500 dark:text-gray-400">
 								Están para ayudarte en lo que necesites.
@@ -67,17 +63,19 @@ export function Contacto() {
 						<img className="w-1/2 rounded-lg" src={chat} alt="" />
 					</figure>
 
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5">
-						¿Interesado en adquirir nuestras avanzadas líneas de
-						producción o deseas obtener información detallada sobre
-						nuestras máquinas y servicios? Te invitamos a
-						contactarnos. Proporcione su nombre, dirección de correo
-						electrónico y los detalles de su consulta en el
+					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-lg">
+						¿Estás interesado en adquirir nuestras avanzadas líneas
+						de producción o deseas obtener información detallada
+						sobre nuestras máquinas y servicios? Te invitamos a
+						contactarnos. Proporcionanos tu nombre, dirección de
+						correo electrónico y los detalles de tu consulta en el
 						formulario a continuación. Nuestro equipo comercial se
-						encargará de brindarte la información que necesitas para
+						encargará de brindarte la información que necesitás para
 						tomar decisiones informadas.
 					</p>
-					<InputData />
+					<div className="w-full flex justify-center items-center px-1 my-20">
+						<InputData />
+					</div>
 				</article>
 			</section>
 		</>

@@ -9,29 +9,31 @@ import { Contacto } from "./pages/Contacto.jsx";
 import { PreguntasFrecuentes } from "./pages/PreguntasFrecuentes.jsx";
 import { Accesorios } from "./pages/Accesorios.jsx";
 import { Normas } from "./pages/Normas.jsx";
+import { Gracias } from "./pages/Gracias.jsx";
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Inicio />} />
 				<Route path="*" element={<Error />} />
-				<Route path="/Nosotros" element={<Nosotros />} />
+				<Route path="/nosotros" element={<Nosotros />} />
 				<Route
-					path="/BidonesRetornables"
+					path="/bidones-retornables"
 					element={<BidonesRetornables />}
 				/>
 				<Route
-					path="/BidonesDescartables"
+					path="/bidones-descartables"
 					element={<BidonesDescartables />}
 				/>
-				<Route path="/Accesorios" element={<Accesorios />} />
-				<Route path="/Normas" element={<Normas />} />
-				<Route path="UltimasNoticias" element={<UltimasNoticias />} />
-				<Route path="/Contacto" element={<Contacto />} />
+				<Route path="/accesorios" element={<Accesorios />} />
+				<Route path="/normas-de-calidad" element={<Normas />} />
+				<Route path="/ultimas-noticias" element={<UltimasNoticias />} />
+				<Route path="/contacto" element={<Contacto />} />
 				<Route
-					path="/PreguntasFrecuentes"
+					path="/preguntas-frecuentes"
 					element={<PreguntasFrecuentes />}
 				/>
+				<Route path="/gracias" element={<Gracias />} />
 			</Routes>
 		</BrowserRouter>
 	);
