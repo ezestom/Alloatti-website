@@ -2,6 +2,7 @@ import { Base } from "../components/Base";
 import InputData from "../components/InputData";
 import { useTheme } from "../context/ThemeContext";
 import chat from "../img/chat.webp";
+import MapComponent from "../components/MapComponent";
 
 export function Contacto() {
 	const { isDarkTheme } = useTheme();
@@ -51,16 +52,26 @@ export function Contacto() {
 						adapte a tus necesidades. ¡Esperamos con interés
 						escuchar de vos!
 					</p>
-					<figure className="w-full flex justify-between items-center my-10 shadow-lg rounded-lg">
-						<figcaption className="w-1/2 text-center p-10 flex-wrap">
-							<h1 className="text-3xl font-bold text-gray-600 pb-2">
-								Nuestras asesoras
-							</h1>
-							<p className="text-gray-500 dark:text-gray-400">
-								Están para ayudarte en lo que necesites.
-							</p>
+					<figure className="w-full flex flex-col items-center my-20 bg-transparent">
+						<h1 className="text-5xl font-bold text-gray-600 pb-2 underline underline-offset-4 decoration-4 decoration-blue-400">
+							Nuestras asesoras
+						</h1>
+						<p className="text-gray-500 dark:text-gray-400 my-2">
+							Están para ayudarte en lo que necesites.
+						</p>
+						<figcaption className="flex text-center py-10 flex-wrap">
+							<div className="w-1/2 pl-1 min-w-[400px]pr-1 ">
+								<img
+									className=" rounded-lg h-full w-full object-cover"
+									src={chat}
+									alt=""
+								/>
+							</div>
+
+							<div className="w-1/2 pl-1 min-w-[400px]">
+								<MapComponent />
+							</div>
 						</figcaption>
-						<img className="w-1/2 rounded-lg" src={chat} alt="" />
 					</figure>
 
 					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-lg">
