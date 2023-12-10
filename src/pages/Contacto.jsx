@@ -53,22 +53,25 @@ export function Contacto() {
 						escuchar de vos!
 					</p>
 					<figure className="w-full flex flex-col items-center my-20 bg-transparent">
-						<h1 className="text-5xl font-bold text-gray-600 pb-2 underline underline-offset-4 decoration-4 decoration-blue-400">
+						<h2
+							className={`${
+								isDarkTheme ? "text-white" : "text-gray-900"
+							} text-3xl md:text-5xl font-extrabold mb-2`}>
 							Nuestras asesoras
-						</h1>
-						<p className="text-gray-500 dark:text-gray-400 my-2">
+						</h2>
+						<p className="text-xl  text-gray-500 dark:text-gray-400 my-2">
 							Están para ayudarte en lo que necesites.
 						</p>
-						<figcaption className="flex text-center py-10 flex-wrap">
-							<div className="w-1/2 pl-1 min-w-[400px]pr-1 ">
-								<img
-									className=" rounded-lg h-full w-full object-cover"
-									src={chat}
-									alt=""
-								/>
-							</div>
+						<figcaption className="flex text-center items-center justify-center py-10 flex-wrap w-full gap-5">
+							<div className=" grid w-full gap-10">
+								<div className="w-full flex justify-end">
+									<img
+										className=" rounded-lg "
+										src={chat}
+										alt=""
+									/>
+								</div>
 
-							<div className="w-1/2 pl-1 min-w-[400px]">
 								<MapComponent />
 							</div>
 						</figcaption>
