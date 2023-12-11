@@ -91,6 +91,7 @@ export function PreguntasFrecuentes() {
 					</p>
 					<div className="bg-gray-100 p-4 rounded-lg shadow-md my-10 ">
 						<Details
+							name={name}
 							question={
 								"Pregunta: ¿Cuánto tiempo lleva Alloatti SRL en el mercado de maquinaria para bidones?"
 							}
@@ -99,6 +100,7 @@ export function PreguntasFrecuentes() {
 							}
 						/>
 						<Details
+							name={name}
 							question={
 								"Pregunta: ¿Cuáles son algunas de las características destacadas de las máquinas ofrecidas por Alloatti SRL?"
 							}
@@ -107,6 +109,7 @@ export function PreguntasFrecuentes() {
 							}
 						/>
 						<Details
+							name={name}
 							question={
 								"Pregunta: ¿Qué capacidad de producción tienen las líneas de producción de Alloatti SRL?"
 							}
@@ -115,6 +118,7 @@ export function PreguntasFrecuentes() {
 							}
 						/>
 						<Details
+							name={name}
 							question={
 								"Pregunta: ¿Qué novedades ha incorporado Alloatti SRL?"
 							}
@@ -123,6 +127,7 @@ export function PreguntasFrecuentes() {
 							}
 						/>
 						<Details
+							name={name}
 							question={
 								"Pregunta: ¿Cómo garantiza Alloatti SRL la calidad e higiene en el procesamiento de bidones?"
 							}

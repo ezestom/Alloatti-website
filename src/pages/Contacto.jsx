@@ -29,7 +29,7 @@ export function Contacto() {
 						</svg>
 						Contacte con nosotros
 					</span>
-					<h1 className="md:text-5xl flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md items-center">
+					<h1 className=" md:text-5xl  flex py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md items-center">
 						<svg
 							className="mx-1"
 							width="45"

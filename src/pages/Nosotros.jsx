@@ -47,7 +47,7 @@ export function Nosotros() {
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl px-1 `}>
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+							<span className="underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">
 								<strong>Alloatti SRL:</strong>
 							</span>{" "}
 							nuestra empresa está dirigida por{" "}
