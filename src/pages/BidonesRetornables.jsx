@@ -87,7 +87,7 @@ export function BidonesRetornables() {
 						nuestras líneas de producción abarcan capacidades desde
 						120 bidones por hora hasta 1000 bidones por hora.
 					</p>
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5">
+					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5 rounded-lg">
 						Garantizamos un tiempo de lavado total de 2 minutos para
 						cada bidón, asegurando una limpieza completa tanto en el
 						interior como en el exterior, incluyendo la boca del

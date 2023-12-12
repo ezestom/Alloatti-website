@@ -10,7 +10,7 @@ export const OpenEmail = ({ data }) => {
 		);
 	}
 
-	const { modelo, producción_max } = data[0];
+	const { modelo } = data[0];
 
 	const sendEmail = () => {
 		const destinatario = "ezequielstom@gmail.com";

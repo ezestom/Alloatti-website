@@ -2,13 +2,17 @@ import { useState } from "react";
 import { OpenEmail } from "./OpenEmail";
 import close from "../icons/close.png";
 import close2 from "../icons/close2.png";
+import { data } from "autoprefixer";
 
-export function CardAccesories({
+export function CardMachines({
 	model,
 	img,
 	onClose,
-	characteristics,
-	description,
+	production_max,
+	washing_time,
+	size,
+	accesories,
+	build,
 }) {
 	const [isShow, setIsShow] = useState(true);
 
@@ -22,28 +26,30 @@ export function CardAccesories({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[60%] max-h-[90%] ">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[60%] max-h-[90%] p-2">
 						<img
-							className=" max-h-[50%] w-full object-cover  rounded-lg "
+							className="max-h-[60%] object-contain w-full"
 							src={img}
 							alt={model}
 						/>
-
 						<button
 							className="absolute top-0 right-0 bg-white rounded-md rounded-br-none  rounded-tl-none  p-1 hover:bg-gray-200 hover:cursor-pointer"
 							onClick={handleClose}>
 							<img src={close} alt="close-icon" />
 						</button>
-						<div className="flex flex-col items-center w-full mt-2 overflow-y-auto  ">
+						<div className="flex flex-col items-center w-full overflow-y-auto mt-2 ">
 							<div className="overflow-x-auto rounded-lg border border-gray-200 w-full">
 								<table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
 									<thead className=" flex-auto-row">
 										<tr>
-											<th className=" w-1/2 p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
-												Accesorio
+											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100 text-center text-gray-900">
+												Modelo
 											</th>
 											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Carracterísticas
+												Producción máxima
+											</th>
+											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+												Tiempo de lavado
 											</th>
 										</tr>
 									</thead>
@@ -53,22 +59,42 @@ export function CardAccesories({
 												{model}
 											</td>
 											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{characteristics}
+												{production_max}
+											</td>
+											<td className="  p-2 text-center font-semibold  text-gray-500">
+												{washing_time}
+											</td>
+										</tr>
+									</tbody>
+
+									<thead className="ltr:text-left rtl:text-right">
+										<tr>
+											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+												Construida
+											</th>
+											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+												Dimensiones
+											</th>
+											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+												Accesorios
+											</th>
+										</tr>
+									</thead>
+
+									<tbody className="divide-y divide-gray-200">
+										<tr>
+											<td className="  p-2 text-center font-semibold  text-gray-500">
+												{build}
+											</td>
+											<td className="  p-2 text-center font-semibold  text-gray-500">
+												{size}
+											</td>
+											<td className="  p-2 text-center font-semibold  text-gray-500">
+												{accesories}
 											</td>
 										</tr>
 									</tbody>
 								</table>
-								<aside className="w-full grid items-center">
-									<article className="w-full  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
-										Descripción
-									</article>
-
-									<article className=" w-full flex justify-center text- p-2 text-center text-wrap font-normal  text-gray-500 ">
-										<p className="max-w-[75ch] ">
-											{description}
-										</p>
-									</article>
-								</aside>
 							</div>
 							<div className="w-full absolute bottom-0 rounded-lg">
 								<OpenEmail
@@ -76,6 +102,7 @@ export function CardAccesories({
 										[
 											{
 												modelo: model,
+												producción_max: production_max,
 											},
 										] || []
 									}

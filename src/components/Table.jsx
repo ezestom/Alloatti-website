@@ -1,7 +1,7 @@
 import machine from "../img/gallon-water.jpg";
-import PropTypes from "prop-types";
-import { CardAccesories } from "./CardAccesories";
-import {  useState } from "react";
+// import PropTypes from "prop-types";
+import { CardMachines } from "./CardMachines";
+import { useState } from "react";
 
 export function Table({ data }) {
 	const [selectedBidones, setSelectedBidones] = useState(null);
@@ -9,24 +9,19 @@ export function Table({ data }) {
 	const handleOpen = (bidones) => {
 		setSelectedBidones(bidones);
 	};
-	const handleClose = () => {
-		setSelectedBidones(null);
-	};
 
-		
-
-	Table.propTypes = {
-		data: PropTypes.arrayOf(
-			PropTypes.shape({
-				id: PropTypes.string.isRequired,
-				modelo: PropTypes.string.isRequired,
-				producción_max: PropTypes.string.isRequired,
-			})
-		).isRequired,
-	};
+	// Table.propTypes = {
+	// 	data: PropTypes.arrayOf(
+	// 		PropTypes.shape({
+	// 			id: PropTypes.string.isRequired,
+	// 			modelo: PropTypes.string.isRequired,
+	// 			producción_max: PropTypes.string.isRequired,
+	// 		})
+	// 	).isRequired,
+	// };
 
 	return (
-		<div className=" overflow-x-auto shadow-md rounded-lg my-10 border-2 border-blue-400 table-container">
+		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200  ">
 			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto relative ">
 				<caption
 					onClick={() => handleOpen(data[0])}
@@ -85,7 +80,7 @@ export function Table({ data }) {
 
 			{selectedBidones && (
 				<div>
-					<CardAccesories
+					<CardMachines
 						img={machine}
 						model={selectedBidones.modelo}
 						production_max={selectedBidones.producción_max}
@@ -93,7 +88,6 @@ export function Table({ data }) {
 						build={selectedBidones.construida}
 						size={selectedBidones.dimensiones}
 						accesories={selectedBidones.accesorios}
-						handleClose={handleClose}
 					/>
 				</div>
 			)}

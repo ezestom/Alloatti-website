@@ -8,8 +8,6 @@ export function Card({
 	date,
 	location,
 }) {
-
-	
 	return (
 		<>
 			<Link
@@ -55,7 +53,6 @@ export function Card({
 						<dt className="text-sm font-medium text-gray-600">
 							{location}
 						</dt>
-						{/* <dd className="text-xs text-gray-500">{}</dd> */}
 					</div>
 				</dl>
 			</Link>

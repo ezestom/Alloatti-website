@@ -3,7 +3,6 @@ import { Card } from "../components/Card";
 import { Data } from "../components/Data";
 import { useTheme } from "../context/ThemeContext";
 
-
 export function Nosotros() {
 	const { isDarkTheme } = useTheme();
 	return (

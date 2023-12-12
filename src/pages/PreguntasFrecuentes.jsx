@@ -1,15 +1,17 @@
 import { Base } from "../components/Base";
 import { Details } from "../components/Details";
 import { useTheme } from "../context/ThemeContext";
-import image from "../img/1.jpg";
+import image1 from "../img/6.jpg";
 import image2 from "../img/2.jpg";
-import image5 from "../img/5.jpg";
-import image6 from "../img/7.jpg";
-import image7 from "../img/9.jpg";
-import image12 from "../img/12.jpg";
+import image3 from "../img/12.jpg";
+import image4 from "../img/3.jpg";
+import image5 from "../img/2.jpg";
+import image6 from "../img/1.webp";
 
 export function PreguntasFrecuentes() {
 	const { isDarkTheme } = useTheme();
+
+	const images = [image1, image2, image3, image4, image5, image6];
 
 	return (
 		<>
@@ -25,7 +27,7 @@ export function PreguntasFrecuentes() {
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
 							{" "}
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+							<span className="underline underline-offset-3 decoration-8 decoration-blue-400">
 								Preguntas y respuestas
 							</span>{" "}
 							frecuentes de nuestros clientes{" "}
@@ -39,41 +41,19 @@ export function PreguntasFrecuentes() {
 							completa para que disfrutes de una experiencia aún
 							más enriquecedora con nosotros.
 						</p>
-						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-2 shadow-md p-5 ">
-							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80 "
-								src={image12}
-								alt="máquina trabajando"
-							/>
-							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
-								src={image2}
-								alt="máquina trabajando"
-							/>
-							<img
-								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
-								src={image5}
-								alt="máquina trabajando"
-							/>
-							<img
-								className="   rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
-								src={image6}
-								alt="máquina trabajando"
-							/>
-							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
-								src={image7}
-								alt="máquina trabajando"
-							/>
-							<img
-								className="  rounded-lg max-w-xs shadow-ld h-full aspect-ratio opacity-80  "
-								src={image}
-								alt="máquina trabajando"
-							/>
+						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-5 shadow-md py-2 ">
+							{images.map((image, index) => (
+								<img
+									key={index}
+									src={image}
+									className="  rounded-lg max-w-xs shadow-ld h-full aspect-square object-cover 	md:w-[250px] opacity-90 "
+									alt={index}
+								/>
+							))}
 						</figure>
 					</div>
 
-					<p className="text-lg border-l-4 border-blue-400 px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+					<p className="text-lg border-l-4  border-blue-400 px-2 font-normal text-gray-500 lg:text-xl rounded-lg">
 						Nuestro{" "}
 						<strong>centro de preguntas y respuestas</strong> es una
 						valiosa herramienta diseñada para proporcionar

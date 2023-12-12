@@ -25,7 +25,7 @@ export function UltimasNoticias() {
 								descargando nuestro catálogo de productos{" "}
 							</span>{" "}
 						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400  px-2">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400  px-2 rounded-lg">
 							Descubre una amplia gama de información que te
 							permitirá explorar a fondo lo que ofrecemos.
 						</p>
@@ -61,7 +61,7 @@ export function UltimasNoticias() {
 							</svg>
 						</Link>
 					</figure>
-					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2">
+					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2 rounded-lg">
 						Además, te invitamos a leer la nota que realizó el
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.

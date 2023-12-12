@@ -2,55 +2,73 @@ export const accesorios = {
 	sectionData1: [
 		{
 			name: "TOLVA",
-			carateristicas: "Capacidad 500 tapas",
+			characteristics: "Capacidad 30 tapas",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData2: [
 		{
 			name: "JIRAFA ",
-			carateristicas: "Capacidad 500 tapas",
+			characteristics: "Capacidad 500 tapas",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData3: [
 		{
 			name: "CARGADOR AUTOMÁTICO",
-			carateristicas: "Con cinta de carga a medida",
+			characteristics: "Con cinta de carga a medida",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData4: [
 		{
 			name: "SACATAPAS MANUAL",
-			carateristicas: "-",
+			characteristics: "-",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData5: [
 		{
 			name: "SACATAPAS AUTOMÁTICO",
-			carateristicas: "Retira 600 tapas retornables p/h",
+			characteristics: "Retira 600 tapas retornables p/h",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData6: [
 		{
 			name: "PANTALLA Y APP",
-			carateristicas: "Conectividad a internet",
+			characteristics: "Conectividad a internet",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData7: [
 		{
 			name: "PRE LAVADORA SOLO EXTERIOR",
-			carateristicas: "600 bidones retornables p/h",
+			characteristics: "600 bidones retornables p/h",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData8: [
 		{
 			name: "PRE LAVADORA SOLO INTERIOR",
-			carateristicas: "600 bidones retornables p/h",
+			characteristics: "600 bidones retornables p/h",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 	sectionData9: [
 		{
 			name: "PRE LAVADORA INTERIOR Y EXTERIOR",
-			carateristicas: "600 bidones retornables p/h",
+			characteristics: "600 bidones retornables p/h",
+			description:
+				" Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario. Aca va la descripcion del proucto seleccionado y sus caracteristicas para brindar un poco más de información al usuario.",
 		},
 	],
 };

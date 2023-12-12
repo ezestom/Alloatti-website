@@ -64,7 +64,7 @@ export function TableAccesories() {
 								</strong>
 							</td>
 							<td className="flex-nowrap bg-gray-100 px-1 py-2 text-gray-700 text-center">
-								{sectionData[0].carateristicas}
+								{sectionData[0].characteristics}
 							</td>
 							<td className="flex-nowrap px-4 py-2 text-center bg-gray-200">
 								<button
@@ -81,8 +81,9 @@ export function TableAccesories() {
 			</table>
 			{selectedAccesory && (
 				<CardAccesories
-					title={selectedAccesory.name}
-					info={selectedAccesory.carateristicas}
+					model={selectedAccesory.name}
+					characteristics={selectedAccesory.characteristics}
+					description={selectedAccesory.description}
 					img={img}
 					isOpen={true}
 					onClose={handleCardClose}

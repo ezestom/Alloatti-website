@@ -45,7 +45,7 @@ export function Home() {
 							</span>{" "}
 							de bidones de agua potable{" "}
 						</h1>
-						<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+						<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400 rounded-lg">
 							Elevando estándares, garantizando pureza: tu socio
 							en transformación industrial. Con tecnología
 							vanguardista y compromiso incansable, creamos el
@@ -157,7 +157,7 @@ export function Home() {
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
 										Características que destacan nuestras
-										máquinas
+										máquinas de bidones retornables
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
@@ -194,7 +194,7 @@ export function Home() {
 									</div>
 
 									<Link
-										to="/BidonesRetornables"
+										to="/bidones-retornables"
 										onClick={handleClick}
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
@@ -223,17 +223,12 @@ export function Home() {
 											className="w-2.5 h-2.5 mr-1.5"
 											aria-hidden="true"
 											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 20 16">
-											<path
-												stroke="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="2"
-												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
-											/>
+											fill="currentColor"
+											viewBox="0 0 18 18">
+											<path d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
 										</svg>
-										Accesorios
+										Carácteristicas de las máquinas de
+										bidones descartables
 									</span>
 									<h2
 										className={`${
@@ -241,8 +236,8 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Potencie al máximo su máquina con estos
-										imprescindibles accesorios
+										Características que destacan nuestras
+										máquinas de bidones descartables
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
@@ -258,7 +253,7 @@ export function Home() {
 											bidones vacíos
 										</p>
 										<p className="mb-2">
-											{/* &#8226; Precintador automático */}
+											&#8226; Precintador automático
 										</p>
 										<p className="mb-2">
 											&#8226; Pantalla con conectividad a
@@ -278,7 +273,7 @@ export function Home() {
 
 									<Link
 										onClick={handleClick}
-										to="/Accesorios"
+										to="/bidones-descartables"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
 										<svg
@@ -325,7 +320,8 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Nueva maquinaria en desarrollo
+										Potencie al máximo su máquina con estos
+										imprescindibles accesorios
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
@@ -361,7 +357,7 @@ export function Home() {
 
 									<Link
 										onClick={handleClick}
-										to="/Accesorios"
+										to="/accesorios"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
 										<svg
@@ -399,7 +395,7 @@ export function Home() {
 												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
 											/>
 										</svg>
-										Próximanente
+										Próximanente innovación en máquinaria
 									</span>
 									<h2
 										className={`${

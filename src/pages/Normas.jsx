@@ -51,7 +51,7 @@ export function Normas() {
 						niveles estén dentro de los límites establecidos en el
 						Anexo A del Marco Regulatorio – Ley Nº 26.221.
 					</p>
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5">
+					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5 rounded-lg">
 						El ERAS por su parte fiscaliza dicho control,
 						verificando el cumplimiento del control de la
 						Concesionaria AySA, realizando análisis y mediciones

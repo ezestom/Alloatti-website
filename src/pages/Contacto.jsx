@@ -2,7 +2,6 @@ import { Base } from "../components/Base";
 import InputData from "../components/InputData";
 import { useTheme } from "../context/ThemeContext";
 import chat from "../img/chat.webp";
-import MapComponent from "../components/MapComponent";
 
 export function Contacto() {
 	const { isDarkTheme } = useTheme();
@@ -62,17 +61,15 @@ export function Contacto() {
 						<p className="text-xl  text-gray-500 dark:text-gray-400 my-2">
 							Están para ayudarte en lo que necesites.
 						</p>
-						<figcaption className="flex text-center items-center justify-center py-10 flex-wrap w-full gap-5">
-							<div className=" grid w-full gap-10">
-								<div className="w-full flex justify-end">
+						<figcaption className="flex text-center items-center justify-center py-10 flex-wrap w-full ">
+							<div className=" grid w-full gap-5">
+								<div className="w-full shadow-lg rounded-lg flex justify-end">
 									<img
 										className=" rounded-lg "
 										src={chat}
 										alt=""
 									/>
 								</div>
-
-								<MapComponent />
 							</div>
 						</figcaption>
 					</figure>
