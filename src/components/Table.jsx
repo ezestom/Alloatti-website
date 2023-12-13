@@ -10,13 +10,6 @@ export function Table({ data }) {
 		document.body.style.overflow = "hidden";
 	};
 
-	const dataSinUltimaColumna = data.map((row) => {
-		const copiaRow = { ...row };
-		const ultimaClave = Object.keys(copiaRow).pop();
-		delete copiaRow[ultimaClave];
-		return copiaRow;
-	});
-
 	return (
 		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200  ">
 			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto relative ">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ThemeButton } from "./ThemeButton";
+import { MachinesButtonsMobile } from "./MachinesButtonsMobile";
 
 export function NavbarMobile() {
 	const scrollToTop = () => {
@@ -12,8 +13,9 @@ export function NavbarMobile() {
 		<div className=" z-10 fixed w-screen  bottom-0 flex justify-around items-center">
 			<ThemeButton />
 
+			<MachinesButtonsMobile />
 			<div>
-				<ul className="flex w-screen justify-around  bg-white rounded-lg">
+				<ul className="flex w-screen justify-around  bg-white ">
 					<li className="list-none">
 						<Link
 							onClick={scrollToTop}
@@ -28,26 +30,6 @@ export function NavbarMobile() {
 							<span className="text-xs">Inicio</span>
 						</Link>
 					</li>
-
-					{/* <li className="list-none">
-						<Link
-							onClick={scrollToTop}
-							to="/BidonesRetornables"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
-							<FaPrescriptionBottle className="text-2xl" />
-							<span className="text-xs ">Retornables</span>
-						</Link>
-					</li>
-
-					<li className="list-none">
-						<Link
-							onClick={scrollToTop}
-							to="/BidonesDescartables"
-							className=" rounded-lg  py-2 text-sm font-medium  grid place-items-center text-gray-500 ">
-							<CiPillsBottle1 className="text-2xl" />
-							<span className="text-xs ">Descartables</span>
-						</Link>
-					</li> */}
 
 					<li className="list-none">
 						<Link
@@ -125,11 +107,11 @@ export function NavbarMobile() {
 					</li>
 				</ul>
 			</div>
-			<div className="fixed bottom-20 bg-red- right-0 z-10">
+			<div className="fixed bottom-28 bg-red- right-0 z-10">
 				<button
 					onClick={scrollToTop}
 					type="button"
-					className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2 dark:bg-blue-600 -rotate-90 border z-20 ">
+					className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2  -rotate-90 border z-20 ">
 					<svg
 						className="w-5 h-5"
 						aria-hidden="true"
