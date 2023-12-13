@@ -50,7 +50,7 @@ export function Table({ data }) {
 						/>
 					</svg>
 				</caption>
-				<thead className="text-xs text-blue-700 uppercase bg-gray-50 ">
+				<thead className="text-xs text-gray-900 uppercase bg-gray-50 ">
 					<tr className="">
 						{Object.keys(data[0]).map((column, index) => (
 							<th

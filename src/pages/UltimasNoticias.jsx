@@ -30,7 +30,7 @@ export function UltimasNoticias() {
 							permitirá explorar a fondo lo que ofrecemos.
 						</p>
 					</div>
-					<figure className="w-full py-20 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
+					<figure className="w-full py-10 px-6 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={imgCatalogo}
 							alt="Imagen del catálogo"
@@ -66,7 +66,7 @@ export function UltimasNoticias() {
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.
 					</p>
-					<figure className="w-full py-20 my-10 flex flex-col justify-center items-center  bg-gray-100 rounded-lg shadow-lg">
+					<figure className="w-full px-6 py-10 my-10 flex flex-col justify-center items-center  bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={infobae}
 							alt="Imagen de la noticia"
