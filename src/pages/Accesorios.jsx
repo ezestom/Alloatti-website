@@ -23,7 +23,7 @@ export function Accesorios() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
 					<span
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">

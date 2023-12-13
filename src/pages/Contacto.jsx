@@ -12,7 +12,7 @@ export function Contacto() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
 					<span
 						href="#"
 						className="bg-green-100 pl-2 text-green-800 text-xs font-medium flex items-center  py-0.5 rounded-md  dark:text-green-400 mb-2">

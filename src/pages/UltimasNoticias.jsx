@@ -13,7 +13,7 @@ export function UltimasNoticias() {
 				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0">
+				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
 					<div className="flex-col px-2">
 						<h1
 							className={`${
