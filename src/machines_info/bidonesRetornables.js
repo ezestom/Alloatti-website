@@ -8,6 +8,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "3 metros x 2 metros",
 			accesorios: "Ninguno",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData2: [
@@ -19,6 +21,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "3,7 metros x 2 metros",
 			accesorios: "Tolva",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData3: [
@@ -30,6 +34,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "4,2 metros x 2,3 metros",
 			accesorios: "Tolva",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData4: [
@@ -41,6 +47,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "5,4 metros x 3,2 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData5: [
@@ -52,6 +60,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "5,4 metros x 3,8 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData6: [
@@ -63,6 +73,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "6,4 metros x 3,8 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData7: [
@@ -74,6 +86,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "6,7 metros x 4,1 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData8: [
@@ -85,6 +99,8 @@ export const bidonesRetornables = {
 			construida: "Acero inoxidable",
 			dimensiones: "7 metros x 4,4 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 };

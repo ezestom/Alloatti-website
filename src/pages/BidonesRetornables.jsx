@@ -66,11 +66,11 @@ export function BidonesRetornables() {
 						</svg>
 						Máquinas automáticas {">"} Bidones Retornables
 					</span>
-					<h1 className="lg:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
+					<h1 className="text-2xl md:text-5xl flex items-center py-5 my-5 text-dark bg-gray-200 rounded-lg font-extrabold shadow-md   ">
 						<svg
 							className="mx-1"
-							width="45"
-							height="45"
+							width="35"
+							height="35"
 							viewBox="0 0 32 32">
 							<path
 								fill="#000000"

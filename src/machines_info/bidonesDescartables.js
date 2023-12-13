@@ -7,6 +7,8 @@ export const bidonesDescartables = {
 			construida: "Acero inoxidable",
 			dimensiones: "falta datos",
 			accesorios: "falta datos",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 	sectionData2: [
@@ -17,6 +19,8 @@ export const bidonesDescartables = {
 			construida: "Acero inoxidable",
 			dimensiones: "falta datos",
 			accesorios: "falta datos",
+			description:
+				"Aca va la descripción del modelo  y sus características principales, funcionamiento, etc. Cuando tengas tiempo me las vas pasando así queda más completo y entendible como son los equipos. Gracias",
 		},
 	],
 };

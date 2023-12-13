@@ -14,6 +14,7 @@ export function CardAccesories({
 
 	const handleClose = () => {
 		setIsShow(false);
+		document.body.style.overflow = "auto";
 		onClose();
 	};
 	return (
@@ -22,7 +23,7 @@ export function CardAccesories({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[50%] max-h-[95%] ">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[50%] max-h-[98%] ">
 						<img
 							className=" max-h-[40%] w-full object-cover rounded-lg "
 							src={img}
@@ -58,8 +59,8 @@ export function CardAccesories({
 										</tr>
 									</tbody>
 								</table>
-								<aside className="w-full grid items-center">
-									<article className="w-full  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
+								<aside className="w-full grid items-center divide-y divide-gray-200">
+									<article className="w-full   p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
 										Descripción
 									</article>
 

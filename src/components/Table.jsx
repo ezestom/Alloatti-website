@@ -1,5 +1,4 @@
 import machine from "../img/gallon-water.jpg";
-// import PropTypes from "prop-types";
 import { CardMachines } from "./CardMachines";
 import { useState } from "react";
 
@@ -8,17 +7,15 @@ export function Table({ data }) {
 
 	const handleOpen = (bidones) => {
 		setSelectedBidones(bidones);
+		document.body.style.overflow = "hidden";
 	};
 
-	// Table.propTypes = {
-	// 	data: PropTypes.arrayOf(
-	// 		PropTypes.shape({
-	// 			id: PropTypes.string.isRequired,
-	// 			modelo: PropTypes.string.isRequired,
-	// 			producción_max: PropTypes.string.isRequired,
-	// 		})
-	// 	).isRequired,
-	// };
+	const dataSinUltimaColumna = data.map((row) => {
+		const copiaRow = { ...row };
+		const ultimaClave = Object.keys(copiaRow).pop();
+		delete copiaRow[ultimaClave];
+		return copiaRow;
+	});
 
 	return (
 		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200  ">
@@ -40,9 +37,9 @@ export function Table({ data }) {
 						accesorios y construcción.
 					</p>
 					<svg
-						className="absolute top-5 right-5  bg-blue-50 rounded-lg p-2"
-						width="50"
-						height="50"
+						className="absolute top-0 right-0 border-1 bg-blue-50 rounded-md p-1"
+						width="40"
+						height="40"
 						viewBox="0 0 24 24">
 						<path
 							fill="#303030"
@@ -56,7 +53,11 @@ export function Table({ data }) {
 							<th
 								key={index}
 								scope="col"
-								className="px-1 py-3 text-center">
+								className={`px-1 py-3 text-center ${
+									index === Object.keys(data[0]).length - 1
+										? "hidden"
+										: "" // Oculta la última columna
+								}`}>
 								{column}
 							</th>
 						))}
@@ -68,7 +69,11 @@ export function Table({ data }) {
 							{Object.values(row).map((value, colIndex) => (
 								<td
 									key={colIndex}
-									className="px-2 text-center py-4  text-blue-900 font-bold whitespace-nowrap bg-blue-50 ">
+									className={`px-2 text-center py-4 text-blue-900 font-bold whitespace-nowrap bg-blue-50 ${
+										colIndex === Object.keys(row).length - 1
+											? "hidden"
+											: "" // Oculta la última columna
+									}`}>
 									{value}
 								</td>
 							))}
@@ -76,7 +81,6 @@ export function Table({ data }) {
 					))}
 				</tbody>
 			</table>
-			{console.log(selectedBidones)}
 
 			{selectedBidones && (
 				<div>
@@ -88,6 +92,9 @@ export function Table({ data }) {
 						build={selectedBidones.construida}
 						size={selectedBidones.dimensiones}
 						accesories={selectedBidones.accesorios}
+						description={selectedBidones.description}
+						isOpen={true}
+						onClose={() => setSelectedBidones(null)}
 					/>
 				</div>
 			)}

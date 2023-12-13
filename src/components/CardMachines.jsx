@@ -13,11 +13,13 @@ export function CardMachines({
 	size,
 	accesories,
 	build,
+	description,
 }) {
 	const [isShow, setIsShow] = useState(true);
 
 	const handleClose = () => {
 		setIsShow(false);
+		document.body.style.overflow = "auto";
 		onClose();
 	};
 	return (
@@ -26,7 +28,7 @@ export function CardMachines({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[95%] p-2">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[98%] p-2">
 						<img
 							className="max-h-[40%] object-contain w-full"
 							src={img}
@@ -95,6 +97,17 @@ export function CardMachines({
 										</tr>
 									</tbody>
 								</table>
+								<aside className="w-full grid items-center divide-y divide-gray-200 ">
+									<article className="w-full  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
+										Descripción
+									</article>
+
+									<article className="w-full flex justify-center p-2 text-center text-sm md:text-sm lg:text-base font-normal text-gray-500 overflow-y-auto">
+										<p className=" text-sm ">
+											{description}
+										</p>
+									</article>
+								</aside>
 							</div>
 							<div className="w-full absolute bottom-0 rounded-lg">
 								<OpenEmail

@@ -18,7 +18,7 @@ export function UltimasNoticias() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							}mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
+							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
 							Obtén más detalles sobre nuestra estrategia de
 							ventas{" "}
 							<span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">
@@ -53,9 +53,9 @@ export function UltimasNoticias() {
 								viewBox="0 0 16 18">
 								<path
 									stroke="currentColor"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
 									d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
 								/>
 							</svg>

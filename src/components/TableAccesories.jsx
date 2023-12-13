@@ -31,7 +31,7 @@ export function TableAccesories() {
 
 	const handleCardOpen = (accesory) => {
 		setSelectedAccesory(accesory);
-		console.log("accesory:", accesory);
+		document.body.style.overflow = "hidden";
 	};
 
 	const handleCardClose = () => {
