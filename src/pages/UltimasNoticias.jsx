@@ -18,14 +18,14 @@ export function UltimasNoticias() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
+							}mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
 							Obtén más detalles sobre nuestra estrategia de
 							ventas{" "}
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+							<span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">
 								descargando nuestro catálogo de productos{" "}
 							</span>{" "}
 						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400  px-2 rounded-lg">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400 my-6 px-2 rounded-lg">
 							Descubre una amplia gama de información que te
 							permitirá explorar a fondo lo que ofrecemos.
 						</p>

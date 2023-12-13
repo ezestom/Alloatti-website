@@ -36,9 +36,9 @@ export function Home() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
+							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl `}>
 							Líderes en innovación de{" "}
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400">
+							<span className="underline underline-offset-3 decoration-6 decoration-blue-400">
 								{" "}
 								máquinas lavadoras, enjuagadoras, llenadoras y
 								tapadoras{" "}
@@ -55,10 +55,10 @@ export function Home() {
 
 					<div className=" h-auto ">
 						<div className="p-1 m-10 mx-auto max-w-screen-xl ">
-							<div className=" flex-col flex justify-between dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 md:p-12 mb-8">
+							<div className=" flex-col flex justify-between  border border-gray-200 rounded-lg p-4 md:p-12 mb-8">
 								<span
 									href="#"
-									className="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
+									className="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										className="icon icon-tabler icon-tabler-bulb"
@@ -241,30 +241,31 @@ export function Home() {
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										<p className="mb-2">
-											&#8226; Sacatapas automático y
-											sacatapas manual
+											&#8226; Tiempo de enjuague ajustable
 										</p>
 										<p className="mb-2">
-											&#8226; Alimentador automático para
-											500 tapas
+											&#8226; Picos de enjuague interior
 										</p>
 										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones vacíos
+											&#8226; Colocador automático de
+											manijas
 										</p>
 										<p className="mb-2">
-											&#8226; Precintador automático
+											&#8226; Colocador automático de
+											tapas a rosca
 										</p>
 										<p className="mb-2">
-											&#8226; Pantalla con conectividad a
-											internet y app de celular
+											&#8226; Roscador automático
 										</p>
 										<p className="mb-2">
-											&#8226; Pre lavadora con cepillos
-											automáticos
+											&#8226; Pantalla táctil para
+											operación y control
 										</p>
 										<p className="mb-2">
-											<br />
+											<p>
+												&#8226; Diagnóstico inteligente
+												de eventuales fallas
+											</p>
 										</p>
 										<p className="mb-2">
 											<br />

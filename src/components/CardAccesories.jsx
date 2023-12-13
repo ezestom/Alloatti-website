@@ -22,9 +22,9 @@ export function CardAccesories({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[60%] max-h-[90%] ">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[50%] max-h-[95%] ">
 						<img
-							className=" max-h-[50%] w-full object-cover  rounded-lg "
+							className=" max-h-[40%] w-full object-cover rounded-lg "
 							src={img}
 							alt={model}
 						/>
@@ -63,10 +63,8 @@ export function CardAccesories({
 										Descripción
 									</article>
 
-									<article className=" w-full flex justify-center text- p-2 text-center text-wrap font-normal  text-gray-500 ">
-										<p className="max-w-[75ch] ">
-											{description}
-										</p>
+									<article className="w-full flex justify-center p-2 text-center text-sm md:text-sm lg:text-base font-normal text-gray-500 overflow-y-auto">
+										<p className=" ">{description}</p>
 									</article>
 								</aside>
 							</div>

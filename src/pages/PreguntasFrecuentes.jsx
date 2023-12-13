@@ -5,7 +5,7 @@ import image1 from "../img/6.jpg";
 import image2 from "../img/2.jpg";
 import image3 from "../img/12.jpg";
 import image4 from "../img/3.jpg";
-import image5 from "../img/2.jpg";
+import image5 from "../img/trabajador.jpg";
 import image6 from "../img/1.webp";
 
 export function PreguntasFrecuentes() {
@@ -25,9 +25,9 @@ export function PreguntasFrecuentes() {
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-5xl lg:text-6xl `}>
+							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
 							{" "}
-							<span className="underline underline-offset-3 decoration-8 decoration-blue-400">
+							<span className="underline underline-offset-3 decoration-6 decoration-blue-400">
 								Preguntas y respuestas
 							</span>{" "}
 							frecuentes de nuestros clientes{" "}

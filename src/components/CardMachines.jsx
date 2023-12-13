@@ -26,9 +26,9 @@ export function CardMachines({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[60%] max-h-[90%] p-2">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[95%] p-2">
 						<img
-							className="max-h-[60%] object-contain w-full"
+							className="max-h-[40%] object-contain w-full"
 							src={img}
 							alt={model}
 						/>

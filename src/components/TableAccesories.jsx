@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
-import img from "../img/1.jpg";
+import img from "../img/tubos.jpg";
 export function TableAccesories() {
 	const [selectedAccesory, setSelectedAccesory] = useState(null);
 
