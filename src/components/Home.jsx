@@ -29,14 +29,14 @@ export function Home() {
 				className={`w-full absolute top-8 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
-					<div className="flex-col px-2 mt-1">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-48  ">
+					<div className="flex-col px-2 mt-3 border border-gray-200 rounded-lg p-4 md:p-12 ">
 						<LogoCelular />
 
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl `}>
+							}  text-3xl  font-extrabold  md:text-5xl  `}>
 							Líderes en innovación de{" "}
 							<span className="underline underline-offset-3 decoration-6 decoration-blue-400">
 								{" "}
@@ -45,14 +45,13 @@ export function Home() {
 							</span>{" "}
 							de bidones de agua potable{" "}
 						</h1>
-						<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400 rounded-lg">
-							Elevando estándares, garantizando pureza: tu socio
-							en transformación industrial. Con tecnología
-							vanguardista y compromiso incansable, creamos el
-							futuro de la producción de agua potable.
-						</p>
 					</div>
-
+					<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400 rounded-sm mt-10  ">
+						Elevando estándares, garantizando pureza: tu socio en
+						transformación industrial. Con tecnología vanguardista y
+						compromiso incansable, creamos el futuro de la
+						producción de agua potable.
+					</p>
 					<div className=" h-auto ">
 						<div className="p-1 m-10 mx-auto max-w-screen-xl ">
 							<div className=" flex-col flex justify-between  border border-gray-200 rounded-lg p-4 md:p-12 mb-8">
@@ -81,7 +80,7 @@ export function Home() {
 									</svg>
 									Innovación
 								</span>
-								<h1
+								<h2
 									className={`${
 										isDarkTheme
 											? "text-white"
@@ -89,7 +88,7 @@ export function Home() {
 									} text-3xl md:text-5xl font-extrabold mb-2`}>
 									Ofrecemos soluciones personalizadas para tus
 									necesidades de producción
-								</h1>
+								</h2>
 
 								<p className="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">
 									Alloatti SRL, líder con más de 30 años en
@@ -444,7 +443,7 @@ export function Home() {
 											/>
 										</picture>{" "}
 									</div>
-
+{/* 
 									<Link
 										onClick={handleClick}
 										to="#"
@@ -464,7 +463,7 @@ export function Home() {
 												d="M1 5h12m0 0L9 1m4 4L9 9"
 											/>
 										</svg>
-									</Link>
+									</Link> */}
 								</div>
 							</div>
 						</div>

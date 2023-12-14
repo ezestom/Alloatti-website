@@ -28,7 +28,7 @@ export function CardMachines({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[98%] p-2">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[95vh] p-2">
 						<img
 							className="max-h-[40%] object-contain w-full"
 							src={img}
@@ -41,71 +41,62 @@ export function CardMachines({
 						</button>
 						<div className="flex flex-col items-center w-full overflow-y-auto mt-2 ">
 							<div className="overflow-x-auto rounded-lg border border-gray-200 w-full">
-								<table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-									<thead className=" flex-auto-row">
-										<tr>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100 text-center text-gray-900">
-												Modelo
-											</th>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Producción máxima
-											</th>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Tiempo de lavado
-											</th>
-										</tr>
-									</thead>
-									<tbody className="divide-y divide-gray-200">
-										<tr>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{model}
-											</td>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{production_max}
-											</td>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{washing_time}
-											</td>
-										</tr>
-									</tbody>
+								<table className="w-full divide-y-2 divide-gray-200 bg-white text-sm flex flex-col ">
+									<article className="flex  divide-y divide-gray-200">
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100 text-center text-gray-900 ">
+											Modelo
+										</p>
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900 ">
+											Producción máxima
+										</p>
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900 ">
+											Tiempo de lavado
+										</p>
+									</article>
 
-									<thead className="ltr:text-left rtl:text-right">
-										<tr>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Construida
-											</th>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Dimensiones
-											</th>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-												Accesorios
-											</th>
-										</tr>
-									</thead>
+									<article className="flex  divide-y divide-gray-200">
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{model}
+										</p>
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{production_max}
+										</p>
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{washing_time}
+										</p>
+									</article>
 
-									<tbody className="divide-y divide-gray-200">
-										<tr>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{build}
-											</td>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{size}
-											</td>
-											<td className="  p-2 text-center font-semibold  text-gray-500">
-												{accesories}
-											</td>
-										</tr>
-									</tbody>
+									<article className=" flex  divide-y divide-gray-200">
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+											Construida
+										</p>
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+											Dimensiones
+										</p>
+										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+											Accesorios
+										</p>
+									</article>
+
+									<article className=" flex divide-y divide-gray-200">
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{build}
+										</p>
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{size}
+										</p>
+										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
+											{accesories}
+										</p>
+									</article>
 								</table>
 								<aside className="w-full grid items-center divide-y divide-gray-200 ">
-									<article className="w-full  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
+									<article className="w-full  p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 text-sm border-t ">
 										Descripción
 									</article>
 
-									<article className="w-full flex justify-center p-2 text-center text-sm md:text-sm lg:text-base font-normal text-gray-500 overflow-y-auto">
-										<p className=" text-sm ">
-											{description}
-										</p>
+									<article className="w-full flex justify-center p-2 text-center text-sm  font-semibold text-gray-600 ">
+										{description}
 									</article>
 								</aside>
 							</div>

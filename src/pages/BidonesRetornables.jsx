@@ -19,6 +19,7 @@ export function BidonesRetornables() {
 		sectionData6,
 		sectionData7,
 		sectionData8,
+		sectionData9,
 	} = bidonesRetornables;
 
 	const sectionDataArray = [
@@ -30,6 +31,7 @@ export function BidonesRetornables() {
 		sectionData6,
 		sectionData7,
 		sectionData8,
+		sectionData9,
 	];
 
 	useEffect(() => {
@@ -46,10 +48,10 @@ export function BidonesRetornables() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<span
 						href="#"
-						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
+						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md   mb-2">
 						<svg
 							className="icon icon-tabler icon-tabler-building-factory-2"
 							width="24"
@@ -79,7 +81,7 @@ export function BidonesRetornables() {
 						</svg>
 						Para Bidones Retornables
 					</h1>
-					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl ">
+					<p className="my-20 px-2 font-medium text-1xl text-gray-500 md:text-xl ">
 						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
 						lavado, enjuague, llenado y tapado de bidones.
@@ -87,7 +89,7 @@ export function BidonesRetornables() {
 						nuestras líneas de producción abarcan capacidades desde
 						120 bidones por hora hasta 1000 bidones por hora.
 					</p>
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5 rounded-lg">
+					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20 rounded-sm">
 						Garantizamos un tiempo de lavado total de 2 minutos para
 						cada bidón, asegurando una limpieza completa tanto en el
 						interior como en el exterior, incluyendo la boca del
@@ -107,7 +109,7 @@ export function BidonesRetornables() {
 								allowfullscreen></iframe>
 						)}
 					</aside>
-					<p className="text-gray-500 dark:text-gray-400 px-2">
+					<p className="text-gray-500 dark:text-gray-400 px-2 my-20 border-l-4 border-blue-400">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de

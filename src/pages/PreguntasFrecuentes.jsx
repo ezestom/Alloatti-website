@@ -20,9 +20,9 @@ export function PreguntasFrecuentes() {
 				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<div className="flex-col px-2">
-						<h1
+						<h6
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
 							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
@@ -31,8 +31,8 @@ export function PreguntasFrecuentes() {
 								Preguntas y respuestas
 							</span>{" "}
 							frecuentes de nuestros clientes{" "}
-						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+						</h6>
+						<p className="text-lg my-20 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
 							Explora nuestras{" "}
 							<strong>preguntas frecuentes</strong> y{" "}
 							<strong>respuestas</strong> para obtener información
@@ -53,7 +53,7 @@ export function PreguntasFrecuentes() {
 						</figure>
 					</div>
 
-					<p className="text-lg border-l-4  border-blue-400 px-2 font-normal text-gray-500 lg:text-xl rounded-lg">
+					<p className="text-lg border-l-4  border-blue-400 px-2 font-normal text-gray-500 lg:text-xl my-20 rounded-sm">
 						Nuestro{" "}
 						<strong>centro de preguntas y respuestas</strong> es una
 						valiosa herramienta diseñada para proporcionar

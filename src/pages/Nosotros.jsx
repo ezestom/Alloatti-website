@@ -12,7 +12,7 @@ export function Nosotros() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 ">
 					<span
 						href="#"
 						className="bg-violet-100 pl-2 text-violet-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-violet-400 mb-2">
@@ -42,10 +42,10 @@ export function Nosotros() {
 						Nuestra empresa
 					</h1>
 					<div className="flex-col mt-5 px-1 ">
-						<h1
+						<h6
 							className={`${
-								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-4xl  font-bold leading-none tracking-tight md:text-3xl lg:text-3xl px-1 `}>
+								isDarkTheme ? "text-white" : "text-gray-700"
+							} 	my-20 font-medium lg:text-2xl dark:text-gray-400 px-2 `}>
 							<span className="underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">
 								<strong>Alloatti SRL:</strong>
 							</span>{" "}
@@ -54,10 +54,10 @@ export function Nosotros() {
 							experiencia técnica y soluciones{" "}
 							<strong>innovadoras</strong> a la vanguardia de
 							nuestras operaciones.
-						</h1>
+						</h6>
 						<Data />
-						<p className="p-4  my-4 border-l-4 border-blue-400 rounded-lg bg-gray-50">
-							<p className="text-xl  font-medium  text-gray-500">
+						<p className="p-4  my-20 bg-gray-50">
+							<p className="text-2xl  font-medium  text-gray-500">
 								La visión liderada por ingenieros impulsa cada
 								aspecto de nuestras operaciones. Nuestro equipo,
 								compuesto por mentes creativas y expertos
@@ -98,8 +98,8 @@ export function Nosotros() {
 							</div>
 						</aside>
 
-						<blockquote className="p-4 border-r-4 border-blue-400 rounded-lg bg-gray-50 mb-20">
-							<p className="text-xl  font-medium  text-gray-500 ">
+						<blockquote className="py-20  bg-gray-50 mb-20">
+							<p className="text-2xl  font-medium  text-gray-500 ">
 								La combinación de pasión por la ingeniería y el
 								compromiso con la calidad nos coloca a la
 								vanguardia de la innovación, garantizando que

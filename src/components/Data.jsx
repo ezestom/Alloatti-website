@@ -4,7 +4,7 @@ export function Data() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section className="bg-transparent">
-			<div className="mx-auto max-w-screen-xl my-10 py-12 sm:px-6 md:py-16 lg:px-8 border border-gray-100 rounded-lg shadow-md">
+			<div className="mx-auto max-w-screen-xl my-10 py-12 sm:px-6 md:py-16 lg:px-8 border border-gray-200 rounded-lg shadow-md ">
 				<div
 					className={`${
 						isDarkTheme ? "text-white" : "text-gray-900"
@@ -21,7 +21,7 @@ export function Data() {
 
 				<div className="mt-8 sm:mt-12 ">
 					<dl className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8  ">
+						<div className="flex flex-col rounded-lg border border-gray-200 px-4 py-8 text-center shadow-md mx-8  ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Países Alcanzados
 							</dt>
@@ -31,7 +31,7 @@ export function Data() {
 							</dd>
 						</div>
 
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8 ">
+						<div className="flex flex-col rounded-lg border border-gray-200 px-4 py-8 text-center shadow-md mx-8 ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Máquinas Vendidas
 							</dt>
@@ -41,7 +41,7 @@ export function Data() {
 							</dd>
 						</div>
 
-						<div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center shadow-md mx-8 ">
+						<div className="flex flex-col rounded-lg border border-gray-200 px-4 py-8 text-center shadow-md mx-8 ">
 							<dt className="order-last text-lg font-medium text-gray-500">
 								Clientes Satisfechos
 							</dt>

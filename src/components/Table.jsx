@@ -11,12 +11,12 @@ export function Table({ data }) {
 	};
 
 	return (
-		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200  ">
-			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto relative ">
+		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200 	  ">
+			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto relative  ">
 				<caption
 					onClick={() => handleOpen(data[0])}
 					id="open-dialog"
-					className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white hover:bg-blue-200 cursor-pointer  ">
+					className="p-5 py-8 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-gray-100 transition-all hover:bg-slate-200 cursor-pointer ">
 					La{" "}
 					<strong className="underline underline-offset-3 decoration-4 decoration-blue-400 ">
 						{data[0]?.modelo}{" "}

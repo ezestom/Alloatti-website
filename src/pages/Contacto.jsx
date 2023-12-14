@@ -12,7 +12,7 @@ export function Contacto() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<span
 						href="#"
 						className="bg-green-100 pl-2 text-green-800 text-xs font-medium flex items-center  py-0.5 rounded-md  dark:text-green-400 mb-2">
@@ -43,7 +43,7 @@ export function Contacto() {
 						</svg>
 						Contactanos
 					</h1>
-					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
+					<p className="my-20 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
 						¿Tenés alguna pregunta sobre nuestra maquinaria para el
 						procesamiento de bidones retornables y descartables? No
 						dudes en ponerte en contacto con nosotros. Estamos aquí
@@ -51,7 +51,7 @@ export function Contacto() {
 						adapte a tus necesidades. ¡Esperamos con interés
 						escuchar de vos!
 					</p>
-					<figure className="w-full flex flex-col items-center my-20 bg-transparent">
+					<figure className="w-full flex flex-col items-center  bg-transparent">
 						<h2
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"
@@ -74,7 +74,7 @@ export function Contacto() {
 						</figcaption>
 					</figure>
 
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-lg">
+					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-sm">
 						¿Estás interesado en adquirir nuestras avanzadas líneas
 						de producción o deseas obtener información detallada
 						sobre nuestras máquinas y servicios? Te invitamos a

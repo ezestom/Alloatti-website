@@ -13,7 +13,7 @@ export function UltimasNoticias() {
 				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<div className="flex-col px-2">
 						<h1
 							className={`${
@@ -25,7 +25,7 @@ export function UltimasNoticias() {
 								descargando nuestro catálogo de productos{" "}
 							</span>{" "}
 						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400 my-6 px-2 rounded-lg">
+						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400 my-20 px-2 rounded-sm">
 							Descubre una amplia gama de información que te
 							permitirá explorar a fondo lo que ofrecemos.
 						</p>
@@ -61,7 +61,7 @@ export function UltimasNoticias() {
 							</svg>
 						</Link>
 					</figure>
-					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400  px-2 rounded-lg">
+					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400 my-20 px-2 rounded-sm">
 						Además, te invitamos a leer la nota que realizó el
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.

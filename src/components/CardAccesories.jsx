@@ -23,9 +23,9 @@ export function CardAccesories({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[50%] max-h-[98%] ">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] p-2 lg:max-w-[50%] max-h-[95vh] ">
 						<img
-							className=" max-h-[40%] w-full object-cover rounded-lg "
+							className=" max-h-[40%] w-full object-cover rounded-lg  "
 							src={img}
 							alt={model}
 						/>
@@ -40,10 +40,10 @@ export function CardAccesories({
 								<table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
 									<thead className=" flex-auto-row">
 										<tr>
-											<th className=" w-1/2 p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
+											<th className=" w-1/2 p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
 												Accesorio
 											</th>
-											<th className="  p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
+											<th className="  p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
 												Carracterísticas
 											</th>
 										</tr>
@@ -60,12 +60,12 @@ export function CardAccesories({
 									</tbody>
 								</table>
 								<aside className="w-full grid items-center divide-y divide-gray-200">
-									<article className="w-full   p-2 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 ">
+									<article className="w-full text-sm  p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 border-t">
 										Descripción
 									</article>
 
-									<article className="w-full flex justify-center p-2 text-center text-sm md:text-sm lg:text-base font-normal text-gray-500 overflow-y-auto">
-										<p className=" ">{description}</p>
+									<article className="w-full flex justify-center p-4 text-center text-sm  font-semibold text-gray-600  ">
+										{description}
 									</article>
 								</aside>
 							</div>

@@ -28,7 +28,7 @@ export function BidonesDescartables() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<span
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
@@ -62,7 +62,7 @@ export function BidonesDescartables() {
 						</svg>
 						Para Bidones Descartables
 					</h1>
-					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
+					<p className="px-2 text-1xl text-gray-500 md:text-xl font-medium my-20">
 						Nuestras avanzadas líneas para bidones descartables
 						representan la excelencia en maquinaria dedicada al
 						llenado y tapado de bidones. Construidas con acero
@@ -70,7 +70,7 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 bidones por
 						hora hasta 700 bidones por hora.
 					</p>
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5 rounded-lg">
+					<p className="text-gray-500 my-20 border-l-4 border-blue-400 px-2 rounded-sm">
 						Garantizamos un tiempo de lavado total de 2 minutos para
 						cada bidón, asegurando una limpieza completa tanto en el
 						interior como en el exterior, incluyendo la boca del
@@ -90,7 +90,7 @@ export function BidonesDescartables() {
 								allowfullscreen></iframe>
 						)}
 					</aside>
-					<p className="text-gray-500 dark:text-gray-400 px-2">
+					<p className="text-gray-500 px-2  border-l-4 border-blue-400  my-20">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de

@@ -11,7 +11,7 @@ export function Normas() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-3/5 lg:ml-[320px] sm:ml-0 mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<span
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
@@ -40,7 +40,7 @@ export function Normas() {
 						</svg>
 						Normas de calidad ERAS
 					</h1>
-					<p className="my-5 px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400">
+					<p className=" px-2 text-1xl text-gray-500 md:text-xl dark:text-gray-400  my-20">
 						En relación a la calidad del agua potable se han
 						establecido parámetros físicos, químicos y
 						bacteriológicos similares a los recomendados por la
@@ -51,7 +51,7 @@ export function Normas() {
 						niveles estén dentro de los límites establecidos en el
 						Anexo A del Marco Regulatorio – Ley Nº 26.221.
 					</p>
-					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-5 rounded-lg">
+					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-sm">
 						El ERAS por su parte fiscaliza dicho control,
 						verificando el cumplimiento del control de la
 						Concesionaria AySA, realizando análisis y mediciones
