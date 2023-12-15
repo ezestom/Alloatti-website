@@ -63,20 +63,18 @@ export function BidonesDescartables() {
 						Para Bidones Descartables
 					</h1>
 					<p className="px-2 text-1xl text-gray-500 md:text-xl font-medium my-20">
-						Nuestras avanzadas líneas para bidones descartables
+						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
-						llenado y tapado de bidones. Construidas con acero
-						inoxidable de alta calidad, nuestras líneas de
-						producción abarcan capacidades desde 300 bidones por
-						hora hasta 700 bidones por hora.
+						enjuague, llenado y roscado de bidones. Construidas con
+						acero inoxidable de alta calidad, nuestras líneas de
+						producción abarcan capacidades desde 300 hasta 700
+						bidones por hora.
 					</p>
 					<p className="text-gray-500 my-20 border-l-4 border-blue-400 px-2 rounded-sm">
-						Garantizamos un tiempo de lavado total de 2 minutos para
-						cada bidón, asegurando una limpieza completa tanto en el
-						interior como en el exterior, incluyendo la boca del
-						bidón. Esta eficiente operación maximiza la efectividad
-						del lavado y cumple con los más altos estándares de
-						higiene.
+						Tiempo de enjuague ajustable a su necesidad, asegurando
+						una limpieza completa del interior. Esta operación
+						asegura la sanitización del interior del bidón
+						cumpliendo los standares de calidad.
 					</p>
 					<aside className="lg:p-10 sm:p-none rounded-lg my-10 bg-gray-100 shadow-lg ">
 						{isLoading ? (

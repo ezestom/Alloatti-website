@@ -58,20 +58,18 @@ export function Accesorios() {
 						Accesorios para potenciar tu producción
 					</h1>
 					<p className=" px-2 text-1xl text-gray-500 md:text-xl my-20 ">
-						Nuestras avanzadas líneas para bidones retornables
-						representan la excelencia en maquinaria dedicada al
-						lavado, enjuague, llenado y tapado de bidones.
-						Construidas con acero inoxidable de alta calidad,
-						nuestras líneas de producción abarcan capacidades desde
-						120 bidones por hora hasta 960 bidones por hora.
+						Nuestros equipos de accesorios están diseñados para
+						optimizar y potenciar su línea de producción. Reduzca
+						los tiempos de procesamiento y aumente
+						significativamente la productividad de su operación
 					</p>
 					<p className="text-gray-500  border-l-4 border-blue-400 px-2 my-20">
-						Garantizamos un tiempo de lavado total de 2 minutos para
-						cada bidón, asegurando una limpieza completa tanto en el
-						interior como en el exterior, incluyendo la boca del
-						bidón. Esta eficiente operación maximiza la efectividad
-						del lavado y cumple con los más altos estándares de
-						higiene.
+						Ofrecemos comodidades en diversas operaciones, como
+						retirar las tapas de los bidones antes de lavarlos,
+						realizar prelavados para eliminar la suciedad más
+						gruesa, organizar las tapas de manera eficiente y
+						visualizar el proceso productivo a distancia, entre
+						otras funciones.
 					</p>
 					<aside className="lg:p-10 sm:p-none rounded-lg my-10 bg-gray-100 shadow-lg ">
 						{isLoading ? (
@@ -86,12 +84,12 @@ export function Accesorios() {
 						)}
 					</aside>
 					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20">
-						Adicionalmente, hemos diseñado nuestras líneas para
-						prevenir el contacto directo entre la boca del bidón y
-						el pico de llenado, eliminando cualquier posibilidad de
-						contaminación del bidón. En Alloatti, nos comprometemos
-						a ofrecer soluciones de calidad que garanticen la
-						seguridad y pureza de cada bidón procesado.
+						En Alloatti, valoramos la retroalimentación de nuestros
+						clientes, ya que nos permite conocer las necesidades
+						específicas de la industria del agua. Este proceso nos
+						impulsa a desarrollar nuevos accesorios que amplían las
+						posibilidades de su línea productiva, adaptándonos de
+						manera precisa a sus requerimientos
 					</p>
 					<figure className="my-10">
 						<TableAccesories accesories={accesorios} />

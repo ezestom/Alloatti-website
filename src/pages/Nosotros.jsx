@@ -52,11 +52,11 @@ export function Nosotros() {
 							nuestra empresa está dirigida por{" "}
 							<strong>ingenieros</strong>, aportando una amplia
 							experiencia técnica y soluciones{" "}
-							<strong>innovadoras</strong> a la vanguardia de
-							nuestras operaciones.
+							<strong>innovadoras</strong> en nuestras
+							operaciones.
 						</h6>
 						<Data />
-						<p className="p-4  my-20 bg-gray-50">
+						<p className="p-4  my-20 ">
 							<p className="text-2xl  font-medium  text-gray-500">
 								La visión liderada por ingenieros impulsa cada
 								aspecto de nuestras operaciones. Nuestro equipo,
@@ -98,13 +98,14 @@ export function Nosotros() {
 							</div>
 						</aside>
 
-						<blockquote className="py-20  bg-gray-50 mb-20">
+						<blockquote className="py-20  bmb-20">
 							<p className="text-2xl  font-medium  text-gray-500 ">
 								La combinación de pasión por la ingeniería y el
-								compromiso con la calidad nos coloca a la
-								vanguardia de la innovación, garantizando que
-								cada producto y servicio refleje la excelencia
-								que caracteriza a nuestra empresa.
+								compromiso con la calidad nos coloca en primera
+								línea en la innovación en el mercado,
+								garantizando que cada producto y servicio
+								refleje la excelencia que caracteriza a nuestra
+								empresa.
 							</p>
 						</blockquote>
 					</div>
