@@ -4,10 +4,10 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 export function ThemeButton() {
 	const { toggleTheme, isDarkTheme } = useTheme();
 	return (
-		<span className="fixed toDark ">
+		<span className=" ">
 			<button
 				onClick={toggleTheme}
-				className="fixed top-1 right-1 items-center rounded  bg-white p-1 text-black focus:outline-none hover:bg-gray-100 focus:ring focus:ring-blue-900 focus:ring-opacity-50 active:bg-white/90">
+				className="fixed right-0 top-1 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2.5 text-center inline-flex items-center mr-2 -rotate-90">
 				{isDarkTheme ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
 			</button>
 		</span>

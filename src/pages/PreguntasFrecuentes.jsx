@@ -38,8 +38,8 @@ export function PreguntasFrecuentes() {
 							<strong>respuestas</strong> para obtener información
 							detallada sobre nuestros productos y servicios.
 							Nuestra intención es proporcionarte una comprensión
-							completa para que disfrutes de una experiencia aún
-							más enriquecedora con nosotros.
+							completa para que disfrutes de una experiencia
+							enriquecedora con nosotros.
 						</p>
 						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-5 shadow-md py-2 ">
 							{images.map((image, index) => (

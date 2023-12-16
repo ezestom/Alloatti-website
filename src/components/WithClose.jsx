@@ -6,7 +6,7 @@ export function WithClose() {
 	const { isDarkTheme } = useTheme();
 
 	return (
-		<section className="w-full h-auto absolute top-0 flex justify-center items-center z-0 ">
+		<section className="w-full h-auto absolute top-1 flex justify-center items-center z-10 ">
 			<div
 				className={` lg:w-3/5 lg:ml-[320px]   ${
 					isDarkTheme ? "text-white bg-gray-800" : " text-gray-900 "

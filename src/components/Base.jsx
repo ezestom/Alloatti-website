@@ -7,7 +7,6 @@ export function Base() {
 	const { isDarkTheme } = useTheme();
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-
 	useEffect(() => {
 		const hanfleRsize = () => {
 			setWindowWidth(window.innerWidth);
