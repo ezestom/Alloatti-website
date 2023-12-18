@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ThemeButton } from "./ThemeButton";
 import { MachinesButtonsMobile } from "./MachinesButtonsMobile";
-
 export function NavbarMobile() {
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -10,7 +9,7 @@ export function NavbarMobile() {
 		});
 	};
 	return (
-		<div className=" z-10 fixed w-screen  bottom-0 flex justify-around items-center">
+		<div className=" z-30 fixed w-screen  bottom-0 flex justify-around items-center">
 			<ThemeButton />
 
 			<MachinesButtonsMobile />

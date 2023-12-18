@@ -28,7 +28,7 @@ export function Navbar() {
 	};
 	return (
 		<div
-			className={` z-10 px-8 fixed min-h-screen max-w-xs bg-${
+			className={` z-20 px-8 fixed min-h-screen max-w-xs bg-${
 				isDarkTheme ? "bg-gray-800 z-10  " : " bg-gray-50"
 			} overflow-y-auto  `}>
 			<ThemeButton />

@@ -27,7 +27,7 @@ export function CardMachines({
 			{isShow && (
 				<div
 					id="card"
-					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-20">
+					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-30">
 					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[95vh] p-2">
 						<img
 							className="max-h-[40%] object-contain w-full"
@@ -95,7 +95,7 @@ export function CardMachines({
 										Descripción
 									</article>
 
-									<article className="w-full flex justify-center p-2 text-center text-sm  font-semibold text-gray-600 ">
+									<article className="w-full flex justify-center p-2 text-center text-sm  font-semibold text-gray-600 overflow-y-auto ">
 										{description}
 									</article>
 								</aside>

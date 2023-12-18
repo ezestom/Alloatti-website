@@ -61,11 +61,11 @@ export function Contacto() {
 						<p className="text-xl  text-gray-500 dark:text-gray-400 my-2">
 							Están para ayudarte en lo que necesites.
 						</p>
-						<figcaption className="flex text-center items-center justify-center py-10 flex-wrap w-full ">
+						<figcaption className="flex text-center items-center justify-center p-10 flex-wrap  bg-gray-100 rounded-lg shadow-lg w-full ">
 							<div className=" grid w-full gap-5">
-								<div className="w-full shadow-lg rounded-lg flex justify-end">
+								<div className=" rounded-lg flex justify-center  ">
 									<img
-										className=" rounded-lg "
+										className=" rounded-lg shadow-md "
 										src={chat}
 										alt=""
 									/>

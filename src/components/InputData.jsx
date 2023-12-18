@@ -3,6 +3,26 @@ import email from "../icons/email.png";
 import person from "../icons/person.png";
 
 function InputData() {
+	const messageAlert = () => {
+		let nameValue = document.getElementById("name").value;
+		let emailValue = document.getElementById("email").value;
+		let messageValue = document.getElementById("message").value;
+		let resultElement = document.getElementById("result");
+
+		if (nameValue === "" || emailValue === "" || messageValue === "") {
+			resultElement.textContent = "Por favor, complete todos los campos";
+			resultElement.style.color = "red";
+			resultElement.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
+		} else {
+			resultElement.textContent = "Mensaje enviado correctamente";
+			resultElement.style.color = "green";
+			resultElement.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
+			setTimeout(() => {
+				resultElement.textContent = "";
+				resultElement.style.backgroundColor = "transparent";
+			}, 5000);
+		}
+	};
 	return (
 		<>
 			<form
@@ -68,9 +88,12 @@ function InputData() {
 							placeholder="Escribinos tu consulta..."
 							required></textarea>
 					</div>
+					<div id="result"></div>
+
 					<div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
 						{/* button */}
 						<button
+							onClick={messageAlert}
 							type="submit"
 							className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
 							Enviar consulta <span>→</span>
@@ -86,7 +109,7 @@ function InputData() {
 					<input
 						type="hidden"
 						name="_subject"
-						value="Mensaje -> Web Alloatti <-"></input>
+						value=" -> ✅ Web Alloatti <-"></input>
 				</div>
 				<p className="ml-auto text-xs text-gray-500 dark:text-gray-400">
 					Rellene el formulario con sus consultas y en breve nos

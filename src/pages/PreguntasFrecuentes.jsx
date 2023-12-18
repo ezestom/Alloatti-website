@@ -41,12 +41,12 @@ export function PreguntasFrecuentes() {
 							completa para que disfrutes de una experiencia
 							enriquecedora con nosotros.
 						</p>
-						<figure className="w-full bg-blue-50 rounded-lg h-full my-10 flex justify-center items-center flex-wrap gap-5 shadow-md py-2 ">
+						<figure className="w-full bg-blue-50 rounded-lg h-full my-10  flex justify-center items-center flex-wrap gap-5 shadow-md py-10 ">
 							{images.map((image, index) => (
 								<img
 									key={index}
 									src={image}
-									className="  rounded-lg max-w-xs shadow-ld h-full aspect-square object-cover 	md:w-[250px] opacity-90 "
+									className="  rounded-lg shadow-ld h-full aspect-square object-cover w-[175px]	md:w-[250px]  opacity-90 "
 									alt={index}
 								/>
 							))}

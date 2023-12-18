@@ -9,7 +9,7 @@ export function TopButton() {
 		<button
 			onClick={logoTurnTop}
 			type="button"
-			className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2 -rotate-90 ">
+			className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2 -rotate-90 border">
 			<svg
 				className="w-5 h-5"
 				aria-hidden="true"
