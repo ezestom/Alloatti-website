@@ -9,7 +9,7 @@ export function Nosotros() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-12 flex justify-center items-center  ${
+				className={`w-full absolute top-12 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 ">
@@ -98,7 +98,7 @@ export function Nosotros() {
 							</div>
 						</aside>
 
-						<blockquote className="py-20  bmb-20">
+						<blockquote className="py-20 px-4 mb-20">
 							<p className="text-2xl  font-medium  text-gray-500 ">
 								La combinación de pasión por la ingeniería y el
 								compromiso con la calidad nos coloca en primera

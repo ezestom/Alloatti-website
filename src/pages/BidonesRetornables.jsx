@@ -48,7 +48,7 @@ export function BidonesRetornables() {
 				className={`w-full absolute top-12 flex justify-center items-center  ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20  ">
 					<span
 						href="#"
 						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md   mb-2">
@@ -81,7 +81,7 @@ export function BidonesRetornables() {
 						</svg>
 						Para Bidones Retornables
 					</h1>
-					<p className="my-20 px-2 font-medium text-1xl text-gray-500 md:text-xl ">
+					<p className="my-20 px-2 font-medium text-1xl text-gray-500 md:text-xl  ">
 						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
 						lavado, enjuague, llenado y tapado de bidones.
@@ -89,7 +89,7 @@ export function BidonesRetornables() {
 						nuestras líneas de producción abarcan capacidades desde
 						120 hasta 1000 bidones por hora.
 					</p>
-					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20 rounded-sm">
+					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20 rounded-sm mx-1">
 						Garantizamos un tiempo de lavado total de 2 minutos para
 						cada bidón, asegurando una limpieza completa tanto en el
 						interior como en el exterior, incluyendo la boca del
@@ -102,14 +102,14 @@ export function BidonesRetornables() {
 							<SkeletonVideo />
 						) : (
 							<iframe
-								className="w-full aspect-video py-5 rounded-lg "
+								className="w-full aspect-video  rounded-lg "
 								src="https://www.youtube.com/embed/X-KcX6Jqlik?si=pG5fpLAkR3vwWMGL"
 								title="YouTube video player"
 								allow="accelerometer; autoplay; muted; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
 								allowfullscreen></iframe>
 						)}
 					</aside>
-					<p className="text-gray-500 dark:text-gray-400 px-2 my-20 border-l-4 border-blue-400">
+					<p className="text-gray-500 dark:text-gray-400 px-2 my-20 border-l-4 border-blue-400 mx-1">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de

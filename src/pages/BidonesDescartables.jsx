@@ -70,7 +70,7 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 hasta 700
 						bidones por hora.
 					</p>
-					<p className="text-gray-500 my-20 border-l-4 border-blue-400 px-2 rounded-sm">
+					<p className="text-gray-500 my-20 border-l-4 border-blue-400 px-2 rounded-sm mx-1">
 						Tiempo de enjuague ajustable a su necesidad, asegurando
 						una limpieza completa del interior. Esta operación
 						asegura la sanitización del interior del bidón
@@ -81,14 +81,14 @@ export function BidonesDescartables() {
 							<SkeletonVideo />
 						) : (
 							<iframe
-								className="w-full aspect-video py-5 rounded-lg "
+								className="w-full aspect-video rounded-lg "
 								src="https://www.youtube.com/embed/X-KcX6Jqlik?si=pG5fpLAkR3vwWMGL"
 								title="YouTube video player"
 								allow="accelerometer; autoplay; muted; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
 								allowfullscreen></iframe>
 						)}
 					</aside>
-					<p className="text-gray-500 px-2  border-l-4 border-blue-400  my-20">
+					<p className="text-gray-500 px-2  border-l-4 border-blue-400  my-20 mx-1">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de

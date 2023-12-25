@@ -2,7 +2,7 @@ import { useState } from "react";
 import { OpenEmail } from "./OpenEmail";
 import close from "../icons/close.png";
 import close2 from "../icons/close2.png";
-import { data } from "autoprefixer";
+
 
 export function CardMachines({
 	model,
@@ -28,9 +28,9 @@ export function CardMachines({
 				<div
 					id="card"
 					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-30">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[50%] max-h-[95vh] p-2">
+					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[60%] max-h-[98vh] p-2">
 						<img
-							className="max-h-[40%] object-contain w-full"
+							className="max-h-[50%] rounded-md object-cover w-full h-auto"
 							src={img}
 							alt={model}
 						/>

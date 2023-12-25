@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
 import { useTheme } from "../context/ThemeContext";
-import imgCatalogo from "../img/imgPDF.png";
+import imgCatalogo from "../img/409shots_so.jpg";
 import infobae from "../img/infobae.png";
 
 export function UltimasNoticias() {
@@ -14,7 +14,7 @@ export function UltimasNoticias() {
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
-					<div className="flex-col px-2">
+					<div className="flex-col">
 						<h1
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-900"

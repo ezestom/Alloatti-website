@@ -9,7 +9,7 @@ export function Contacto() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-12 flex justify-center items-center  ${
+				className={`w-full absolute top-12 flex justify-center items-center px-1 ${
 					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
 				}`}>
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">

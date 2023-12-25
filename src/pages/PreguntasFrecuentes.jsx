@@ -2,11 +2,11 @@ import { Base } from "../components/Base";
 import { Details } from "../components/Details";
 import { useTheme } from "../context/ThemeContext";
 import image1 from "../img/6.jpg";
-import image2 from "../img/2.jpg";
+import image2 from "../img/maquina5.jpg";
 import image3 from "../img/12.jpg";
-import image4 from "../img/3.jpg";
+import image4 from "../img/maquina3.jpg";
 import image5 from "../img/trabajador.jpg";
-import image6 from "../img/1.webp";
+import image6 from "../img/maquina2.jpg";
 
 export function PreguntasFrecuentes() {
 	const { isDarkTheme } = useTheme();
@@ -46,7 +46,7 @@ export function PreguntasFrecuentes() {
 								<img
 									key={index}
 									src={image}
-									className="  rounded-lg shadow-ld h-full aspect-square object-cover w-[175px]	md:w-[250px]  opacity-90 "
+									className="  rounded-lg shadow-ld h-full aspect-square object-cover w-[175px]	md:w-[250px]  "
 									alt={index}
 								/>
 							))}

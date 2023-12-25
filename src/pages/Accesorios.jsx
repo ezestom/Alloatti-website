@@ -63,7 +63,7 @@ export function Accesorios() {
 						los tiempos de procesamiento y aumente
 						significativamente la productividad de su operación
 					</p>
-					<p className="text-gray-500  border-l-4 border-blue-400 px-2 my-20">
+					<p className="text-gray-500  border-l-4 border-blue-400 px-2 my-20 mx-1">
 						Ofrecemos comodidades en diversas operaciones, como
 						retirar las tapas de los bidones antes de lavarlos,
 						realizar prelavados para eliminar la suciedad más
@@ -83,7 +83,7 @@ export function Accesorios() {
 								allowfullscreen></iframe>
 						)}
 					</aside>
-					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20">
+					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20 mx-1">
 						En Alloatti, valoramos la retroalimentación de nuestros
 						clientes, ya que nos permite conocer las necesidades
 						específicas de la industria del agua. Este proceso nos
