@@ -66,6 +66,7 @@ export function TableAccesories() {
 							<td className="flex-nowrap bg-gray-100 px-1 py-2 text-gray-700 text-center">
 								{sectionData[0].characteristics}
 							</td>
+
 							<td className="flex-nowrap px-4 py-2 text-center bg-gray-200">
 								<button
 									onClick={() =>
@@ -84,6 +85,7 @@ export function TableAccesories() {
 					model={selectedAccesory.name}
 					characteristics={selectedAccesory.characteristics}
 					description={selectedAccesory.description}
+					link={selectedAccesory.link}
 					img={img}
 					isOpen={true}
 					onClose={handleCardClose}

@@ -9,6 +9,7 @@ export function CardAccesories({
 	onClose,
 	characteristics,
 	description,
+	link,
 }) {
 	const [isShow, setIsShow] = useState(true);
 
@@ -66,6 +67,14 @@ export function CardAccesories({
 
 									<article className="w-full flex justify-center p-4 text-center text-sm  font-semibold text-gray-600  ">
 										{description}
+									</article>
+									<article className="w-full flex justify-center p-1  text-center text-sm  font-bold text-blue-600 hover:bg-blue-200 hover:text-gray-900 ">
+										<a
+											href={link}
+											target="_blank"
+											rel="noreferrer">
+											Ver Video {" ->"}{" "}
+										</a>
 									</article>
 								</aside>
 							</div>

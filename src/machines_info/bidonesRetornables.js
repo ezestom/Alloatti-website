@@ -97,7 +97,7 @@ export const bidonesRetornables = {
 			producción_max: "840 bidones por hora",
 			tiempo_lavado: "2 minutos",
 			construida: "Acero inoxidable",
-			dimensiones: "7 metros x 4,4 metros",
+			dimensiones: "7 metros x 4,1 metros",
 			accesorios: "Tolva, Cargador automático, Jirafa",
 			description:
 				"Lavadora y llenadora automática: la lavadora opera en tandas de 6 bidones. Posee 5 etapas de lavado, 2 de enjuague y 1 de enjuague con agua de llenado. La llenadora trabaja con 6 picos de llenado y 1 tapador con cinta. Producción recomendada 840 bidones por hora de 20, 12 o 10 litros. Trae incluida la TOLVA, el CARGADOR y la JIRAFA.",
