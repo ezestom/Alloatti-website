@@ -78,6 +78,14 @@ export function Normas() {
 					</p>
 					<div className="flex flex-col justify-center  items-center ">
 						<figure className="w-full py-10 px-6 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
+							<div>
+								<h2 className="text-gray-900 text-3xl md:text-5xl  text-center font-extrabold mb-2">
+									Calidad garantizada
+								</h2>
+								<p className="text-xl  text-gray-500 dark:text-gray-400 text-center my-4">
+									Tranquilidad para tu negocio y tu familia.
+								</p>
+							</div>
 							<img
 								src={familia}
 								alt="Imagen ivess"

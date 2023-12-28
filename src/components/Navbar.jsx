@@ -40,9 +40,17 @@ export function Navbar() {
 					className="">
 					<Link onClick={scrollToTop}>
 						{isDarkTheme ? (
-							<img src={LogoDark} alt="logo" className="pt-11" />
+							<img
+								src={LogoDark}
+								alt="logo"
+								className="pt-11 hover:scale-95 active:scale-100 transition "
+							/>
 						) : (
-							<img src={LogoLigth} alt="logo" className="pt-11" />
+							<img
+								src={LogoLigth}
+								alt="logo"
+								className="pt-11 hover:scale-95 active:scale-100 transition"
+							/>
 						)}
 					</Link>
 				</span>

@@ -28,7 +28,7 @@ export function Data() {
 							</dd>
 						</div>
 
-						<div className="flex flex-col rounded-lg border border-gray-200 px-4 py-8 text-center shadow-md mx-8 ">
+						<div className="flex flex-col rounded-lg border border-gray-200 px-4 py-8 text-center shadow-md mx-8   ">
 							<dt className="order-last text-lg font-medium text-white">
 								Máquinas Vendidas
 							</dt>
