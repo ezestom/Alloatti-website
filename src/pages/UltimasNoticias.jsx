@@ -66,12 +66,12 @@ export function UltimasNoticias() {
 						periódico Infobae sobre la importancia del agua en
 						nuestras vidas.
 					</p>
-					<figure className="w-full px-6 py-10 my-10 flex flex-col justify-center items-center  bg-gray-100 rounded-lg shadow-lg">
+					<figure className="w-full py-10 px-6 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
 						<img
 							src={infobae}
 							alt="Imagen de la noticia"
 							title="Catálogo de productos"
-							className=" rounded-lg  h-auto  shadow-lg "
+							className="rounded-lg  h-auto shadow-lg w-full"
 						/>
 						<p className="text-lg font-normal text-gray-500 lg:text-xl text-center py-5">
 							Vea la nota completa en el siguiente enlace

@@ -67,8 +67,8 @@ export function Nosotros() {
 						</p>
 					</div>
 					<div className="flex justify-center flex-col items-center">
-						<aside className="gap-5 h-auto w-full flex flex-wrap justify-around ">
-							<div className="mt-10 ">
+						<aside className="w-full gap-5 flex flex-col  md:flex-row  justify-evenly items-center  bg-gray-100 rounded-lg shadow-lg ">
+							<div className="">
 								<Card
 									name={"Ing. Hector Alloatti"}
 									university={

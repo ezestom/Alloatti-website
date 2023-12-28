@@ -1,7 +1,7 @@
 import { Base } from "../components/Base";
 import InputData from "../components/InputData";
 import { useTheme } from "../context/ThemeContext";
-import chat from "../img/chat.webp";
+import chat from "../img/call-center.jpg";
 
 export function Contacto() {
 	const { isDarkTheme } = useTheme();
@@ -51,27 +51,21 @@ export function Contacto() {
 						adapte a tus necesidades. ¡Esperamos con interés
 						escuchar de vos!
 					</p>
-					<figure className="w-full flex flex-col items-center  bg-transparent">
-						<h2
-							className={`${
-								isDarkTheme ? "text-white" : "text-gray-900"
-							} text-3xl md:text-5xl font-extrabold mb-2`}>
-							Nuestras asesoras
-						</h2>
-						<p className="text-xl  text-gray-500 dark:text-gray-400 my-2">
-							Están para ayudarte en lo que necesites.
-						</p>
-						<figcaption className="flex text-center items-center justify-center p-10 flex-wrap  bg-gray-100 rounded-lg shadow-lg w-full ">
-							<div className=" grid w-full gap-5">
-								<div className=" rounded-lg flex justify-center  ">
-									<img
-										className=" rounded-lg shadow-md "
-										src={chat}
-										alt=""
-									/>
-								</div>
-							</div>
-						</figcaption>
+					<figure className="flex text-center items-center justify-center p-10 flex-wrap  bg-gray-100 rounded-lg shadow-lg w-full">
+						<div>
+							<h2 className="text-gray-900 text-3xl md:text-5xl font-extrabold mb-2">
+								Nuestros asesores
+							</h2>
+							<p className="text-xl  text-gray-500 dark:text-gray-400 my-4">
+								Están para ayudarte, y responderán a tus dudas.
+							</p>
+						</div>
+
+						<img
+							className=" rounded-lg  h-auto shadow-lg w-full "
+							src={chat}
+							alt=""
+						/>
 					</figure>
 
 					<p className="text-gray-500 dark:text-gray-400 border-l-4 border-blue-400 px-2 my-20 rounded-sm">
