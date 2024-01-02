@@ -81,7 +81,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/bidones-retornables"
+										to="/maquina-para-bidones-retornables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Bidones Retornables
 									</Link>
@@ -89,7 +89,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/bidones-descartables"
+										to="/maquina-para-bidones-descartables"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Bidones Descartables
 									</Link>
@@ -97,7 +97,7 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
-										to="/accesorios"
+										to="/accesorios-para-maquinas"
 										className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 										~ Accesorios
 									</Link>

@@ -12,7 +12,7 @@ export function MachinesButtonsMobile() {
 			<Link
 				className="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative gap-1 "
 				onClick={scrollToTop}
-				to="/bidones-retornables">
+				to="/maquina-para-bidones-retornables">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1.25em"
@@ -29,7 +29,7 @@ export function MachinesButtonsMobile() {
 			<Link
 				className="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative gap-1"
 				onClick={scrollToTop}
-				to="/bidones-descartables">
+				to="/maquina-para-bidones-descartables">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1.25em"
@@ -46,7 +46,7 @@ export function MachinesButtonsMobile() {
 			<Link
 				className="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative gap-1"
 				onClick={scrollToTop}
-				to="/accesorios">
+				to="/accesorios-para-maquinas">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1.25em"

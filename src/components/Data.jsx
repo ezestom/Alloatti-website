@@ -1,7 +1,4 @@
-import { useTheme } from "../context/ThemeContext";
-
 export function Data() {
-	const { isDarkTheme } = useTheme();
 	return (
 		<section className="bg-transparent">
 			<div className="mx-auto max-w-screen-xl my-10 py-12 sm:px-6 md:py-16 lg:px-8 border border-gray-200  rounded-lg shadow-md  bg-gradient-to-r from-cyan-400 to-blue-500 ">
@@ -23,7 +20,7 @@ export function Data() {
 								Países Alcanzados
 							</dt>
 
-							<dd className="text-4xl font-extrabold text-white lg:text-6xl">
+							<dd className="text-4xl font-extrabold text-white lg:text-5xl">
 								+5
 							</dd>
 						</div>
@@ -33,7 +30,7 @@ export function Data() {
 								Máquinas Vendidas
 							</dt>
 
-							<dd className="text-4xl font-extrabold text-white lg:text-6xl">
+							<dd className="text-4xl font-extrabold text-white lg:text-5xl">
 								+600
 							</dd>
 						</div>
@@ -43,7 +40,7 @@ export function Data() {
 								Clientes Satisfechos
 							</dt>
 
-							<dd className="text-4xl font-extrabold text-white lg:text-6xl">
+							<dd className="text-4xl font-extrabold text-white lg:text-5xl">
 								+400
 							</dd>
 						</div>

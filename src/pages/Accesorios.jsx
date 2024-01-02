@@ -76,7 +76,7 @@ export function Accesorios() {
 							<SkeletonVideo />
 						) : (
 							<iframe
-								className="w-full aspect-video py-5 rounded-lg "
+								className="w-full aspect-video  rounded-lg "
 								src="https://www.youtube.com/embed/X-KcX6Jqlik?si=pG5fpLAkR3vwWMGL"
 								title="YouTube video player"
 								allow="accelerometer; autoplay; muted; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"

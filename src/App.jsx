@@ -17,14 +17,17 @@ function App() {
 				<Route path="*" element={<Error />} />
 				<Route path="/nosotros" element={<Nosotros />} />
 				<Route
-					path="/bidones-retornables"
+					path="/maquina-para-bidones-retornables"
 					element={<BidonesRetornables />}
 				/>
 				<Route
-					path="/bidones-descartables"
+					path="/maquina-para-bidones-descartables"
 					element={<BidonesDescartables />}
 				/>
-				<Route path="/accesorios" element={<Accesorios />} />
+				<Route
+					path="/accesorios-para-maquinas"
+					element={<Accesorios />}
+				/>
 				<Route path="/normas-de-calidad" element={<Normas />} />
 				<Route path="/ultimas-noticias" element={<UltimasNoticias />} />
 				<Route path="/contacto" element={<Contacto />} />
