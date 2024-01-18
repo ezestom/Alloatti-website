@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
 import { bidonesRetornables } from "../machines_info/bidonesRetornables";
 import "./Table.css";
+import { BlurVideo } from "../components/BlurVideo/BlurVideo";
+import bidonesEnjuagandose from "../videos/bidonesEnjuagandose.mp4";
 
 export function BidonesRetornables() {
 	const { isDarkTheme } = useTheme();
@@ -101,12 +103,10 @@ export function BidonesRetornables() {
 						{isLoading ? (
 							<SkeletonVideo />
 						) : (
-							<iframe
-								className="w-full aspect-video  rounded-lg "
-								src="https://www.youtube.com/embed/KQ4Qwh-nuow?si=qacHbkVM6tPRgaN-"
-								title="YouTube video player"
-								allow="accelerometer; autoplay; muted; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen></iframe>
+							<BlurVideo
+								video={bidonesEnjuagandose}
+								urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+							/>
 						)}
 					</aside>
 					<p className="text-gray-500 dark:text-gray-400 px-2 my-20 border-l-4 border-blue-400 mx-1">

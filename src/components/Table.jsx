@@ -16,7 +16,7 @@ export function Table({ data }) {
 				<caption
 					onClick={() => handleOpen(data[0])}
 					id="open-dialog"
-					className="p-5 py-8 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-gray-100 transition-all hover:bg-slate-200 cursor-pointer ">
+					className="p-5 py-8 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-gray-100 transition-all hover:bg-slate-300 cursor-pointer ">
 					La{" "}
 					<strong className="underline underline-offset-3 decoration-4 decoration-blue-400 ">
 						{data[0]?.modelo}{" "}

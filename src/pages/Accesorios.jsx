@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { SkeletonVideo } from "../components/VideoSkeleton";
 import { TableAccesories } from "../components/TableAccesories";
 import { accesorios } from "../machines_info/accesorios";
+import { BlurVideo } from "../components/BlurVideo/BlurVideo";
+import pantalla from "../videos/pantalla.mp4";
 
 export function Accesorios() {
 	const { isDarkTheme } = useTheme();
@@ -75,12 +77,10 @@ export function Accesorios() {
 						{isLoading ? (
 							<SkeletonVideo />
 						) : (
-							<iframe
-								className="w-full aspect-video  rounded-lg "
-								src="https://www.youtube.com/embed/X-KcX6Jqlik?si=pG5fpLAkR3vwWMGL"
-								title="YouTube video player"
-								allow="accelerometer; autoplay; muted; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen></iframe>
+							<BlurVideo
+								video={pantalla}
+								urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
+							/>
 						)}
 					</aside>
 					<p className="text-gray-500 border-l-4 border-blue-400 px-2 my-20 mx-1">

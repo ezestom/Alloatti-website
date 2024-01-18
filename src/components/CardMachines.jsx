@@ -50,7 +50,7 @@ export function CardMachines({
 											Producción máxima
 										</p>
 										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900 ">
-											Tiempo de lavado
+											Tiempo de enjuague
 										</p>
 									</article>
 

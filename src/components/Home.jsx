@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
 import { LogoCelular } from "./LogoCelular";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
+import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -101,7 +102,14 @@ export function Home() {
 									excelencia y eficiencia incomparable.
 								</p>
 
-								{isLoading ? <SkeletonVideo /> : <BlurVideo />}
+								{isLoading ? (
+									<SkeletonVideo />
+								) : (
+									<BlurVideo
+										video={bidonesCorriendo}
+										urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+									/>
+								)}
 								<a
 									href="https://www.youtube.com/@AlloattiSRL"
 									rel="noopener noreferrer"
@@ -395,7 +403,7 @@ export function Home() {
 												? "text-white"
 												: "text-gray-900"
 										} text-3xl font-extrabold mb-2`}>
-										Sección en producción...
+										En desarrollo...
 									</h2>
 									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
 										{/* <p className="mb-2">

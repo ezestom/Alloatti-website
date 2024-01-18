@@ -1,10 +1,9 @@
 import { useState } from "react";
 import youtube from "../../img/youtube.png";
-import video1 from "../../videos/video1.mp4";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
 
-export function BlurVideo() {
+export function BlurVideo({ urlYoutube, video }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const openDialog = () => {
@@ -22,7 +21,7 @@ export function BlurVideo() {
 		<article className=" relative">
 			<video
 				className="rounded-lg app-video w-full  object-cover aspect-video "
-				src={video1}
+				src={video}
 				loop
 				muted
 				autoPlay></video>
@@ -36,8 +35,8 @@ export function BlurVideo() {
 			{isOpen && (
 				<dialog open className="z-30 w-screen h-screen m-auto  fixed">
 					<iframe
-						className="m-auto w-[50%] aspect-video rounded-lg shadow-2xl"
-						src="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+						className="m-auto  w-[50%] aspect-video rounded-lg shadow-2xl"
+						src={urlYoutube}
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen></iframe>
