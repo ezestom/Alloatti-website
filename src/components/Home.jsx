@@ -5,6 +5,7 @@ import { WithClose } from "./WithClose";
 import { Link } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
 import { LogoCelular } from "./LogoCelular";
+import { BlurVideo } from "./BlurVideo/BlurVideo";
 
 export function Home() {
 	const { isDarkTheme } = useTheme();
@@ -100,16 +101,7 @@ export function Home() {
 									excelencia y eficiencia incomparable.
 								</p>
 
-								{isLoading ? (
-									<SkeletonVideo />
-								) : (
-									<iframe
-										className="w-full aspect-video rounded-lg mb-4 "
-										src="https://www.youtube.com/embed/KQ4Qwh-nuow?si=UhDX8PXuURukgOM8"
-										title="YouTube video player"
-										allow="accelerometer; autoplay; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
-										allowfullscreen></iframe>
-								)}
+								{isLoading ? <SkeletonVideo /> : <BlurVideo />}
 								<a
 									href="https://www.youtube.com/@AlloattiSRL"
 									rel="noopener noreferrer"
@@ -193,7 +185,7 @@ export function Home() {
 									</div>
 
 									<Link
-										to="/bidones-retornables"
+										to="/maquina-para-bidones-retornables"
 										onClick={handleClick}
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
@@ -273,7 +265,7 @@ export function Home() {
 
 									<Link
 										onClick={handleClick}
-										to="/bidones-descartables"
+										to="/maquina-para-bidones-descartables"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
 										<svg
@@ -357,7 +349,7 @@ export function Home() {
 
 									<Link
 										onClick={handleClick}
-										to="/accesorios"
+										to="/accesorios-para-maquinas"
 										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 										Más información
 										<svg
