@@ -15,7 +15,7 @@ export function Nosotros() {
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 ">
 					<span
 						href="#"
-						className="bg-violet-100 pl-2 text-violet-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-violet-400 mb-2">
+						className="bg-violet-100 pl-2 text-violet-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:text-violet-400 mb-2">
 						<svg
 							className="m-1"
 							width="15"
@@ -45,7 +45,7 @@ export function Nosotros() {
 						<h6
 							className={`${
 								isDarkTheme ? "text-white" : "text-gray-700"
-							} 	my-20 font-medium lg:text-2xl dark:text-gray-400 px-2 `}>
+							} 	my-20 font-medium lg:text-2xl dark:text-gray-500 px-2 `}>
 							<span className="underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">
 								<strong>Alloatti SRL:</strong>
 							</span>{" "}

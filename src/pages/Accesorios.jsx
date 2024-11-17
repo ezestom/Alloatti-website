@@ -28,7 +28,7 @@ export function Accesorios() {
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
 					<span
 						href="#"
-						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 mb-2">
+						className="bg-blue-100 pl-2 text-blue-800 text-xs font-medium flex items-center  py-0.5 rounded-md  dark:text-blue-400 mb-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="icon icon-tabler icon-tabler-building-factory-2"
