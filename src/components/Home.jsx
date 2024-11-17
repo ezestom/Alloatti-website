@@ -134,10 +134,10 @@ export function Home() {
 							</div>
 							<div className="grid md:grid-cols-2 gap-8">
 								{/* sección 1 */}
-								<div className=" flex-col flex justify-between  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 md:p-12">
+								<div className=" flex-col flex justify-between  border border-gray-200  rounded-lg p-4 md:p-12">
 									<span
 										href="#"
-										className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-2">
+										className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  dark:text-green-400 mb-2">
 										<svg
 											className="w-2.5 h-2.5 mr-1.5"
 											aria-hidden="true"
@@ -214,10 +214,10 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 2 */}
-								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
 									<span
 										href="#"
-										className="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2">
+										className="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  dark:text-purple-400 mb-2">
 										<svg
 											className="w-2.5 h-2.5 mr-1.5"
 											aria-hidden="true"
@@ -293,7 +293,7 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 3 */}
-								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
 									<span
 										href="#"
 										className="bg-yellow-100 text-yellow-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2">
@@ -377,7 +377,7 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 4 */}
-								<div className=" flex-col flex justify-start  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
 									<span
 										href="#"
 										className="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">

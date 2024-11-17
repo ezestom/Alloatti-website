@@ -21,7 +21,7 @@ export function Footer() {
 						Te responederemos a la brevedad
 					</span>{" "}
 				</Link>
-				<ul className="flex justify-around py-1">
+				<ul className="flex justify-around py-2">
 					<li>
 						<a
 							href="https://www.facebook.com/alloatti.srl/"

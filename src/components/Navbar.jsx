@@ -59,7 +59,7 @@ export function Navbar() {
 					<Link
 						onClick={scrollToTop}
 						to="/"
-						className=" flex items-center justify-start gap-1 block rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
+						className=" flex items-center justify-start gap-1 rounded-lg bg-gray-200 px-4 py-2 text-m font-medium text-gray-700">
 						<AiFillHome />
 						Inicio
 						{RiHomeLine}
@@ -110,7 +110,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/nosotros"
-							className=" flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className=" flex justify-start items-center gap-1 rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsBriefcaseFill />
 							Nosotros
 						</Link>
@@ -120,7 +120,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/preguntas-frecuentes"
-							className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+							className="flex justify-start items-center gap-1 rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 							<BsFillQuestionSquareFill />
 							Preguntas Frecuentes
 						</Link>
@@ -161,7 +161,7 @@ export function Navbar() {
 							<Link
 								onClick={scrollToTop}
 								to="/contacto"
-								className="flex justify-start items-center gap-1 block rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
+								className="flex justify-start items-center gap-1  rounded-lg px-4 py-2 text-m font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-700">
 								<BsFillChatRightTextFill />
 								Contacto
 							</Link>
