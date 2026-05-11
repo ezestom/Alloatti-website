@@ -1,54 +1,39 @@
-import  { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { useEffect } from "react";
 
 export function Details({ question, answer, name }) {
-	// Utilizamos un estado local para almacenar el estado de apertura del detalle
-	const [isOpen, setIsOpen] = useState(false);
-
-	// La función que maneja el cambio de estado de apertura
-	const handleToggle = () => {
-		setIsOpen(!isOpen);
-	};
-
 	// La función que garantiza que solo un detalle esté abierto a la vez
 	const acordionOpenOnlyOne = () => {
-		document.querySelectorAll("details[name]").forEach(($details) => {
+		const detailsElements = document.querySelectorAll(`details[name="${name}"]`);
+		detailsElements.forEach(($details) => {
 			$details.addEventListener("toggle", (e) => {
-				const name = $details.getAttribute("name");
-
-				if (e.newState === "open") {
-					document
-						.querySelectorAll(`details[name="${name}"][open]`)
-						.forEach(($openDetails) => {
-							if (!($openDetails === $details)) {
-								$openDetails.removeAttribute("open");
-							}
-						});
+				if ($details.open) {
+					detailsElements.forEach(($otherDetails) => {
+						if ($otherDetails !== $details && $otherDetails.open) {
+							$otherDetails.removeAttribute("open");
+						}
+					});
 				}
 			});
 		});
 	};
 
-	// Efecto de montaje para configurar el listener una vez que el componente está montado
 	useEffect(() => {
 		acordionOpenOnlyOne();
-		return () => {
-			// Limpiar el listener cuando el componente se desmonte para evitar posibles fugas de memoria
-			document.querySelectorAll("details[name]").forEach(($details) => {
-				$details.removeEventListener("toggle", handleToggle);
-			});
-		};
-	}, []);
+	}, [name]);
 
 	return (
-		<>
-			<details
-				name={name}
-				className="group [&_summary::-webkit-details-marker]:hidden my-2">
-				<summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
-					<h2 className="font-medium">{question}</h2>
+		<details
+			name={name}
+			className="group [&_summary::-webkit-details-marker]:hidden py-4 border-b border-slate-100 dark:border-slate-800 last:border-none">
+			<summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-xl transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800/40 p-4">
+				<h2 className="font-semibold text-slate-900 dark:text-slate-200 group-open:text-[#024ad8] dark:group-open:text-blue-400 transition-colors">
+					{question}
+				</h2>
 
+				<div className="bg-slate-100 dark:bg-slate-800 p-1 rounded-full group-open:bg-blue-50 dark:group-open:bg-blue-900/30 transition-colors">
 					<svg
-						className=" h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
+						className="h-4 w-4 shrink-0 transition duration-300 group-open:-rotate-180 text-slate-500 group-open:text-[#024ad8]"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
@@ -56,16 +41,24 @@ export function Details({ question, answer, name }) {
 						<path
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							strokeWidth="2"
+							strokeWidth="2.5"
 							d="M19 9l-7 7-7-7"
 						/>
 					</svg>
-				</summary>
+				</div>
+			</summary>
 
-				<p className="mt-4 px-4 leading-relaxed text-gray-700">
+			<div className="mt-4 px-6 overflow-hidden transition-all duration-500">
+				<p className="leading-relaxed text-slate-600 dark:text-slate-400 text-sm md:text-base border-l-2 border-slate-200 dark:border-slate-700 pl-6 py-2">
 					{answer}
 				</p>
-			</details>
-		</>
+			</div>
+		</details>
 	);
 }
+
+Details.propTypes = {
+	question: PropTypes.string.isRequired,
+	answer: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+};

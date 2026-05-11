@@ -1,26 +1,36 @@
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { useTheme } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
 
 export function WithClose() {
 	const { isDarkTheme } = useTheme();
 
 	return (
-		<section className="w-full h-auto absolute top-1 flex justify-center items-center z-10 ">
+		<section className="w-full fixed top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none p-4">
 			<div
-				className={` lg:w-3/5 lg:ml-[320px]   ${
-					isDarkTheme ? "text-white bg-gray-800" : " text-gray-900 "
-				} bg-transparent  `}>
-				<Link
-					to="https://wa.me/+5491168641122"
+				className={`pointer-events-auto flex justify-center items-center w-full max-w-2xl transition-all duration-500 rounded-full border shadow-2xl backdrop-blur-md px-6 py-2 ${
+					isDarkTheme 
+						? "bg-[#1a1a1a]/80 border-slate-700 text-white justify-around" 
+						: "bg-white/80 border-slate-200 text-slate-800 justify-around"
+				}`}>
+				<div className="flex items-center gap-2">
+					<div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+					<span className="text-[10px] md:text-xs font-bold uppercase tracking-wider opacity-80">
+						Atención Inmediata
+					</span>
+				</div>
+				
+				<a
+					href="https://wa.me/+5491168641122"
 					target="_blank"
 					rel="noopener noreferrer"
-					className=" gap-1  hover:text-green-600 flex justify-center items-center">
-					<span className=" gap-1 flex justify-center items-center bg-green-300 text-black text-xs font-medium  p-2 rounded-lg hover:bg-green-400   ">
-						<IoLogoWhatsapp /> Contactanos por WhatsApp para más
-						Info
+					className="flex items-center gap-2 group transition-all">
+					<span className="text-xs md:text-sm font-semibold group-hover:text-[#024ad8] transition-colors">
+						WhatsApp Directo
 					</span>
-				</Link>
+					<div className="bg-[#25D366] text-white p-1.5 rounded-full shadow-lg group-hover:scale-110 transition-transform">
+						<IoLogoWhatsapp className="text-lg" />
+					</div>
+				</a>
 			</div>
 		</section>
 	);

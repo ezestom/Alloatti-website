@@ -1,26 +1,28 @@
+import { FaArrowUp } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
+
 export function TopButton() {
-	const logoTurnTop = () => {
+	const { isDarkTheme } = useTheme();
+	
+	const scrollToTop = () => {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
 		});
 	};
+
 	return (
 		<button
-			onClick={logoTurnTop}
+			onClick={scrollToTop}
 			type="button"
-			className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2 -rotate-90 border">
-			<svg
-				className="w-5 h-5"
-				aria-hidden="true"
-				fill="none"
-				viewBox="0 0 14 10">
-				<path
-					stroke="currentColor"
-					strokeWidth="1"
-					d="M1 5h12m0 0L9 1m4 4L9 9"
-				/>
-			</svg>
+			className={`w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 backdrop-blur-xl border hover:scale-110 active:scale-95 group ${
+				isDarkTheme 
+					? "bg-slate-800/80 border-white/10 text-blue-400 shadow-black/40" 
+					: "bg-white/80 border-slate-200 text-[#024ad8] shadow-slate-200"
+			}`}
+			aria-label="Volver arriba"
+		>
+			<FaArrowUp className="text-xl group-hover:-translate-y-1 transition-transform" />
 		</button>
 	);
 }

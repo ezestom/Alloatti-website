@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export function Card({
 	name,
@@ -9,53 +9,54 @@ export function Card({
 	location,
 }) {
 	return (
-		<>
-			<Link
-				href="#"
-				className="relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 bg-blue-50 cursor-crosshair  hover:scale-105 transition-all hover:shadow-lg">
-				<span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 "></span>
-
-				<div className="sm:flex sm:justify-between sm:gap-4 ">
-					<div>
-						<h3 className="text-lg font-bold text-gray-900 sm:text-xl">
-							{name}
-						</h3>
-
-						<p className="mt-1 text-xs font-medium text-gray-600">
-							{university}
-						</p>
-					</div>
-
-					<div className="hidden sm:block sm:shrink-0">
-						<img
-							alt="imagen de la tarjeta"
-							src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-							className="h-16 w-16 rounded-lg object-cover shadow-sm"
-						/>
-					</div>
+		<div className="hp-card flex flex-col md:flex-row gap-8 items-start hover:border-[#024ad8]/30">
+			<div className="shrink-0 relative">
+				<img
+					alt={name}
+					src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=150&h=150&q=80"
+					className="h-24 w-24 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
+				/>
+				<div className="absolute -bottom-2 -right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+					</svg>
 				</div>
+			</div>
 
-				<div className="mt-4">
-					<p className="max-w-[40ch] text-sm text-gray-500">
-						{description}
-					</p>
+			<div className="flex-1">
+				<div className="hp-eyebrow hp-eyebrow-blue mb-3 !text-[10px] py-1 px-3">
+					{position} • {date}
 				</div>
+				
+				<h3 className="text-2xl font-medium text-slate-800 dark:text-white mb-1">
+					{name}
+				</h3>
+				
+				<p className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-4 tracking-tight">
+					{university}
+				</p>
 
-				<dl className="mt-6 flex gap-4 sm:gap-6">
-					<div className="flex flex-col-reverse">
-						<dt className="text-sm font-medium text-gray-600">
-							{position}
-						</dt>
-						<dd className="text-xs text-gray-500">{date}</dd>
-					</div>
+				<p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-lg">
+					{description}
+				</p>
 
-					<div className="flex flex-col-reverse">
-						<dt className="text-sm font-medium text-gray-600">
-							{location}
-						</dt>
-					</div>
-				</dl>
-			</Link>
-		</>
+				<div className="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-widest">
+					<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+						<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+						<circle cx="12" cy="10" r="3" />
+					</svg>
+					{location}
+				</div>
+			</div>
+		</div>
 	);
 }
+
+Card.propTypes = {
+	name: PropTypes.string.isRequired,
+	university: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	position: PropTypes.string.isRequired,
+	date: PropTypes.string.isRequired,
+	location: PropTypes.string.isRequired,
+};

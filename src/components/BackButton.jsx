@@ -1,38 +1,26 @@
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
 export function BackButton() {
-	const [isHome, setIsHome] = useState(false);
-
-	useEffect(() => {
-		const button = document.querySelector(".back-button");
-		if (window.location.pathname === "/") {
-			setIsHome(true);
-			button.style.display = "none";
-		} else {
-			setIsHome(false);
-			button.style.display = "block";
-		}
-	}, []);
-
-	function handleClick() {
-		window.history.back();
-	}
+	const navigate = useNavigate();
+	const { isDarkTheme } = useTheme();
+	
+	const handleClick = () => {
+		navigate(-1);
+	};
 
 	return (
 		<button
-			className="back-button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg p-2 text-center inline-flex items-center mr-2 dark:bg-blue-600 border dark:hover:bg-blue-700 dark:focus:ring-blue-800 rotate-180"
-			onClick={handleClick}>
-			<svg
-				className="w-5 h-5"
-				aria-hidden="true"
-				fill="none"
-				viewBox="0 0 14 10">
-				<path
-					stroke="currentColor"
-					strokeWidth="1"
-					d="M1 5h12m0 0L9 1m4 4L9 9"
-				/>
-			</svg>
+			onClick={handleClick}
+			className={`w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 transform backdrop-blur-xl border hover:scale-110 active:scale-95 group ${
+				isDarkTheme 
+					? "bg-slate-800/80 border-white/10 text-blue-400 shadow-black/40" 
+					: "bg-white/80 border-slate-200 text-[#024ad8] shadow-slate-200"
+			}`}
+			aria-label="Volver"
+		>
+			<FaArrowLeft className="text-xl group-hover:-translate-x-1 transition-transform" />
 		</button>
 	);
 }

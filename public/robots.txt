@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alloatti.com.ar/sitemap.xml

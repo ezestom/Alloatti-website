@@ -1,87 +1,89 @@
 import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
-import { useTheme } from "../context/ThemeContext";
 import imgCatalogo from "../img/409shots_so.jpg";
 import infobae from "../img/infobae.png";
 
 export function UltimasNoticias() {
-	const { isDarkTheme } = useTheme();
 	return (
 		<>
 			<Base />
-			<section
-				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
-					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
-				}`}>
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
-					<div className="flex-col">
-						<h1
-							className={`${
-								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
-							Obtén más detalles sobre nuestra estrategia de
-							ventas{" "}
-							<span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">
-								descargando nuestro catálogo de productos{" "}
-							</span>{" "}
-						</h1>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl border-l-4 border-blue-400 my-20 px-2 rounded-sm">
-							Descubre una amplia gama de información que te
-							permitirá explorar a fondo lo que ofrecemos.
-						</p>
-					</div>
-					<figure className="w-full py-10 px-6 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
-						<img
-							src={imgCatalogo}
-							alt="Imagen del catálogo"
-							title="Catálogo de productos"
-							className=" rounded-lg  h-auto shadow-lg "
-						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl text-center py-5">
-							Ver presentación con información detallada de los
-							productos que ofrecemos y sus características.
-						</p>
-						<Link
-							target="_blank"
-							to="https://docs.google.com/presentation/d/1V037vKTmnGZCmRs8LkFWctZsFL3bLrEUZFudSfnOZbA/edit?usp=sharing"
-							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center gap-1 ">
-							Descargar catálogo PDF{" "}
-							<svg
-								className="w-4 "
-								aria-hidden="true"
-								fill="none"
-								viewBox="0 0 16 18">
-								<path
-									stroke="currentColor"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
-								/>
+			<section className="w-full absolute top-12 flex justify-center items-center">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
+					<header className="hp-page-header">
+						<div className="hp-eyebrow hp-eyebrow-blue">
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+								<path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2z" />
+								<path d="M7 8h4M7 12h8M7 16h8" />
 							</svg>
-						</Link>
-					</figure>
-					<p className="text-lg font-normal text-gray-500 lg:text-xl  border-l-4 border-blue-400 my-20 px-2 rounded-sm">
-						Además, te invitamos a leer la nota que realizó el
-						periódico Infobae sobre la importancia del agua en
-						nuestras vidas.
+							Ventas • Recursos y Prensa
+						</div>
+						<h1 className="hp-h1">Estrategia y Catálogo</h1>
+					</header>
+					<p className="hp-p-intro mb-12">
+						Descubre nuestra estrategia comercial y descarga el 
+						<strong className="hp-strong"> catálogo completo de productos </strong> 
+						para explorar a fondo nuestras soluciones de envasado.
 					</p>
-					<figure className="w-full py-10 px-6 my-10  flex flex-col justify-center items-center   bg-gray-100 rounded-lg shadow-lg">
-						<img
-							src={infobae}
-							alt="Imagen de la noticia"
-							title="Catálogo de productos"
-							className="rounded-lg  h-auto shadow-lg w-full"
-						/>
-						<p className="text-lg font-normal text-gray-500 lg:text-xl text-center py-5">
-							Vea la nota completa en el siguiente enlace
-						</p>
-						<Link
-							target="_blank"
-							to="https://www.infobae.com/def/desarrollo/2019/12/21/agua-envasada-verdadera-fuente-de-salud-o-solo-marketing/"
-							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center ">
-							Ir a la noticia {"->"}
-						</Link>
+					
+					<figure className="w-full py-20 px-8 md:px-16 my-12 flex flex-col justify-center items-start bg-slate-50 dark:bg-slate-900/40 rounded-[24px] shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
+						<div className="w-full flex justify-center mb-12">
+							<img
+								src={imgCatalogo}
+								alt="Catálogo Alloatti"
+								className="rounded-2xl h-auto shadow-2xl max-w-3xl w-full border border-slate-200 dark:border-slate-700"
+							/>
+						</div>
+						<div className="text-left w-full">
+							<div className="hp-eyebrow hp-eyebrow-blue mb-6">Recurso Digital</div>
+							<h2 className="hp-h2 !text-3xl mb-6">Catálogo Institucional</h2>
+							<p className="hp-p max-w-2xl mb-10">
+								Explore nuestra gama completa de soluciones. Esta presentación técnica incluye 
+								especificaciones detalladas, diagramas de procesos y ventajas competitivas de 
+								nuestra maquinaria de vanguardia.
+							</p>
+							<Link
+								target="_blank"
+								to="https://docs.google.com/presentation/d/1V037vKTmnGZCmRs8LkFWctZsFL3bLrEUZFudSfnOZbA/edit?usp=sharing"
+								className="hp-btn-primary inline-flex items-center gap-2">
+								Descargar catálogo PDF
+								<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+								</svg>
+							</Link>
+						</div>
+					</figure>
+
+					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-24">
+						Nuestra presencia en medios nacionales refleja el impacto de nuestras 
+						soluciones en el mercado de consumo masivo y la industria del agua.
+					</p>
+
+					<figure className="w-full py-20 px-8 md:px-16 my-12 flex flex-col justify-center items-start bg-slate-50 dark:bg-slate-900/40 rounded-[24px] shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
+						<div className="w-full flex justify-center mb-12">
+							<img
+								src={infobae}
+								alt="Noticia Infobae"
+								className="rounded-2xl h-auto shadow-2xl w-full max-w-3xl border border-slate-200 dark:border-slate-700"
+							/>
+						</div>
+						<div className="text-left w-full">
+							<div className="hp-eyebrow hp-eyebrow-blue mb-6">Prensa y Medios</div>
+							<h2 className="hp-h2 !text-3xl mb-6">Nota Editorial: Infobae</h2>
+							<p className="hp-p max-w-2xl mb-10">
+								Le invitamos a leer la entrevista exclusiva sobre la importancia del agua envasada, 
+								los mitos del mercado y cómo la tecnología de Alloatti garantiza la salud de millones 
+								de consumidores.
+							</p>
+							<Link
+								target="_blank"
+								to="https://www.infobae.com/def/desarrollo/2019/12/21/agua-envasada-verdadera-fuente-de-salud-o-solo-marketing/"
+								className="hp-btn-primary inline-flex items-center gap-2">
+								Ir a la noticia
+								<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+							</Link>
+						</div>
 					</figure>
 				</article>
 			</section>

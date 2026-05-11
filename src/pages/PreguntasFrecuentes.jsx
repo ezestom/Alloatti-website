@@ -1,6 +1,5 @@
 import { Base } from "../components/Base";
 import { Details } from "../components/Details";
-import { useTheme } from "../context/ThemeContext";
 import image1 from "../img/6.jpg";
 import image2 from "../img/maquina5.jpg";
 import image3 from "../img/12.jpg";
@@ -9,7 +8,6 @@ import image5 from "../img/trabajador.jpg";
 import image6 from "../img/maquina2.jpg";
 
 export function PreguntasFrecuentes() {
-	const { isDarkTheme } = useTheme();
 
 	const images = [image1, image2, image3, image4, image5, image6];
 
@@ -17,45 +15,46 @@ export function PreguntasFrecuentes() {
 		<>
 			<Base />
 			<section
-				className={`w-full absolute top-10 flex justify-center items-center px-1 ${
-					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
-				}`}>
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 ">
+				className="w-full absolute top-10 flex justify-center items-center px-1">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
 					<div className="flex-col px-2">
-						<h6
-							className={`${
-								isDarkTheme ? "text-white" : "text-gray-900"
-							} mb-10 text-3xl  font-extrabold  tracking-tight md:text-5xl  `}>
-							{" "}
-							<span className="underline underline-offset-3 decoration-6 decoration-blue-400">
-								Preguntas y respuestas
-							</span>{" "}
-							frecuentes de nuestros clientes{" "}
-						</h6>
-						<p className="text-lg my-20 font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+						<header className="hp-page-header">
+							<div className="hp-eyebrow hp-eyebrow-blue">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+									<circle cx="12" cy="12" r="10" />
+									<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+									<path d="M12 17h.01" />
+								</svg>
+								Centro de Ayuda • Soporte Técnico
+							</div>
+							<h1 className="hp-h1">Preguntas Frecuentes</h1>
+						</header>
+						<p className="hp-p-intro my-20">
 							Explora nuestras{" "}
-							<strong>preguntas frecuentes</strong> y{" "}
-							<strong>respuestas</strong> para obtener información
+							<strong className="hp-strong">preguntas frecuentes</strong> y{" "}
+							<strong className="hp-strong">respuestas</strong> para obtener información
 							detallada sobre nuestros productos y servicios.
 							Nuestra intención es proporcionarte una comprensión
 							completa para que disfrutes de una experiencia
 							enriquecedora con nosotros.
 						</p>
-						<figure className="w-full bg-blue-50 rounded-lg h-full my-10  flex justify-center items-center flex-wrap gap-5 shadow-md py-10 ">
+						<div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
 							{images.map((image, index) => (
-								<img
-									key={index}
-									src={image}
-									className="  rounded-lg shadow-ld h-full aspect-square object-cover w-[175px]	md:w-[250px]  "
-									alt={index}
-								/>
+								<div key={index} className="relative group overflow-hidden rounded-2xl aspect-square shadow-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+									<img
+										src={image}
+										className="w-full h-full object-cover grayscale-[50%] transition-all duration-700 group-hover:grayscale-0"
+										alt={`Galería Alloatti ${index}`}
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-40"></div>
+								</div>
 							))}
-						</figure>
+						</div>
 					</div>
 
-					<p className="text-lg border-l-4  border-blue-400 px-2 font-normal text-gray-500 lg:text-xl my-20 rounded-sm">
+					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
 						Nuestro{" "}
-						<strong>centro de preguntas y respuestas</strong> es una
+						<strong className="hp-strong">centro de preguntas y respuestas</strong> es una
 						valiosa herramienta diseñada para proporcionar
 						respuestas rápidas y precisas a las preguntas más
 						comunes sobre nuestra empresa y maquinaria. En esta
@@ -65,56 +64,61 @@ export function PreguntasFrecuentes() {
 						conocer las características técnicas de nuestras
 						máquinas, los plazos de entrega, o cómo contactarnos
 						para consultas específicas, nuestro{" "}
-						<strong>centro de preguntas y respuestas</strong> está
+						<strong className="hp-strong">centro de preguntas y respuestas</strong> está
 						aquí para facilitar tu experiencia y brindarte la
 						información que necesitas de manera fácil y accesible.
 					</p>
-					<div className="bg-gray-100 p-4 rounded-lg shadow-md my-10 ">
-						<Details
-							name={name}
-							question={
-								"Pregunta: ¿Cuánto tiempo lleva Alloatti SRL en el mercado de maquinaria para bidones?"
-							}
-							answer={
-								"Respuesta: Alloatti SRL tiene más de 20 años de experiencia en el mercado, brindando maquinaria de calidad para el procesamiento de bidones retornables y descartables."
-							}
-						/>
-						<Details
-							name={name}
-							question={
-								"Pregunta: ¿Cuáles son algunas de las características destacadas de las máquinas ofrecidas por Alloatti SRL?"
-							}
-							answer={
-								"Respuesta: Nuestras máquinas cuentan con características como tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente, soportes abiertos para bidones, pantalla táctil para operación y control, entre otras."
-							}
-						/>
-						<Details
-							name={name}
-							question={
-								"Pregunta: ¿Qué capacidad de producción tienen las líneas de producción de Alloatti SRL?"
-							}
-							answer={
-								"Respuesta: Ofrecemos líneas de producción que abarcan un rango de 50 hasta 1000 bidones por hora. Además, podemos desarrollar líneas de mayor capacidad según los requerimientos específicos de nuestros clientes."
-							}
-						/>
-						<Details
-							name={name}
-							question={
-								"Pregunta: ¿Qué novedades ha incorporado Alloatti SRL?"
-							}
-							answer={
-								"Respuesta: Hemos fortalecido nuestra operación con la introducción de un departamento de automatización y el lanzamiento de productos innovadores, que incluyen sacatapas automático y manual, alimentador automático para 500 tapas, cargador automático de bidones vacíos, prelavadora con cepillos automáticos, y pantalla con conectividad a Internet y app móvil"
-							}
-						/>
-						<Details
-							name={name}
-							question={
-								"Pregunta: ¿Cómo garantiza Alloatti SRL la calidad e higiene en el procesamiento de bidones?"
-							}
-							answer={
-								"Respuesta: En Alloatti, garantizamos un tiempo de lavado total de 120 segundos para cada bidón, asegurando una limpieza completa tanto en el interior como en el exterior, incluyendo la boca del bidón. Nuestras máquinas están diseñadas para prevenir el contacto directo entre la boca del bidón y el pico de llenado, eliminando cualquier posibilidad de contaminación del bidón. Además, contamos con un proceso de saneado, registro de producción y saneado, y diagnóstico inteligente de eventuales fallas para asegurar la máxima eficiencia y estándares de higiene."
-							}
-						/>
+					<div className="hp-card my-12 !p-0 overflow-hidden">
+						<div className="bg-slate-50 dark:bg-slate-800/50 p-6 border-b border-slate-100 dark:border-slate-700">
+							<div className="hp-eyebrow hp-eyebrow-blue !bg-white dark:!bg-slate-900">Soporte Técnico • FAQ</div>
+						</div>
+						<div className="p-4 md:p-12 space-y-2">
+							<Details
+								name={"Alloatti"}
+								question={
+									"¿Cuánto tiempo lleva Alloatti SRL en el mercado?"
+								}
+								answer={
+									"Alloatti SRL tiene más de 30 años de experiencia en el mercado, brindando maquinaria de calidad para el procesamiento de bidones retornables y descartables."
+								}
+							/>
+							<Details
+								name={"Alloatti"}
+								question={
+									"¿Cuáles son las características destacadas de sus máquinas?"
+								}
+								answer={
+									"Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente y control inteligente vía pantalla táctil."
+								}
+							/>
+							<Details
+								name={"Alloatti"}
+								question={
+									"¿Qué capacidad de producción ofrecen?"
+								}
+								answer={
+									"Ofrecemos líneas que abarcan desde 50 hasta 1000 bidones por hora, con la posibilidad de desarrollar capacidades mayores según requerimientos específicos."
+								}
+							/>
+							<Details
+								name={"Alloatti"}
+								question={
+									"¿Qué innovaciones recientes han incorporado?"
+								}
+								answer={
+									"Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad IoT con diagnósticos inteligentes en tiempo real."
+								}
+							/>
+							<Details
+								name={"Alloatti"}
+								question={
+									"¿Cómo garantizan la calidad e higiene?"
+								}
+								answer={
+									"Garantizamos un ciclo de lavado de 120 segundos y llenado sin contacto para eliminar cualquier posibilidad de contaminación, cumpliendo con los estándares de higiene más exigentes."
+								}
+							/>
+						</div>
 					</div>
 				</article>
 			</section>

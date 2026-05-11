@@ -1,9 +1,300 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* HP Inspired Colors */
+  --hp-blue: #024ad8;
+  --hp-blue-deep: #0e3191;
+  --hp-ink: #1a1a1a;
+  --hp-cloud: #f7f7f7;
+  --hp-fog: #e8e8e8;
+  --hp-steel: #c2c2c2;
+  --hp-on-primary: #ffffff;
+  
+  /* Functional Variables - Light */
+  --primary: var(--hp-blue);
+  --bg-canvas: #ffffff;
+  --bg-surface: var(--hp-cloud);
+  --text-main: var(--hp-ink);
+  --border-main: var(--hp-fog);
+  
+  /* Spacing & Radii */
+  --rounded-btn: 4px; /* rounded.md */
+  --rounded-card: 16px; /* rounded.xl */
+}
+
+.dark {
+  --bg-canvas: var(--hp-ink);
+  --bg-surface: #292929;
+  --text-main: #ffffff;
+  --border-main: #334155;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-canvas);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* HP Specific Components */
+.hp-btn-primary {
+  background-color: var(--hp-blue);
+  color: var(--hp-on-primary);
+  padding: 12px 24px;
+  border-radius: var(--rounded-btn);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.hp-btn-primary:hover {
+  background-color: var(--hp-blue-deep);
+}
+
+/* Page Headers & Typography */
+.hp-page-header {
+  margin-bottom: 48px;
+}
+
+.hp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+}
+
+.hp-eyebrow-blue {
+  background-color: rgba(2, 74, 216, 0.1);
+  color: var(--hp-blue);
+}
+
+.dark .hp-eyebrow-blue {
+  background-color: rgba(2, 74, 216, 0.2);
+  color: #60a5fa;
+}
+
+.hp-h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  position: relative;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .hp-h1 {
+    font-size: 56px;
+  }
+}
+
+.hp-h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .hp-h2 {
+    font-size: 48px;
+  }
+}
+
+.hp-p-intro {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #475569; /* slate-600 */
+  margin-bottom: 32px;
+}
+
+.dark .hp-p-intro {
+  color: #94a3b8; /* slate-400 */
+}
+
+@media (min-width: 768px) {
+  .hp-p-intro {
+    font-size: 24px;
+  }
+}
+
+.hp-p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569; /* slate-600 */
+  margin-bottom: 16px;
+}
+
+.dark .hp-p {
+  color: #94a3b8; /* slate-400 */
+}
+
+@media (min-width: 768px) {
+  .hp-p {
+    font-size: 18px;
+  }
+}
+
+.hp-strong {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.hp-h1::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--hp-blue);
+}
+
+.hp-card {
+  background-color: #ffffff;
+  border: 1px solid var(--hp-fog);
+  border-radius: var(--rounded-card);
+  padding: 32px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .hp-card {
+  background-color: #292929;
+  border-color: #334155;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hp-blue);
+  transform: translateY(0);
+  transition: height 0.3s ease;
+}
+
+.hp-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.dark .hp-card:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.hp-section-cloud {
+  background-color: var(--hp-cloud);
+}
+
+.dark .hp-section-cloud {
+  background-color: #212121;
+}
+
+.hp-section-ink {
+  background-color: var(--hp-ink);
+  color: #ffffff;
+}
+
+/* HP Chevron Decoration - Signature Motif */
+.hp-chevron-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hp-chevron {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-color: var(--hp-blue);
+  top: 0;
+  z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, -20% 100%); /* Sharp parallelogram */
+}
+
+.hp-chevron-left {
+  left: -50px;
+}
+
+.hp-chevron-right {
+  right: -50px;
+  transform: scaleX(-1);
+}
+
+/* Animations */
+@keyframes hpFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-hp-fade {
+  animation: hpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+/* Premium Navigation Animations */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite ease-in-out;
+}
+
+@keyframes pulse-gentle {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 3s infinite ease-in-out;
 }

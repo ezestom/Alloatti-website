@@ -1,80 +1,68 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
-import { IoLogoWhatsapp } from "react-icons/io5";
 import { BsYoutube } from "react-icons/bs";
 export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section
-			className={`fixed bottom-0 left-8 z-10  ${
-				isDarkTheme ? "bg-gray-900 " : "bg-gray-50 "
+			className={`absolute bottom-0 left-1/2 z-10 w-full max-w-2xl -translate-x-1/2 p-4 transition-colors duration-300 backdrop-blur-sm ${
+				isDarkTheme ? "bg-[#1a1a1a]" : "bg-white "
 			}`}>
-			<div className=" text-center">
-				<Link
+			<div className="flex flex-col items-center justify-center gap-1">
+				{/* <Link
 					to="https://wa.me/+5491168641122"
 					target="_blank"
 					rel="noopener noreferrer"
-					className=" flex w-full items-center hover:text-green-500  justify-center">
-					<span className=" flex w-auto justify-center text-center items-center gap-1 bg-green-300 text-black text-xs font-medium p-2  rounded-lg hover:bg-green-400">
-						<IoLogoWhatsapp />
-						Te responederemos a la brevedad
-					</span>{" "}
-				</Link>
-				<ul className="flex justify-around py-2">
-					<li>
-						<a
-							href="https://www.facebook.com/alloatti.srl/"
-							rel="noreferrer"
-							target="_blank"
-							className={`${
-								isDarkTheme
-									? "text-gray-100 hover:text-blue-900"
-									: "text-black hover:text-blue-900"
-							}`}>
-							<FaFacebookF />
-						</a>
-					</li>
-					<li>
-						<a
-							href="/"
-							rel="noreferrer"
-							target="_blank"
-							className={`${
-								isDarkTheme
-									? "text-gray-100 hover:text-pink-600"
-									: "text-black hover:text-pink-600"
-							}`}>
-							<FaInstagram />
-						</a>
-					</li>
-					<li>
-						<a
-							target="_blank"
-							href="https://www.youtube.com/@AlloattiSRL"
-							rel="noreferrer"
-							className={`${
-								isDarkTheme
-									? "text-gray-100 hover:text-red-600"
-									: "text-black hover:text-red-600"
-							}`}>
-							<BsYoutube />
-						</a>
-					</li>
-				</ul>
-				<p className="mt-1 text-center text-xs text-gray-500 sm:mt-0 ">
-					Copyright &copy; 2023. All rights reserved.
-				</p>
-				<code className="mt-1 text-center text-sm  sm:mt-0 sm:text-right text-slate-600">
-					Designed and Developed by{" "}
+					className="group flex items-center justify-center gap-2 py-2 px-4 rounded-[4px] bg-[#25d366] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#128c7e] transition-all">
+					<IoLogoWhatsapp className="text-lg" />
+					Soporte Directo
+				</Link> */}
+				
+				<div className="flex justify-center gap-2">
 					<a
-						href="https://ezestom.github.io/portfolio/"
+						href="https://www.facebook.com/alloatti.srl/"
+						rel="noreferrer"
 						target="_blank"
-						rel="noopener noreferrer"
-						className="text-blue-500 hover:text-blue-700">
-						Eze Stom {"->"}
+						className={`${
+							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
+						} transition-colors`}>
+						<FaFacebookF size={12} />
 					</a>
-				</code>
+					<a
+						href="/"
+						rel="noreferrer"
+						target="_blank"
+						className={`${
+							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
+						} transition-colors`}>
+						<FaInstagram size={12} />
+					</a>
+					<a
+						target="_blank"
+						href="https://www.youtube.com/@AlloattiSRL"
+						rel="noreferrer"
+						className={`${
+							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
+						} transition-colors`}>
+						<BsYoutube size={12} />
+					</a>
+				</div>
+				
+				<div className="text-[10px] text-center leading-relaxed">
+					<p className="text-slate-500 uppercase tracking-tighter">
+						&copy; 2023 Alloatti SRL. All rights reserved.
+					</p>
+					<p className="mt-1 text-slate-400">
+						Developed by{" "}
+						<a
+							href="https://ezestom.is-a.dev/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-[#024ad8] hover:underline">
+							Eze Stom
+						</a>
+					</p>
+				</div>
 			</div>
 		</section>
 	);

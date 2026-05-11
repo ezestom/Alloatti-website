@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../img/Alloatti-logo-dark.png";
 import { LogoCelular } from "./LogoCelular";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
 import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
 
 export function Home() {
+	const navigate = useNavigate();
 	const { isDarkTheme } = useTheme();
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -26,170 +27,155 @@ export function Home() {
 	}, []);
 	return (
 		<>
-			<WithClose />
 			<section
-				className={`w-full absolute top-8 flex justify-center items-center px-1 ${
-					isDarkTheme ? "bg-gray-900" : "bg-gray-50 "
+				className={`w-full absolute top-8 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
+					isDarkTheme ? "bg-[#1a1a1a]" : "bg-white"
 				}`}>
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-48  ">
-					<div className="flex-col px-2 mt-3 border border-gray-200 rounded-lg p-4 md:p-12 ">
-						<LogoCelular />
+				<article className="lg:w-5/6 lg:ml-[300px] sm:ml-0 mb-48 animate-hp-fade">
+					{/* HP Hero Section with Chevrons */}
+					<WithClose />
+					<div className="hp-chevron-container mb-20 rounded-[16px] overflow-visible">
+						<div className="hidden lg:block hp-chevron hp-chevron-left"></div>
+						<div className="hidden lg:block hp-chevron hp-chevron-right"></div>
+						
+						<div className={`relative z-10 flex-col px-8 py-16 md:px-20 md:py-24 border rounded-[16px] transition-all duration-500 ${
+							isDarkTheme ? "bg-[#1a1a1a] border-slate-800" : "bg-white border-gray-100"
+						}`}>
+							<LogoCelular />
 
-						<h1
-							className={`${
-								isDarkTheme ? "text-white" : "text-gray-900"
-							}  text-3xl  font-extrabold  md:text-5xl  `}>
-							Líderes en innovación de{" "}
-							<span className="underline underline-offset-3 decoration-6 decoration-blue-400">
-								{" "}
-								máquinas lavadoras, enjuagadoras, llenadoras y
-								tapadoras{" "}
-							</span>{" "}
-							de bidones de agua potable{" "}
-						</h1>
+							<h1
+								className={`${
+									isDarkTheme ? "text-white" : "text-[#1a1a1a]"
+								} text-5xl font-medium md:text-7xl tracking-tight leading-[1.0] mb-8`}>
+								Líderes en innovación de{" "}
+								<span className="text-[#024ad8]">
+									{" "}
+									máquinas lavadoras, enjuagadoras, llenadoras y
+									tapadoras{" "}
+								</span>{" "}
+								de bidones
+							</h1>
+
+							<p className="hp-p-intro max-w-3xl mb-10">
+								Elevando estándares, garantizando pureza: tu socio en
+								transformación industrial. Con tecnología vanguardista y
+								compromiso incansable.
+							</p>
+
+							<div className="flex gap-4">
+								<button 
+									onClick={() => navigate("/contacto")}
+									className="hp-btn-primary">
+									Solicitar Presupuesto
+								</button>
+								<button 
+									onClick={() => navigate("/nosotros")}
+									className="px-6 py-3 border border-[#1a1a1a] dark:border-gray-200 rounded-[4px] font-semibold text-sm uppercase tracking-wider hover:bg-white dark:hover:bg-slate-500 transition-colors">
+									Conócenos
+								</button>
+							</div>
+						</div>
 					</div>
-					<p className="text-lg border-l-4 border-blue-400  px-2 font-normal text-gray-500 lg:text-xl dark:text-gray-400 rounded-sm mt-10  ">
-						Elevando estándares, garantizando pureza: tu socio en
-						transformación industrial. Con tecnología vanguardista y
-						compromiso incansable, creamos el futuro de la
-						producción de agua potable.
-					</p>
-					<div className=" h-auto ">
-						<div className="p-1 m-10 mx-auto max-w-screen-xl ">
-							<div className=" flex-col flex justify-between  border border-gray-200 rounded-lg p-4 md:p-12 mb-8">
-								<span
-									href="#"
-									className="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										className="icon icon-tabler icon-tabler-bulb"
-										width="24"
-										height="24"
-										viewBox="0 0 30 30"
-										stroke="currentColor"
-										strokeWidth="1.5"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										fill="none">
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
-										<path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
-										<path d="M9.7 17l4.6 0" />
-									</svg>
-									Innovación
-								</span>
-								<h2
-									className={`${
-										isDarkTheme
-											? "text-white"
-											: "text-gray-900"
-									} text-3xl md:text-5xl font-extrabold mb-2`}>
-									Ofrecemos soluciones personalizadas para tus
-									necesidades de producción
-								</h2>
 
-								<p className="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">
-									Alloatti SRL, líder con más de 30 años en
-									maquinaria para bidones de agua. Innovamos
-									con tecnología avanzada, ofreciendo
-									soluciones personalizadas y calidad
-									excepcional. Forjamos el futuro de la
-									industria, convirtiendo cada gota en
-									excelencia y eficiencia incomparable.
-								</p>
+					{/* Section 2: Solutions */}
+					<div className="hp-section-cloud py-20 px-6 rounded-[16px] mb-12">
+						<div className="max-w-screen-xl mx-auto ">
+							<div className="flex flex-col md:flex-row justify-between items-start gap-12">
+								<div className="md:w-1/2">
+									<span className="bg-blue-100 text-[#024ad8] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm mb-4 inline-block">
+										Innovación
+									</span>
+									<h2 className="hp-h2">
+										Ofrecemos soluciones personalizadas para tus
+										necesidades de producción
+									</h2>
+									<p className="hp-p text-lg">
+										Alloatti SRL, líder con más de 30 años en
+										maquinaria para bidones de agua. Innovamos
+										con tecnología avanzada, ofreciendo
+										soluciones personalizadas y calidad
+										excepcional.
+									</p>
+								</div>
 
-								{isLoading ? (
-									<SkeletonVideo />
-								) : (
-									<BlurVideo
-										video={bidonesCorriendo}
-										urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-									/>
-								)}
+								<div className="md:w-1/2 w-full">
+									{isLoading ? (
+										<SkeletonVideo />
+									) : (
+										<div className="overflow-hidden">
+											<BlurVideo
+												video={bidonesCorriendo}
+												urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+											/>
+										</div>
+									)}
+								</div>
+							</div>
+							
+							<div className="mt-12 text-center">
 								<a
 									href="https://www.youtube.com/@AlloattiSRL"
 									rel="noopener noreferrer"
 									target="_blank"
-									className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+									className="hp-btn-primary inline-flex items-center gap-2">
 									Ver más videos en YouTube
 									<svg
-										className="w-3.5 h-3.5 ml-2"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
+										className="w-4 h-4"
 										fill="none"
-										viewBox="0 0 14 10">
-										<path
-											stroke="currentColor"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth="2"
-											d="M1 5h12m0 0L9 1m4 4L9 9"
-										/>
+										stroke="currentColor"
+										viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
 									</svg>
 								</a>
 							</div>
+						</div>
+					</div>
 							<div className="grid md:grid-cols-2 gap-8">
 								{/* sección 1 */}
-								<div className=" flex-col flex justify-between  border border-gray-200  rounded-lg p-4 md:p-12">
-									<span
-										href="#"
-										className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  dark:text-green-400 mb-2">
-										<svg
-											className="w-2.5 h-2.5 mr-1.5"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 18 18">
-											<path d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
-										</svg>
-										Carácteristicas de las máquinas de
-										bidones retornables
-									</span>
-									<h2
-										className={`${
-											isDarkTheme
-												? "text-white"
-												: "text-gray-900"
-										} text-3xl font-extrabold mb-2`}>
-										Características que destacan nuestras
-										máquinas de bidones retornables
-									</h2>
-									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
-										<p className="mb-2">
-											&#8226; Tiempo en lavado: 120
-											segundos
-										</p>
-										<p className="mb-2">
-											&#8226; Picos de lavado exterior
-											rotativos
-										</p>
-										<p className="mb-2">
-											&#8226; Puertas accionadas
-											neumáticamente
-										</p>
-										<p className="mb-2">
-											&#8226; Soportes abiertos para
-											bidones
-										</p>
-										<p className="mb-2">
-											&#8226; Pantalla táctil para
-											operación y control
-										</p>
-										<p className="mb-2">
-											&#8226; Proceso de saneado
-										</p>
-										<p className="mb-2">
-											&#8226; Registro de producción y
-											saneado
-										</p>
-										<p className="mb-2">
-											&#8226; Diagnóstico inteligente de
-											eventuales fallas
-										</p>
+								<div className="hp-card flex flex-col h-full">
+									<div className="flex-grow">
+										<div className="hp-eyebrow hp-eyebrow-blue mb-4">
+											<svg width="14" height="14" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+											</svg>
+											Bidones Retornables
+										</div>
+										<h2 className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+											Características destacadas en máquinas retornables
+										</h2>
+										<div className="hp-p text-sm mb-8 space-y-2">
+											<p className="mb-2">
+												&#8226; Tiempo en lavado: 120
+												segundos
+											</p>
+											<p className="mb-2">
+												&#8226; Picos de lavado exterior
+												rotativos
+											</p>
+											<p className="mb-2">
+												&#8226; Puertas accionadas
+												neumáticamente
+											</p>
+											<p className="mb-2">
+												&#8226; Soportes abiertos para
+												bidones
+											</p>
+											<p className="mb-2">
+												&#8226; Pantalla táctil para
+												operación y control
+											</p>
+											<p className="mb-2">
+												&#8226; Proceso de saneado
+											</p>
+											<p className="mb-2">
+												&#8226; Registro de producción y
+												saneado
+											</p>
+											<p className="mb-2">
+												&#8226; Diagnóstico inteligente de
+												eventuales fallas
+											</p>
+										</div>
 									</div>
 
 									<Link
@@ -214,61 +200,44 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 2 */}
-								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
-									<span
-										href="#"
-										className="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  dark:text-purple-400 mb-2">
-										<svg
-											className="w-2.5 h-2.5 mr-1.5"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 18 18">
-											<path d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
-										</svg>
-										Carácteristicas de las máquinas de
-										bidones descartables
-									</span>
-									<h2
-										className={`${
-											isDarkTheme
-												? "text-white"
-												: "text-gray-900"
-										} text-3xl font-extrabold mb-2`}>
-										Características que destacan nuestras
-										máquinas de bidones descartables
-									</h2>
-									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
-										<p className="mb-2">
-											&#8226; Tiempo de enjuague ajustable
-										</p>
-										<p className="mb-2">
-											&#8226; Picos de enjuague interior
-										</p>
-										<p className="mb-2">
-											&#8226; Colocador automático de
-											manijas
-										</p>
-										<p className="mb-2">
-											&#8226; Colocador automático de
-											tapas a rosca
-										</p>
-										<p className="mb-2">
-											&#8226; Roscador automático
-										</p>
-										<p className="mb-2">
-											&#8226; Pantalla táctil para
-											operación y control
-										</p>
-										<p className="mb-2">
-											<p>
-												&#8226; Diagnóstico inteligente
-												de eventuales fallas
+								<div className="hp-card flex flex-col h-full">
+									<div className="flex-grow">
+										<div className="hp-eyebrow hp-eyebrow-blue mb-4">
+											<svg width="14" height="14" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.08-.33.12-.51.12s-.35-.04-.51-.12l-7.9-4.44c-.32-.17-.53-.5-.53-.88V7.5c0-.38.21-.71.53-.88l7.9-4.44c.16-.08.33-.12.51-.12s.35.04.51.12l7.9 4.44c.32.17.53.5.53.88v9z" />
+											</svg>
+											Bidones Descartables
+										</div>
+										<h2 className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+											Innovación en máquinas de bidones descartables
+										</h2>
+										<div className="hp-p text-sm mb-8 space-y-2">
+											<p className="mb-2">
+												&#8226; Tiempo de enjuague ajustable
 											</p>
-										</p>
-										<p className="mb-2">
-											<br />
-										</p>
+											<p className="mb-2">
+												&#8226; Picos de enjuague interior
+											</p>
+											<p className="mb-2">
+												&#8226; Colocador automático de
+												manijas
+											</p>
+											<p className="mb-2">
+												&#8226; Colocador automático de
+												tapas a rosca
+											</p>
+											<p className="mb-2">
+												&#8226; Roscador automático
+											</p>
+											<p className="mb-2">
+												&#8226; Pantalla táctil para
+												operación y control
+											</p>
+											<p className="mb-2">
+												&#8226; Diagnóstico inteligente de
+												eventuales fallas
+											</p>
+										</div>
 									</div>
 
 									<Link
@@ -293,66 +262,42 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 3 */}
-								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
-									<span
-										href="#"
-										className="bg-yellow-100 text-yellow-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2">
-										<svg
-											className="w-2.5 h-2.5 mr-1.5"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 20 16">
-											<path
-												stroke="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="2"
-												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
-											/>
-										</svg>
-										Carácteristicas de los accesorios
-										mecanizados
-									</span>
-									<h2
-										className={`${
-											isDarkTheme
-												? "text-white"
-												: "text-gray-900"
-										} text-3xl font-extrabold mb-2`}>
-										Potencie al máximo su máquina con estos
-										imprescindibles accesorios
-									</h2>
-									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
-										<p className="mb-2">
-											&#8226; Sacatapas automático y
-											sacatapas manual
-										</p>
-										<p className="mb-2">
-											&#8226; Alimentador automático para
-											500 tapas
-										</p>
-										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones vacíos
-										</p>
-										<p className="mb-2">
-											&#8226; Precintador automático
-										</p>
-										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones en racks
-										</p>
-										<p className="mb-2">
-											&#8226; Lavadora con cepillos
-											automática
-										</p>
-										<p className="mb-2">
-											<br />
-										</p>
-										<p className="mb-2">
-											<br />
-										</p>
+								<div className="hp-card flex flex-col h-full">
+									<div className="flex-grow">
+										<div className="hp-eyebrow hp-eyebrow-blue mb-4">
+											<svg width="14" height="14" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M6.27 17.05A2.991 2.991 0 0 1 4 22c-1.66 0-3-1.34-3-3s1.34-3 3-3c.18 0 .36 0 .53.05l3.07-5.36l-1.74-.99l4.09-1.12l1.12 4.09l-1.74-.99l-3.06 5.37M20 16c-1.3 0-2.4.84-2.82 2H11v-2l-3 3l3 3v-2h6.18c.42 1.16 1.52 2 2.82 2c1.66 0 3-1.34 3-3s-1.34-3-3-3m-8-8c.18 0 .36 0 .53-.05l3.07 5.36l-1.74.99l4.09 1.12l1.12-4.09l-1.74.99l-3.06-5.37A2.991 2.991 0 0 0 12 2c-1.66 0-3 1.34-3 3s1.34 3 3 3Z" />
+											</svg>
+											Accesorios Mecanizados
+										</div>
+										<h2 className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+											Accesorios imprescindibles para tu línea
+										</h2>
+										<div className="hp-p text-sm mb-8 space-y-2">
+											<p className="mb-2">
+												&#8226; Sacatapas automático y
+												sacatapas manual
+											</p>
+											<p className="mb-2">
+												&#8226; Alimentador automático para
+												500 tapas
+											</p>
+											<p className="mb-2">
+												&#8226; Cargador automático de
+												bidones vacíos
+											</p>
+											<p className="mb-2">
+												&#8226; Precintador automático
+											</p>
+											<p className="mb-2">
+												&#8226; Cargador automático de
+												bidones en racks
+											</p>
+											<p className="mb-2">
+												&#8226; Lavadora con cepillos
+												automática
+											</p>
+										</div>
 									</div>
 
 									<Link
@@ -377,97 +322,29 @@ export function Home() {
 									</Link>
 								</div>
 								{/* sección 4 */}
-								<div className=" flex-col flex justify-start  border border-gray-200  rounded-lg p-8 md:p-12">
-									<span
-										href="#"
-										className="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
-										<svg
-											className="w-2.5 h-2.5 mr-1.5"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 20 16">
-											<path
-												stroke="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="2"
-												d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
-											/>
-										</svg>
-										Próximanente innovación en máquinaria
-									</span>
-									<h2
-										className={`${
-											isDarkTheme
-												? "text-white"
-												: "text-gray-900"
-										} text-3xl font-extrabold mb-2`}>
-										En desarrollo...
-									</h2>
-									<div className="text-m font-normal text-gray-500 dark:text-gray-400 mb-4">
-										{/* <p className="mb-2">
-											&#8226; Sacatapas automático y
-											sacatapas manual
-										</p>
-										<p className="mb-2">
-											&#8226; Alimentador automático para
-											500 tapas
-										</p>
-										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones vacíos
-										</p>
-										<p className="mb-2">
-											&#8226; Precintador automático
-										</p>
-										<p className="mb-2">
-											&#8226; Cargador automático de
-											bidones en racks
-										</p>
-										<p className="mb-2">
-											&#8226; Lavadora con cepillos
-											automática
-										</p>
-										<p className="mb-2">
-											<br />
-										</p>
-										<p className="mb-2">
-											<br />
-										</p> */}
-										<picture className=" opacity-20 h-full w-full flex justify-center items-center">
-											<img
-												className="py-20 w-auto h-auto"
-												src={logo}
-												alt=""
-											/>
-										</picture>{" "}
+								<div className="hp-card flex flex-col h-full">
+									<div className="flex-grow">
+										<div className="hp-eyebrow hp-eyebrow-blue mb-4">
+											<svg width="14" height="14" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+											</svg>
+											Próximamente
+										</div>
+										<h2 className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+											Innovación en desarrollo constante
+										</h2>
+										<div className="hp-p text-sm mb-4">
+											<picture className=" opacity-5 h-full w-full flex justify-center items-center">
+												<img
+													className="py-20 w-auto h-auto"
+													src={logo}
+													alt=""
+												/>
+											</picture>{" "}
+										</div>
 									</div>
-									{/* 
-									<Link
-										onClick={handleClick}
-										to="#"
-										className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-										Más información
-										<svg
-											className="w-3.5 h-3.5 ml-2"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 14 10">
-											<path
-												stroke="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="2"
-												d="M1 5h12m0 0L9 1m4 4L9 9"
-											/>
-										</svg>
-									</Link> */}
 								</div>
 							</div>
-						</div>
-					</div>
 				</article>
 			</section>
 		</>

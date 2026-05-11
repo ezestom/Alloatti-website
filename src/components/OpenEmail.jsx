@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import ok from "../icons/ok.png";
 
 export const OpenEmail = ({ data }) => {
@@ -43,4 +44,12 @@ export const OpenEmail = ({ data }) => {
 			</span>
 		</button>
 	);
+};
+
+OpenEmail.propTypes = {
+	data: PropTypes.arrayOf(
+		PropTypes.shape({
+			modelo: PropTypes.string,
+		})
+	).isRequired,
 };
