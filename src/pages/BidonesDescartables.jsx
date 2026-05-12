@@ -27,10 +27,12 @@ export function BidonesDescartables() {
 				title="Máquinas para Bidones Descartables" 
 				description="Líneas automáticas de enjuague, llenado y roscado para bidones descartables. Capacidad de 300 a 700 bidones por hora con alta precisión."
 				keywords="bidones descartables, llenadora de bidones, roscado automatico, envasado de agua"
+			url="/maquina-para-bidones-descartables"
 			/>
 			<Base />
-			<section className="w-full absolute top-12 flex justify-center items-center">
+			<section className="w-full absolute top-12 flex justify-center items-center flex-col">
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
+
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -72,12 +74,12 @@ export function BidonesDescartables() {
 						a ofrecer soluciones de calidad que garanticen la
 						seguridad y pureza de cada bidón procesado.
 					</p>
-					<div className="table-container ">
+				</article>
+					<div className="table-container">
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}
 					</div>
-				</article>
 			</section>
 		</>
 	);

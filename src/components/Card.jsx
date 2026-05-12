@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 export function Card({
 	name,
+	photo,
 	university,
 	description,
 	position,
@@ -13,8 +14,8 @@ export function Card({
 			<div className="shrink-0 relative">
 				<img
 					alt={name}
-					src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=150&h=150&q=80"
-					className="h-24 w-24 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
+					src={photo}
+					className="h-40 w-40 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
 				/>
 				<div className="absolute -bottom-2 -right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -54,6 +55,7 @@ export function Card({
 
 Card.propTypes = {
 	name: PropTypes.string.isRequired,
+	photo: PropTypes.string.isRequired,
 	university: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	position: PropTypes.string.isRequired,

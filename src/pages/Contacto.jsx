@@ -10,6 +10,7 @@ export function Contacto() {
 				title="Contacto" 
 				description="¿Tienes dudas sobre nuestra maquinaria? Ponte en contacto con nuestros asesores para recibir información detallada y presupuestos personalizados."
 				keywords="contacto, ventas, soporte técnico, presupuesto máquinas de agua"
+			url="/contacto"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">

@@ -1,11 +1,44 @@
 import { Base } from "../components/Base";
 import { Details } from "../components/Details";
-import image1 from "../img/6.jpg";
+import { SEO } from "../components/SEO";
+import image1 from "../img/1.jpg";
 import image2 from "../img/maquina5.jpg";
-import image3 from "../img/12.jpg";
+import image3 from "../img/7.jpg";
 import image4 from "../img/maquina3.jpg";
 import image5 from "../img/trabajador.jpg";
 import image6 from "../img/maquina2.jpg";
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "¿Cuánto tiempo lleva Alloatti SRL en el mercado?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Alloatti SRL tiene más de 30 años de experiencia en el mercado, brindando maquinaria de calidad para el procesamiento de bidones retornables y descartables." }
+		},
+		{
+			"@type": "Question",
+			"name": "¿Cuáles son las características destacadas de sus máquinas?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente y control inteligente vía pantalla táctil." }
+		},
+		{
+			"@type": "Question",
+			"name": "¿Qué capacidad de producción ofrecen?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos líneas que abarcan desde 50 hasta 1000 bidones por hora, con la posibilidad de desarrollar capacidades mayores según requerimientos específicos." }
+		},
+		{
+			"@type": "Question",
+			"name": "¿Qué innovaciones recientes han incorporado?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad IoT con diagnósticos inteligentes en tiempo real." }
+		},
+		{
+			"@type": "Question",
+			"name": "¿Cómo garantizan la calidad e higiene?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Garantizamos un ciclo de lavado de 120 segundos y llenado sin contacto para eliminar cualquier posibilidad de contaminación, cumpliendo con los estándares de higiene más exigentes." }
+		}
+	]
+};
 
 export function PreguntasFrecuentes() {
 
@@ -13,6 +46,13 @@ export function PreguntasFrecuentes() {
 
 	return (
 		<>
+			<SEO 
+				title="Preguntas Frecuentes" 
+				description="Respuestas a las preguntas más comunes sobre maquinaria Alloatti: capacidad de producción, características técnicas, tiempos de lavado e innovaciones."
+				keywords="preguntas frecuentes, FAQ, maquinas bidones, soporte técnico, Alloatti"
+				url="/preguntas-frecuentes"
+				jsonLd={faqSchema}
+			/>
 			<Base />
 			<section
 				className="w-full absolute top-10 flex justify-center items-center px-1">
@@ -43,7 +83,7 @@ export function PreguntasFrecuentes() {
 								<div key={index} className="relative group overflow-hidden rounded-2xl aspect-square shadow-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
 									<img
 										src={image}
-										className="w-full h-full object-cover grayscale-[50%] transition-all duration-700 group-hover:grayscale-0"
+										className="w-full h-full object-cover grayscale-[25%] transition-all duration-700 group-hover:grayscale-0"
 										alt={`Galería Alloatti ${index}`}
 									/>
 									<div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-40"></div>

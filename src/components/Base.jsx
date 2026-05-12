@@ -9,20 +9,21 @@ import { TopButton } from "./TopButton";
 
 export function Base() {
 	const location = useLocation();
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [isMobile, setIsMobile] = useState(() => window.matchMedia("(max-width: 1023px)").matches);
 	const [showTopButton, setShowTopButton] = useState(false);
 
 	const isBackVisible = location.pathname !== "/";
 
 	useEffect(() => {
-		const handleResize = () => setWindowWidth(window.innerWidth);
+		const mediaQuery = window.matchMedia("(max-width: 1023px)");
+		const handleMediaChange = (e) => setIsMobile(e.matches);
 		const handleScroll = () => setShowTopButton(window.scrollY > 300);
 
-		window.addEventListener("resize", handleResize);
+		mediaQuery.addEventListener("change", handleMediaChange);
 		window.addEventListener("scroll", handleScroll);
 
 		return () => {
-			window.removeEventListener("resize", handleResize);
+			mediaQuery.removeEventListener("change", handleMediaChange);
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
@@ -30,7 +31,7 @@ export function Base() {
 	return (
 		<>
 			<div className="relative min-h-screen flex flex-col">
-				{windowWidth < 1023 ? <NavbarMobile /> : <Navbar />}
+				{isMobile ? <NavbarMobile /> : <Navbar />}
 			</div>
 			
 			{/* Theme Toggle - Top Right */}

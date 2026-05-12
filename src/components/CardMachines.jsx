@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { OpenEmail } from "./OpenEmail";
-import close from "../icons/close.png";
-import close2 from "../icons/close2.png";
-
+import closeIcon from "../icons/close.png";
+import close2Icon from "../icons/close2.png";
 
 export function CardMachines({
 	model,
@@ -17,114 +16,110 @@ export function CardMachines({
 }) {
 	const [isShow, setIsShow] = useState(true);
 
+	useEffect(() => {
+		// Prevent scrolling when modal is open
+		document.body.style.overflow = "hidden";
+		return () => {
+			document.body.style.overflow = "auto";
+		};
+	}, []);
+
 	const handleClose = () => {
 		setIsShow(false);
-		document.body.style.overflow = "auto";
 		onClose();
 	};
+
+	if (!isShow) return null;
+
 	return (
-		<div>
-			{isShow && (
-				<div
-					id="card"
-					className="w-screen h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/30 z-30">
-					<aside className="absolute right-0 left-0 m-auto top-0 bottom-0  bg-white border border-gray-200 rounded-lg shadow md:flex-row  sm:max-w-[95vw] lg:max-w-[60%] max-h-[98vh] p-2">
+		<div
+			className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-hp-fade"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="modal-title">
+			
+			<div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+				
+				{/* Close Button */}
+				<button
+					className="absolute top-4 right-4 z-10 p-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full shadow-lg hover:scale-110 transition-transform"
+					onClick={handleClose}
+					aria-label="Cerrar ventana">
+					<img src={closeIcon} className="w-4 h-4" alt="Cerrar" />
+				</button>
+
+				<div className="flex flex-col lg:flex-row h-full overflow-y-auto">
+					
+					{/* Image Section */}
+					<div className="lg:w-1/2 h-64 lg:h-auto relative">
 						<img
-							className="max-h-[50%] rounded-md object-cover w-full h-auto"
+							className="w-full h-full object-cover"
 							src={img}
 							alt={model}
 						/>
-						<button
-							className="absolute top-0 right-0 bg-white rounded-md rounded-br-none  rounded-tl-none  p-1 hover:bg-gray-200 hover:cursor-pointer"
-							onClick={handleClose}>
-							<img src={close} alt="close-icon" />
-						</button>
-						<div className="flex flex-col items-center w-full overflow-y-auto mt-2 ">
-							<div className="overflow-x-auto rounded-lg border border-gray-200 w-full">
-								<table className="w-full divide-y-2 divide-gray-200 bg-white text-sm flex flex-col ">
-									<article className="flex  divide-y divide-gray-200">
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100 text-center text-gray-900 ">
-											Modelo
-										</p>
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900 ">
-											Producción máxima
-										</p>
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900 ">
-											Tiempo de enjuague
-										</p>
-									</article>
+						<div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent lg:hidden"></div>
+					</div>
 
-									<article className="flex  divide-y divide-gray-200">
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{model}
-										</p>
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{production_max}
-										</p>
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{washing_time}
-										</p>
-									</article>
+					{/* Content Section */}
+					<div className="lg:w-1/2 p-8 lg:p-10 flex flex-col">
+						<header className="mb-8">
+							<div className="hp-eyebrow hp-eyebrow-blue mb-2">Especificaciones Técnicas</div>
+							<h3 id="modal-title" className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+								{model}
+							</h3>
+						</header>
 
-									<article className=" flex  divide-y divide-gray-200">
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-											Construida
-										</p>
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-											Dimensiones
-										</p>
-										<p className=" w-full p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400  bg-gray-100 text-center text-gray-900">
-											Accesorios
-										</p>
-									</article>
-
-									<article className=" flex divide-y divide-gray-200">
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{build}
-										</p>
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{size}
-										</p>
-										<p className=" w-full p-1 text-center font-semibold  text-gray-500">
-											{accesories}
-										</p>
-									</article>
-								</table>
-								<aside className="w-full grid items-center divide-y divide-gray-200 ">
-									<article className="w-full  p-1 font-bold uppercase underline underline-offset-4 decoration-blue-400 bg-gray-100  text-center text-gray-900 text-sm border-t ">
-										Descripción
-									</article>
-
-									<article className="w-full flex justify-center p-2 text-center text-sm  font-semibold text-gray-600 overflow-y-auto ">
-										{description}
-									</article>
-								</aside>
+						{/* Specs Grid */}
+						<dl className="grid grid-cols-2 gap-x-6 gap-y-8 mb-10 border-b border-slate-100 dark:border-slate-800 pb-10">
+							<div>
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Producción Máxima</dt>
+								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{production_max}</dd>
 							</div>
-							<div className="w-full absolute bottom-0 rounded-lg">
-								<OpenEmail
-									data={
-										[
-											{
-												modelo: model,
-												producción_max: production_max,
-											},
-										] || []
-									}
-								/>
-								<button
-									className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-1 px-4  w-full text-lg rounded-lg rounded-t-none"
-									id="close-dialog"
-									onClick={handleClose}>
-									<span className="flex items-center justify-center gap-1 font-nomal">
-										<img src={close2} alt=" close-icon" />{" "}
-										Cerrar ventana
-									</span>
-								</button>
+							<div>
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Tiempo de Enjuague</dt>
+								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{washing_time}</dd>
 							</div>
+							<div>
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Construcción</dt>
+								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{build}</dd>
+							</div>
+							<div>
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Dimensiones</dt>
+								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{size}</dd>
+							</div>
+							<div className="col-span-2">
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Accesorios</dt>
+								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{accesories}</dd>
+							</div>
+						</dl>
+
+						<div className="mb-10">
+							<h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Descripción</h4>
+							<p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 font-medium">
+								{description}
+							</p>
 						</div>
-					</aside>
+
+						{/* Footer Actions */}
+						<div className="mt-auto flex flex-col gap-3">
+							<OpenEmail
+								data={[
+									{
+										modelo: model,
+										producción_max: production_max,
+									},
+								]}
+							/>
+							<button
+								className="hp-btn-outline w-full flex items-center justify-center gap-2 !border-slate-200 dark:!border-slate-800 text-slate-500 hover:text-slate-900"
+								onClick={handleClose}>
+								<img src={close2Icon} className="w-4 h-4 opacity-50" alt="" />
+								Cerrar Ventana
+							</button>
+						</div>
+					</div>
 				</div>
-			)}
+			</div>
 		</div>
 	);
 }

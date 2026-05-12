@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
+import { SEO } from "../components/SEO";
 import imgCatalogo from "../img/409shots_so.jpg";
 import infobae from "../img/infobae.png";
 
 export function UltimasNoticias() {
 	return (
 		<>
+			<SEO 
+				title="Estrategia y Catálogo" 
+				description="Descarga el catálogo completo de productos Alloatti SRL. Conoce nuestra presencia en medios nacionales y nuestra estrategia comercial."
+				keywords="catálogo, noticias, prensa, Infobae, agua envasada, Alloatti"
+				url="/ultimas-noticias"
+			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
@@ -71,7 +78,7 @@ export function UltimasNoticias() {
 							<h2 className="hp-h2 !text-3xl mb-6">Nota Editorial: Infobae</h2>
 							<p className="hp-p max-w-2xl mb-10">
 								Le invitamos a leer la entrevista exclusiva sobre la importancia del agua envasada, 
-								los mitos del mercado y cómo la tecnología de Alloatti garantiza la salud de millones 
+								los mitos del mercado y cómo la tecnología garantiza la salud de millones 
 								de consumidores.
 							</p>
 							<Link

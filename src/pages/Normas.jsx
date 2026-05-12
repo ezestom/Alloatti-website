@@ -1,9 +1,16 @@
 import { Base } from "../components/Base";
+import { SEO } from "../components/SEO";
 import familia from "../img/familia.avif";
 
 export function Normas() {
 	return (
 		<>
+			<SEO 
+				title="Normas de Calidad" 
+				description="Conoce las normativas IVESS y CIMES que cumplen nuestras máquinas envasadoras. Estándares de higiene y seguridad garantizados en cada proceso."
+				keywords="normas de calidad, IVESS, CIMES, higiene, agua potable, certificación"
+				url="/normas-de-calidad"
+			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-20 px-4 md:px-0">

@@ -1,4 +1,4 @@
-import machine from "../img/maquinaMitad.jpg";
+import machine from "../img/wallpaper_machine2.jpg";
 import { CardMachines } from "./CardMachines";
 import { useState } from "react";
 

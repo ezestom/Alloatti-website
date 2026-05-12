@@ -29,7 +29,7 @@ export function Footer() {
 						<FaFacebookF size={12} />
 					</a>
 					<a
-						href="/"
+						href="https://www.instagram.com/alloatti.srl/"
 						rel="noreferrer"
 						target="_blank"
 						className={`${
@@ -50,7 +50,7 @@ export function Footer() {
 				
 				<div className="text-[10px] text-center leading-relaxed">
 					<p className="text-slate-500 uppercase tracking-tighter">
-						&copy; 2023 Alloatti SRL. All rights reserved.
+						&copy; {new Date().getFullYear()} Alloatti SRL. All rights reserved.
 					</p>
 					<p className="mt-1 text-slate-400">
 						Developed by{" "}

@@ -1,28 +1,50 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import email from "../icons/email.png";
-import person from "../icons/person.png";
+import emailIcon from "../icons/email.png";
+import personIcon from "../icons/person.png";
 
 function InputData() {
-	const messageAlert = () => {
-		let nameValue = document.getElementById("name").value;
-		let emailValue = document.getElementById("email").value;
-		let messageValue = document.getElementById("message").value;
-		let resultElement = document.getElementById("result");
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: ""
+	});
 
-		if (nameValue === "" || emailValue === "" || messageValue === "") {
-			resultElement.textContent = "Por favor, complete todos los campos";
-			resultElement.style.color = "red";
-			resultElement.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
-		} else {
-			resultElement.textContent = "Mensaje enviado correctamente";
-			resultElement.style.color = "green";
-			resultElement.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
-			setTimeout(() => {
-				resultElement.textContent = "";
-				resultElement.style.backgroundColor = "transparent";
-			}, 5000);
-		}
+	const [status, setStatus] = useState({
+		submitting: false,
+		info: { error: false, msg: null }
+	});
+
+	const handleOnChange = (e) => {
+		setFormData((prev) => ({
+			...prev,
+			[e.target.name]: e.target.value
+		}));
 	};
+
+	const handleOnSubmit = async (e) => {
+		// We still let the form submit to formsubmit.co via action attribute 
+		// but we can provide better validation and feedback here.
+		if (!formData.name || !formData.email || !formData.message) {
+			e.preventDefault();
+			setStatus({
+				submitting: false,
+				info: { error: true, msg: "Por favor, complete todos los campos" }
+			});
+			return;
+		}
+
+		setStatus({
+			submitting: true,
+			info: { error: false, msg: "Enviando consulta..." }
+		});
+
+		// Since we use formsubmit.co, the page will redirect unless we use AJAX.
+		// For now, let's just keep the legacy action but improve the visual feedback.
+		// If the user wants a full SPA experience, we'd need to use fetch/axios.
+		// Given the "don't change titles/texts" rule, I'll stick to a safer refactor.
+	};
+
 	return (
 		<>
 			<form
@@ -30,7 +52,9 @@ function InputData() {
 				className="hp-card !p-8 md:!p-12 border-none shadow-2xl transition-all duration-500"
 				target="_blank"
 				action="https://formsubmit.co/ezequielstom@hotmail.com"
-				method="POST">
+				method="POST"
+				onSubmit={handleOnSubmit}>
+				
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
 					<div>
 						<label
@@ -40,13 +64,15 @@ function InputData() {
 						</label>
 						<div className="relative group">
 							<div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none transition-opacity group-focus-within:opacity-100 opacity-40">
-								<img src={person} className="w-4 dark:invert" alt="" />
+								<img src={personIcon} className="w-4 dark:invert" alt="Icono de usuario" />
 							</div>
 							<input
 								name="name"
 								type="text"
 								id="name"
 								autoComplete="name"
+								value={formData.name}
+								onChange={handleOnChange}
 								className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm rounded-xl focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 block w-full pl-12 p-4 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"
 								placeholder="Juan Perez"
 								required
@@ -62,13 +88,15 @@ function InputData() {
 						</label>
 						<div className="relative group">
 							<div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none transition-opacity group-focus-within:opacity-100 opacity-40">
-								<img src={email} className="w-4 dark:invert" alt="" />
+								<img src={emailIcon} className="w-4 dark:invert" alt="Icono de email" />
 							</div>
 							<input
 								name="email"
 								type="email"
 								id="email"
 								autoComplete="email"
+								value={formData.email}
+								onChange={handleOnChange}
 								className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm rounded-xl focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 block w-full pl-12 p-4 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"
 								placeholder="juan_perez@empresa.com"
 								required
@@ -87,18 +115,29 @@ function InputData() {
 						name="message"
 						id="message"
 						rows="5"
+						value={formData.message}
+						onChange={handleOnChange}
 						className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm rounded-xl focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 block w-full p-4 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none"
 						placeholder="Describinos tu proyecto o necesidad específica..."
 						required></textarea>
-					<div id="result" className="mt-4 text-sm font-medium p-3 rounded-lg text-center hidden"></div>
+					
+					{status.info.msg && (
+						<div className={`mt-4 text-sm font-medium p-4 rounded-xl text-center animate-hp-fade ${
+							status.info.error 
+								? "bg-red-50 text-red-600 border border-red-100 dark:bg-red-900/20 dark:border-red-900/30" 
+								: "bg-green-50 text-green-600 border border-green-100 dark:bg-green-900/20 dark:border-green-900/30"
+						}`}>
+							{status.info.msg}
+						</div>
+					)}
 				</div>
 
 				<div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-slate-100 dark:border-slate-800">
 					<button
-						onClick={messageAlert}
+						disabled={status.submitting}
 						type="submit"
-						className="hp-btn-primary inline-flex items-center gap-2">
-						Enviar consulta <span className="ml-2">→</span>
+						className="hp-btn-primary">
+						{status.submitting ? "Enviando..." : "Enviar consulta"} <span className="ml-2">→</span>
 					</button>
 
 					<p className="text-xs text-slate-400 dark:text-slate-500 max-w-xs text-center md:text-right leading-relaxed font-medium">

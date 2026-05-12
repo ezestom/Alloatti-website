@@ -63,6 +63,25 @@ body {
   background-color: var(--hp-blue-deep);
 }
 
+.hp-btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  padding: 12px 24px;
+  border-radius: var(--rounded-btn);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  border: 1px solid var(--text-main);
+  transition: all 0.2s;
+}
+
+.hp-btn-outline:hover {
+  background-color: var(--hp-blue);
+  color: var(--hp-on-primary);
+  border-color: var(--hp-blue);
+}
+
 /* Page Headers & Typography */
 .hp-page-header {
   margin-bottom: 48px;

@@ -23,6 +23,7 @@ export function Accesorios() {
 				title="Accesorios para Máquinas" 
 				description="Optimice su producción con nuestros accesorios: sacatapas automáticos, alimentadores de tapas, precintadores y más."
 				keywords="accesorios industriales, sacatapas, alimentador de tapas, automatización de agua"
+			url="/accesorios-para-maquinas"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">

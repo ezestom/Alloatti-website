@@ -9,6 +9,7 @@ export function Inicio() {
 				title="Inicio" 
 				description="Especialistas en máquinas para bidones de agua. Soluciones industriales de lavado, llenado y tapado con tecnología de vanguardia."
 				keywords="envasadoras, agua potable, bidones, maquinaria industrial, argentina"
+			url="/"
 			/>
 			<Base />
 			<Home/>

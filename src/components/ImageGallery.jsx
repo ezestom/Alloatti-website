@@ -20,21 +20,21 @@ export function ImageGallery() {
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 				<div>
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 				<div>
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 			</div>
@@ -43,21 +43,21 @@ export function ImageGallery() {
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 				<div>
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 				<div>
 					<img
 						className="h-auto max-w-full rounded-lg"
 						src={getRandomPhoto()}
-						alt=""
+						alt="Maquinaria industrial Alloatti SRL"
 					/>
 				</div>
 			</div>

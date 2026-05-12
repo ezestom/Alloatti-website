@@ -2,6 +2,8 @@ import { Base } from "../components/Base";
 import { Card } from "../components/Card";
 import { Data } from "../components/Data";
 import { SEO } from "../components/SEO";
+import hector from "../img/tito_card_op.jpg";
+import matias from "../img/mati_card_op.jpg";
 
 export function Nosotros() {
 	return (
@@ -10,6 +12,7 @@ export function Nosotros() {
 				title="Nosotros" 
 				description="Conoce la trayectoria de Alloatti SRL, una empresa dirigida por ingenieros con más de 30 años de experiencia en maquinaria para el procesamiento de agua."
 				keywords="ingeniería, maquinaria, agua potable, trayectoria, experiencia"
+			url="/nosotros"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
@@ -46,18 +49,20 @@ export function Nosotros() {
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
 							<Card
 								name={"Ing. Hector Alloatti"}
+								photo={hector}
 								university={"Universidad Nacional de La Plata"}
 								description={"Fundador y Gerente de Alloatti SRL, con más de 30 años de experiencia en la industria del agua. Especialista en ingeniería mecánica y eléctrica."}
 								position={"Fundador-Gerente"}
-								date={"2023"}
+								date={"2005"}
 								location={"Buenos Aires, Argentina"}
 							/>
 							<Card
 								name={"Ing. Matías Alloatti"}
+								photo={matias}
 								university={"Universidad Tecnológica Nacional"}
 								description={"Director de Logística y Programación de maquinarias con más de 15 años de experiencia. Especialista en programación de PLC y pantallas táctiles."}
 								position={"Director de Logística"}
-								date={"2023"}
+								date={"2010"}
 								location={"Buenos Aires, Argentina"}
 							/>
 						</div>
