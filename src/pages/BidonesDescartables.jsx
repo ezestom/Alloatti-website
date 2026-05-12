@@ -22,7 +22,7 @@ export function BidonesDescartables() {
 		}, 1000);
 	}, []);
 	return (
-		<section>
+		<>
 			<SEO 
 				title="Máquinas para Bidones Descartables" 
 				description="Líneas automáticas de enjuague, llenado y roscado para bidones descartables. Capacidad de 300 a 700 bidones por hora con alta precisión."
@@ -40,7 +40,7 @@ export function BidonesDescartables() {
 						</div>
 						<h1 className="hp-h1">Para Bidones Descartables</h1>
 					</header>
-					<p className="hp-p-intro my-20 px-2">
+					<p className="hp-p-intro my-20">
 						Nuestras avanzadas líneas para bidones descartables
 						representan la excelencia en maquinaria dedicada al
 						enjuague, llenado y roscado de bidones. Construidas con
@@ -79,6 +79,6 @@ export function BidonesDescartables() {
 					</div>
 				</article>
 			</section>
-		</section>
+		</>
 	);
 }

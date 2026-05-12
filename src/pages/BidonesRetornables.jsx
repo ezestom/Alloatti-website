@@ -9,7 +9,7 @@ import bidonesEnjuagandose from "../videos/bidonesEnjuagandose.mp4";
 import { SEO } from "../components/SEO";
 
 export function BidonesRetornables() {
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const {
 		sectionData1,
@@ -43,7 +43,7 @@ export function BidonesRetornables() {
 	}, []);
 
 	return (
-		<section>
+		<>
 			<SEO 
 				title="Máquinas para Bidones Retornables" 
 				description="Líneas automáticas de lavado, llenado y tapado para bidones retornables de 12 a 20 litros. Capacidad de 120 a 1000 bidones por hora."
@@ -61,7 +61,7 @@ export function BidonesRetornables() {
 						</div>
 						<h1 className="hp-h1">Para Bidones Retornables</h1>
 					</header>
-					<p className="hp-p-intro my-20 px-2">
+					<p className="hp-p-intro my-20">
 						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
 						lavado, enjuague, llenado y tapado de bidones.
@@ -102,6 +102,6 @@ export function BidonesRetornables() {
 					</div>
 				</article>
 			</section>
-		</section>
+		</>
 	);
 }
