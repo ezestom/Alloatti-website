@@ -50,9 +50,9 @@ export function UltimasNoticias() {
 							</p>
 							<Link
 								target="_blank"
-								to="https://docs.google.com/presentation/d/1V037vKTmnGZCmRs8LkFWctZsFL3bLrEUZFudSfnOZbA/edit?usp=sharing"
+								to="https://docs.google.com/presentation/d/1nxAnPC36P5ZGGVoCrPrG6OuOgro9ctrZ/edit?usp=sharing&ouid=100382327728309392109&rtpof=true&sd=true"
 								className="hp-btn-primary inline-flex items-center gap-2">
-								Descargar catálogo PDF
+								Ir al catálogo
 								<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
 								</svg>
