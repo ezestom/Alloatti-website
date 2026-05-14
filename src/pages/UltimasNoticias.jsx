@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
 import { SEO } from "../components/SEO";
-import imgCatalogo from "../img/409shots_so.jpg";
-import infobae from "../img/infobae.png";
+import imgCatalogo from "../img/ppt.jpeg";
+import infobae from "../img/infobae.jpeg";
 
 export function UltimasNoticias() {
 	return (
