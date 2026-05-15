@@ -23,19 +23,19 @@ export function Home() {
 	return (
 		<>
 			<section
-				className={`rounded-[32px] w-full absolute top-8 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
+				className={`rounded-[16px] w-full absolute top-8 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
 					isDarkTheme ? "bg-[#1a1a1a]" : "bg-white"
 				}`}>
-				<article className="rounded-[32px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade">
+				<article className="rounded-[16px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade">
 					<WithClose />
 					
 					{/* HP Hero Section with Premium Background */}
-					<div className="hp-chevron-container mb-24 rounded-[32px] overflow-visible">
+					<div className="hp-chevron-container mb-24 rounded-[16px] overflow-visible">
 						<div className="hidden xl:block hp-chevron hp-chevron-left"></div>
 						<div className="hidden xl:block hp-chevron hp-chevron-right"></div>
 						
 						<div 
-							className="relative z-10 flex flex-col px-6 py-16 md:px-20 md:py-32 border rounded-[32px] overflow-hidden transition-all duration-500 shadow-2xl group"
+							className={`relative z-10 flex flex-col px-6 py-16 md:px-20 md:py-32 border rounded-[16px] overflow-hidden transition-all duration-500 shadow-2xl group ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}
 							style={{
 								backgroundImage: `url(${heroMachine})`,
 								backgroundSize: 'cover',
@@ -58,16 +58,15 @@ export function Home() {
 									} text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[0.95] mb-8 `}>
 									Líderes en innovación de{" "}
 									<span className="text-[#024ad8]">
-										máquinas lavadoras, enjuagadoras, llenadoras y tapadorasadoras
+										máquinas lavadoras, enjuagadoras, llenadoras y tapadoras
 									</span>{" "}
 									de bidones
 								</h1>
 
-								<p className={`${
-									isDarkTheme ? "text-slate-300" : "text-slate-600"
-								} text-lg md:text-xl max-w-2xl mb-12 text-pretty font-medium leading-relaxed`}>
-									Elevando estándares, garantizando pureza: tu socio en
-									transformación industrial. Tecnología de vanguardia diseñada para maximizar tu producción.
+								<p className="hp-p-intro">
+									En Alloatti, nos especializamos en diseñar y fabricar
+									maquinaria de última generación para la industria del
+									agua, adaptándonos a las necesidades específicas de cada cliente.
 								</p>
 
 								<div className="flex flex-wrap gap-6">
@@ -90,9 +89,9 @@ export function Home() {
 					<Data />
 
 					{/* Section 2: Solutions */}
-					<div className="hp-section-cloud py-24 px-6 md:px-10 rounded-[32px] mb-20 shadow-sm">
+					<div className={`hp-section-cloud py-24 px-6 md:px-10 rounded-[16px] mb-20 shadow-sm border ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
 						<div className="max-w-screen-xl mx-auto ">
-							<div className="flex flex-col xl:flex-row justify-between items-start gap-16">
+							<div className="flex flex-col xl:flex-row justify-between items-center gap-16">
 								<div className="xl:w-1/2">
 									<span className="bg-blue-100 dark:bg-blue-900/30 text-[#024ad8] dark:text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-6 inline-block">
 										Innovación constante
@@ -103,7 +102,7 @@ export function Home() {
 										maquinaria de última generación para la industria del 
 										agua, adaptándonos a las necesidades específicas de cada cliente.
 									</p>
-									<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 mb-10 italic">
+									<p className={`hp-p-intro border-l-4 pl-8 mb-10 italic ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
 										Nuestra misión es potenciar tu negocio con tecnología 
 										que optimiza tiempos y garantiza la máxima calidad en cada bidón.
 									</p>
@@ -172,7 +171,7 @@ export function Home() {
 								]
 							}
 						].map((card, idx) => (
-							<div key={idx} className="hp-card flex flex-col p-0 overflow-hidden hover:border-[#024ad8]/30 transition-all duration-500 group">
+							<div key={idx} className="hp-card flex flex-col p-0 overflow-hidden transition-all duration-500 group">
 								<div className="p-8 flex-1">
 									<div className="hp-eyebrow hp-eyebrow-blue mb-6">
 										{card.title}

@@ -97,7 +97,7 @@ export function BidonesRetornables() {
 						seguridad y pureza de cada bidón procesado.
 					</p>
 				</article>
-					<div className="table-container ">
+					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}

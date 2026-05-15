@@ -1,80 +1,167 @@
 import machine from "../img/wallpaper_machine2.jpg";
 import { CardMachines } from "./CardMachines";
 import { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 export function Table({ data }) {
 	const [selectedBidones, setSelectedBidones] = useState(null);
+	const { isDarkTheme } = useTheme();
 
 	const handleOpen = (bidones) => {
 		setSelectedBidones(bidones);
 		document.body.style.overflow = "hidden";
 	};
 
-	return (
-		<div className=" overflow-x-auto  rounded-lg my-10 border-2 border-gray-200 	  ">
-			<table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto relative  ">
-				<caption
-					onClick={() => handleOpen(data[0])}
-					id="open-dialog"
-					className="p-5 py-8 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-gray-100 transition-all hover:bg-slate-300 cursor-pointer ">
-					La{" "}
-					<strong className="underline underline-offset-3 decoration-4 decoration-blue-400 ">
-						{data[0]?.modelo}{" "}
-					</strong>{" "}
-					es una máquina de producción de{" "}
-					<strong className="underline underline-offset-3 decoration-4 decoration-blue-400">
-						{data[0]?.producción_max}
-					</strong>
-					<p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-						Características de la {data[0]?.modelo}, procesos,
-						accesorios y construcción.
-					</p>
-					<svg
-						className="absolute top-0 right-0 border-1 bg-blue-50 rounded-md p-1"
-						width="40"
-						height="40"
-						viewBox="0 0 24 24">
-						<path
-							fill="#303030"
-							d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h6q.425 0 .713.288T12 4q0 .425-.288.713T11 5H5v14h14v-6q0-.425.288-.713T20 12q.425 0 .713.288T21 13v6q0 .825-.588 1.413T19 21H5ZM19 6.4L10.4 15q-.275.275-.7.275T9 15q-.275-.275-.275-.7T9 13.6L17.6 5H15q-.425 0-.713-.288T14 4q0-.425.288-.713T15 3h6v6q0 .425-.288.713T20 10q-.425 0-.713-.288T19 9V6.4Z"
-						/>
-					</svg>
-				</caption>
-				<thead className="text-xs text-gray-900 uppercase bg-gray-50 ">
-					<tr className="">
-						{Object.keys(data[0]).map((column, index) => (
-							<th
-								key={index}
-								scope="col"
-								className={`px-1 py-3 text-center ${
-									index === Object.keys(data[0]).length - 1
-										? "hidden"
-										: "" // Oculta la última columna
-								}`}>
-								{column}
-							</th>
-						))}
-					</tr>
-				</thead>
-				<tbody>
-					{data.map((row, index) => (
-						<tr key={index} className="bg-gray-100 border-b">
-							{Object.values(row).map((value, colIndex) => (
-								<td
-									key={colIndex}
-									className={`px-2 text-center py-4 text-blue-900 font-bold whitespace-nowrap bg-blue-50 ${
-										colIndex === Object.keys(row).length - 1
-											? "hidden"
-											: "" // Oculta la última columna
-									}`}>
-									{value}
-								</td>
-							))}
-						</tr>
-					))}
-				</tbody>
-			</table>
+	const machineData = data[0];
+	const visibleKeys = Object.keys(machineData).filter(
+		(key) => key !== "description"
+	);
 
+	// Key specs to highlight in the card header
+	const keySpecs = [
+		{ label: "Producción", value: machineData.producción_max, icon: "⚡" },
+		{ label: "Tiempo", value: machineData.tiempo_lavado || machineData.tiempo_enjuague, icon: "⏱" },
+		{ label: "Construcción", value: machineData.construida, icon: "🔧" },
+	].filter(spec => spec.value);
+
+	return (
+		<div className="mb-6">
+			{/* Premium Machine Card Button */}
+			<button
+				onClick={() => handleOpen(machineData)}
+				className={`w-full text-left group rounded-[16px] border transition-all duration-500 overflow-hidden relative ${
+					isDarkTheme
+						? "bg-[#1e1e1e] border-[#2a2a2a] hover:border-[#024ad8]/40 hover:shadow-[0_8px_32px_rgba(2,74,216,0.12)]"
+						: "bg-white border-[#e8e8e8] hover:border-[#024ad8]/30 hover:shadow-[0_8px_32px_rgba(2,74,216,0.08)]"
+				}`}
+			>
+				{/* Top accent bar */}
+				<div className="h-[3px] w-full bg-gradient-to-r from-[#024ad8] via-[#024ad8] to-[#0e3191] opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+				{/* Card Content */}
+				<div className="p-6 md:p-8">
+					{/* Header Row: Model + Open Icon */}
+					<div className="flex items-start justify-between gap-4 mb-6">
+						<div className="flex-1">
+							<div className="flex items-center gap-3 mb-2">
+								<span className={`text-xs font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full ${
+									isDarkTheme
+										? "bg-[#024ad8]/15 text-blue-400"
+										: "bg-[#024ad8]/8 text-[#024ad8]"
+								}`}>
+									{machineData.modelo}
+								</span>
+							</div>
+							<h3 className={`text-xl md:text-2xl font-bold tracking-tight leading-tight ${
+								isDarkTheme ? "text-white" : "text-[#1a1a1a]"
+							}`}>
+								Máquina de producción de{" "}
+								<span className="text-[#024ad8]">{machineData.producción_max}</span>
+							</h3>
+						</div>
+
+						{/* Open indicator */}
+						<div className={`flex-shrink-0 w-10 h-10 rounded-[10px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
+							isDarkTheme
+								? "bg-[#024ad8]/15 group-hover:bg-[#024ad8]/25"
+								: "bg-[#024ad8]/8 group-hover:bg-[#024ad8]/15"
+						}`}>
+							<svg
+								className="w-4 h-4 text-[#024ad8] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2.5"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							>
+								<path d="M7 17L17 7" />
+								<path d="M7 7h10v10" />
+							</svg>
+						</div>
+					</div>
+
+					{/* Key Specs Grid */}
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+						{keySpecs.map((spec, idx) => (
+							<div
+								key={idx}
+								className={`flex items-center gap-3 px-4 py-3 rounded-[12px] transition-colors duration-300 ${
+									isDarkTheme
+										? "bg-white/[0.03]"
+										: "bg-slate-50"
+								}`}
+							>
+								<span className="text-lg">{spec.icon}</span>
+								<div>
+									<p className={`text-[10px] font-bold uppercase tracking-[0.12em] ${
+										isDarkTheme ? "text-slate-500" : "text-slate-400"
+									}`}>
+										{spec.label}
+									</p>
+									<p className={`text-sm font-semibold ${
+										isDarkTheme ? "text-slate-200" : "text-slate-700"
+									}`}>
+										{spec.value}
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
+
+					{/* Detail Specs Row */}
+					<div className={`flex flex-wrap gap-x-6 gap-y-2 pt-5 border-t ${
+						isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"
+					}`}>
+						{visibleKeys.map((key, idx) => {
+							if (["modelo", "producción_max", "tiempo_lavado", "tiempo_enjuague", "construida"].includes(key)) return null;
+							return (
+								<div key={idx} className="flex items-center gap-2">
+									<span className={`text-[10px] font-bold uppercase tracking-wider ${
+										isDarkTheme ? "text-slate-500" : "text-slate-400"
+									}`}>
+										{key.replace(/_/g, " ")}:
+									</span>
+									<span className={`text-sm font-medium ${
+										isDarkTheme ? "text-slate-300" : "text-slate-600"
+									}`}>
+										{machineData[key]}
+									</span>
+								</div>
+							);
+						})}
+					</div>
+
+					{/* CTA hint */}
+					<div className="flex items-center gap-2 mt-5">
+						<span className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 ${
+							isDarkTheme
+								? "text-slate-500 group-hover:text-blue-400"
+								: "text-slate-400 group-hover:text-[#024ad8]"
+						}`}>
+							Ver especificaciones completas
+						</span>
+						<svg
+							className={`w-3.5 h-3.5 transition-all duration-300 group-hover:translate-x-1 ${
+								isDarkTheme
+									? "text-slate-500 group-hover:text-blue-400"
+									: "text-slate-400 group-hover:text-[#024ad8]"
+							}`}
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="2.5"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						>
+							<path d="M5 12h14" />
+							<path d="M12 5l7 7-7 7" />
+						</svg>
+					</div>
+				</div>
+			</button>
+
+			{/* Modal - unchanged */}
 			{selectedBidones && (
 				<div>
 					<CardMachines

@@ -13,7 +13,7 @@ export function Data() {
 						Manteniendo la confianza de nuestros clientes
 					</h2>
 					<p className="hp-p-intro">
-						Estamos orgullosos de haber brindado un servicio de
+						Estamos orgullosos de brindar un servicio de
 						calidad a nuestros clientes durante más de 30 años.
 						Estos son algunos de nuestros logros estratégicos.
 					</p>

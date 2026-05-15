@@ -1,6 +1,6 @@
 import { Base } from "../components/Base";
 import { SEO } from "../components/SEO";
-import familia from "../img/familia.avif";
+import familia from "../img/family.png";
 
 export function Normas() {
 	return (
@@ -65,7 +65,7 @@ export function Normas() {
 							<img
 								src={familia}
 								alt="Calidad IVESS Alloatti"
-								className="rounded-xl h-auto shadow-xl w-full max-w-4xl"
+								className="h-auto w-full max-w-4xl"
 							/>
 						</figure>
 

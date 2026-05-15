@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "sileo";
 
 const Inicio = lazy(() => import("./pages/Inicio.jsx").then(m => ({ default: m.Inicio })));
 const Error = lazy(() => import("./pages/Error.jsx").then(m => ({ default: m.Error })));
@@ -25,34 +26,37 @@ function PageLoader() {
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Suspense fallback={<PageLoader />}>
-				<Routes>
-					<Route path="/" element={<Inicio />} />
-					<Route path="*" element={<Error />} />
-					<Route path="/nosotros" element={<Nosotros />} />
-					<Route
-						path="/maquina-para-bidones-retornables"
-						element={<BidonesRetornables />}
-					/>
-					<Route
-						path="/maquina-para-bidones-descartables"
-						element={<BidonesDescartables />}
-					/>
-					<Route
-						path="/accesorios-para-maquinas"
-						element={<Accesorios />}
-					/>
-					<Route path="/normas-de-calidad" element={<Normas />} />
-					<Route path="/ultimas-noticias" element={<UltimasNoticias />} />
-					<Route path="/contacto" element={<Contacto />} />
-					<Route
-						path="/preguntas-frecuentes"
-						element={<PreguntasFrecuentes />}
-					/>
-				</Routes>
-			</Suspense>
-		</BrowserRouter>
+		<>
+			<Toaster position="bottom-center" />
+			<BrowserRouter>
+				<Suspense fallback={<PageLoader />}>
+					<Routes>
+						<Route path="/" element={<Inicio />} />
+						<Route path="*" element={<Error />} />
+						<Route path="/nosotros" element={<Nosotros />} />
+						<Route
+							path="/maquina-para-bidones-retornables"
+							element={<BidonesRetornables />}
+						/>
+						<Route
+							path="/maquina-para-bidones-descartables"
+							element={<BidonesDescartables />}
+						/>
+						<Route
+							path="/accesorios-para-maquinas"
+							element={<Accesorios />}
+						/>
+						<Route path="/normas-de-calidad" element={<Normas />} />
+						<Route path="/ultimas-noticias" element={<UltimasNoticias />} />
+						<Route path="/contacto" element={<Contacto />} />
+						<Route
+							path="/preguntas-frecuentes"
+							element={<PreguntasFrecuentes />}
+						/>
+					</Routes>
+				</Suspense>
+			</BrowserRouter>
+		</>
 	);
 }
 

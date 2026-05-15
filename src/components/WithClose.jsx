@@ -5,9 +5,9 @@ export function WithClose() {
 	const { isDarkTheme } = useTheme();
 
 	return (
-		<section className="w-full fixed top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none p-4">
+		<section className="w-full fixed top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none p-8">
 			<div
-				className={`pointer-events-auto flex justify-center items-center w-full max-w-2xl transition-all duration-500 rounded-full border shadow-2xl backdrop-blur-md px-6 py-2 ${
+				className={`pointer-events-auto flex justify-center items-center w-full max-w-lg transition-all duration-500 rounded-xl border shadow-2xl backdrop-blur-md px-6 py-2 ${
 					isDarkTheme 
 						? "bg-[#1a1a1a]/80 border-slate-700 text-white justify-around" 
 						: "bg-white/80 border-slate-200 text-slate-800 justify-around"
