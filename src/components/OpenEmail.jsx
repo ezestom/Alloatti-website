@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import ok from "../icons/ok.png";
+import { sileo } from "sileo";
 
 export const OpenEmail = ({ data }) => {
 	if (!data || !data[0]) {
@@ -30,6 +31,11 @@ export const OpenEmail = ({ data }) => {
 
 		// Abrir en una nueva ventana/tab o cambiar window.location.href
 		window.open(mailtoLink, "_blank");
+
+		sileo.success({
+			title: "¡Consulta iniciada!",
+			description: "Se abrirá tu cliente de correo para enviar la consulta.",
+		});
 	};
 
 	return (
