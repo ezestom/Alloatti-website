@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import emailIcon from "../icons/email.png";
 import personIcon from "../icons/person.png";
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "../constants/emailjs";
 
 function InputData() {
 	const [formData, setFormData] = useState({
@@ -23,10 +25,9 @@ function InputData() {
 	};
 
 	const handleOnSubmit = async (e) => {
-		// We still let the form submit to formsubmit.co via action attribute 
-		// but we can provide better validation and feedback here.
+		e.preventDefault();
+
 		if (!formData.name || !formData.email || !formData.message) {
-			e.preventDefault();
 			setStatus({
 				submitting: false,
 				info: { error: true, msg: "Por favor, complete todos los campos" }
@@ -39,10 +40,30 @@ function InputData() {
 			info: { error: false, msg: "Enviando consulta..." }
 		});
 
-		// Since we use formsubmit.co, the page will redirect unless we use AJAX.
-		// For now, let's just keep the legacy action but improve the visual feedback.
-		// If the user wants a full SPA experience, we'd need to use fetch/axios.
-		// Given the "don't change titles/texts" rule, I'll stick to a safer refactor.
+		try {
+			await emailjs.send(
+				EMAILJS_SERVICE_ID,
+				EMAILJS_TEMPLATE_ID,
+				{
+					name: formData.name,
+					email: formData.email,
+					message: formData.message,
+				},
+				EMAILJS_PUBLIC_KEY
+			);
+
+			setStatus({
+				submitting: false,
+				info: { error: false, msg: "¡Consulta enviada con éxito! Nos contactaremos a la brevedad." }
+			});
+			setFormData({ name: "", email: "", message: "" });
+		} catch (error) {
+			console.error("EmailJS Error:", error);
+			setStatus({
+				submitting: false,
+				info: { error: true, msg: "Hubo un error al enviar la consulta. Intente nuevamente." }
+			});
+		}
 	};
 
 	return (
@@ -50,9 +71,6 @@ function InputData() {
 			<form
 				id="form"
 				className="hp-card !p-8 md:!p-12 border-none shadow-2xl transition-all duration-500"
-				target="_blank"
-				action="https://formsubmit.co/ezequielstom@hotmail.com"
-				method="POST"
 				onSubmit={handleOnSubmit}>
 				
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
@@ -150,9 +168,6 @@ function InputData() {
 						</Link>
 					</p>
 				</div>
-				<input type="hidden" name="_captcha" value="false" />
-				<input type="hidden" name="_cc" value="ezequielstom@gmail.com,ezequielstom@hotmail.com" />
-				<input type="hidden" name="_subject" value=" -> ✅ Web Alloatti <-" />
 			</form>
 		</>
 	);
