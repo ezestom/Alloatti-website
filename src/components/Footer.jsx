@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+// import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 import { BsYoutube } from "react-icons/bs";
 export function Footer() {
@@ -19,7 +19,7 @@ export function Footer() {
 				</Link> */}
 				
 				<div className="flex justify-center gap-2">
-					<a
+					{/* <a
 						href="https://www.facebook.com/alloatti.srl/"
 						rel="noreferrer"
 						target="_blank"
@@ -36,7 +36,7 @@ export function Footer() {
 							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
 						} transition-colors`}>
 						<FaInstagram size={12} />
-					</a>
+					</a> */}
 					<a
 						target="_blank"
 						href="https://www.youtube.com/@AlloattiSRL"

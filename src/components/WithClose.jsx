@@ -1,8 +1,12 @@
 import { IoLogoWhatsapp } from "react-icons/io5";
+import { useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { getWhatsAppUrl } from "../constants/whatsapp";
 
 export function WithClose() {
 	const { isDarkTheme } = useTheme();
+	const location = useLocation();
+	const whatsappUrl = getWhatsAppUrl(location.pathname);
 
 	return (
 		<section className="w-full fixed top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none p-8">
@@ -20,7 +24,7 @@ export function WithClose() {
 				</div>
 				
 				<a
-					href="https://wa.me/+5491168641122"
+					href={whatsappUrl}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center gap-2 group transition-all">

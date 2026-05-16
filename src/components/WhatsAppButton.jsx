@@ -1,20 +1,10 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
-
-const pageMessages = {
-  '/': 'Hola Alloatti SRL, estoy interesado en sus máquinas envasadoras.',
-  '/maquina-para-bidones-retornables': 'Hola Alloatti SRL, me interesa la línea de máquinas para bidones retornables. ¿Podrían enviarme información?',
-  '/maquina-para-bidones-descartables': 'Hola Alloatti SRL, me interesa la línea de máquinas para bidones descartables. ¿Podrían enviarme información?',
-  '/accesorios-para-maquinas': 'Hola Alloatti SRL, me interesan los accesorios para máquinas. ¿Podrían enviarme información?',
-  '/contacto': 'Hola Alloatti SRL, quisiera consultar por sus servicios y solicitar un presupuesto.',
-  '/nosotros': 'Hola Alloatti SRL, me gustaría conocer más sobre la empresa y sus soluciones.',
-};
+import { getWhatsAppUrl } from '../constants/whatsapp';
 
 export function WhatsAppButton() {
   const location = useLocation();
-  const phoneNumber = "5491168641122"; 
-  const message = encodeURIComponent(pageMessages[location.pathname] || pageMessages['/']);
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = getWhatsAppUrl(location.pathname);
 
   return (
     <div className="relative group">
