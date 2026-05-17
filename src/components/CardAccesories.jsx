@@ -3,6 +3,7 @@ import { OpenEmail } from "./OpenEmail";
 import closeIcon from "../icons/close.png";
 import close2Icon from "../icons/close2.png";
 import { FaPlay } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 export function CardAccesories({
 	model,
@@ -119,3 +120,12 @@ export function CardAccesories({
 		</div>
 	);
 }
+
+CardAccesories.propTypes = {
+	model: PropTypes.string.isRequired,
+	img: PropTypes.string.isRequired,
+	onClose: PropTypes.func.isRequired,
+	characteristics: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	link: PropTypes.string,
+};
