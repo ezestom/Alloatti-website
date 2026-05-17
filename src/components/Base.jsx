@@ -40,7 +40,7 @@ export function Base() {
 			</div>
 
 			{/* Navigation & Contact Stack - Bottom Right */}
-			<div className="fixed bottom-32 lg:bottom-12 right-4 z-50 flex flex-col items-center gap-3">
+			<div className="fixed bottom-32 lg:bottom-24 right-4 z-50 flex flex-col items-center gap-3">
 				{/* Smart Back Button */}
 				<div className={`transition-all duration-500 transform ${
 					isBackVisible 
@@ -61,6 +61,8 @@ export function Base() {
 
 				{/* Primary CTA: WhatsApp */}
 				<WhatsAppButton />
+
+	
 			</div>
 		</>
 	);

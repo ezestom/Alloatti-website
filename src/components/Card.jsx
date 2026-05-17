@@ -10,7 +10,7 @@ export function Card({
 	location,
 }) {
 	return (
-		<div className="hp-card flex flex-col md:flex-row gap-8 items-start hover:border-[#024ad8]/30">
+		<div className="hp-card p-4 md:p-8 flex flex-col md:flex-row gap-8 items-start hover:border-[#024ad8]/30">
 			<div className="shrink-0 relative">
 				<img
 					alt={name}

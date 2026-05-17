@@ -72,11 +72,7 @@ export function PreguntasFrecuentes() {
 						<p className="hp-p-intro my-20">
 							Explora nuestras{" "}
 							<strong className="hp-strong">preguntas frecuentes</strong> y{" "}
-							<strong className="hp-strong">respuestas</strong> para obtener información
-							detallada sobre nuestros productos y servicios.
-							Nuestra intención es proporcionarte una comprensión
-							completa para que disfrutes de una experiencia
-							enriquecedora con nosotros.
+							y encontrá información clara sobre nuestros productos, servicios y maquinaria.
 						</p>
 						<div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
 							{images.map((image, index) => (
@@ -93,20 +89,7 @@ export function PreguntasFrecuentes() {
 					</div>
 
 					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
-						Nuestro{" "}
-						<strong className="hp-strong">centro de preguntas y respuestas</strong> es una
-						valiosa herramienta diseñada para proporcionar
-						respuestas rápidas y precisas a las preguntas más
-						comunes sobre nuestra empresa y maquinaria. En esta
-						sección, encontrarás información detallada sobre
-						nuestros productos, procesos y servicios, abordando
-						inquietudes frecuentes. Ya sea que estés interesado en
-						conocer las características técnicas de nuestras
-						máquinas, los plazos de entrega, o cómo contactarnos
-						para consultas específicas, nuestro{" "}
-						<strong className="hp-strong">centro de preguntas y respuestas</strong> está
-						aquí para facilitar tu experiencia y brindarte la
-						información que necesitas de manera fácil y accesible.
+Accedé rápidamente a respuestas sobre máquinas, procesos, entregas y soporte técnico.
 					</p>
 					<div className="hp-card my-12 !p-0 overflow-hidden">
 						<div className="bg-slate-50 dark:bg-slate-800/50 p-6 border-b border-slate-100 dark:border-slate-700">
