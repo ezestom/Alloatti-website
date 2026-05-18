@@ -168,7 +168,7 @@ export function Table({ data }) {
 						img={machine}
 						model={selectedBidones.modelo}
 						production_max={selectedBidones.producción_max}
-						washing_time={selectedBidones.tiempo_lavado}
+						washing_time={selectedBidones.tiempo_enjuague || selectedBidones.tiempo_lavado}
 						build={selectedBidones.construida}
 						size={selectedBidones.dimensiones}
 						accesories={selectedBidones.accesorios}

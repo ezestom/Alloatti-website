@@ -137,7 +137,7 @@ export function Home() {
 								features: [
 									"Tiempo en lavado: 120 segundos",
 									"Picos de lavado exterior rotativos",
-									"Puertas accionadas neumáticamente",
+									"Puertas sin contacto con bidón",
 									"Soportes abiertos para bidones",
 									"Pantalla táctil para operación y control",
 									"Proceso de saneado",
@@ -149,7 +149,7 @@ export function Home() {
 								title: "Bidones Descartables",
 								path: "/maquina-para-bidones-descartables",
 								features: [
-									"Tiempo de enjuague ajustable",
+									"Tiempo de lavado ajustable",
 									"Picos de enjuague interior",
 									"Colocador automático de manijas",
 									"Colocador automático de tapas a rosca",
@@ -159,13 +159,12 @@ export function Home() {
 								]
 							},
 							{
-								title: "Accesorios Mecanizados",
+								title: "Accesorios",
 								path: "/accesorios-para-maquinas",
 								features: [
 									"Sacatapas automático y sacatapas manual",
 									"Alimentador automático para 500 tapas",
 									"Cargador automático de bidones vacíos",
-									"Precintador automático",
 									"Cargador automático de bidones en racks",
 									"Lavadora con cepillos automática"
 								]

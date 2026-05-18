@@ -14,7 +14,7 @@ export const accesorios = {
 			characteristics: "Capacidad 500 tapas",
 			description:
 				"El equipo eleva las tapas para depositarlas en la tolva. Está compuesto por una cinta inclinada con la capacidad de elevar tapas desde una bolsa que contiene hasta 500 unidades. A medida que la tolva se queda sin tapas, la Jirafa se activa para rellenarla nuevamente con tapas, garantizando un suministro continuo.",
-			link: "",
+			link: "https://youtu.be/__BRYqdbh9M?si=z3Nv1l8_nwdIu_Eu&t=210",
 		},
 	],
 	sectionData3: [
@@ -59,7 +59,7 @@ export const accesorios = {
 			characteristics: "600 bidones retornables p/h",
 			description:
 				"El equipo posibilita la realización de un prelavado a los bidones antes de introducirlos en la máquina de lavado. Se compone de una cinta transportadora que lleva los bidones al interior de una cabina equipada con cepillos para realizar el cepillado exterior de los bidones. Además, se incorpora una bomba para llevar a cabo el prelavado exterior. La duración del prelavado es ajustable para adecuarse al ritmo de lavado de la máquina, permitiendo una limpieza eficiente y personalizada.",
-			link: "",
+			link: "https://www.youtube.com/watch?v=yLlcoZRyccM",
 		},
 	],
 	sectionData8: [

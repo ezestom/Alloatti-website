@@ -20,7 +20,7 @@ const faqSchema = {
 		{
 			"@type": "Question",
 			"name": "¿Cuáles son las características destacadas de sus máquinas?",
-			"acceptedAnswer": { "@type": "Answer", "text": "Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente y control inteligente vía pantalla táctil." }
+			"acceptedAnswer": { "@type": "Answer", "text": "Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas sin contacto con bidón y control inteligente vía pantalla táctil." }
 		},
 		{
 			"@type": "Question",
@@ -111,7 +111,7 @@ Accedé rápidamente a respuestas sobre máquinas, procesos, entregas y soporte 
 									"¿Cuáles son las características destacadas de sus máquinas?"
 								}
 								answer={
-									"Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas accionadas neumáticamente y control inteligente vía pantalla táctil."
+									"Nuestras máquinas cuentan con tiempos de lavado de 120 segundos, picos de lavado exterior rotativos, puertas sin contacto con bidón y control inteligente vía pantalla táctil."
 								}
 							/>
 							<Details

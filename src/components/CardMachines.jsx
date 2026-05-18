@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { OpenEmail } from "./OpenEmail";
 import closeIcon from "../icons/close.png";
 import close2Icon from "../icons/close2.png";
@@ -76,7 +77,7 @@ export function CardMachines({
 								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{production_max}</dd>
 							</div>
 							<div>
-								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Tiempo de Enjuague</dt>
+								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Tiempo de Lavado</dt>
 								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{washing_time}</dd>
 							</div>
 							<div>
@@ -123,3 +124,15 @@ export function CardMachines({
 		</div>
 	);
 }
+
+CardMachines.propTypes = {
+	model: PropTypes.string.isRequired,
+	img: PropTypes.string.isRequired,
+	onClose: PropTypes.func.isRequired,
+	production_max: PropTypes.string,
+	washing_time: PropTypes.string,
+	size: PropTypes.string,
+	accesories: PropTypes.string,
+	build: PropTypes.string,
+	description: PropTypes.string,
+};
