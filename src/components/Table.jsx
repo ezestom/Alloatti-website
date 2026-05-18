@@ -2,6 +2,7 @@ import machine from "../img/wallpaper_machine2.jpg";
 import { CardMachines } from "./CardMachines";
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import PropTypes from "prop-types";
 
 export function Table({ data }) {
 	const [selectedBidones, setSelectedBidones] = useState(null);
@@ -181,3 +182,7 @@ export function Table({ data }) {
 		</div>
 	);
 }
+
+Table.propTypes = {
+	data: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
