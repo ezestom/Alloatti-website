@@ -24,10 +24,10 @@ export function BidonesDescartables() {
 	return (
 		<>
 			<SEO 
-				title="Máquinas para Bidones Descartables" 
-				description="Líneas automáticas de enjuague, llenado y roscado para bidones descartables. Capacidad de 300 a 700 bidones por hora con alta precisión."
-				keywords="bidones descartables, llenadora de bidones, roscado automatico, envasado de agua"
-			url="/maquina-para-bidones-descartables"
+				title="Máquinas Envasadoras para Bidones Descartables" 
+				description="Líneas industriales automáticas de enjuague, llenado y roscado para bidones descartables. Producción continua de 300 a 700 bidones por hora con precisión extrema."
+				keywords="maquinas para bidones descartables, llenadora de bidones de PET, envasadora de agua, roscadora automatica, planta embotelladora, industria de agua"
+				url="/maquina-para-bidones-descartables"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center flex-col">

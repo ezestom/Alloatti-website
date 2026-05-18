@@ -45,10 +45,10 @@ export function BidonesRetornables() {
 	return (
 		<>
 			<SEO 
-				title="Máquinas para Bidones Retornables" 
-				description="Líneas automáticas de lavado, llenado y tapado para bidones retornables de 12 a 20 litros. Capacidad de 120 a 1000 bidones por hora."
-				keywords="bidones retornables, lavadora de bidones, envasadora automatica, acero inoxidable"
-			url="/maquina-para-bidones-retornables"
+				title="Máquinas Envasadoras para Bidones Retornables" 
+				description="Líneas automáticas industriales de lavado, llenado y tapado para bidones retornables de 12 a 20 litros. Alto rendimiento desde 120 hasta 1000 bidones por hora."
+				keywords="maquinas para bidones retornables, lavadora de bidones de 20 litros, envasadora automatica de agua, linea de llenado, embotelladora, acero inoxidable"
+				url="/maquina-para-bidones-retornables"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center flex-col">

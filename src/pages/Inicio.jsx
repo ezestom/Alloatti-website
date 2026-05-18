@@ -6,10 +6,10 @@ export function Inicio() {
 	return (
 		<>
 			<SEO 
-				title="Inicio" 
-				description="Especialistas en máquinas para bidones de agua. Soluciones industriales de lavado, llenado y tapado con tecnología de vanguardia."
-				keywords="envasadoras, agua potable, bidones, maquinaria industrial, argentina"
-			url="/"
+				title="Fábrica de Máquinas Envasadoras de Agua y Bidones" 
+				description="Fábrica de máquinas lavadoras, llenadoras y tapadoras de bidones de agua. Más de 30 años liderando la innovación industrial en Argentina."
+				keywords="envasadoras de agua, maquinas para bidones, lavadora de bidones, llenadora de bidones, tapadora de bidones, maquinaria industrial para agua, Alloatti SRL"
+				url="/"
 			/>
 			<Base />
 			<Home/>

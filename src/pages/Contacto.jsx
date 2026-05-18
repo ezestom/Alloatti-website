@@ -2,6 +2,7 @@ import { Base } from "../components/Base";
 import InputData from "../components/InputData";
 import chat from "../img/call-center.jpg";
 import { SEO } from "../components/SEO";
+import { Map } from "../components/Map";
 
 export function Contacto() {
 	return (
@@ -32,6 +33,32 @@ export function Contacto() {
 						adapte a tus necesidades. ¡Esperamos con interés
 						escuchar de vos!
 					</p>
+
+										{/* Map Section */}
+					<section className="mt-16">
+						<div className="hp-card p-6 md:p-8 flex flex-col gap-6 shadow-xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
+							<div>
+								<span className="bg-blue-100 dark:bg-blue-900/30 text-[#024ad8] dark:text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-4 inline-block">
+									Planta Industrial
+								</span>
+								<h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
+									Nuestra Ubicación
+								</h2>
+								<address className="not-italic text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider flex items-center gap-2">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#024ad8]">
+										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+										<circle cx="12" cy="10" r="3" />
+									</svg>
+									Ing. Luis Silveyra 1139, B1607BQC Villa Adelina, Provincia de Buenos Aires
+								</address>
+							</div>
+							
+							<div className="w-full h-[350px] md:h-[420px] rounded-2xl overflow-hidden">
+								<Map />
+							</div>
+						</div>
+					</section>
+					
 					<section className="mt-20">
 						<div className="hp-card flex flex-col md:flex-row gap-12 items-center !p-12 shadow-2xl transition-all duration-500">
 							<div className="flex-1 order-2 md:order-1">
@@ -54,6 +81,8 @@ export function Contacto() {
 							</div>
 						</div>
 					</section>
+
+
 
 					<div className="my-32">
 						<div className="hp-eyebrow hp-eyebrow-blue mb-8">Solicitud de Presupuesto</div>

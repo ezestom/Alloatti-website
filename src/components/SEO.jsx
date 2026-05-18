@@ -21,8 +21,11 @@ export function SEO({ title, description, keywords, image, url, jsonLd }) {
     "foundingDate": "1993",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "AR",
-      "addressLocality": "Buenos Aires"
+      "streetAddress": "Ing. Luis Silveyra 1139",
+      "addressLocality": "Villa Adelina",
+      "addressRegion": "Provincia de Buenos Aires",
+      "postalCode": "B1607BQC",
+      "addressCountry": "AR"
     },
     "contactPoint": {
       "@type": "ContactPoint",
