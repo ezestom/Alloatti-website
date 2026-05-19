@@ -32,7 +32,7 @@ export const accesorios = {
 			characteristics: "-",
 			description:
 				"El equipo facilita la extracción manual de tapas de los bidones mediante una pinza controlada por un botón pulsador. Para utilizarlo, se coloca manualmente el bidón en la abertura de la pinza, y al presionar el botón, la pinza se activa, extrayendo la tapa de manera sencilla y eficiente.",
-			link: "",
+			link: "https://www.youtube.com/shorts/45l4_lqM-4w",
 		},
 	],
 	sectionData5: [
@@ -41,7 +41,7 @@ export const accesorios = {
 			characteristics: "Retira 600 tapas retornables p/h",
 			description:
 				"El equipo facilita la extracción automática de tapas de los bidones mediante una cinta transportadora. Este sistema incluye una pinza que se introduce en el bidón y se activa automáticamente para extraer la tapa. La longitud de la cinta es ajustable según los requisitos específicos de la planta del cliente, proporcionando versatilidad y adaptabilidad al entorno de trabajo.",
-			link: "",
+			link: "https://www.youtube.com/shorts/wvt6Be8CC64",
 		},
 	],
 	sectionData6: [
