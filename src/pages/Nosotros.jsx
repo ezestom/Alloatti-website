@@ -11,7 +11,7 @@ export function Nosotros() {
 			<SEO 
 				title="Nosotros" 
 				description="Conoce la trayectoria de Alloatti SRL, una empresa dirigida por ingenieros con más de 30 años de experiencia en maquinaria para el procesamiento de agua."
-				keywords="ingeniería, maquinaria, agua potable, trayectoria, experiencia"
+				keywords="ingeniería, maquinaria, agua potable, trayectoria, experiencia, innovación, soluciones industriales, Alloatti SRL"
 			url="/nosotros"
 			/>
 			<Base />
