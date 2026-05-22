@@ -45,7 +45,7 @@ export function Navbar() {
 					<img
 						src={isDarkTheme ? LogoDark : LogoLigth}
 						alt="Alloatti Logo"
-						className="w-auto h-16 mx-auto hover:opacity-80 transition-opacity duration-300"
+						className="w-auto h-14 mx-auto hover:opacity-80 transition-opacity duration-300"
 					/>
 				</Link>
 			</div>

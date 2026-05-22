@@ -2,7 +2,7 @@ export function SkeletonVideo() {
 	return (
 		<div
 			role="status"
-			className="w-full aspect-video py-5 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700">
+			className="w-full aspect-video py-5 bg-gray-200 rounded-lg dark:bg-gray-800">
 			<svg
 				className="w-10 h-10 text-gray-200 dark:text-gray-600"
 				aria-hidden="true"
