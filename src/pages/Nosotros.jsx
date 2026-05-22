@@ -16,10 +16,26 @@ import foto7 from "../img/carousel/7.jpg";
 import foto8 from "../img/carousel/8.jpg";
 import foto9 from "../img/carousel/9.jpg";
 import foto10 from "../img/carousel/10.jpg";
+import foto11 from "../img/carousel/11.jpg";
+import foto12 from "../img/carousel/12.jpg";
+import foto13 from "../img/carousel/13.jpg";
+import foto14 from "../img/carousel/14.jpg";
+import foto15 from "../img/carousel/15.jpg";
+import foto16 from "../img/carousel/16.jpg";
+import foto17 from "../img/carousel/17.jpg";
+import foto18 from "../img/carousel/18.jpg";
+import foto19 from "../img/carousel/19.jpg";
+import foto20 from "../img/carousel/20.jpg";
+import foto21 from "../img/carousel/21.jpg";
+import foto22 from "../img/carousel/22.jpg";
+import foto23 from "../img/carousel/23.jpg";
+import foto24 from "../img/carousel/24.jpg";
+import foto25 from "../img/carousel/25.jpg";
+import foto26 from "../img/carousel/26.jpg";
 
 export function Nosotros() {
 	const carouselImages =
-		[foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10];
+		[foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20, foto21, foto22, foto23, foto24, foto25, foto26];
 	return (
 		<>
 			<SEO
@@ -59,10 +75,10 @@ export function Nosotros() {
 						<div className="mt-12 mb-12 w-[calc(100vw-2rem)] md:w-auto -ml-4 md:ml-0 overflow-hidden rounded-2xl">
 							<CarouselAutoScroll>
 					
-								{[...Array(10)].map((_, idx) => (
+								{[...Array(26)].map((_, idx) => (
 									<div
 										key={idx}
-										className="w-full h-64 bg-slate-100 dark:bg-slate-800/50 rounded-xl flex items-center justify-center border-4 border-dashed border-slate-300 dark:border-slate-700 overflow-hidden">
+										className="w-full h-full sm:min-h-[250px] bg-slate-100 dark:bg-slate-800/50 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-300 dark:border-slate-700 overflow-hidden">
 										{/* Cuando tengas las imágenes cargadas en el array, reemplaza este <span> por tu imagen */}
 										<img src={carouselImages[idx]} alt={`Carousel ${idx}`} className="w-full h-full object-cover rounded-lg" />
 

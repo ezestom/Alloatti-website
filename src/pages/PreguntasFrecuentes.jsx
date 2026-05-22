@@ -93,7 +93,7 @@ export function PreguntasFrecuentes() {
 							y y encontrá información clara sobre nuestros
 							productos, servicios y maquinaria.
 						</p>
-						<div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
+						<div className="grid grid-cols-3 gap-2 sm:gap-4 my-12">
 							{images.map((image, index) => (
 								<div
 									key={index}
