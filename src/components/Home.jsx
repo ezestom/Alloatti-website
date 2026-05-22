@@ -162,6 +162,8 @@ export function Home() {
 								title: "Accesorios",
 								path: "/accesorios-para-maquinas",
 								features: [
+									"Conectividad a internet",
+									"Pantalla táctil para operación y control + App móvil",
 									"Sacatapas automático y sacatapas manual",
 									"Alimentador automático para 500 tapas",
 									"Cargador automático de bidones vacíos",
