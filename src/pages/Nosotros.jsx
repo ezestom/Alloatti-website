@@ -62,7 +62,7 @@ export function Nosotros() {
 								{[...Array(10)].map((_, idx) => (
 									<div
 										key={idx}
-										className="w-full h-68 bg-slate-100 dark:bg-slate-800/50 rounded-xl flex items-center justify-center border-4 border-dashed border-slate-300 dark:border-slate-700 overflow-hidden">
+										className="w-full h-64 bg-slate-100 dark:bg-slate-800/50 rounded-xl flex items-center justify-center border-4 border-dashed border-slate-300 dark:border-slate-700 overflow-hidden">
 										{/* Cuando tengas las imágenes cargadas en el array, reemplaza este <span> por tu imagen */}
 										<img src={carouselImages[idx]} alt={`Carousel ${idx}`} className="w-full h-full object-cover rounded-lg" />
 
