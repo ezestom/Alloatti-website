@@ -8,9 +8,9 @@ export function Contacto() {
 	return (
 		<>
 			<SEO 
-				title="Contacto" 
-				description="¿Tienes dudas sobre nuestra maquinaria? Ponte en contacto con nuestros asesores para recibir información detallada y presupuestos personalizados."
-				keywords="contacto, ventas, soporte técnico, presupuesto máquinas de agua"
+				title="Contacto y Presupuestos de Maquinaria de Agua" 
+				description="Solicite un presupuesto personalizado para su planta embotelladora de agua. Póngase en contacto con nuestros ingenieros y asesores técnicos."
+				keywords="contacto, presupuesto de envasadora, ventas de maquinas de agua, soporte tecnico"
 			url="/contacto"
 			/>
 			<Base />

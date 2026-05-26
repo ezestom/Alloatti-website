@@ -8,9 +8,9 @@ export function UltimasNoticias() {
 	return (
 		<>
 			<SEO 
-				title="Estrategia y Catálogo" 
-				description="Descarga el catálogo completo de productos Alloatti SRL. Conoce nuestra presencia en medios nacionales y nuestra estrategia comercial."
-				keywords="catálogo, noticias, prensa, Infobae, agua envasada, Alloatti"
+				title="Catálogo de Envasadoras de Agua y Prensa" 
+				description="Descargue la presentación técnica y catálogo completo de productos Alloatti SRL. Nota de prensa sobre la industria de agua embotellada."
+				keywords="catalogo de envasadoras, catalogo de productos, prensa, Infobae, presentacion tecnica, descargas"
 				url="/ultimas-noticias"
 			/>
 			<Base />

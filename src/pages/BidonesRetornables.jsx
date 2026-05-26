@@ -8,6 +8,63 @@ import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import bidonesEnjuagandose from "../videos/bidonesEnjuagandose.mp4";
 import { SEO } from "../components/SEO";
 
+const productSchema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Product",
+			"name": "Línea de Envasadoras Automáticas AT (Bidones Retornables)",
+			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"description": "Líneas industriales automáticas de lavado, enjuague, llenado y tapado (a presión o por cinta transportadora) para bidones retornables de agua de 10, 12 y 20 litros. Fabricadas en acero inoxidable AISI 304 bajo normas IVESS y CIMES, con capacidades desde 120 hasta 1000 bidones por hora y ciclo de lavado de 2 minutos garantizado.",
+			"brand": { 
+				"@type": "Brand", 
+				"name": "Alloatti" 
+			},
+			"manufacturer": { 
+				"@type": "Organization", 
+				"name": "Alloatti SRL",
+				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://alloatti.com"
+			},
+			"category": "PackagingMachinery",
+			"material": "Acero Inoxidable AISI 304",
+			"model": ["AT-120", "AT-180", "AT-240", "AT-360", "AT-480", "AT-600", "AT-720", "AT-840", "AT-960"],
+			"additionalProperty": [
+				{
+					"@type": "PropertyValue",
+					"name": "Capacidad de producción",
+					"value": "120 a 1000 bidones/hora"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Formatos de bidón",
+					"value": "Bidones retornables de 10 litros, 12 litros y 20 litros"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Ciclo de lavado garantizado",
+					"value": "2 minutos (120 segundos) de permanencia bajo lavado activo"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Tipo de llenado",
+					"value": "Llenado por gravedad sin contacto físico (evita contaminación cruzada)"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Normas y certificaciones compatibles",
+					"value": "IVESS, CIMES"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Higiene y soldadura",
+					"value": "Soldadura sanitaria TIG con respaldo de gas"
+				}
+			]
+		}
+	]
+};
+
 export function BidonesRetornables() {
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -45,10 +102,11 @@ export function BidonesRetornables() {
 	return (
 		<>
 			<SEO 
-				title="Máquinas Envasadoras para Bidones Retornables" 
-				description="Líneas automáticas industriales de lavado, llenado y tapado para bidones retornables de 12 a 20 litros. Alto rendimiento desde 120 hasta 1000 bidones por hora."
-				keywords="maquinas para bidones retornables, lavadora de bidones de 20 litros, envasadora automatica de agua, linea de llenado, embotelladora, acero inoxidable"
+				title="Máquinas Envasadoras de Bidones Retornables de 20L" 
+				description="Líneas automáticas e industriales para lavado, enjuague, llenado y tapado de bidones retornables de 10, 12 y 20 litros. Capacidad de 120 a 1000 bidones/hora."
+				keywords="maquinas para bidones retornables, lavadora de bidones de 20 litros, envasadora automatica de agua, linea de llenado, embotelladora industrial, acero inoxidable grado alimenticio"
 				url="/maquina-para-bidones-retornables"
+				jsonLd={productSchema}
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center flex-col">
@@ -60,7 +118,7 @@ export function BidonesRetornables() {
 							</svg>
 							Líneas Automáticas • Bidones Retornables
 						</div>
-						<h1 className="hp-h1">Para Bidones Retornables</h1>
+						<h1 className="hp-h1">Envasadoras para Bidones Retornables de Agua</h1>
 					</header>
 					<p className="hp-p-intro my-20">
 						Nuestras avanzadas líneas para bidones retornables

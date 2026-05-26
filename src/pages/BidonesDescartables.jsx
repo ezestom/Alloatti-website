@@ -8,6 +8,58 @@ import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import cargador from "../videos/cargador.mp4";
 import { SEO } from "../components/SEO";
 
+const productSchema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Product",
+			"name": "Línea de Envasadoras para Bidones Descartables AT-D",
+			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"description": "Líneas industriales automáticas y semiautomáticas para el enjuague, llenado y tapado roscado de bidones descartables de un solo uso (PET) de 6, 8 y 10 litros. Construidas en acero inoxidable AISI 304 con capacidades de 300 a 700 bidones por hora y opciones de colocador de manijas automático.",
+			"brand": { 
+				"@type": "Brand", 
+				"name": "Alloatti" 
+			},
+			"manufacturer": { 
+				"@type": "Organization", 
+				"name": "Alloatti SRL",
+				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://alloatti.com"
+			},
+			"category": "PackagingMachinery",
+			"material": "Acero Inoxidable AISI 304",
+			"model": ["AT-300D", "AT-700D"],
+			"additionalProperty": [
+				{
+					"@type": "PropertyValue",
+					"name": "Capacidad de producción",
+					"value": "300 a 700 bidones/hora (según modelo)"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Formatos de bidón",
+					"value": "Bidones descartables de 6 litros, 8 litros y 10 litros"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Tipo de cierre",
+					"value": "Tapador roscador automático/neumático"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Tipo de llenado",
+					"value": "Llenado por gravedad sin contacto físico (evita contaminación cruzada)"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Higiene y soldadura",
+					"value": "Soldadura sanitaria TIG con respaldo de gas"
+				}
+			]
+		}
+	]
+};
+
 export function BidonesDescartables() {
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -24,10 +76,11 @@ export function BidonesDescartables() {
 	return (
 		<>
 			<SEO 
-				title="Máquinas Envasadoras para Bidones Descartables" 
-				description="Líneas industriales automáticas de enjuague, llenado y roscado para bidones descartables. Producción continua de 300 a 700 bidones por hora con precisión extrema."
-				keywords="maquinas para bidones descartables, llenadora de bidones de PET, envasadora de agua, roscadora automatica, planta embotelladora, industria de agua"
+				title="Envasadoras de Bidones Descartables y de un Solo Uso" 
+				description="Líneas industriales automáticas y semiautomáticas de enjuague, llenado y roscado para bidones descartables de PET (6L, 8L y 10L). Rendimiento de 300 a 700 bidones/hora."
+				keywords="envasadora de bidones descartables, llenadora de bidones PET, roscadora automatica, enjuagadora de bidones, planta embotelladora de agua, envasado de agua mineral"
 				url="/maquina-para-bidones-descartables"
+				jsonLd={productSchema}
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center flex-col">
@@ -40,7 +93,7 @@ export function BidonesDescartables() {
 							</svg>
 							Líneas Automáticas • Bidones Descartables
 						</div>
-						<h1 className="hp-h1">Para Bidones Descartables</h1>
+						<h1 className="hp-h1">Maquinaria de Envasado para Bidones Descartables</h1>
 					</header>
 					<p className="hp-p-intro my-20">
 						Nuestras avanzadas líneas para bidones descartables

@@ -7,6 +7,63 @@ import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import pantalla from "../videos/pantalla.mp4";
 import { SEO } from "../components/SEO";
 
+const productSchema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Product",
+			"name": "Accesorios y Periféricos para Embotelladoras Alloatti",
+			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"description": "Módulos de automatización y accesorios periféricos para líneas de envasado de agua potable: tolvas rotativas distribuidoras de tapas, elevadores de tapas tipo Jirafa, cargadores automáticos de bidones vacíos, sacatapas neumáticos, prelavadoras (interiores, exteriores y mixtas) y conectividad HMI IoT con visualización móvil.",
+			"brand": { 
+				"@type": "Brand", 
+				"name": "Alloatti" 
+			},
+			"manufacturer": { 
+				"@type": "Organization", 
+				"name": "Alloatti SRL",
+				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://alloatti.com"
+			},
+			"category": "PackagingMachinery",
+			"material": "Acero Inoxidable AISI 304",
+			"model": [
+				"Tolva distribuidora de tapas",
+				"Jirafa elevadora de tapas (Elevador de tapas industrial)",
+				"Cargador automático de bidones",
+				"Sacatapas manual",
+				"Sacatapas automático en línea",
+				"Sistema de conectividad HMI e IoT (Pantalla y App)",
+				"Pre-lavadora exterior",
+				"Pre-lavadora interior",
+				"Pre-lavadora mixta (interior y exterior)"
+			],
+			"additionalProperty": [
+				{
+					"@type": "PropertyValue",
+					"name": "Conectividad",
+					"value": "Ethernet, aplicación móvil Android para monitoreo en tiempo real"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Material principal",
+					"value": "Acero Inoxidable AISI 304"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Capacidad de prelavadoras",
+					"value": "Hasta 600 bidones/hora"
+				},
+				{
+					"@type": "PropertyValue",
+					"name": "Almacenamiento de tapas en Jirafa",
+					"value": "Hasta 500 tapas"
+				}
+			]
+		}
+	]
+};
+
 export function Accesorios() {
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -20,10 +77,11 @@ export function Accesorios() {
 	return (
 		<>
 			<SEO 
-				title="Accesorios para Máquinas" 
-				description="Optimice su producción con nuestros accesorios: sacatapas automáticos, alimentadores de tapas, precintadores y más."
-				keywords="accesorios industriales, sacatapas, alimentador de tapas, automatización de agua"
-			url="/accesorios-para-maquinas"
+				title="Accesorios y Automatización para Embotelladoras" 
+				description="Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas y conectividad IoT con app Android."
+				keywords="accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, conectividad IoT, HMI"
+				url="/accesorios-para-maquinas"
+				jsonLd={productSchema}
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
@@ -35,7 +93,7 @@ export function Accesorios() {
 							</svg>
 							Líneas Automáticas • Accesorios
 						</div>
-						<h1 className="hp-h1">Potencia tu producción</h1>
+						<h1 className="hp-h1">Accesorios de Automatización para Embotelladoras</h1>
 					</header>
 					<p className="hp-p-intro my-20">
 						Nuestros equipos de accesorios están diseñados para

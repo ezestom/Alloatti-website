@@ -134,6 +134,7 @@ export function Home() {
 							{
 								title: "Bidones Retornables",
 								path: "/maquina-para-bidones-retornables",
+								buttonText: "Ver Líneas Retornables",
 								features: [
 									"Tiempo en lavado: 120 segundos",
 									"Picos de lavado exterior rotativos",
@@ -148,6 +149,7 @@ export function Home() {
 							{
 								title: "Bidones Descartables",
 								path: "/maquina-para-bidones-descartables",
+								buttonText: "Ver Líneas Descartables",
 								features: [
 									"Tiempo de lavado ajustable",
 									"Picos de enjuague interior",
@@ -161,6 +163,7 @@ export function Home() {
 							{
 								title: "Accesorios",
 								path: "/accesorios-para-maquinas",
+								buttonText: "Ver Accesorios y Automatización",
 								features: [
 									"Conectividad a internet",
 									"Pantalla táctil para operación y control + App móvil",
@@ -189,7 +192,7 @@ export function Home() {
 								<button
 									onClick={() => navigate(card.path)}
 									className="w-full bg-[#024ad8] hover:bg-[#0e3191] text-white py-4 text-sm font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 group-hover:gap-4">
-									Más información <span>→</span>
+									{card.buttonText} <span>→</span>
 								</button>
 							</div>
 						))}

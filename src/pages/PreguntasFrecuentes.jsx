@@ -58,9 +58,9 @@ export function PreguntasFrecuentes() {
 	return (
 		<>
 			<SEO
-				title="Preguntas Frecuentes sobre Máquinas Envasadoras"
-				description="Respuestas a las preguntas más comunes sobre maquinaria industrial Alloatti: capacidad de producción, características técnicas, tiempos de lavado e innovaciones."
-				keywords="preguntas frecuentes maquinas de agua, FAQ envasadoras, maquinas bidones, soporte técnico industrial, Alloatti SRL"
+				title="Preguntas Frecuentes sobre Envasadoras de Agua"
+				description="Respuestas a dudas comunes sobre la producción, materiales (acero inoxidable), tiempos de lavado, conectividad HMI/App y soporte postventa de Alloatti."
+				keywords="preguntas frecuentes maquinas de agua, FAQ envasadoras, maquinas bidones, soporte tecnico, garantia envasadoras"
 				url="/preguntas-frecuentes"
 				jsonLd={faqSchema}
 			/>

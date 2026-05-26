@@ -6,9 +6,9 @@ export function Normas() {
 	return (
 		<>
 			<SEO 
-				title="Normas de Calidad" 
-				description="Conoce las normativas IVESS y CIMES que cumplen nuestras máquinas envasadoras. Estándares de higiene y seguridad garantizados en cada proceso."
-				keywords="normas de calidad, IVESS, CIMES, higiene, agua potable, certificación"
+				title="Normas de Calidad e Higiene (IVESS/CIMES)"
+				description="Detalle de las normativas de sanidad IVESS y CIMES que cumplen nuestras máquinas envasadoras. Estándares de higiene y seguridad en el lavado de bidones."
+				keywords="normas de calidad, IVESS, CIMES, higiene, agua potable, sanidad, prevencion contaminacion cruzada, lavado 120 segundos"
 				url="/normas-de-calidad"
 			/>
 			<Base />
