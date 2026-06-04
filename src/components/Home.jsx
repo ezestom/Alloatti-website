@@ -28,56 +28,60 @@ export function Home() {
 				}`}>
 				<article className="rounded-[16px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade">
 					<WithClose />
-					
+
 					{/* HP Hero Section with Premium Background */}
 					<div className="hp-chevron-container mb-24 rounded-[16px] overflow-visible">
 						<div className="hidden xl:block hp-chevron hp-chevron-left"></div>
 						<div className="hidden xl:block hp-chevron hp-chevron-right"></div>
-						
-						<div 
+
+						<div
 							className={`relative z-10 flex flex-col px-6 py-16 md:px-16 md:py-52 border rounded-[16px] overflow-hidden transition-all duration-500 shadow-2xl group ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}
 							style={{
 								backgroundImage: `url(${heroMachine})`,
-								backgroundSize: 'cover',
-								backgroundPosition: 'center'
-							}}
-						>
+								backgroundSize: "cover",
+								backgroundPosition: "center",
+							}}>
 							{/* Premium Overlay: Darker in Dark Theme, Glass-Gradient in Light Theme */}
-							<div className={`absolute inset-0 z-0 transition-opacity duration-500 ${
-								isDarkTheme 
-									? "bg-slate-950/80" 
-									: "bg-white/40 bg-gradient-to-r from-white via-white/50 to-transparent"
-							}`}></div>
+							<div
+								className={`absolute inset-0 z-0 transition-opacity duration-500 ${
+									isDarkTheme
+										? "bg-slate-950/80"
+										: "bg-white/25 bg-gradient-to-r from-white via-white/75 to-transparent"
+								}`}></div>
 
 							<div className="relative z-10">
 								<LogoCelular />
 
 								<h1
 									className={`${
-										isDarkTheme ? "text-white" : "text-[#1a1a1a]"
-									} text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter  mb-8 `}>
+										isDarkTheme
+											? "text-white"
+											: "text-[#1a1a1a]"
+									} text-2xl md:text-4xl xl:text-5xl font-black tracking-normal mb-8 hp-text-glow !leading-[1.1]`}>
 									Líderes en innovación de{" "}
 									<span className="text-[#024ad8]">
-										máquinas lavadoras, enjuagadoras, llenadoras y tapadoras
+										máquinas lavadoras, enjuagadoras,
+										llenadoras y tapadoras
 									</span>{" "}
 									de bidones
 								</h1>
 
 								<p className="hp-p-intro">
-									En Alloatti, nos especializamos en diseñar y fabricar
-									maquinaria de última generación para la industria del
-									agua, adaptándonos a las necesidades específicas de cada cliente.
+									En Alloatti, nos especializamos en diseñar y
+									fabricar maquinaria de última generación
+									para la industria del agua, adaptándonos a
+									las necesidades específicas de cada cliente.
 								</p>
 
 								<div className="flex flex-wrap gap-6">
-									<button 
+									<button
 										onClick={() => navigate("/contacto")}
 										className="hp-btn-primary !px-10 !py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40  transition-all">
 										Solicitar Presupuesto
 									</button>
-									<button 
+									<button
 										onClick={() => navigate("/nosotros")}
-										className="hp-btn-outline !px-10 !py-4 hover:bg-slate-900 hover:text-white transition-all">
+										className="hp-btn-outline !px-10 !py-4 hover:bg-slate-900 hover:text-white transition-all backdrop-blur-md">
 										Conócenos
 									</button>
 								</div>
@@ -89,25 +93,37 @@ export function Home() {
 					<Data />
 
 					{/* Section 2: Solutions */}
-					<div className={`hp-section-cloud py-24 px-6 md:px-10 rounded-[16px] mb-20 shadow-sm border ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
+					<div
+						className={`hp-section-cloud py-24 px-6 md:px-10 rounded-[16px] mb-20 shadow-sm border ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
 						<div className="max-w-screen-xl mx-auto ">
 							<div className="flex flex-col xl:flex-row justify-between items-center gap-16">
 								<div className="xl:w-1/2">
 									<span className="bg-blue-100 dark:bg-blue-900/30 text-[#024ad8] dark:text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-6 inline-block">
 										Innovación constante
 									</span>
-									<h2 className="hp-h2 mb-8 leading-tight">Ofrecemos soluciones personalizadas</h2>
+									<h2 className="hp-h2 mb-8 leading-tight">
+										Ofrecemos soluciones personalizadas
+									</h2>
 									<p className="hp-p-intro mb-10 text-pretty">
-										En Alloatti, nos especializamos en diseñar y fabricar 
-										maquinaria de última generación para la industria del 
-										agua, adaptándonos a las necesidades específicas de cada cliente.
+										En Alloatti, nos especializamos en
+										diseñar y fabricar maquinaria de última
+										generación para la industria del agua,
+										adaptándonos a las necesidades
+										específicas de cada cliente.
 									</p>
-									<p className={`hp-p-intro border-l-4 pl-8 mb-10 italic ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
-										Nuestra misión es potenciar tu negocio con tecnología 
-										que optimiza tiempos y garantiza la máxima calidad en cada bidón.
+									<p
+										className={`hp-p-intro border-l-4 pl-8 mb-10 italic ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
+										Nuestra misión es potenciar tu negocio
+										con tecnología que optimiza tiempos y
+										garantiza la máxima calidad en cada
+										bidón.
 									</p>
-									<button 
-										onClick={() => navigate("/maquina-para-bidones-retornables")}
+									<button
+										onClick={() =>
+											navigate(
+												"/maquina-para-bidones-retornables",
+											)
+										}
 										className="hp-btn-primary">
 										Ver Productos
 									</button>
@@ -143,8 +159,8 @@ export function Home() {
 									"Pantalla táctil para operación y control",
 									"Proceso de saneado",
 									"Registro de producción y saneado",
-									"Diagnóstico inteligente de eventuales fallas"
-								]
+									"Diagnóstico inteligente de eventuales fallas",
+								],
 							},
 							{
 								title: "Bidones Descartables",
@@ -157,8 +173,8 @@ export function Home() {
 									"Colocador automático de tapas a rosca",
 									"Roscador automático",
 									"Pantalla táctil para operación y control",
-									"Diagnóstico inteligente de eventuales fallas"
-								]
+									"Diagnóstico inteligente de eventuales fallas",
+								],
 							},
 							{
 								title: "Accesorios",
@@ -171,19 +187,25 @@ export function Home() {
 									"Alimentador automático para 500 tapas",
 									"Cargador automático de bidones vacíos",
 									"Cargador automático de bidones en racks",
-									"Lavadora con cepillos automática"
-								]
-							}
+									"Lavadora con cepillos automática",
+								],
+							},
 						].map((card, idx) => (
-							<div key={idx} className="hp-card flex flex-col p-0 overflow-hidden transition-all duration-500 group">
+							<div
+								key={idx}
+								className="hp-card flex flex-col p-0 overflow-hidden transition-all duration-500 group">
 								<div className="p-8 flex-1">
 									<div className="hp-eyebrow hp-eyebrow-blue mb-6">
 										{card.title}
 									</div>
 									<ul className="space-y-4">
 										{card.features.map((feature, fIdx) => (
-											<li key={fIdx} className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium">
-												<span className="text-[#024ad8] mt-1">•</span>
+											<li
+												key={fIdx}
+												className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400 font-medium">
+												<span className="text-[#024ad8] mt-1">
+													•
+												</span>
 												{feature}
 											</li>
 										))}
