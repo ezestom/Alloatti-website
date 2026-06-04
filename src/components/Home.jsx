@@ -7,7 +7,7 @@ import { LogoCelular } from "./LogoCelular";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
 import { Data } from "./Data";
 import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
-import heroMachine from "../img/wallpaper_machine2.jpg";
+import heroMachine from "../img/machine_2_ps.jpg";
 
 export function Home() {
 	const navigate = useNavigate();
@@ -35,7 +35,7 @@ export function Home() {
 						<div className="hidden xl:block hp-chevron hp-chevron-right"></div>
 						
 						<div 
-							className={`relative z-10 flex flex-col px-6 py-16 md:px-20 md:py-32 border rounded-[16px] overflow-hidden transition-all duration-500 shadow-2xl group ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}
+							className={`relative z-10 flex flex-col px-6 py-16 md:px-16 md:py-52 border rounded-[16px] overflow-hidden transition-all duration-500 shadow-2xl group ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}
 							style={{
 								backgroundImage: `url(${heroMachine})`,
 								backgroundSize: 'cover',
@@ -45,8 +45,8 @@ export function Home() {
 							{/* Premium Overlay: Darker in Dark Theme, Glass-Gradient in Light Theme */}
 							<div className={`absolute inset-0 z-0 transition-opacity duration-500 ${
 								isDarkTheme 
-									? "bg-slate-950/80 backdrop-blur-[2px]" 
-									: "bg-white/60 backdrop-blur-[1px] bg-gradient-to-r from-white via-white/50 to-transparent"
+									? "bg-slate-950/80" 
+									: "bg-white/40 bg-gradient-to-r from-white via-white/50 to-transparent"
 							}`}></div>
 
 							<div className="relative z-10">
@@ -55,7 +55,7 @@ export function Home() {
 								<h1
 									className={`${
 										isDarkTheme ? "text-white" : "text-[#1a1a1a]"
-									} text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[0.95] mb-8 `}>
+									} text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter  mb-8 `}>
 									Líderes en innovación de{" "}
 									<span className="text-[#024ad8]">
 										máquinas lavadoras, enjuagadoras, llenadoras y tapadoras

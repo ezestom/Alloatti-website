@@ -17,7 +17,7 @@ export function Card({
 					src={photo}
 					className="h-40 w-40 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
 				/>
-				<div className="absolute -bottom-2 -right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
+				<div className="absolute bottom-2 right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
 						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
 					</svg>
