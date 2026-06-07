@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { SkeletonVideo } from "./VideoSkeleton";
 import { WithClose } from "./WithClose";
 import { useNavigate } from "react-router-dom";
 import { LogoCelular } from "./LogoCelular";
@@ -12,13 +10,6 @@ import heroMachine from "../img/machine_2_ps.jpg";
 export function Home() {
 	const navigate = useNavigate();
 	const { isDarkTheme } = useTheme();
-	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
-	}, []);
 
 	return (
 		<>
@@ -130,14 +121,10 @@ export function Home() {
 								</div>
 								<div className="xl:w-1/2 w-full">
 									<div>
-										{isLoading ? (
-											<SkeletonVideo />
-										) : (
-											<BlurVideo
-												video={bidonesCorriendo}
-												urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-											/>
-										)}
+										<BlurVideo
+											video={bidonesCorriendo}
+											urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+										/>
 									</div>
 								</div>
 							</div>

@@ -13,23 +13,12 @@ const Accesorios = lazy(() => import("./pages/Accesorios.jsx").then(m => ({ defa
 const UltimasNoticias = lazy(() => import("./pages/UltimasNoticias.jsx").then(m => ({ default: m.UltimasNoticias })));
 const Normas = lazy(() => import("./pages/Normas.jsx").then(m => ({ default: m.Normas })));
 
-function PageLoader() {
-	return (
-		<div className="flex items-center justify-center min-h-screen bg-white dark:bg-[#1a1a1a]">
-			<div className="flex flex-col items-center gap-4">
-				<div className="w-10 h-10 border-4 border-[#024ad8] border-t-transparent rounded-full animate-spin"></div>
-				<span className="text-sm font-semibold uppercase tracking-widest text-slate-400">Cargando...</span>
-			</div>
-		</div>
-	);
-}
-
 function App() {
 	return (
 		<>
 			<Toaster position="bottom-center" />
 			<BrowserRouter>
-				<Suspense fallback={<PageLoader />}>
+				<Suspense fallback={null}>
 					<Routes>
 						<Route path="/" element={<Inicio />} />
 						<Route path="*" element={<Error />} />

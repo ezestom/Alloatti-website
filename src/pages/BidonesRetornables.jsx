@@ -1,7 +1,5 @@
 import { Base } from "../components/Base";
 import { Table } from "../components/Table";
-import { useEffect, useState } from "react";
-import { SkeletonVideo } from "../components/VideoSkeleton";
 import { bidonesRetornables } from "../machines_info/bidonesRetornables";
 import "./Table.css";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
@@ -66,8 +64,6 @@ const productSchema = {
 };
 
 export function BidonesRetornables() {
-	const [isLoading, setIsLoading] = useState(true);
-
 	const {
 		sectionData1,
 		sectionData2,
@@ -91,13 +87,6 @@ export function BidonesRetornables() {
 		sectionData8,
 		sectionData9,
 	];
-
-	useEffect(() => {
-		setIsLoading(true);
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
-	}, []);
 
 	return (
 		<>
@@ -137,14 +126,10 @@ export function BidonesRetornables() {
 						higiene.
 					</p>
 					<aside className="lg:p-10 p-4 rounded-[16px] my-10 bg-slate-50 dark:bg-slate-900/40 shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
-						{isLoading ? (
-							<SkeletonVideo />
-						) : (
-							<BlurVideo
-								video={bidonesEnjuagandose}
-								urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-							/>
-						)}
+						<BlurVideo
+							video={bidonesEnjuagandose}
+							urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+						/>
 					</aside>
 					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
 						Adicionalmente, hemos diseñado nuestras líneas para

@@ -1,6 +1,4 @@
 import { Base } from "../components/Base";
-import { useEffect, useState } from "react";
-import { SkeletonVideo } from "../components/VideoSkeleton";
 import { TableAccesories } from "../components/TableAccesories";
 import { accesorios } from "../machines_info/accesorios";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
@@ -65,15 +63,6 @@ const productSchema = {
 };
 
 export function Accesorios() {
-	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		setIsLoading(true);
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
-	}, []);
-
 	return (
 		<>
 			<SEO 
@@ -110,14 +99,10 @@ export function Accesorios() {
 						otras funciones.
 					</p>
 					<aside className="lg:p-10 p-4 rounded-[16px] my-10 bg-slate-50 dark:bg-slate-900/40 shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
-						{isLoading ? (
-							<SkeletonVideo />
-						) : (
-							<BlurVideo
-								video={pantalla}
-								urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
-							/>
-						)}
+						<BlurVideo
+							video={pantalla}
+							urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
+						/>
 					</aside>
 					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
 						En Alloatti, valoramos la retroalimentación de nuestros
