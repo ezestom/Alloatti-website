@@ -527,7 +527,7 @@ export function MaquinasPrecios() {
 						</header>
 
 						{/* Parameters Controller Card (No Print) */}
-						<div className="no-print mt-8 p-6 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-2xl shadow-sm space-y-6">
+						<div className="no-print min-h-[150px] mt-8 p-6 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-2xl shadow-sm space-y-6">
 							<div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
 								
 								{/* Currency Toggle */}
@@ -700,7 +700,7 @@ export function MaquinasPrecios() {
 															</span>
 															<h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm md:text-base">{item.name}</h3>
 														</div>
-														<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.desc}</p>
+														<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.capacity}</p>
 													</div>
 													<div className="flex items-center justify-between md:justify-end w-full md:w-auto gap-6 border-t md:border-t-0 pt-3 md:pt-0 border-slate-100 dark:border-zinc-800">
 														<div className="text-right">
@@ -750,7 +750,7 @@ export function MaquinasPrecios() {
 															</span>
 															<h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm md:text-base">{item.name}</h3>
 														</div>
-														<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.desc}</p>
+														<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.capacity}</p>
 													</div>
 													<div className="flex items-center justify-between md:justify-end w-full md:w-auto gap-6 border-t md:border-t-0 pt-3 md:pt-0 border-slate-100 dark:border-zinc-800">
 														<div className="text-right">
@@ -799,7 +799,7 @@ export function MaquinasPrecios() {
 														</span>
 														<h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm md:text-base">{item.name}</h3>
 													</div>
-													<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.desc}</p>
+													<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.capacity}</p>
 												</div>
 												<div className="flex items-center justify-between md:justify-end w-full md:w-auto gap-6 border-t md:border-t-0 pt-3 md:pt-0 border-slate-100 dark:border-zinc-800">
 													<div className="text-right">
@@ -848,7 +848,7 @@ export function MaquinasPrecios() {
 														</span>
 														<h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm md:text-base">{item.name}</h3>
 													</div>
-													<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.desc}</p>
+													<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 text-left">{item.capacity}</p>
 												</div>
 												<div className="flex items-center justify-between md:justify-end w-full md:w-auto gap-6 border-t md:border-t-0 pt-3 md:pt-0 border-slate-100 dark:border-zinc-800">
 													<div className="text-right">
@@ -983,11 +983,12 @@ export function MaquinasPrecios() {
 				<div className="print-header-logo text-center mb-8">
 					<img src="https://alloatti.com/Alloatti-logo-dark.png" alt="Alloatti SRL" className="mx-auto" style={{ maxWidth: "180px", height: "auto" }} />
 					<h2 className="text-xl font-black tracking-tight mt-4 text-slate-800">COTIZACIÓN DE MAQUINARIA INDUSTRIAL</h2>
+					<h3 className="text-xs font-bold text-slate-800">Presupuesto no válido como factura</h3>
 					<p className="text-xs text-slate-500 mt-1">Generado el {new Date().toLocaleDateString("es-AR")}</p>
 				</div>
 				
 				<div className="border border-slate-200 rounded-2xl p-6 bg-white space-y-6">
-					<h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider border-b pb-2">Resumen del Presupuesto</h3>
+					<h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider border-b pb-2"></h3>
 					
 					{/* Table of selected items */}
 					<table className="w-full text-left text-xs border-collapse">
@@ -1047,8 +1048,7 @@ export function MaquinasPrecios() {
 				</div>
 				
 				<div className="text-center mt-12 text-[10px] text-slate-400">
-					<p>Alloatti SRL • www.alloatti.com • Rosario, Santa Fe, Argentina</p>
-					<p className="mt-1">Precios válidos por 15 días a partir de la fecha de generación de este documento.</p>
+					<p>Alloatti SRL • www.alloatti.com • Buenos Aires, Argentina</p>
 				</div>
 			</div>
 		</>
