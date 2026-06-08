@@ -10,14 +10,15 @@ import heroMachine from "../img/machine_2_ps.jpg";
 export function Home() {
 	const navigate = useNavigate();
 	const { isDarkTheme } = useTheme();
+	// bg-slate-50 dark:bg-zinc-950/20
 
 	return (
 		<>
 			<section
-				className={`rounded-[16px] w-full absolute top-8 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
-					isDarkTheme ? "bg-[#1a1a1a]" : "bg-white"
+				className={`rounded-[16px] w-full absolute top-0 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
+					isDarkTheme ? "bg-[#1a1a1a]" : "bg-slate-50"
 				}`}>
-				<article className="rounded-[16px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade">
+				<article className="rounded-[16px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade pt-14">
 					<WithClose />
 
 					{/* HP Hero Section with Premium Background */}
