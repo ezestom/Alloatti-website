@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Base } from "../components/Base";
 import InputData from "../components/InputData";
 import chat from "../img/call-center.jpg";
@@ -5,13 +7,27 @@ import { SEO } from "../components/SEO";
 import { Map } from "../components/Map";
 
 export function Contacto() {
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const id = location.hash.replace("#", "");
+			const element = document.getElementById(id);
+			if (element) {
+				setTimeout(() => {
+					element.scrollIntoView({ behavior: "smooth" });
+				}, 100);
+			}
+		}
+	}, [location]);
+
 	return (
 		<>
 			<SEO 
 				title="Contacto y Presupuestos de Maquinaria de Agua" 
 				description="Solicite un presupuesto personalizado para su planta embotelladora de agua. Póngase en contacto con nuestros ingenieros y asesores técnicos."
 				keywords="contacto, presupuesto de envasadora, ventas de maquinas de agua, soporte tecnico"
-			url="/contacto"
+				url="/contacto"
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
@@ -84,7 +100,7 @@ export function Contacto() {
 
 
 
-					<div className="my-32">
+					<div className="my-32" id="form">
 						<div className="hp-eyebrow hp-eyebrow-blue mb-8">Solicitud de Presupuesto</div>
 						<p className="hp-p-intro mb-12">
 							Proporcionanos tus datos y los detalles de tu consulta. Nuestro equipo comercial se encargará de brindarte una propuesta integral y detallada.

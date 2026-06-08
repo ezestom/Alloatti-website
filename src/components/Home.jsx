@@ -67,7 +67,7 @@ export function Home() {
 
 								<div className="flex flex-wrap gap-6">
 									<button
-										onClick={() => navigate("/contacto")}
+										onClick={() => navigate("/contacto#form")}
 										className="hp-btn-primary !px-10 !py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40  transition-all">
 										Solicitar Presupuesto
 									</button>

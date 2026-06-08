@@ -13,6 +13,7 @@ const Accesorios = lazy(() => import("./pages/Accesorios.jsx").then(m => ({ defa
 const UltimasNoticias = lazy(() => import("./pages/UltimasNoticias.jsx").then(m => ({ default: m.UltimasNoticias })));
 const Normas = lazy(() => import("./pages/Normas.jsx").then(m => ({ default: m.Normas })));
 const MaquinasPrecios = lazy(() => import("./pages/MaquinasPrecios.jsx").then(m => ({ default: m.MaquinasPrecios }))); // Cotizador de precios de maquinas
+const MaquinasPromociones = lazy(() => import("./pages/MaquinasPromociones.jsx").then(m => ({ default: m.MaquinasPromociones }))); // Promociones Plan 24
 
 function App() {
 	return (
@@ -42,6 +43,10 @@ function App() {
 						<Route
 							path="/maquinas/precios"
 							element={<MaquinasPrecios />}
+						/>
+						<Route
+							path="/maquinas/promociones"
+							element={<MaquinasPromociones />}
 						/>
 						<Route
 							path="/preguntas-frecuentes"
