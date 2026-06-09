@@ -38,6 +38,7 @@ export function MaquinasPromociones() {
 	const [customPrice, setCustomPrice] = useState("");
 	const [isCustomMode, setIsCustomMode] = useState(false);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+	const [showIva, setShowIva] = useState(false);
 
 	const selectedMachine = QUALIFIED_MACHINES.find(m => m.id === selectedMachineId) || QUALIFIED_MACHINES[0];
 
@@ -71,22 +72,28 @@ export function MaquinasPromociones() {
 		setMonthlyInstallment(price > 0 ? finalVal / 24 : 0);
 	}, [selectedMachineId, customPrice, isCustomMode]);
 
+	// Display values incorporating IVA if toggled
+	const displayedListPrice = showIva ? listPrice * 1.105 : listPrice;
+	const displayedDiscountValue = showIva ? discountValue * 1.105 : discountValue;
+	const displayedPromoPrice = showIva ? promoPrice * 1.105 : promoPrice;
+	const displayedMonthlyInstallment = showIva ? monthlyInstallment * 1.105 : monthlyInstallment;
+
 	const formatUSD = (val) => {
 		return new Intl.NumberFormat("en-US", {
 			style: "currency",
 			currency: "USD",
 			minimumFractionDigits: 0,
-			maximumFractionDigits: 0
+			maximumFractionDigits: 2
 		}).format(val);
 	};
 
 	const handleWhatsAppContact = () => {
 		let message = "";
 		if (isCustomMode) {
-			message = `Hola Alloatti, estoy interesado en el Plan 24 para un equipamiento personalizado con un presupuesto estimado de ${formatUSD(listPrice)}. Quisiera consultar los detalles técnicos y de financiación.`;
+			message = `Hola Alloatti, estoy interesado en el Plan 24 para un equipamiento personalizado con un presupuesto estimado de ${formatUSD(displayedListPrice)}${showIva ? " (IVA incluido 10.5%)" : " (Neto sin IVA)"}. Quisiera consultar los detalles técnicos y de financiación.`;
 		} else {
 			const machine = QUALIFIED_MACHINES.find(m => m.id === selectedMachineId);
-			message = `Hola Alloatti, me interesa el Plan 24 de financiación para la ${machine.name} (Precio de lista: ${formatUSD(machine.price)}). Quisiera recibir asesoramiento sobre este equipo y cómo ingresar al plan de cuotas.`;
+			message = `Hola Alloatti, me interesa el Plan 24 de financiación para la ${machine.name} (Precio de lista: ${formatUSD(displayedListPrice)}${showIva ? " IVA incluido 10.5%" : " Neto sin IVA"}). Quisiera recibir asesoramiento sobre este equipo y cómo ingresar al plan de cuotas.`;
 		}
 
 		const url = `https://wa.me/5493415033878?text=${encodeURIComponent(message)}`;
@@ -129,7 +136,7 @@ export function MaquinasPromociones() {
 								En cualquier equipo superior a <span className="text-slate-800 dark:text-white underline decoration-2 decoration-[#024ad8]">U$S 20.000</span>
 							</p>
 
-							<div className="inline-flex items-center justify-center border-2 border-[#024ad8] rounded-xl px-6 py-4 bg-[#024ad8]/5 animate-pulse">
+							<div className="inline-flex items-center justify-center border-2 border-[#024ad8] rounded-xl px-6 py-4 bg-[#024ad8]/5">
 								<span className="text-sm md:text-base font-black uppercase tracking-wider text-[#024ad8] dark:text-blue-400">
 									💥 Con 5% de Descuento sobre Valor de Lista 💥
 								</span>
@@ -293,7 +300,7 @@ export function MaquinasPromociones() {
 											<div className="flex flex-col items-start text-left">
 												<span className="font-extrabold">{selectedMachine.name}</span>
 												<span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-0.5">
-													Capacidad: {selectedMachine.capacity} • Lista: {formatUSD(selectedMachine.price)}
+													Capacidad: {selectedMachine.capacity} • Lista: {formatUSD(showIva ? selectedMachine.price * 1.105 : selectedMachine.price)}
 												</span>
 											</div>
 											<svg
@@ -358,7 +365,7 @@ export function MaquinasPromociones() {
 																	</span>
 																</div>
 																<span className={`font-black text-xs ${isSelected ? "text-white" : "text-[#024ad8] dark:text-blue-400"}`}>
-																	{formatUSD(m.price)}
+																	{formatUSD(showIva ? m.price * 1.105 : m.price)}
 																</span>
 															</button>
 														);
@@ -369,6 +376,19 @@ export function MaquinasPromociones() {
 									</div>
 								)}
 
+								{/* IVA Switch */}
+								<div className="flex flex-col">
+									<label className="block text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Impuestos (IVA 10.5%)</label>
+									<button 
+										onClick={() => setShowIva(!showIva)}
+										className={`w-full py-2.5 px-4 text-xs font-bold rounded-xl border transition-all flex items-center justify-between ${showIva ? "bg-emerald-50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400" : "bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-400 hover:bg-slate-100"}`}>
+										<span>{showIva ? "IVA Incluido (+10.5%)" : "Neto (Sin IVA)"}</span>
+										<div className={`w-8 h-4 rounded-full p-0.5 transition-colors ${showIva ? "bg-emerald-500" : "bg-slate-300 dark:bg-zinc-600"}`}>
+											<div className={`w-3 h-3 rounded-full bg-white transition-transform transform ${showIva ? "translate-x-4" : "translate-x-0"}`}></div>
+										</div>
+									</button>
+								</div>
+
 								{/* Calculated Breakdown Card */}
 								{listPrice >= 20000 && !validationError ? (
 									<div className={`p-5 rounded-2xl space-y-4 border ${
@@ -376,17 +396,17 @@ export function MaquinasPromociones() {
 									}`}>
 										<div className="flex justify-between text-xs font-semibold">
 											<span className="text-slate-500 dark:text-slate-400">Precio de Lista:</span>
-											<span className="text-slate-800 dark:text-slate-200">{formatUSD(listPrice)}</span>
+											<span className="text-slate-800 dark:text-slate-200">{formatUSD(displayedListPrice)}</span>
 										</div>
 
 										<div className="flex justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
 											<span>Descuento Promocional (5%):</span>
-											<span>- {formatUSD(discountValue)}</span>
+											<span>- {formatUSD(displayedDiscountValue)}</span>
 										</div>
 
 										<div className="flex justify-between text-xs font-bold border-t border-dashed border-slate-200 dark:border-zinc-800 pt-3">
 											<span className="text-slate-600 dark:text-slate-350">Precio Final Promocional:</span>
-											<span className="text-slate-800 dark:text-slate-200">{formatUSD(promoPrice)}</span>
+											<span className="text-slate-800 dark:text-slate-200">{formatUSD(displayedPromoPrice)}</span>
 										</div>
 
 										<div className="flex flex-col items-center justify-center text-center pt-2">
@@ -394,7 +414,7 @@ export function MaquinasPromociones() {
 												Financiación Directa
 											</span>
 											<span className="text-3xl font-black text-[#024ad8] dark:text-blue-400 mt-1">
-												24x {formatUSD(monthlyInstallment)}
+												24x {formatUSD(displayedMonthlyInstallment)}
 											</span>
 											<span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-1">
 												Cuotas fijas en dólares sin interés
