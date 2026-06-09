@@ -96,13 +96,6 @@ export function Home() {
 									<h2 className="hp-h2 mb-8 leading-tight">
 										Ofrecemos soluciones personalizadas
 									</h2>
-									<p className="hp-p-intro mb-10 text-pretty">
-										En Alloatti, nos especializamos en
-										diseñar y fabricar maquinaria de última
-										generación para la industria del agua,
-										adaptándonos a las necesidades
-										específicas de cada cliente.
-									</p>
 									<p
 										className={`hp-p-intro border-l-4 pl-8 mb-10 italic ${isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"}`}>
 										Nuestra misión es potenciar tu negocio
