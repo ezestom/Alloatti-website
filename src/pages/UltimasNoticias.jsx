@@ -15,7 +15,7 @@ export function UltimasNoticias() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-32 px-8 md:px-0">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

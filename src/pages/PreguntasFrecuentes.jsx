@@ -65,10 +65,9 @@ export function PreguntasFrecuentes() {
 				jsonLd={faqSchema}
 			/>
 			<Base />
-			<section className="w-full absolute top-10 flex justify-center items-center px-1">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
-					<div className="flex-col px-2">
-						<header className="hp-page-header">
+			<section className="w-full absolute top-12 flex justify-center items-center">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
+					<header className="hp-page-header">
 							<div className="hp-eyebrow hp-eyebrow-blue">
 								<svg
 									width="12"
@@ -107,7 +106,7 @@ export function PreguntasFrecuentes() {
 								</div>
 							))}
 						</div>
-					</div>
+				
 
 					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
 						Accedé rápidamente a respuestas sobre máquinas,

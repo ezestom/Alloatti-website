@@ -13,7 +13,7 @@ export function Normas() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0  mb-32 px-4 md:px-0">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-32 px-4 md:px-0">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -23,7 +23,7 @@ export function Normas() {
 						</div>
 						<h1 className="hp-h1">Normas de Calidad</h1>
 					</header>
-					<p className="hp-p-intro my-20 px-2">
+					<p className="hp-p-intro my-20">
 						Contamos con una estrecha relación con IVESS y CIMES,
 						normativas que garantizan la máxima calidad y pureza del
 						agua. Estas normas definen los estándares a cumplir para

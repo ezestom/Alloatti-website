@@ -15,7 +15,7 @@ export function Home() {
 	return (
 		<>
 			<section
-				className={`rounded-[16px] w-full absolute top-0 flex flex-col justify-center items-center px-1 transition-colors duration-500 ${
+				className={`rounded-[16px] w-full absolute top-0 flex flex-col justify-center items-center transition-colors duration-500 ${
 					isDarkTheme ? "bg-[#1a1a1a]" : "bg-slate-50"
 				}`}>
 				<article className="rounded-[16px] xl:w-[calc(100%-350px)] lg:w-[calc(100%-320px)] lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-10 animate-hp-fade pt-14">
@@ -49,7 +49,7 @@ export function Home() {
 										isDarkTheme
 											? "text-white"
 											: "text-[#1a1a1a]"
-									} text-2xl md:text-4xl xl:text-5xl font-black tracking-normal mb-8 hp-text-glow !leading-[1.1]`}>
+									} text-[32px] md:text-4xl xl:text-5xl font-semibold md:font-black tracking-[-0.01em] md:tracking-[-0.02em] mb-8 hp-text-glow !leading-[1.2]`}>
 									Líderes en innovación de{" "}
 									<span className="text-[#024ad8]">
 										máquinas lavadoras, enjuagadoras,
