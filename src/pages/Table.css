@@ -1,7 +1,7 @@
 
 @media (width < 950px) {
 	.table-container {
-		width: 100vw;
+		width: 100%;
 		padding: 0 .25rem;
 		margin-bottom:8rem;
 		}

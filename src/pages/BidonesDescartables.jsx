@@ -72,7 +72,7 @@ export function BidonesDescartables() {
 				jsonLd={productSchema}
 			/>
 			<Base />
-			<section className="w-full absolute top-12 flex justify-center items-center flex-col">
+			<section className="w-full absolute left-0 top-12 flex justify-center items-center flex-col">
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
 
 					<header className="hp-page-header">

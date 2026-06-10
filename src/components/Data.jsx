@@ -21,7 +21,7 @@ export function Data() {
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 					<div className="flex flex-col items-start">
-						<dd className="text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+5
 						</dd>
 						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
@@ -30,7 +30,7 @@ export function Data() {
 					</div>
 
 					<div className="flex flex-col items-start">
-						<dd className="text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+600
 						</dd>
 						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
@@ -39,7 +39,7 @@ export function Data() {
 					</div>
 
 					<div className="flex flex-col items-start">
-						<dd className="text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+400
 						</dd>
 						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">

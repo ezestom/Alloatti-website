@@ -83,7 +83,7 @@ export function NavbarMobile() {
 	};
 
 	return (
-		<div className="z-30 fixed bottom-0 w-full px-4 pb-4 flex flex-col gap-2">
+		<div className="z-30 fixed !bottom-0 w-full px-4 !pb-2 flex flex-col gap-2">
 			{/* Sub-navigation Mobile (Context-Aware and Auto-Collapsible) */}
 			{(isMachinesPath || isSalesPath) && (
 				<div
@@ -97,7 +97,7 @@ export function NavbarMobile() {
 							<Link
 								to="/normas-de-calidad"
 								onClick={scrollToTop}
-								className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
 									location.pathname === "/normas-de-calidad"
 										? isDarkTheme
 											? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent scale-105 shadow-blue-500/30"
@@ -111,7 +111,7 @@ export function NavbarMobile() {
 							<Link
 								to="/ultimas-noticias"
 								onClick={scrollToTop}
-								className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
 									location.pathname === "/ultimas-noticias"
 										? isDarkTheme
 											? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent scale-105 shadow-blue-500/30"
@@ -128,7 +128,7 @@ export function NavbarMobile() {
 							<Link
 								to="/maquina-para-bidones-retornables"
 								onClick={scrollToTop}
-								className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
 									location.pathname ===
 									"/maquina-para-bidones-retornables"
 										? isDarkTheme
@@ -143,7 +143,7 @@ export function NavbarMobile() {
 							<Link
 								to="/maquina-para-bidones-descartables"
 								onClick={scrollToTop}
-								className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
 									location.pathname ===
 									"/maquina-para-bidones-descartables"
 										? isDarkTheme
@@ -158,7 +158,7 @@ export function NavbarMobile() {
 							<Link
 								to="/accesorios-para-maquinas"
 								onClick={scrollToTop}
-								className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
 									location.pathname ===
 									"/accesorios-para-maquinas"
 										? isDarkTheme
@@ -180,7 +180,7 @@ export function NavbarMobile() {
 				className={`flex justify-around items-center rounded-2xl shadow-2xl border backdrop-blur-xl py-3 transition-all duration-500 ${
 					isDarkTheme
 						? "bg-[#121212]/90 border-white/5 shadow-black/40"
-						: "bg-white/90 border-slate-200/50 shadow-slate-200/60"
+						: "bg-white border-slate-200/50 shadow-slate-200/60"
 				}`}>
 				<ul className="flex w-full justify-between items-center px-2">
 					{navItems.map((item) => {

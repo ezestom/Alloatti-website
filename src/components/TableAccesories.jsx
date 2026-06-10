@@ -119,8 +119,8 @@ export function TableAccesories() {
 							onClick={() => handleCardOpen(item)}
 							className={`w-full text-left group rounded-[16px] border transition-all duration-500 overflow-hidden relative flex flex-col justify-between ${
 								isDarkTheme
-									? "bg-[#1e1e1e] border-[#2a2a2a] hover:border-[#024ad8]/40 hover:shadow-[0_8px_32px_rgba(2,74,216,0.12)]"
-									: "bg-white border-[#e8e8e8] hover:border-[#024ad8]/30 hover:shadow-[0_8px_32px_rgba(2,74,216,0.08)]"
+									? "bg-slate-900/40 border-[#2a2a2a] hover:border-[#024ad8]/40 hover:shadow-[0_8px_32px_rgba(2,74,216,0.12)]"
+									: "bg-slate-200 border-[#e8e8e8] hover:border-[#024ad8]/30 hover:shadow-[0_8px_32px_rgba(2,74,216,0.08)]"
 							}`}
 						>
 							{/* Top accent bar */}

@@ -98,7 +98,7 @@ export function BidonesRetornables() {
 				jsonLd={productSchema}
 			/>
 			<Base />
-			<section className="w-full absolute top-12 flex justify-center items-center flex-col">
+			<section className="w-full absolute left-0 top-12 flex justify-center items-center flex-col">
 				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
@@ -140,7 +140,7 @@ export function BidonesRetornables() {
 						seguridad y pureza de cada bidón procesado.
 					</p>
 				</article>
-					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
+					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}

@@ -80,7 +80,7 @@ export function Table({ data }) {
 				<div className="h-[3px] w-full bg-gradient-to-r from-[#024ad8] via-[#024ad8] to-[#0e3191] opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
 
 				{/* Card Content */}
-				<div className="p-6 md:p-8">
+				<div className="p-6 md:p-8 bg-gray-200 dark:bg-slate-900/40">
 					{/* Header Row: Model + Open Icon */}
 					<div className="flex items-start justify-between gap-4 mb-6">
 						<div className="flex-1">
