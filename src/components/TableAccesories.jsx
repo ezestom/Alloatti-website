@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
 import { useTheme } from "../context/ThemeContext";
 import img from "../img/tubos.jpg";
+import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog } from "react-icons/fa";
+import { useSearchParams } from "react-router-dom";
+
+const slugify = (text) => {
+	if (!text) return "";
+	return text
+		.toString()
+		.toLowerCase()
+		.trim()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/\s+/g, "-")
+		.replace(/[^\w-]+/g, "")
+		.replace(/--+/g, "-");
+};
 
 export function TableAccesories() {
 	const [selectedAccesory, setSelectedAccesory] = useState(null);
 	const { isDarkTheme } = useTheme();
+	const [searchParams, setSearchParams] = useSearchParams();
 
 	const {
 		sectionData1,
@@ -32,13 +48,37 @@ export function TableAccesories() {
 		sectionData9,
 	];
 
+	useEffect(() => {
+		const maquinaParam = searchParams.get("maquina") || searchParams.get("id");
+		if (maquinaParam) {
+			const slugParam = slugify(maquinaParam);
+			for (const sectionData of sectionDataArray) {
+				const item = sectionData[0];
+				if (slugify(item.name) === slugParam) {
+					setSelectedAccesory(item);
+					document.body.style.overflow = "hidden";
+					break;
+				}
+			}
+		}
+	}, [searchParams]);
+
 	const handleCardOpen = (accesory) => {
 		setSelectedAccesory(accesory);
 		document.body.style.overflow = "hidden";
+
+		const params = new URLSearchParams(window.location.search);
+		params.set("maquina", slugify(accesory.name));
+		setSearchParams(params, { replace: true });
 	};
 
 	const handleCardClose = () => {
 		setSelectedAccesory(null);
+		document.body.style.overflow = "auto";
+
+		const params = new URLSearchParams(window.location.search);
+		params.delete("maquina");
+		setSearchParams(params, { replace: true });
 	};
 
 	const getCategoryName = (name) => {
@@ -57,13 +97,13 @@ export function TableAccesories() {
 
 	const getIcon = (name) => {
 		const n = name.toUpperCase().trim();
-		if (n.includes("TOLVA")) return "💿";
-		if (n.includes("JIRAFA")) return "🦒";
-		if (n.includes("CARGADOR")) return "📥";
-		if (n.includes("SACATAPAS")) return "🔌";
-		if (n.includes("PANTALLA")) return "📱";
-		if (n.includes("PRE LAVADORA")) return "🚿";
-		return "⚙️";
+		if (n.includes("TOLVA")) return <FaCompactDisc />;
+		if (n.includes("JIRAFA")) return <FaArrowUp />;
+		if (n.includes("CARGADOR")) return <FaInbox />;
+		if (n.includes("SACATAPAS")) return <FaEject />;
+		if (n.includes("PANTALLA")) return <FaTabletAlt />;
+		if (n.includes("PRE LAVADORA")) return <FaShower />;
+		return <FaCog />;
 	};
 
 	return (
@@ -103,7 +143,7 @@ export function TableAccesories() {
 									<h3 className={`text-base font-extrabold tracking-tight mb-2 flex items-center gap-2 group-hover:text-[#024ad8] transition-colors duration-300 ${
 										isDarkTheme ? "text-white" : "text-[#1a1a1a]"
 									}`}>
-										<span className="text-lg">{icon}</span>
+										<span className="text-lg flex items-center">{icon}</span>
 										{item.name}
 									</h3>
 

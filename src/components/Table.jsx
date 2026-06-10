@@ -1,22 +1,62 @@
 import machine from "../img/wallpaper_machine2.jpg";
 import { CardMachines } from "./CardMachines";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import PropTypes from "prop-types";
+import { useSearchParams } from "react-router-dom";
+
+const slugify = (text) => {
+	if (!text) return "";
+	return text
+		.toString()
+		.toLowerCase()
+		.trim()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/\s+/g, "-")
+		.replace(/[^\w-]+/g, "")
+		.replace(/--+/g, "-");
+};
 
 export function Table({ data }) {
 	const [selectedBidones, setSelectedBidones] = useState(null);
 	const { isDarkTheme } = useTheme();
-
-	const handleOpen = (bidones) => {
-		setSelectedBidones(bidones);
-		document.body.style.overflow = "hidden";
-	};
+	const [searchParams, setSearchParams] = useSearchParams();
 
 	const machineData = data[0];
 	const visibleKeys = Object.keys(machineData).filter(
 		(key) => key !== "description"
 	);
+
+	useEffect(() => {
+		const maquinaParam = searchParams.get("maquina") || searchParams.get("id");
+		if (maquinaParam) {
+			const slugParam = slugify(maquinaParam);
+			const slugModel = slugify(machineData.modelo);
+			if (slugParam === slugModel) {
+				setSelectedBidones(machineData);
+				document.body.style.overflow = "hidden";
+			}
+		}
+	}, [searchParams, machineData]);
+
+	const handleOpen = (bidones) => {
+		setSelectedBidones(bidones);
+		document.body.style.overflow = "hidden";
+
+		const params = new URLSearchParams(window.location.search);
+		params.set("maquina", slugify(bidones.modelo));
+		setSearchParams(params, { replace: true });
+	};
+
+	const handleClose = () => {
+		setSelectedBidones(null);
+		document.body.style.overflow = "auto";
+
+		const params = new URLSearchParams(window.location.search);
+		params.delete("maquina");
+		setSearchParams(params, { replace: true });
+	};
 
 	// Key specs to highlight in the card header
 	const keySpecs = [
@@ -175,7 +215,7 @@ export function Table({ data }) {
 						accesories={selectedBidones.accesorios}
 						description={selectedBidones.description}
 						isOpen={true}
-						onClose={() => setSelectedBidones(null)}
+						onClose={handleClose}
 					/>
 				</div>
 			)}

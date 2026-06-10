@@ -404,6 +404,11 @@ export function MaquinasPromociones() {
 											<span>- {formatUSD(displayedDiscountValue)}</span>
 										</div>
 
+										<div className="flex justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
+											<span>IVA (10.5%):</span>
+											<span>{showIva ? `+ ${formatUSD(promoPrice * 0.105)}` : "No incluido"}</span>
+										</div>
+
 										<div className="flex justify-between text-xs font-bold border-t border-dashed border-slate-200 dark:border-zinc-800 pt-3">
 											<span className="text-slate-600 dark:text-slate-350">Precio Final Promocional:</span>
 											<span className="text-slate-800 dark:text-slate-200">{formatUSD(displayedPromoPrice)}</span>

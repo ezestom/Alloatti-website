@@ -101,7 +101,7 @@ export function Nosotros() {
 					</div>
 					<div className="flex flex-col items-start">
 						<div className="space-y-32 w-full">
-							<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
+							<div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 mt-12">
 								<Card
 									name={"Ing. Hector Alloatti"}
 									photo={hector}
