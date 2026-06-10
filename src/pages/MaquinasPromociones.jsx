@@ -34,13 +34,13 @@ export function MaquinasPromociones() {
 	const { isDarkTheme } = useTheme();
 
 	// Calculator states
-	const [selectedMachineId, setSelectedMachineId] = useState(QUALIFIED_MACHINES[0].id);
+	const [selectedMachineId, setSelectedMachineId] = useState("");
 	const [customPrice, setCustomPrice] = useState("");
 	const [isCustomMode, setIsCustomMode] = useState(false);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [showIva, setShowIva] = useState(false);
 
-	const selectedMachine = QUALIFIED_MACHINES.find(m => m.id === selectedMachineId) || QUALIFIED_MACHINES[0];
+	const selectedMachine = QUALIFIED_MACHINES.find(m => m.id === selectedMachineId);
 
 	// Calculated values
 	const [listPrice, setListPrice] = useState(0);
@@ -298,10 +298,21 @@ export function MaquinasPromociones() {
 											}`}
 										>
 											<div className="flex flex-col items-start text-left">
-												<span className="font-extrabold">{selectedMachine.name}</span>
-												<span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-0.5">
-													Capacidad: {selectedMachine.capacity} • Lista: {formatUSD(showIva ? selectedMachine.price * 1.105 : selectedMachine.price)}
-												</span>
+												{selectedMachine ? (
+													<>
+														<span className="font-extrabold">{selectedMachine.name}</span>
+														<span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-0.5">
+															Capacidad: {selectedMachine.capacity} • Lista: {formatUSD(showIva ? selectedMachine.price * 1.105 : selectedMachine.price)}
+														</span>
+													</>
+												) : (
+													<>
+														<span className="font-extrabold text-slate-400 dark:text-slate-500">Seleccionar máquina...</span>
+														<span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-0.5">
+															Desplegar menú para ver opciones
+														</span>
+													</>
+												)}
 											</div>
 											<svg
 												className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
@@ -431,7 +442,7 @@ export function MaquinasPromociones() {
 										isDarkTheme ? "border-zinc-800 bg-white/[0.01]" : "border-slate-200 bg-slate-50"
 									}`}>
 										<span className="text-xs text-slate-400 dark:text-slate-500 font-bold">
-											{validationError ? "Monto no válido para la promoción" : "Ingrese un monto para simular la financiación"}
+											{validationError ? "Monto no válido para la promoción" : "Seleccione una máquina o ingrese un monto para simular la financiación"}
 										</span>
 									</div>
 								)}
