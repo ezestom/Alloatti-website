@@ -41,7 +41,7 @@ export const OpenEmail = ({ data }) => {
 	return (
 		<button
 			onClick={sendEmail}
-			className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 w-full text-lg"
+			className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-2xl"
 			id="close-dialog">
 			<span className="flex items-center justify-center gap-1">
 				<img src={ok} alt=" ok-icon" />

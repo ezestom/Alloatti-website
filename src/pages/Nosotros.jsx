@@ -130,7 +130,7 @@ export function Nosotros() {
 								/>
 							</div>
 
-							<blockquote className="py-20 px-4 mb-20 border-y border-slate-100 dark:border-slate-800">
+							<blockquote className="px-4 mb-20 border-y border-slate-100 dark:border-slate-800">
 								<p className="hp-p-intro italic">
 									&ldquo;La combinación de pasión por la
 									ingeniería y el compromiso con la calidad

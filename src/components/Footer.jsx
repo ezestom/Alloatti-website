@@ -1,42 +1,36 @@
-// import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 import { BsYoutube } from "react-icons/bs";
+import logo from "../img/e_logo_op.png"
 export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<section
-			className={`absolute bottom-0 left-1/2 z-10 w-full max-w-2xl -translate-x-1/2 p-4 transition-colors duration-300 backdrop-blur-sm ${
+			className={`absolute bottom-0 left-1/2 z-10 w-full max-w-2xl -translate-x-1/2 p-4 transition-colors duration-500 backdrop-blur-sm ${
 				isDarkTheme ? "bg-[#1a1a1a]" : "bg-white "
 			}`}>
 			<div className="flex flex-col items-center justify-center gap-1">
-				{/* <Link
-					to="https://wa.me/+5491168641122"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group flex items-center justify-center gap-2 py-2 px-4 rounded-[4px] bg-[#25d366] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#128c7e] transition-all">
-					<IoLogoWhatsapp className="text-lg" />
-					Soporte Directo
-				</Link> */}
+
 				
 				<div className="flex justify-center gap-2">
-					{/* <a
-						href="https://www.facebook.com/alloatti.srl/"
-						rel="noreferrer"
-						target="_blank"
-						className={`${
-							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
-						} transition-colors`}>
-						<FaFacebookF size={12} />
-					</a>
 					<a
-						href="https://www.instagram.com/alloatti.srl/"
+						href="https://www.instagram.com/maquinaria.alloatti/"
 						rel="noreferrer"
 						target="_blank"
 						className={`${
 							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
 						} transition-colors`}>
-						<FaInstagram size={12} />
-					</a> */}
+						<FaInstagram size={16} />
+					</a> 
+					<a
+						href="https://www.linkedin.com/company/alloatti/"
+						rel="noreferrer"
+						target="_blank"
+						className={`${
+							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
+						} transition-colors`}>
+						<FaLinkedin size={16} />
+					</a> 
 					<a
 						target="_blank"
 						href="https://www.youtube.com/@AlloattiSRL"
@@ -44,7 +38,7 @@ export function Footer() {
 						className={`${
 							isDarkTheme ? "text-slate-400 hover:text-white" : "text-slate-600 hover:text-[#024ad8]"
 						} transition-colors`}>
-						<BsYoutube size={12} />
+						<BsYoutube size={16} />
 					</a>
 				</div>
 				
@@ -52,14 +46,18 @@ export function Footer() {
 					<p className="text-slate-500 uppercase tracking-tighter">
 						&copy; {new Date().getFullYear()} Alloatti SRL. All rights reserved.
 					</p>
-					<p className="mt-1 text-slate-400">
+					<p className="mt-1 text-slate-400 uppercase tracking-tighter">
 						Developed by{" "}
 						<a
 							href="https://ezestom.is-a.dev/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-[#024ad8] hover:underline">
-							Eze Stom
+							className="flex items-center justify-center hover:scale-110 transition-transform text-blue-">
+							<img
+								src={logo}
+								alt="Eze Stom"
+								className="w-4 h-4 mt-1"
+							/>
 						</a>
 					</p>
 				</div>

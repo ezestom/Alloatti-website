@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { OpenEmail } from "./OpenEmail";
 import closeIcon from "../icons/close.png";
-import close2Icon from "../icons/close2.png";
 import { FaPlay } from "react-icons/fa";
 import PropTypes from "prop-types";
 
@@ -107,12 +106,6 @@ export function CardAccesories({
 									},
 								]}
 							/>
-							<button
-								className="hp-btn-outline w-full flex items-center justify-center gap-2 !border-slate-200 dark:!border-slate-800 text-slate-500 hover:text-slate-900"
-								onClick={handleClose}>
-								<img src={close2Icon} className="w-4 h-4 opacity-50" alt="" />
-								Cerrar Ventana
-							</button>
 						</div>
 					</div>
 				</div>

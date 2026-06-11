@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { OpenEmail } from "./OpenEmail";
 import closeIcon from "../icons/close.png";
-import close2Icon from "../icons/close2.png";
 
 export function CardMachines({
 	model,
@@ -71,7 +70,7 @@ export function CardMachines({
 						</header>
 
 						{/* Specs Grid */}
-						<dl className="grid grid-cols-2 gap-x-6 gap-y-8 mb-10 border-b border-slate-100 dark:border-slate-800 pb-10">
+						<dl className="grid grid-cols-2 gap-x-4 gap-y-4 mb-10 border-b border-slate-100 dark:border-slate-800 pb-10">
 							<div>
 								<dt className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Producción Máxima</dt>
 								<dd className="text-sm font-semibold text-slate-700 dark:text-slate-300">{production_max}</dd>
@@ -111,12 +110,6 @@ export function CardMachines({
 									},
 								]}
 							/>
-							<button
-								className="hp-btn-outline w-full flex items-center justify-center gap-2 !border-slate-200 dark:!border-slate-800 text-slate-500 hover:text-slate-900"
-								onClick={handleClose}>
-								<img src={close2Icon} className="w-4 h-4 opacity-50" alt="" />
-								Cerrar Ventana
-							</button>
 						</div>
 					</div>
 				</div>

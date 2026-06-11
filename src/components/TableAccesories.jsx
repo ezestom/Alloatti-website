@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
 import { useTheme } from "../context/ThemeContext";
-import img from "../img/tubos.jpg";
+import img from "../img/machine_5_ps.jpg";
 import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 
