@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Base } from "../components/Base";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 import imgCatalogo from "../img/ppt.jpeg";
 import infobae from "../img/infobae.jpeg";
 
@@ -26,7 +27,7 @@ export function UltimasNoticias() {
 						</div>
 						<h1 className="hp-h1">Estrategia y Catálogo</h1>
 					</header>
-					<p className="hp-p-intro mb-12">
+					<p className="ntro mb-12">
 						Descubre nuestra estrategia comercial y descarga el 
 						<strong className="hp-strong"> catálogo completo de productos </strong> 
 						para explorar a fondo nuestras soluciones de envasado.
@@ -60,7 +61,7 @@ export function UltimasNoticias() {
 						</div>
 					</figure>
 
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-24">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-24">
 						Nuestra presencia en medios nacionales refleja el impacto de nuestras 
 						soluciones en el mercado de consumo masivo y la industria del agua.
 					</p>
@@ -92,6 +93,7 @@ export function UltimasNoticias() {
 							</Link>
 						</div>
 					</figure>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>

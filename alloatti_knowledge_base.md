@@ -92,7 +92,7 @@ Alloatti ofrece una serie de periféricos de alta gama para optimizar y automati
 5.  **SACATAPAS AUTOMÁTICO:**
     *   *Función:* Extracción automática continua en línea antes del lavado.
     *   *Características:* Pinzas mecánicas automáticas sobre cinta transportadora. Capacidad de retirar hasta 600 tapas retornables por hora.
-6.  **PANTALLA Y APP (Conectividad IoT):**
+6.  **PANTALLA Y APP (Conectividad):**
     *   *Función:* HMI táctil con conexión a internet para control remoto.
     *   *Características:* Conexión directa por cable de red (RJ45). Cuenta con app para teléfonos Android que permite diagnosticar fallas en vivo, visualizar métricas en tiempo real e interactuar a distancia.
 7.  **PRE-LAVADORA SOLO EXTERIOR:**

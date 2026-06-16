@@ -12,7 +12,7 @@ export function Footer() {
 			<div className="flex flex-col items-center justify-center gap-1">
 
 				
-				<div className="flex justify-center gap-2">
+				<div className="flex justify-center gap-4">
 					<a
 						href="https://www.instagram.com/maquinaria.alloatti/"
 						rel="noreferrer"
@@ -44,7 +44,7 @@ export function Footer() {
 				
 				<div className="text-[10px] text-center leading-relaxed">
 					<p className="text-slate-500 uppercase tracking-tighter">
-						&copy; {new Date().getFullYear()} Alloatti SRL. All rights reserved.
+						&copy; {new Date().getFullYear()} Alloatti SRL.<br/> All rights reserved.
 					</p>
 					<p className="mt-1 text-slate-400 uppercase tracking-tighter">
 						Developed by{" "}

@@ -1,6 +1,7 @@
 import { Base } from "../components/Base";
 import { useEffect, useState } from "react";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 import { FaWhatsapp, FaCalculator, FaCheckCircle, FaCalendarAlt, FaFileInvoiceDollar } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 
@@ -465,6 +466,7 @@ export function MaquinasPromociones() {
 
 					</div>
 
+					<PremiumFooter />
 				</div>
 			</div>
 		</>

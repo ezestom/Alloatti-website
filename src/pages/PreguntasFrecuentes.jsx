@@ -1,6 +1,7 @@
 import { Base } from "../components/Base";
 import { Details } from "../components/Details";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 import image1 from "../img/1.jpg";
 import image2 from "../img/trabajador.jpg";
 import image3 from "../img/7.jpg";
@@ -84,7 +85,7 @@ export function PreguntasFrecuentes() {
 							</div>
 							<h1 className="hp-h1">Preguntas Frecuentes</h1>
 						</header>
-						<p className="hp-p-intro my-20">
+						<p className="hp-p my-20">
 							Explora nuestras{" "}
 							<strong className="hp-strong">
 								preguntas frecuentes
@@ -108,7 +109,7 @@ export function PreguntasFrecuentes() {
 						</div>
 				
 
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Accedé rápidamente a respuestas sobre máquinas,
 						procesos, entregas y soporte técnico.
 					</p>
@@ -166,6 +167,7 @@ export function PreguntasFrecuentes() {
 							/>
 						</div>
 					</div>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>

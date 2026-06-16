@@ -2,6 +2,7 @@ import { Base } from "../components/Base";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 import { useDolarApi } from "../hooks/useDolarApi";
 import { Drawer } from "vaul";
 import PropTypes from "prop-types";
@@ -505,10 +506,10 @@ export function MaquinasPrecios() {
 					</div>
 				)}
 
-				<div className="w-full max-w-5xl my-10 flex pricing-layout gap-4 pb-16">
-					
-					{/* Main pricing Area */}
-					<div className="flex-1">
+				<div className="w-full max-w-5xl my-10 flex flex-col gap-4 pb-16">
+					<div className="flex pricing-layout gap-4">
+						{/* Main pricing Area */}
+						<div className="flex-1">
 						
 
 
@@ -929,6 +930,8 @@ export function MaquinasPrecios() {
 						/>
 					</div>
 
+				</div>
+				<PremiumFooter />
 				</div>
 
 				{/* Floating Bottom Bar & Bottom Drawer for Mobile/Tablet (< 1400px) */}

@@ -5,6 +5,7 @@ import InputData from "../components/InputData";
 import chat from "../img/call-center.jpg";
 import { SEO } from "../components/SEO";
 import { Map } from "../components/Map";
+import { PremiumFooter } from "../components/PremiumFooter";
 
 export function Contacto() {
 	const location = useLocation();
@@ -41,7 +42,7 @@ export function Contacto() {
 						</div>
 						<h1 className="hp-h1">Contactanos</h1>
 					</header>
-					<p className="hp-p-intro my-20">
+					<p className="hp-p my-20">
 						¿Tenés alguna pregunta sobre nuestra maquinaria para el
 						procesamiento de bidones retornables y descartables? No
 						dudes en ponerte en contacto con nosotros. Estamos aquí
@@ -102,11 +103,12 @@ export function Contacto() {
 
 					<div className="my-32" id="form">
 						<div className="hp-eyebrow hp-eyebrow-blue mb-8">Solicitud de Presupuesto</div>
-						<p className="hp-p-intro mb-12">
+						<p className="hp-p mb-12">
 							Proporcionanos tus datos y los detalles de tu consulta. Nuestro equipo comercial se encargará de brindarte una propuesta integral y detallada.
 						</p>
 						<InputData />
 					</div>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>

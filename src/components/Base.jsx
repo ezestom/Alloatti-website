@@ -39,7 +39,7 @@ export function Base() {
 			</div>
 
 			{/* Mobile Social Networks - Top Left */}
-			<div className="absolute top-0 left-0 right-0 mx-auto z-50 lg:hidden">
+			<div className="absolute top-2 left-0 right-0 mx-auto z-50 lg:hidden">
 				<div className={`!px-4 !py-2 flex items-center justify-center gap-5 transition-all duration-500 ${
 					isDarkTheme 
 						? " border-white/10 shadow-black/40" 

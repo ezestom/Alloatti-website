@@ -4,6 +4,7 @@ import { accesorios } from "../machines_info/accesorios";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import pantalla from "../videos/pantalla.mp4";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -84,13 +85,13 @@ export function Accesorios() {
 						</div>
 						<h1 className="hp-h1">Accesorios de Automatización para Embotelladoras</h1>
 					</header>
-					<p className="hp-p-intro my-20">
+					<p className="hp-p my-20">
 						Nuestros equipos de accesorios están diseñados para
 						optimizar y potenciar su línea de producción. Reduzca
 						los tiempos de procesamiento y aumente
 						significativamente la productividad de su operación.
 					</p>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Ofrecemos comodidades en diversas operaciones, como
 						retirar las tapas de los bidones antes de lavarlos,
 						realizar prelavados para eliminar la suciedad más
@@ -104,7 +105,7 @@ export function Accesorios() {
 							urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
 						/>
 					</aside>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						En Alloatti, valoramos la retroalimentación de nuestros
 						clientes, ya que nos permite conocer las necesidades
 						específicas de la industria del agua. Este proceso nos
@@ -115,6 +116,7 @@ export function Accesorios() {
 					<figure className="my-10">
 						<TableAccesories accesories={accesorios} />
 					</figure>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>

@@ -5,6 +5,7 @@ import "./Table.css";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import cargador from "../videos/cargador.mp4";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -84,7 +85,7 @@ export function BidonesDescartables() {
 						</div>
 						<h1 className="hp-h1">Maquinaria de Envasado para Bidones Descartables</h1>
 					</header>
-					<p className="hp-p-intro my-20">
+					<p className="hp-p my-20">
 						Nuestras avanzadas líneas para bidones descartables
 						representan la excelencia en maquinaria dedicada al
 						enjuague, llenado y roscado de bidones. Construidas con
@@ -92,7 +93,7 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 hasta 700
 						bidones por hora.
 					</p>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Tiempo de enjuague ajustable a su necesidad, asegurando
 						una limpieza completa del interior. Esta operación
 						asegura la sanitización del interior del bidón
@@ -104,7 +105,7 @@ export function BidonesDescartables() {
 							urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
 						/>
 					</aside>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de
@@ -117,6 +118,9 @@ export function BidonesDescartables() {
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}
+					</div>
+					<div className="w-full lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
+						<PremiumFooter />
 					</div>
 			</section>
 		</>

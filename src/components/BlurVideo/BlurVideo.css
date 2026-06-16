@@ -32,10 +32,10 @@ dialog {
 	cursor: crosshair;
 }
 
-@keyframes zoom1 {
+/* @keyframes zoom1 {
 	from {
 		opacity: 0.2;
 		scale: 0.9;
 		translate: 0 10%;
 	}
-}
+} */

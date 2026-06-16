@@ -5,6 +5,7 @@ import "./Table.css";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
 import bidonesEnjuagandose from "../videos/bidonesEnjuagandose.mp4";
 import { SEO } from "../components/SEO";
+import { PremiumFooter } from "../components/PremiumFooter";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -109,7 +110,7 @@ export function BidonesRetornables() {
 						</div>
 						<h1 className="hp-h1">Envasadoras para Bidones Retornables de Agua</h1>
 					</header>
-					<p className="hp-p-intro my-20">
+					<p className="hp-p my-20">
 						Nuestras avanzadas líneas para bidones retornables
 						representan la excelencia en maquinaria dedicada al
 						lavado, enjuague, llenado y tapado de bidones.
@@ -117,7 +118,7 @@ export function BidonesRetornables() {
 						nuestras líneas de producción abarcan capacidades desde
 						120 hasta 1000 bidones por hora.
 					</p>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Garantizamos un tiempo de lavado total de 2 minutos para
 						cada bidón, asegurando una limpieza completa tanto en el
 						interior como en el exterior, incluyendo la boca del
@@ -131,7 +132,7 @@ export function BidonesRetornables() {
 							urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
 						/>
 					</aside>
-					<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
 						Adicionalmente, hemos diseñado nuestras líneas para
 						prevenir el contacto directo entre la boca del bidón y
 						el pico de llenado, eliminando cualquier posibilidad de
@@ -144,6 +145,9 @@ export function BidonesRetornables() {
 						{sectionDataArray.map((section, index) => (
 							<Table key={index} data={section} />
 						))}
+					</div>
+					<div className="w-full lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
+						<PremiumFooter />
 					</div>
 			</section>
 		</>

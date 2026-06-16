@@ -3,6 +3,7 @@ import { Card } from "../components/Card";
 import { Data } from "../components/Data";
 import { SEO } from "../components/SEO";
 import { CarouselAutoScroll } from "../components/CarouselAutoScroll";
+import { PremiumFooter } from "../components/PremiumFooter";
 import hector from "../img/tito_card_op.jpg";
 import matias from "../img/mati_card_op.jpg";
 
@@ -61,7 +62,7 @@ export function Nosotros() {
 					</header>
 
 					<div className="mt-16 text-left">
-						<p className="hp-p-intro mb-12">
+						<p className="hp-p mb-12">
 							<strong className="hp-strong">Alloatti SRL</strong>{" "}
 							es una empresa dirigida por{" "}
 							<strong className="hp-strong">ingenieros</strong>,
@@ -91,7 +92,7 @@ export function Nosotros() {
 						</div>
 
 						<div className="mt-20 mb-20 border-l-4 border-[#024ad8] pl-8 text-left">
-							<p className="hp-p-intro italic">
+							<p className="hp-p italic">
 								La visión liderada por ingenieros impulsa cada
 								aspecto de nuestras operaciones. Nuestro equipo
 								está dedicado a superar desafíos y ofrecer
@@ -131,7 +132,7 @@ export function Nosotros() {
 							</div>
 
 							<blockquote className="px-4 mb-20 border-y border-slate-100 dark:border-slate-800">
-								<p className="hp-p-intro italic">
+								<p className="hp-p italic">
 									&ldquo;La combinación de pasión por la
 									ingeniería y el compromiso con la calidad
 									nos coloca en primera línea en la innovación
@@ -142,6 +143,7 @@ export function Nosotros() {
 							</blockquote>
 						</div>
 					</div>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>

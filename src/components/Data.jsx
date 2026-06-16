@@ -12,37 +12,35 @@ export function Data() {
 					<h2 className="hp-h2">
 						Manteniendo la confianza de nuestros clientes
 					</h2>
-					<p className="hp-p-intro">
-						Estamos orgullosos de brindar un servicio de
-						calidad a nuestros clientes durante más de 30 años.
-						Estos son algunos de nuestros logros estratégicos.
+					<p className="hp-p">
+						Estamos orgullosos de brindar un servicio de calidad a nuestros clientes durante más de 30 años. Estos son algunos de nuestros logros estratégicos.
 					</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-					<div className="flex flex-col items-start">
-						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+					<div className="flex flex-col items-center">
+						<dd className="text-3xl md:text-4xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+5
 						</dd>
-						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+						<dt className="text-xs font-bold text-slate-500 dark:text-slate-400">
 							Países Alcanzados
 						</dt>
 					</div>
 
-					<div className="flex flex-col items-start">
-						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+					<div className="flex flex-col items-center">
+						<dd className="text-3xl md:text-4xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+600
 						</dd>
-						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+						<dt className="text-xs font-bold text-slate-500 dark:text-slate-400">
 							Máquinas Vendidas
 						</dt>
 					</div>
 
-					<div className="flex flex-col items-start">
-						<dd className="text-3xl md:text-6xl font-bold text-[#024ad8] mb-3 tracking-tighter">
+					<div className="flex flex-col items-center">
+						<dd className="text-3xl md:text-4xl font-bold text-[#024ad8] mb-3 tracking-tighter">
 							+400
 						</dd>
-						<dt className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+						<dt className="text-xs font-bold text-slate-500 dark:text-slate-400">
 							Clientes Satisfechos
 						</dt>
 					</div>

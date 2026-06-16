@@ -192,6 +192,7 @@ body {
 @media (min-width: 768px) {
 	.hp-p {
 		font-size: 18px;
+		text-wrap:pretty;
 	}
 }
 
@@ -301,9 +302,9 @@ body {
 	}
 }
 
-.animate-hp-fade {
+/* .animate-hp-fade {
 	animation: hpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+} */
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {

@@ -1,6 +1,7 @@
 import { Base } from "../components/Base";
 import { SEO } from "../components/SEO";
 import familia from "../img/family.png";
+import { PremiumFooter } from "../components/PremiumFooter";
 
 export function Normas() {
 	return (
@@ -23,7 +24,7 @@ export function Normas() {
 						</div>
 						<h1 className="hp-h1">Normas de Calidad</h1>
 					</header>
-					<p className="hp-p-intro my-20">
+					<p className="hp-p my-20">
 						Contamos con una estrecha relación con IVESS y CIMES,
 						normativas que garantizan la máxima calidad y pureza del
 						agua. Estas normas definen los estándares a cumplir para
@@ -58,7 +59,7 @@ export function Normas() {
 						<figure className="w-full py-16 px-8 my-10 flex flex-col justify-center items-center bg-slate-50 dark:bg-slate-900/40 rounded-[16px] shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
 							<div className="mb-12 text-center">
 								<h2 className="hp-h2 mb-4">Calidad garantizada</h2>
-								<p className="hp-p-intro text-slate-500 dark:text-slate-400">
+								<p className="hp-p text-slate-500 dark:text-slate-400">
 									Tranquilidad para tu negocio y tu familia.
 								</p>
 							</div>
@@ -86,12 +87,13 @@ export function Normas() {
 							</p>
 						</div>
 
-						<p className="hp-p-intro border-l-4 border-[#024ad8] pl-8 italic">
+						<p className="hp-p border-l-4 border-[#024ad8] pl-8 italic">
 							Estas directrices reflejan nuestro compromiso
 							inquebrantable con la calidad y la seguridad en cada
 							paso de nuestro proceso de producción.
 						</p>
 					</div>
+					<PremiumFooter />
 				</article>
 			</section>
 		</>
