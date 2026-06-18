@@ -182,14 +182,14 @@ Para que el equipo de marketing estructure las campañas de publicidad (Google A
 *   *tolva rotativa dosificadora de tapas plásticas*
 *   *envasadora semiautomatica de bidones descartables AT-300D*
 *   *linea automatica de bidones descartables de 6 y 8 litros*
-*   *pantalla HMI IoT para control de envasadora remota*
+*   *pantalla para control de envasadora remota*
 
 ---
 
 ## 8. NOTAS Y PREGUNTAS PARA EL EQUIPO DE INGENIEROS
 *Estimado equipo de ingeniería (Ing. Héctor Alloatti, Ing. Matías Alloatti): por favor revisen las siguientes consultas para enriquecer esta base de conocimiento técnica:*
 
-1.  **Modelos de Acero Inoxidable:** ¿Las estructuras estructurales y las cabinas de lavado utilizan exclusivamente acero AISI 304, o se utiliza AISI 316 en picos de llenado o colectores de productos químicos agresivos?
+1.  **Modelos de Acero Inoxidable:** ¿Las estructuras estructurales y las cabinas de lavado utilizan exclusivamente acero, o se utiliza AISI 316 en picos de llenado o colectores de productos químicos agresivos?
 2.  **Etapas de Productos Químicos:** ¿Cuáles son los nombres de los químicos de lavado que comúnmente recomiendan en sus ciclos (por ejemplo: detergente alcalino, sanitizante ácido, ácido peracético, agua ozonizada, cloro)? Esto sirve para agregar palabras clave sobre resistencia química de los sellos.
 3.  **Presiones y Caudales:** ¿Existen rangos de presión específicos en bar o psi que utilicen las bombas centrífugas para el lavado interior y exterior? (Ej: "lavado a 3 bar de presión"). Esto atrae búsquedas técnicas muy cualificadas de jefes de planta.
 4.  **Marcas de Componentes:** ¿Utilizan marcas específicas de PLC o neumática que debamos destacar como sinónimo de calidad? (Ej: *PLC Siemens, Festo, SMC, Schneider Electric*). Los compradores buscan activamente estas marcas asociadas a la robustez.

@@ -5,11 +5,11 @@ export function Data() {
 				{/* Top Blue Accent */}
 				<div className="absolute top-0 left-0 w-full h-1.5 bg-[#024ad8]"></div>
 				
-				<div className="max-w-4xl mb-16">
+				<div className="mb-16">
 					<div className="hp-eyebrow hp-eyebrow-blue mb-4">
 						Nuestra Trayectoria
 					</div>
-					<h2 className="hp-h2">
+					<h2 className="hp-h2 !text-3xl">
 						Manteniendo la confianza de nuestros clientes
 					</h2>
 					<p className="hp-p">

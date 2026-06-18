@@ -33,18 +33,18 @@ export function Home() {
 					{/* 1. HERO SECTION REDESIGNED TO 2 COLUMNS */}
 					<div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-16 items-center min-h-[85vh] mb-28 md:mb-36">
 						{/* Left Column: Text Content */}
-						<div className="xl:col-span-6 flex flex-col items-start text-left w-full">
+						<div className="xl:col-span-6 flex flex-col items-start text-left w-full gap-6">
 							<LogoCelular />
 							
-							<span className="hp-eyebrow hp-eyebrow-blue mb-6">
+							<span className="hp-eyebrow hp-eyebrow-blue">
 								Excelencia en Ingeniería
 							</span>
 
-							<h1 className={`text-3xl md:text-4xl xl:text-6xl font-extrabold tracking-tight mb-6 ${
+							<h1 className={`text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight ${
 								isDarkTheme ? "text-white" : "text-[#1a1a1a]"
 							}`}>
 								<span className="text-[#024ad8] block mb-2">Líderes en innovación y desarrollo:</span>
-								<span className="text-2xl md:text-3xl xl:text-5xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
+								<span className="text-2xl md:text-3xl lg:text-4xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
 							</h1>
 
 							<p className={`text-sm md:text-base xl:text-lg mb-8 leading-relaxed max-w-xl ${
@@ -72,7 +72,7 @@ export function Home() {
 							<img 
 								src={heroMachine} 
 								alt="Líderes en innovación y desarrollo de envasadoras" 
-								className="w-full aspect-video object-cover rounded-[16px] shadow-2xl min-h-[65vh]"
+								className="w-full aspect-video object-cover rounded-[16px] shadow-2xl lg:min-h-[55vh] min-h-[30vh]"
 							/>
 							{/* Floating Stats Card */}
 							<div>
@@ -195,12 +195,28 @@ export function Home() {
 						</div>
 
 						{/* Right Column: Video */}
-						<div className="relative rounded-[16px] overflow-hidden group mx-auto xl:mx-0 w-full">
-							<div className="">
+						<div className="relative group mx-auto xl:mx-0 w-full">
+							<div className="rounded-[16px] overflow-hidden">
 								<BlurVideo
 									video={bidonesCorriendo}
 									urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
 								/>
+							</div>
+							{/* Floating Video Info Card */}
+							<div className={`absolute !border-t-2 !border-t-[#024ad8] -bottom-12 left-6 right-6 p-4 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+								isDarkTheme 
+									? "bg-zinc-900 border-[#333]" 
+									: "bg-white border-slate-100"
+							}`}>
+								<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
+								<div className="text-left">
+									<h4 className={`text-xs font-extrabold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+										Líneas de Producción en Vivo
+									</h4>
+									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-450" : "text-slate-600"}`}>
+										Proceso automático continuo de lavado, llenado y tapado con estándares sanitarios certificados.
+									</p>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -358,7 +374,7 @@ export function Home() {
 											Eficiencia Energética
 										</h3>
 										<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-											Algoritmos inteligentes de gestión de potencia que reducen el consumo eléctrico hasta en un 20%.
+											Algoritmos inteligentes de gestión de potencia que reducen el consumo eléctrico.
 										</p>
 										<span className="inline-block text-[9px] font-extrabold tracking-[0.15em] text-[#024ad8] uppercase mt-2">
 											Tecnología en Avance
@@ -370,7 +386,7 @@ export function Home() {
 					</section>
 
 					{/* 6. TRUST / SOCIAL PROOF BAND */}
-					<section className="w-full py-12 px-6 rounded-[16px] mb-20 md:mb-28 flex flex-col items-center justify-center bg-[#024ad8] dark:bg-[#0e3191] text-white shadow-lg">
+					{/* <section className="w-full py-12 px-6 rounded-[16px] mb-20 md:mb-28 flex flex-col items-center justify-center bg-[#024ad8] dark:bg-[#0e3191] text-white shadow-lg">
 						<span className="text-[9px] font-bold tracking-[0.25em] text-blue-200/80 mb-6 uppercase">
 							Confían en Nosotros
 						</span>
@@ -381,7 +397,7 @@ export function Home() {
 							<span className="hover:text-white/80 transition-colors duration-300">UMBRELLA</span>
 							<span className="hover:text-white/80 transition-colors duration-300">CYBERDYNE</span>
 						</div>
-					</section>
+					</section> */}
 
 					{/* 7. PREMIUM SITE FOOTER */}
 					<PremiumFooter />

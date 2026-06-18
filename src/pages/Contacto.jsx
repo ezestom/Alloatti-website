@@ -32,7 +32,7 @@ export function Contacto() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
+				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -80,7 +80,7 @@ export function Contacto() {
 						<div className="hp-card flex flex-col md:flex-row gap-12 items-center !p-12 shadow-2xl transition-all duration-500">
 							<div className="flex-1 order-2 md:order-1">
 								<div className="hp-eyebrow hp-eyebrow-blue mb-6">Asistencia Personalizada</div>
-								<h2 className="hp-h2">
+								<h2 className="hp-h2 !text-3xl">
 									Nuestros asesores
 								</h2>
 								<p className="hp-p">
