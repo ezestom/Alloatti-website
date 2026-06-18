@@ -12,7 +12,7 @@ const productSchema = {
 		{
 			"@type": "Product",
 			"name": "Accesorios y Periféricos para Embotelladoras Alloatti",
-			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"image": "https://www.alloatti.com/Alloatti-logo-dark.png",
 			"description": "Módulos de automatización y accesorios periféricos para líneas de envasado de agua potable: tolvas rotativas distribuidoras de tapas, elevadores de tapas tipo Jirafa, cargadores automáticos de bidones vacíos, sacatapas neumáticos, prelavadoras (interiores, exteriores y mixtas) y conectividad HMI IoT con visualización móvil.",
 			"brand": { 
 				"@type": "Brand", 
@@ -21,8 +21,8 @@ const productSchema = {
 			"manufacturer": { 
 				"@type": "Organization", 
 				"name": "Alloatti SRL",
-				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
-				"url": "https://alloatti.com"
+				"logo": "https://www.alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://www.alloatti.com"
 			},
 			"category": "PackagingMachinery",
 			"material": "Acero Inoxidable AISI 304",

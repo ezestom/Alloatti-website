@@ -13,7 +13,7 @@ const productSchema = {
 		{
 			"@type": "Product",
 			"name": "Línea de Envasadoras Automáticas AT (Bidones Retornables)",
-			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"image": "https://www.alloatti.com/Alloatti-logo-dark.png",
 			"description": "Líneas industriales automáticas de lavado, enjuague, llenado y tapado (a presión o por cinta transportadora) para bidones retornables de agua de 10, 12 y 20 litros. Fabricadas en acero inoxidable AISI 304 bajo normas IVESS y CIMES, con capacidades desde 120 hasta 1000 bidones por hora y ciclo de lavado de 2 minutos garantizado.",
 			"brand": { 
 				"@type": "Brand", 
@@ -22,8 +22,8 @@ const productSchema = {
 			"manufacturer": { 
 				"@type": "Organization", 
 				"name": "Alloatti SRL",
-				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
-				"url": "https://alloatti.com"
+				"logo": "https://www.alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://www.alloatti.com"
 			},
 			"category": "PackagingMachinery",
 			"material": "Acero Inoxidable AISI 304",

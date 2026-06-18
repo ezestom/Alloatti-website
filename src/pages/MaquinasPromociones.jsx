@@ -78,7 +78,7 @@ function SellerLogin({ password, setPassword, loginError, showPassword, setShowP
 			<div className="w-full max-w-md bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-xl p-8 space-y-6">
 				<div className="text-center space-y-3">
 					<img 
-						src="https://alloatti.com/Alloatti-logo-dark.png" 
+						src="https://www.alloatti.com/Alloatti-logo-dark.png" 
 						alt="Alloatti SRL" 
 						className="mx-auto h-12 w-auto dark:invert transition-all duration-300"
 					/>
@@ -1589,7 +1589,7 @@ export function MaquinasPromociones() {
 			{/* Print layout representation */}
 			<div className="print-only p-8 bg-white max-w-3xl mx-auto text-left">
 				<div className="text-center mb-8 border-b pb-4">
-					<img src="https://alloatti.com/Alloatti-logo-dark.png" alt="Alloatti SRL" className="mx-auto h-12" />
+					<img src="https://www.alloatti.com/Alloatti-logo-dark.png" alt="Alloatti SRL" className="mx-auto h-12" />
 					<h2 className="text-xl font-black tracking-tight mt-4 text-slate-800 uppercase">Simulación de Plan Ahora 24</h2>
 					<p className="text-xs text-slate-500 mt-1">Generado el {new Date().toLocaleDateString("es-AR")}</p>
 				</div>

@@ -33,7 +33,7 @@ export function Home() {
 					{/* 1. HERO SECTION REDESIGNED TO 2 COLUMNS */}
 					<div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-16 items-center min-h-[85vh] mb-28 md:mb-36">
 						{/* Left Column: Text Content */}
-						<div className="xl:col-span-6 flex flex-col items-start text-left w-full gap-6">
+						<div className="xl:col-span-6 flex flex-col items-start text-left w-full gap-2 lg:gap-6">
 							<LogoCelular />
 							
 							<span className="hp-eyebrow hp-eyebrow-blue">

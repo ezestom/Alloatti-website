@@ -23,7 +23,7 @@ const productSchema = {
 		{
 			"@type": "Product",
 			"name": "Lista de Precios Oficial - Alloatti SRL",
-			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"image": "https://www.alloatti.com/Alloatti-logo-dark.png",
 			"description": "Cotizador y lista de precios oficial para líneas de envasado, lavado, enjuague, llenado y tapado de bidones retornables, descartables y accesorios periféricos de automatización.",
 			"brand": { 
 				"@type": "Brand", 
@@ -32,8 +32,8 @@ const productSchema = {
 			"manufacturer": { 
 				"@type": "Organization", 
 				"name": "Alloatti SRL",
-				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
-				"url": "https://alloatti.com"
+				"logo": "https://www.alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://www.alloatti.com"
 			}
 		}
 	]
@@ -251,7 +251,7 @@ function SellerLogin({ password, setPassword, loginError, showPassword, setShowP
 			<div className="w-full max-w-md bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-xl p-8 space-y-6">
 				<div className="text-center space-y-3">
 					<img 
-						src="https://alloatti.com/Alloatti-logo-dark.png" 
+						src="https://www.alloatti.com/Alloatti-logo-dark.png" 
 						alt="Alloatti SRL" 
 						className="mx-auto h-12 w-auto dark:invert transition-all duration-300"
 					/>
@@ -1441,7 +1441,7 @@ export function MaquinasPrecios() {
 			{/* Print-Only Layout */}
 			<div className="print-only p-8 bg-white max-w-3xl mx-auto">
 				<div className="print-header-logo text-center mb-8">
-					<img src="https://alloatti.com/Alloatti-logo-dark.png" alt="Alloatti SRL" className="mx-auto" style={{ maxWidth: "180px", height: "auto" }} />
+					<img src="https://www.alloatti.com/Alloatti-logo-dark.png" alt="Alloatti SRL" className="mx-auto" style={{ maxWidth: "180px", height: "auto" }} />
 					<h2 className="text-xl font-black tracking-tight mt-4 text-slate-800">COTIZACIÓN DE MAQUINARIA INDUSTRIAL</h2>
 					<h3 className="text-xs font-bold text-slate-800">Presupuesto no válido como factura</h3>
 					<p className="text-xs text-slate-500 mt-1">Generado el {new Date().toLocaleDateString("es-AR")}</p>

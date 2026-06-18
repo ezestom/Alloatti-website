@@ -9,9 +9,9 @@ export function WithClose() {
 	const whatsappUrl = getWhatsAppUrl(location.pathname);
 
 	return (
-		<section className="w-full top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none pt-16 lg:pt-5">
+		<section className="w-full top-0 left-0 right-0 z-50 flex justify-center items-center pointer-events-none pt-12 lg:pt-5">
 			<div
-				className={`pointer-events-auto flex justify-center items-center  max-w-lg transition-all duration-500 rounded-full border shadow-2xl backdrop-blur-md px-4 py-2 ${
+				className={`pointer-events-auto flex justify-center items-center  max-w-lg transition-all duration-500 rounded-full border shadow-2xl backdrop-blur-md px-2 lg:px-4 py-1 md:py-2 ${
 					isDarkTheme 
 						? "bg-[#1a1a1a]/80 border-slate-700 text-white justify-around" 
 						: "bg-white/80 border-slate-200 text-slate-800 justify-around"

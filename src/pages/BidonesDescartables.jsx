@@ -13,7 +13,7 @@ const productSchema = {
 		{
 			"@type": "Product",
 			"name": "Línea de Envasadoras para Bidones Descartables AT-D",
-			"image": "https://alloatti.com/Alloatti-logo-dark.png",
+			"image": "https://www.alloatti.com/Alloatti-logo-dark.png",
 			"description": "Líneas industriales automáticas y semiautomáticas para el enjuague, llenado y tapado roscado de bidones descartables de un solo uso (PET) de 6, 8 y 10 litros. Construidas en acero inoxidable AISI 304 con capacidades de 300 a 700 bidones por hora y opciones de colocador de manijas automático.",
 			"brand": { 
 				"@type": "Brand", 
@@ -22,8 +22,8 @@ const productSchema = {
 			"manufacturer": { 
 				"@type": "Organization", 
 				"name": "Alloatti SRL",
-				"logo": "https://alloatti.com/Alloatti-logo-dark.png",
-				"url": "https://alloatti.com"
+				"logo": "https://www.alloatti.com/Alloatti-logo-dark.png",
+				"url": "https://www.alloatti.com"
 			},
 			"category": "PackagingMachinery",
 			"material": "Acero Inoxidable AISI 304",

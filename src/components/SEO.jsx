@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
-const BASE_URL = "https://alloatti.com";
+const BASE_URL = "https://www.alloatti.com";
 
 export function SEO({ title, description, keywords, image, url, jsonLd }) {
   const siteTitle = "Alloatti SRL";
