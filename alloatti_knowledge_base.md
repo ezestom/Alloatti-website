@@ -5,7 +5,7 @@ Este documento recopila toda la información institucional, técnica, comercial 
 
 ## 1. Perfil Institucional e Identidad
 *   **Nombre de la Empresa:** Alloatti SRL
-*   **Eslogan / Enfoque:** Líder en Innovación. Empresa liderada por ingenieros, dedicada al diseño y fabricación de maquinaria de última generación para la industria del procesamiento y envasado de agua potable.
+*   **Eslogan / Enfoque:** Líderes en innovación y desarrollo de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones. Empresa liderada por ingenieros, dedicada al diseño y fabricación de maquinaria de última generación para la industria del procesamiento y envasado de agua potable.
 *   **Trayectoria:** Más de 30 años de experiencia técnica e innovación constante en el mercado.
 *   **Ubicación Principal:** Buenos Aires, Argentina.
 *   **Logros Estratégicos:**
@@ -27,8 +27,8 @@ Este documento recopila toda la información institucional, técnica, comercial 
 
 ---
 
-## 2. Compromiso de Calidad y Normativas (IVESS / CIMES)
-Toda la maquinaria de Alloatti SRL se diseña y fabrica bajo estrictos lineamientos inspirados en las normativas de **IVESS** y **CIMES**, garantizando la máxima pureza del agua y previniendo la contaminación cruzada:
+## 2. Compromiso de Calidad y Normativas
+Toda la maquinaria de Alloatti SRL se diseña y fabrica bajo estrictos lineamientos de higiene industrial, garantizando la máxima pureza del agua y previniendo la contaminación cruzada:
 *   **Duración del Lavado:** Ciclo mínimo garantizado de **2 minutos (120 segundos)** para asegurar la sanitización interna y externa de cada bidón.
 *   **Presión Rotativa Exterior:** Limpieza profunda de toda la superficie externa del bidón mediante picos de lavado rotativos de alta presión.
 *   **Presión Interna del Bidón:** Picos de inyección interna a alta presión que sanitizan todos los rincones del recipiente.
@@ -113,7 +113,7 @@ Alloatti ofrece una serie de periféricos de alta gama para optimizar y automati
 *   **¿Qué materiales se utilizan para la fabricación?**
     *   Toda la línea de envasadoras y pre-lavadoras se construye en Acero Inoxidable de grado alimentario, resistente al agua y a los agentes sanitizantes de lavado.
 *   **¿Qué innovaciones recientes se han incorporado?**
-    *   Integración de pantallas HMI conectadas a internet (IoT) con aplicación móvil para Android, permitiendo diagnóstico inteligente de fallas en vivo y registro de producción en tiempo real. También destaca el desarrollo de cargadores y sacatapas 100% automáticos.
+    *   Integración de pantallas táctiles conectadas a internet con aplicación móvil para Android, permitiendo diagnóstico inteligente de fallas en vivo y registro de producción en tiempo real. También destaca el desarrollo de cargadores y sacatapas 100% automáticos.
 *   **¿Cómo se contacta a Alloatti SRL para presupuestos?**
     *   *Vía Web:* Formulario de contacto en la web de Alloatti (procesado de forma segura y directa por EmailJS).
     *   *WhatsApp Directo / Atención Inmediata:* +54 9 11 6864-1122.
