@@ -985,7 +985,7 @@ export function MaquinasPromociones() {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		if (password.toLowerCase().trim() === "Alloatti3145%") {
+		if (password.toLowerCase().trim() === "alloattisrl3145$") {
 			setIsAuthorized(true);
 			setLoginError("");
 		} else {
