@@ -39,7 +39,7 @@ const faqSchema = {
 			name: "¿Qué innovaciones recientes han incorporado?",
 			acceptedAnswer: {
 				"@type": "Answer",
-				text: "Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad IoT con diagnósticos inteligentes en tiempo real.",
+				text: "Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad con diagnósticos inteligentes en tiempo real.",
 			},
 		},
 		{
@@ -153,7 +153,7 @@ export function PreguntasFrecuentes() {
 									"¿Qué innovaciones recientes han incorporado?"
 								}
 								answer={
-									"Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad IoT con diagnósticos inteligentes en tiempo real."
+									"Hemos sumado departamentos de automatización, sacatapas automáticos, cargadores de bidones vacíos y conectividad con diagnósticos inteligentes en tiempo real."
 								}
 							/>
 							<Details

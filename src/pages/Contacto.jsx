@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Base } from "../components/Base";
 import InputData from "../components/InputData";
-import chat from "../img/call-center.jpg";
+import chat from "../img/tito_contacto_op.jpg";
 import { SEO } from "../components/SEO";
 import { Map } from "../components/Map";
 import { PremiumFooter } from "../components/PremiumFooter";
@@ -91,7 +91,7 @@ export function Contacto() {
 							</div>
 							<div className="w-full md:w-1/2 order-1 md:order-2">
 								<img
-									className="rounded-2xl shadow-2xl w-full aspect-video object-cover border border-slate-100 dark:border-slate-800"
+									className="rounded-2xl shadow-2xl w-full grayscale-[35%] aspect-video object-cover border border-slate-100 dark:border-slate-800"
 									src={chat}
 									alt="Asesores Alloatti"
 								/>

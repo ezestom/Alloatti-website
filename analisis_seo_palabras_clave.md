@@ -68,7 +68,7 @@ Línea especializada para bidones de plástico de un solo uso (descartables) de 
 Periféricos y módulos de ampliación para automatizar por completo la línea de producción y reducir la mano de obra física.
 
 ### Palabras Clave Principales (SEO):
-*Automatización de embotelladoras, cargador automático de bidones, sacatapas neumático, elevador de tapas industrial, tolva distribuidora de tapas, conectividad IoT industrial, prelavadora exterior de bidones, cepilladora de bidones.*
+*Automatización de embotelladoras, cargador automático de bidones, sacatapas neumático, elevador de tapas industrial, tolva distribuidora de tapas, conectividad, prelavadora exterior de bidones, cepilladora de bidones.*
 
 ### Detalle de Equipamiento Periférico:
 1.  **TOLVA (Distribuidor de tapas):**
@@ -86,7 +86,7 @@ Periféricos y módulos de ampliación para automatizar por completo la línea d
 5.  **SACATAPAS AUTOMÁTICO EN LÍNEA:**
     *   *Función:* Extracción robotizada continua de tapas de retorno antes de que los bidones ingresen al área de prelavado o lavado.
     *   *Componentes:* Pinzas mecánicas automáticas montadas sobre estructura con cinta transportadora. Capacidad de remoción de hasta 600 tapas por hora.
-6.  **PANTALLA HMI Y APLICACIÓN MÓVIL (Conectividad IoT):**
+6.  **PANTALLA HMI Y APLICACIÓN MÓVIL (Conectividad):**
     *   *Función:* Sistema de control de procesos en pantalla táctil con comunicación Ethernet e internet.
     *   *Componentes:* Interfaz HMI táctil, cableado RJ45, aplicación móvil para Android. Permite la visualización de métricas de producción en tiempo real, registro de sanidad, diagnóstico de alarmas y fallas en vivo e interacción remota.
 7.  **PRE-LAVADORA SOLO EXTERIOR:**

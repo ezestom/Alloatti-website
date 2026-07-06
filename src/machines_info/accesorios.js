@@ -80,4 +80,13 @@ export const accesorios = {
 			link: "https://www.youtube.com/watch?v=xYFHJshns2s",
 		},
 	],
+	sectionData10: [
+		{
+			name: "PALETIZADOR",
+			characteristics: "Paletizado de bidones de 12 y 20 litros",
+			description:
+				"El equipo realiza el paletizado automático de bidones de 12 y 20 litros. Cuenta con una configuración ajustable hasta un máximo de 4 niveles por palet y un sistema automatizado con capacidad de alimentación síncrona de hasta 4 bidones en simultáneo por nivel. Su diseño robusto e ingeniería adaptable permiten ajustar la configuración según requerimientos especiales de layout y necesidades específicas de cada planta.",
+			link: "https://www.youtube.com/watch?v=5RGHW1hmLho",
+		},
+	],
 };

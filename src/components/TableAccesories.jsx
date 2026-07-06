@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
 import { useTheme } from "../context/ThemeContext";
-import img from "../img/machine_5_ps.jpg";
-import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog } from "react-icons/fa";
+import defaultImg from "../img/machine_5_ps.jpg";
+import paletizadoraImg from "../img/accesories/paletizadora_op.jpg";
+import appImg from "../img/accesories/app_op.jpg";
+import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog, FaBoxes } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 
 const slugify = (text) => {
@@ -34,6 +36,7 @@ export function TableAccesories() {
 		sectionData7,
 		sectionData8,
 		sectionData9,
+		sectionData10,
 	} = accesorios;
 
 	const sectionDataArray = [
@@ -46,6 +49,7 @@ export function TableAccesories() {
 		sectionData7,
 		sectionData8,
 		sectionData9,
+		sectionData10,
 	];
 
 	useEffect(() => {
@@ -88,10 +92,11 @@ export function TableAccesories() {
 		if (n.includes("CARGADOR")) return "Alimentación de Bidones";
 		if (n.includes("SACATAPAS MANUAL")) return "Extracción Manual";
 		if (n.includes("SACATAPAS AUTOMÁTICO")) return "Extracción Automática";
-		if (n.includes("PANTALLA")) return "Telemetría y Control IoT";
+		if (n.includes("PANTALLA")) return "Conectividad y Telemetría";
 		if (n.includes("SOLO EXTERIOR")) return "Saneamiento Exterior";
 		if (n.includes("SOLO INTERIOR")) return "Saneamiento Interior";
 		if (n.includes("INTERIOR Y EXTERIOR")) return "Saneamiento Dual";
+		if (n.includes("PALETIZADOR")) return "Fin de Línea";
 		return "Periférico de Línea";
 	};
 
@@ -103,7 +108,15 @@ export function TableAccesories() {
 		if (n.includes("SACATAPAS")) return <FaEject />;
 		if (n.includes("PANTALLA")) return <FaTabletAlt />;
 		if (n.includes("PRE LAVADORA")) return <FaShower />;
+		if (n.includes("PALETIZADOR")) return <FaBoxes />;
 		return <FaCog />;
+	};
+
+	const getAccessoryImage = (name) => {
+		const n = name.toUpperCase().trim();
+		if (n.includes("PALETIZADOR")) return paletizadoraImg;
+		if (n.includes("PANTALLA") || n.includes("APP")) return appImg;
+		return defaultImg;
 	};
 
 	return (
@@ -202,7 +215,7 @@ export function TableAccesories() {
 					characteristics={selectedAccesory.characteristics}
 					description={selectedAccesory.description}
 					link={selectedAccesory.link}
-					img={img}
+					img={getAccessoryImage(selectedAccesory.name)}
 					isOpen={true}
 					onClose={handleCardClose}
 				/>

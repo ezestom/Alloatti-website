@@ -13,7 +13,7 @@ const productSchema = {
 			"@type": "Product",
 			"name": "Accesorios y Periféricos para Embotelladoras Alloatti",
 			"image": "https://www.alloatti.com/Alloatti-logo-dark.png",
-			"description": "Módulos de automatización y accesorios periféricos para líneas de envasado de agua potable: tolvas rotativas distribuidoras de tapas, elevadores de tapas tipo Jirafa, cargadores automáticos de bidones vacíos, sacatapas neumáticos, prelavadoras (interiores, exteriores y mixtas) y conectividad HMI IoT con visualización móvil.",
+			"description": "Módulos de automatización, final de línea y accesorios periféricos para líneas de envasado de agua potable: tolvas rotativas distribuidoras de tapas, elevadores de tapas tipo Jirafa, cargadores automáticos de bidones vacíos, sacatapas neumáticos, prelavadoras (interiores, exteriores y mixtas), paletizadores de bidones y conectividad con visualización móvil.",
 			"brand": { 
 				"@type": "Brand", 
 				"name": "Alloatti" 
@@ -32,10 +32,11 @@ const productSchema = {
 				"Cargador automático de bidones",
 				"Sacatapas manual",
 				"Sacatapas automático en línea",
-				"Sistema de conectividad HMI e IoT (Pantalla y App)",
+				"Sistema de conectividad (Pantalla y App)",
 				"Pre-lavadora exterior",
 				"Pre-lavadora interior",
-				"Pre-lavadora mixta (interior y exterior)"
+				"Pre-lavadora mixta (interior y exterior)",
+				"Paletizador automático de bidones"
 			],
 			"additionalProperty": [
 				{
@@ -68,8 +69,8 @@ export function Accesorios() {
 		<>
 			<SEO 
 				title="Accesorios y Automatización para Embotelladoras" 
-				description="Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas y conectividad IoT con app Android."
-				keywords="accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, conectividad IoT, HMI"
+				description="Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas, paletizadores de bidones y conectividad con app."
+				keywords="accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, paletizador de bidones, pantallas, conectividad"
 				url="/accesorios-para-maquinas"
 				jsonLd={productSchema}
 			/>

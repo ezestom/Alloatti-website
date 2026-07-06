@@ -26,7 +26,7 @@ const ROUTES = [
     keywords: 'trayectoria envasadoras, ingenieria industrial, automatizacion de bidones, fabricacion de maquinaria, ingenieros de agua, Alloatti SRL',
     canonical: 'https://www.alloatti.com/nosotros',
     h1: 'Nuestra empresa y trayectoria profesional',
-    bodyText: 'Alloatti SRL es una empresa argentina liderada por ingenieros, dedicada al diseño y fabricación de maquinaria industrial para el embotellado de agua de mesa. Bajo la dirección del Ing. Héctor Alloatti (Fundador y Gerente con más de 30 años de experiencia técnica en la industria del agua) y el Ing. Matías Alloatti (Director de Logística y Programación de PLC/HMI con más de 15 años de trayectoria), aportamos soluciones innovadoras de alta fidelidad, construidas íntegramente en acero inoxidable AISI 304, garantizando robustez y confiabilidad en cada una de nuestras operaciones.'
+    bodyText: 'Alloatti SRL es una empresa argentina liderada por ingenieros, dedicada al diseño y fabricación de maquinaria industrial para el embotellado de agua de mesa. Bajo la dirección del Ing. Héctor Alloatti (Fundador y Gerente con más de 30 años de experiencia técnica en la industria del agua) y el Ing. Matías Alloatti (Director de Logística y Programación de PLC con más de 15 años de trayectoria), aportamos soluciones innovadoras de alta fidelidad, construidas íntegramente en acero inoxidable AISI 304, garantizando robustez y confiabilidad en cada una de nuestras operaciones.'
   },
   {
     path: '/maquina-para-bidones-retornables',
@@ -49,11 +49,11 @@ const ROUTES = [
   {
     path: '/accesorios-para-maquinas',
     title: 'Accesorios y Automatización para Embotelladoras | Alloatti SRL',
-    description: 'Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas y conectividad IoT con app Android.',
-    keywords: 'accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, conectividad IoT, HMI',
+    description: 'Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas y conectividad con app Android.',
+    keywords: 'accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, conectividad',
     canonical: 'https://www.alloatti.com/accesorios-para-maquinas',
     h1: 'Accesorios de Automatización y Periféricos para Embotelladoras',
-    bodyText: 'Ofrecemos una gama completa de periféricos y accesorios industriales para automatizar por completo las líneas de embotellado de agua de mesa, reduciendo costos operativos y tiempos muertos. Nuestro catálogo incluye: Tolvas rotativas distribuidoras de tapas con plato giratorio y dosificador, Elevadores de tapas tipo Jirafa con tolva de suelo para 500 unidades, Cargadores automáticos de bidones vacíos con brazos neumáticos, Sacatapas manuales y Sacatapas automáticos mecánicos en línea (remoción de 600 tapas/hora), Pre-lavadoras externas de cepillos rotativos, Pre-lavadoras internas de alta presión, y Sistemas de conectividad HMI IoT con pantalla táctil y aplicación móvil Android para el diagnóstico de fallas en vivo y registro de producción en tiempo real.'
+    bodyText: 'Ofrecemos una gama completa de periféricos y accesorios industriales para automatizar por completo las líneas de embotellado de agua de mesa, reduciendo costos operativos y tiempos muertos. Nuestro catálogo incluye: Tolvas rotativas distribuidoras de tapas con plato giratorio y dosificador, Elevadores de tapas tipo Jirafa con tolva de suelo para 500 unidades, Cargadores automáticos de bidones vacíos con brazos neumáticos, Sacatapas manuales y Sacatapas automáticos mecánicos en línea (remoción de 600 tapas/hora), Pre-lavadoras externas de cepillos rotativos, Pre-lavadoras internas de alta presión, y Sistemas de conectivida con pantalla táctil y aplicación móvil Android para el diagnóstico de fallas en vivo y registro de producción en tiempo real.'
   },
   {
     path: '/normas-de-calidad',
@@ -85,11 +85,11 @@ const ROUTES = [
   {
     path: '/preguntas-frecuentes',
     title: 'Preguntas Frecuentes sobre Envasadoras de Agua | Alloatti SRL',
-    description: 'Respuestas a dudas comunes sobre la producción, materiales (acero inoxidable), tiempos de lavado, conectividad HMI/App y soporte postventa de Alloatti.',
+    description: 'Respuestas a dudas comunes sobre la producción, materiales (acero inoxidable), tiempos de lavado, conectivida/App y soporte postventa de Alloatti.',
     keywords: 'preguntas frecuentes maquinas de agua, FAQ envasadoras, maquinas bidones, soporte tecnico, garantia envasadoras',
     canonical: 'https://www.alloatti.com/preguntas-frecuentes',
     h1: 'Preguntas Frecuentes - Centro de Ayuda Técnico',
-    bodyText: 'Resolvemos sus dudas más frecuentes acerca del diseño, materiales y mantenimiento de nuestras envasadoras industriales. Toda la línea de envasadoras y pre-lavadoras de Alloatti SRL se construye exclusivamente en chasis de Acero Inoxidable alimenticio AISI 304, garantizando una resistencia extrema frente a agentes desinfectantes agresivos (ácido peracético, cloro, amonio cuaternario, agua ozonizada). La producción varía según el modelo desde 120 hasta 1000 bidones por hora en retornables y de 300 a 700 en descartables. Las máquinas incorporan control HMI de fácil manejo con conectividad Ethernet para monitoreo remoto.'
+    bodyText: 'Resolvemos sus dudas más frecuentes acerca del diseño, materiales y mantenimiento de nuestras envasadoras industriales. Toda la línea de envasadoras y pre-lavadoras de Alloatti SRL se construye exclusivamente en chasis de Acero Inoxidable alimenticio AISI 304, garantizando una resistencia extrema frente a agentes desinfectantes agresivos (ácido peracético, cloro, amonio cuaternario, agua ozonizada). La producción varía según el modelo desde 120 hasta 1000 bidones por hora en retornables y de 300 a 700 en descartables. Las máquinas incorporan contro de fácil manejo con conectividad Ethernet para monitoreo remoto.'
   },
   {
     path: '/maquinas/precios',
