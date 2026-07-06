@@ -115,7 +115,7 @@ export function Home() {
 								className="w-full aspect-video object-cover rounded-[16px]"
 							/>
 							{/* Floating Quality Assurance Card */}
-							<div className={`absolute !border-t-2 !border-t-[#024ad8] -bottom-12 left-6 right-6 p-4 md:p-8 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 ${
+							<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
 								isDarkTheme 
 									? "bg-zinc-900 border-[#333]" 
 									: "bg-white border-slate-100"
@@ -203,7 +203,7 @@ export function Home() {
 								/>
 							</div>
 							{/* Floating Video Info Card */}
-							<div className={`absolute !border-t-2 !border-t-[#024ad8] -bottom-12 left-6 right-6 p-4 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+							<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
 								isDarkTheme 
 									? "bg-zinc-900 border-[#333]" 
 									: "bg-white border-slate-100"
@@ -214,7 +214,7 @@ export function Home() {
 										Líneas de Producción en Vivo
 									</h4>
 									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-450" : "text-slate-600"}`}>
-										Proceso automático continuo de lavado, llenado y tapado con estándares sanitarios certificados.
+										Líneas con procesos automáticos continuos de lavado, llenado y tapado con estándares sanitarios certificados.
 									</p>
 								</div>
 							</div>
@@ -314,7 +314,7 @@ export function Home() {
 								className="w-full aspect-video object-cover rounded-[16px]"
 							/>
 							{/* Floating Control Interface Card */}
-							<div className={`absolute !border-t-2 !border-t-[#024ad8] -bottom-12 left-6 right-6 p-4 md:p-8 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 ${
+							<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
 								isDarkTheme 
 									? "bg-zinc-900 border-[#333]" 
 									: "bg-white border-slate-100"

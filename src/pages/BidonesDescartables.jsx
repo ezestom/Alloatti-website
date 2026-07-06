@@ -93,26 +93,30 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 hasta 700
 						bidones por hora.
 					</p>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						Tiempo de enjuague ajustable a su necesidad, asegurando
-						una limpieza completa del interior. Esta operación
-						asegura la sanitización del interior del bidón
-						cumpliendo los standares de calidad.
-					</p>
-					<aside className="lg:p-10 p-4 rounded-[16px] my-10 bg-slate-50 dark:bg-slate-900/40 shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
-						<BlurVideo
-							video={cargador}
-							urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-						/>
-					</aside>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						Adicionalmente, hemos diseñado nuestras líneas para
-						prevenir el contacto directo entre la boca del bidón y
-						el pico de llenado, eliminando cualquier posibilidad de
-						contaminación del bidón. En Alloatti, nos comprometemos
-						a ofrecer soluciones de calidad que garanticen la
-						seguridad y pureza de cada bidón procesado.
-					</p>
+					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center my-14">
+						<div className="flex flex-col gap-8">
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								Tiempo de enjuague ajustable a su necesidad, asegurando
+								una limpieza completa del interior. Esta operación
+								asegura la sanitización del interior del bidón
+								cumpliendo los standares de calidad.
+							</p>
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								Adicionalmente, hemos diseñado nuestras líneas para
+								prevenir el contacto directo entre la boca del bidón y
+								el pico de llenado, eliminando cualquier posibilidad de
+								contaminación del bidón. En Alloatti, nos comprometemos
+								a ofrecer soluciones de calidad que garanticen la
+								seguridad y pureza de cada bidón procesado.
+							</p>
+						</div>
+						<div className="w-full">
+							<BlurVideo
+								video={cargador}
+								urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+							/>
+						</div>
+					</div>
 				</article>
 					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
 						{sectionDataArray.map((section, index) => (

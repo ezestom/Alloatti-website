@@ -92,28 +92,32 @@ export function Accesorios() {
 						los tiempos de procesamiento y aumente
 						significativamente la productividad de su operación.
 					</p>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						Ofrecemos comodidades en diversas operaciones, como
-						retirar las tapas de los bidones antes de lavarlos,
-						realizar prelavados para eliminar la suciedad más
-						gruesa, organizar las tapas de manera eficiente y
-						visualizar el proceso productivo a distancia, entre
-						otras funciones.
-					</p>
-					<aside className="lg:p-10 p-4 rounded-[16px] my-10 bg-slate-50 dark:bg-slate-900/40 shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
-						<BlurVideo
-							video={pantalla}
-							urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
-						/>
-					</aside>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						En Alloatti, valoramos la retroalimentación de nuestros
-						clientes, ya que nos permite conocer las necesidades
-						específicas de la industria del agua. Este proceso nos
-						impulsa a desarrollar nuevos accesorios que amplían las
-						posibilidades de su línea productiva, adaptándonos de
-						manera precisa a sus requerimientos.
-					</p>
+					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center my-14">
+						<div className="flex flex-col gap-8">
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								Ofrecemos comodidades en diversas operaciones, como
+								retirar las tapas de los bidones antes de lavarlos,
+								realizar prelavados para eliminar la suciedad más
+								gruesa, organizar las tapas de manera eficiente y
+								visualizar el proceso productivo a distancia, entre
+								otras funciones.
+							</p>
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								En Alloatti, valoramos la retroalimentación de nuestros
+								clientes, ya que nos permite conocer las necesidades
+								específicas de la industria del agua. Este proceso nos
+								impulsa a desarrollar nuevos accesorios que amplían las
+								posibilidades de su línea productiva, adaptándonos de
+								manera precisa a sus requerimientos.
+							</p>
+						</div>
+						<div className="w-full">
+							<BlurVideo
+								video={pantalla}
+								urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
+							/>
+						</div>
+					</div>
 					<figure className="my-10">
 						<TableAccesories accesories={accesorios} />
 					</figure>

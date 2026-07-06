@@ -118,28 +118,32 @@ export function BidonesRetornables() {
 						nuestras líneas de producción abarcan capacidades desde
 						120 hasta 1000 bidones por hora.
 					</p>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						Garantizamos un tiempo de lavado total de 2 minutos para
-						cada bidón, asegurando una limpieza completa tanto en el
-						interior como en el exterior, incluyendo la boca del
-						bidón. Esta eficiente operación maximiza la efectividad
-						del lavado y cumple con los más altos estándares de
-						higiene.
-					</p>
-					<aside className="lg:p-10 p-4 rounded-[16px] my-10 bg-slate-50 dark:bg-slate-900/40 shadow-2xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
-						<BlurVideo
-							video={bidonesEnjuagandose}
-							urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-						/>
-					</aside>
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
-						Adicionalmente, hemos diseñado nuestras líneas para
-						prevenir el contacto directo entre la boca del bidón y
-						el pico de llenado, eliminando cualquier posibilidad de
-						contaminación del bidón. En Alloatti, nos comprometemos
-						a ofrecer soluciones de calidad que garanticen la
-						seguridad y pureza de cada bidón procesado.
-					</p>
+					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center my-14">
+						<div className="flex flex-col gap-8">
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								Garantizamos un tiempo de lavado total de 2 minutos para
+								cada bidón, asegurando una limpieza completa tanto en el
+								interior como en el exterior, incluyendo la boca del
+								bidón. Esta eficiente operación maximiza la efectividad
+								del lavado y cumple con los más altos estándares de
+								higiene.
+							</p>
+							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								Adicionalmente, hemos diseñado nuestras líneas para
+								prevenir el contacto directo entre la boca del bidón y
+								el pico de llenado, eliminando cualquier posibilidad de
+								contaminación del bidón. En Alloatti, nos comprometemos
+								a ofrecer soluciones de calidad que garanticen la
+								seguridad y pureza de cada bidón procesado.
+							</p>
+						</div>
+						<div className="w-full">
+							<BlurVideo
+								video={bidonesEnjuagandose}
+								urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+							/>
+						</div>
+					</div>
 				</article>
 					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
 						{sectionDataArray.map((section, index) => (
