@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import PropTypes from "prop-types";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
 
@@ -125,3 +126,8 @@ export function BlurVideo({ urlYoutube, video }) {
 		</div>
 	);
 }
+
+BlurVideo.propTypes = {
+	urlYoutube: PropTypes.string.isRequired,
+	video: PropTypes.string.isRequired,
+};

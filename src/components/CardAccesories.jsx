@@ -40,7 +40,7 @@ export function CardAccesories({
 			aria-modal="true"
 			aria-labelledby="modal-title">
 			
-			<div className="relative w-full max-w-5xl max-h-[92vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
+			<div className="relative w-full max-w-[80rem] max-h-[92vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
 				
 				{/* Close Button */}
 				<button
