@@ -199,7 +199,7 @@ export function Home() {
 							<div className="rounded-[16px] overflow-hidden">
 								<BlurVideo
 									video={bidonesCorriendo}
-									urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
+									urlYoutube="https://www.youtube.com/embed/vLdxcTmlY18?si=jsS8PxyHdDG5GYCz&autoplay=1&mute=0"
 								/>
 							</div>
 							{/* Floating Video Info Card */}
