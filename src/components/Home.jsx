@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { WithClose } from "./WithClose";
 import { useNavigate } from "react-router-dom";
 import { LogoCelular } from "./LogoCelular";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
 import { PremiumFooter } from "./PremiumFooter";
+import { CardAccesories } from "./CardAccesories";
+import { accesorios } from "../machines_info/accesorios";
+import paletizadoraImg from "../img/accesories/paletizadora_op.jpg";
 import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
 import heroMachine from "../img/machine_2_ps.jpg";
 import maquina from "../img/machine_3_ps.jpg";
@@ -12,14 +16,35 @@ import {
 	FaCheckCircle, 
 	FaWater, 
 	FaWrench,
-	FaFileInvoiceDollar 
+	FaFileInvoiceDollar,
+	FaBoxes,
+	FaLayerGroup,
+	FaLock
 } from "react-icons/fa";
 import { BsBroadcast, BsLightningChargeFill } from "react-icons/bs";
 
 export function Home() {
 	const navigate = useNavigate();
 	const { isDarkTheme } = useTheme();
+	const [selectedAccesory, setSelectedAccesory] = useState(null);
 
+	const paletizadorItem = accesorios.sectionData10[0];
+	const latestDevelopments = [
+		{
+			...paletizadorItem,
+			id: 1,
+			badge: "Fin de Línea",
+			isComingSoon: false,
+		},
+		{
+			id: 2,
+			name: "DETECTOR DE PINCHADURAS",
+			badge: "Próximamente",
+			characteristics: "Control de estanqueidad e inspección",
+			description: "Sistema automatizado para inspeccionar y descartar bidones con microfisuras antes del lavado y llenado.",
+			isComingSoon: true,
+		},
+	];
 
 	return (
 		<>
@@ -304,7 +329,226 @@ export function Home() {
 						</div>
 					</section>
 
-					{/* 5. SMART SOLUTIONS 4.0 SECTION */}
+					{/* 5. LATEST DEVELOPMENTS SECTION */}
+					<section className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-16 items-center mb-28 md:mb-36">
+						{/* Left Column: Text & Features */}
+						<div className="xl:col-span-5 flex flex-col items-start text-left w-full">
+							<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
+								Últimos Desarrollos
+							</span>
+							<h2 className="hp-h2 mb-6 leading-tight">
+								Automatización y final de línea
+							</h2>
+							<p className="hp-p mb-8 text-base md:text-lg">
+								Soluciones modulares diseñadas para agilizar el despacho y maximizar la autonomía operativa.
+							</p>
+
+							<div className="space-y-6 mb-8 w-full">
+								{/* Bullet 1 */}
+								<div className="flex gap-4 items-start">
+									<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+										<FaBoxes className="text-[#024ad8] text-lg" />
+									</div>
+									<div>
+										<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+											Paletizado Automático
+										</h3>
+										<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+											Carga simultánea de hasta 4 bidones por nivel y configuración de hasta 4 alturas.
+										</p>
+									</div>
+								</div>
+
+								{/* Bullet 2 */}
+								<div className="flex gap-4 items-start">
+									<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+										<FaLayerGroup className="text-[#024ad8] text-lg" />
+									</div>
+									<div>
+										<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+											Estructura Modular
+										</h3>
+										<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+											Construcción en acero inoxidable adaptable al layout de tu planta.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<button
+								onClick={() => navigate("/accesorios-para-maquinas")}
+								className="hp-btn-primary !px-6 !py-3.5 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+								Ver Accesorios <span className="transition-transform group-hover:translate-x-1">→</span>
+							</button>
+						</div>
+
+						{/* Right Column: 2 Cards (Paletizador + Teaser Próximamente) */}
+						<div className="xl:col-span-7 w-full">
+							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+								{latestDevelopments.map((item, idx) => {
+									if (item.isComingSoon) {
+										return (
+											<div
+												key={idx}
+												className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none ${
+													isDarkTheme
+														? "bg-slate-900/40 border-slate-800/80 text-slate-400"
+														: "bg-slate-50/80 border-slate-200 text-slate-500"
+												}`}
+											>
+												{/* Top Image Section with Blur */}
+												<div className="w-full h-48 md:h-52 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+													<img 
+														src={paletizadoraImg} 
+														alt={item.name}
+														className="w-full h-full object-cover filter blur-[6px] grayscale scale-110 opacity-40"
+													/>
+													{/* Gradient and Darkening overlay */}
+													<div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px]"></div>
+													
+													{/* Category badge */}
+													<div className="absolute top-3.5 left-3.5 z-10">
+														<span className="inline-flex items-center gap-1.5 text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur-md bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-sm">
+															<span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+															{item.badge}
+														</span>
+													</div>
+													
+													{/* Lock Icon floating */}
+													<div className="absolute top-3.5 right-3.5 z-10 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-amber-300 border border-amber-500/30 shadow-sm text-xs">
+														<FaLock />
+													</div>
+													
+													{/* Center Teaser Stamp */}
+													<div className="absolute inset-0 flex items-center justify-center z-10">
+														<span className="px-4 py-1.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-white text-[11px] font-extrabold uppercase tracking-wider shadow-lg">
+															En Fase de Desarrollo
+														</span>
+													</div>
+
+													{/* Characteristics tag */}
+													{item.characteristics && (
+														<div className="absolute bottom-3 left-3 right-3 z-10">
+															<p className="text-[11px] font-bold text-slate-300 drop-shadow-md line-clamp-1">
+																✨ {item.characteristics}
+															</p>
+														</div>
+													)}
+												</div>
+
+												{/* Content Section */}
+												<div className="p-4 md:p-5 flex flex-col flex-grow w-full z-10 relative">
+													<div className="flex items-center gap-2 mb-2">
+														<h3 className={`text-lg font-extrabold tracking-tight ${
+															isDarkTheme ? "text-slate-200" : "text-slate-800"
+														}`}>
+															{item.name}
+														</h3>
+													</div>
+
+													<p className={`text-xs line-clamp-3 font-medium leading-relaxed mb-5 ${
+														isDarkTheme ? "text-slate-400" : "text-slate-500"
+													}`}>
+														{item.description}
+													</p>
+
+													{/* Disabled Button */}
+													<div className="mt-auto pt-1">
+														<div className={`flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-xl font-bold text-xs tracking-wide border cursor-not-allowed ${
+															isDarkTheme
+																? "bg-slate-800/40 border-slate-700/50 text-slate-500"
+																: "bg-slate-100 border-slate-200 text-slate-400"
+														}`}>
+															<FaLock size={10} className="opacity-70" />
+															<span>Próximamente disponible</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										);
+									}
+
+									return (
+										<button
+											key={idx}
+											onClick={() => setSelectedAccesory(item)}
+											className={`w-full text-left group rounded-3xl border transition-all duration-500 overflow-hidden relative flex flex-col h-full shadow-sm hover:-translate-y-1 ${
+												isDarkTheme
+													? "bg-slate-900/60 border-slate-800 hover:border-[#024ad8]/50 hover:shadow-[0_12px_40px_rgba(2,74,216,0.15)]"
+													: "bg-white border-slate-200/80 hover:border-[#024ad8]/30 hover:shadow-[0_12px_40px_rgba(2,74,216,0.1)]"
+											}`}
+										>
+											{/* Top Image Section */}
+											<div className="w-full h-48 md:h-52 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+												<img 
+													src={paletizadoraImg} 
+													alt={item.name}
+													className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+												/>
+												{/* Gradient overlay */}
+												<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-slate-900/30 opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+												
+												{/* Category badge */}
+												<div className="absolute top-3.5 left-3.5 z-10">
+													<span className={`inline-flex items-center gap-1.5 text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur-md border shadow-sm transition-colors duration-300 ${
+														isDarkTheme
+															? "bg-black/50 border-white/10 text-white group-hover:bg-[#024ad8]/80 group-hover:border-[#024ad8]"
+															: "bg-white/95 border-slate-200/50 text-[#024ad8] group-hover:bg-[#024ad8] group-hover:text-white"
+													}`}>
+														<span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span>
+														{item.badge || "Fin de Línea"}
+													</span>
+												</div>
+												
+												{/* Icon floating */}
+												<div className="absolute top-3.5 right-3.5 z-10 w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/20 shadow-sm text-xs">
+													<FaBoxes />
+												</div>
+												
+												{/* Characteristics tag */}
+												{item.characteristics && item.characteristics !== "-" && (
+													<div className="absolute bottom-3 left-3 right-3 z-10">
+														<p className="text-[11px] font-bold text-white/90 drop-shadow-md line-clamp-1">
+															✨ {item.characteristics}
+														</p>
+													</div>
+												)}
+											</div>
+
+											{/* Content Section */}
+											<div className="p-4 md:p-5 flex flex-col flex-grow w-full z-10 bg-inherit relative">
+												<h3 className={`text-lg font-extrabold tracking-tight mb-2 transition-colors duration-300 group-hover:text-[#024ad8] ${
+													isDarkTheme ? "text-white" : "text-slate-900"
+												}`}>
+													{item.name}
+												</h3>
+
+												<p className={`text-xs line-clamp-3 font-medium leading-relaxed mb-5 ${
+													isDarkTheme ? "text-slate-400" : "text-slate-500"
+												}`}>
+													{item.description}
+												</p>
+
+												{/* CTA Button */}
+												<div className="mt-auto pt-1">
+													<div className={`flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 border ${
+														isDarkTheme
+															? "bg-slate-800/50 border-slate-700 text-white group-hover:bg-[#024ad8] group-hover:border-[#024ad8] group-hover:shadow-[0_0_20px_rgba(2,74,216,0.3)]"
+															: "bg-slate-50 border-slate-200/80 text-slate-700 group-hover:bg-[#024ad8] group-hover:border-[#024ad8] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(2,74,216,0.25)]"
+													}`}>
+														<span>Ver información detallada</span>
+														<span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+													</div>
+												</div>
+											</div>
+										</button>
+									);
+								})}
+							</div>
+						</div>
+					</section>
+
+					{/* 6. SMART SOLUTIONS 4.0 SECTION */}
 					<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-28 md:mb-36">
 						{/* Left Column: Image with Floating Card */}
 						<div className="relative rounded-[16px] group xl:mx-0 w-full">
@@ -385,19 +629,18 @@ export function Home() {
 						</div>
 					</section>
 
-					{/* 6. TRUST / SOCIAL PROOF BAND */}
-					{/* <section className="w-full py-12 px-6 rounded-[16px] mb-20 md:mb-28 flex flex-col items-center justify-center bg-[#024ad8] dark:bg-[#0e3191] text-white shadow-lg">
-						<span className="text-[9px] font-bold tracking-[0.25em] text-blue-200/80 mb-6 uppercase">
-							Confían en Nosotros
-						</span>
-						<div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-lg md:text-3xl font-black tracking-widest text-white/50 select-none">
-							<span className="hover:text-white/80 transition-colors duration-300">GLOBEX</span>
-							<span className="hover:text-white/80 transition-colors duration-300">INITECH</span>
-							<span className="hover:text-white/80 transition-colors duration-300">SYNDICATE</span>
-							<span className="hover:text-white/80 transition-colors duration-300">UMBRELLA</span>
-							<span className="hover:text-white/80 transition-colors duration-300">CYBERDYNE</span>
-						</div>
-					</section> */}
+
+					{/* Modal for detail view */}
+					{selectedAccesory && (
+						<CardAccesories
+							model={selectedAccesory.name}
+							img={paletizadoraImg}
+							characteristics={selectedAccesory.characteristics}
+							description={selectedAccesory.description}
+							link={selectedAccesory.link}
+							onClose={() => setSelectedAccesory(null)}
+						/>
+					)}
 
 					{/* 7. PREMIUM SITE FOOTER */}
 					<PremiumFooter />

@@ -89,4 +89,13 @@ export const accesorios = {
 			link: "https://www.youtube.com/watch?v=5RGHW1hmLho",
 		},
 	],
+	sectionData11: [
+		{
+			name: "DETECTOR DE PINCHADURAS",
+			characteristics: "Control de estanqueidad e inspección",
+			description:
+				"Sistema automatizado para inspeccionar y descartar bidones con microfisuras antes del lavado y llenado.",
+			isComingSoon: true,
+		},
+	],
 };

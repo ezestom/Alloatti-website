@@ -13,7 +13,7 @@ import jirafaImg from "../img/accesories/jirafa_op.jpg";
 import tolvaImg from "../img/accesories/tolva_op.jpg";
 import sacatapasAutoImg from "../img/accesories/sacatapas_auto_op.jpg"
 import appImg from "../img/accesories/app_op.jpg";
-import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog, FaBoxes } from "react-icons/fa";
+import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog, FaBoxes, FaLock } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 
 const slugify = (text) => {
@@ -45,6 +45,7 @@ export function TableAccesories() {
 		sectionData8,
 		sectionData9,
 		sectionData10,
+		sectionData11,
 	} = accesorios;
 
 	const sectionDataArray = [
@@ -58,6 +59,7 @@ export function TableAccesories() {
 		sectionData8,
 		sectionData9,
 		sectionData10,
+		sectionData11,
 	];
 
 	useEffect(() => {
@@ -66,7 +68,7 @@ export function TableAccesories() {
 			const slugParam = slugify(maquinaParam);
 			for (const sectionData of sectionDataArray) {
 				const item = sectionData[0];
-				if (slugify(item.name) === slugParam) {
+				if (!item.isComingSoon && slugify(item.name) === slugParam) {
 					setSelectedAccesory(item);
 					document.body.style.overflow = "hidden";
 					break;
@@ -76,6 +78,7 @@ export function TableAccesories() {
 	}, [searchParams]);
 
 	const handleCardOpen = (accesory) => {
+		if (accesory.isComingSoon) return;
 		setSelectedAccesory(accesory);
 		document.body.style.overflow = "hidden";
 
@@ -105,6 +108,7 @@ export function TableAccesories() {
 		if (n.includes("SOLO INTERIOR")) return "Saneamiento Interior";
 		if (n.includes("INTERIOR Y EXTERIOR")) return "Saneamiento Dual";
 		if (n.includes("PALETIZADOR")) return "Fin de Línea";
+		if (n.includes("DETECTOR") || n.includes("PINCHADURAS")) return "Control de Calidad";
 		return "Periférico de Línea";
 	};
 
@@ -117,6 +121,7 @@ export function TableAccesories() {
 		if (n.includes("PANTALLA")) return <FaTabletAlt />;
 		if (n.includes("PRE LAVADORA")) return <FaShower />;
 		if (n.includes("PALETIZADOR")) return <FaBoxes />;
+		if (n.includes("DETECTOR") || n.includes("PINCHADURAS")) return <FaLock />;
 		return <FaCog />;
 	};
 
@@ -132,6 +137,7 @@ export function TableAccesories() {
 		if (n.includes("JIRAFA")) return jirafaImg;
 		if (n.includes("TOLVA")) return tolvaImg;
 		if (n.includes("SACATAPAS AUTOMÁTICO")) return sacatapasAutoImg;
+		if (n.includes("DETECTOR") || n.includes("PINCHADURAS")) return paletizadoraImg;
 		return defaultImg;
 	};
 
@@ -143,6 +149,84 @@ export function TableAccesories() {
 					const category = getCategoryName(item.name);
 					const icon = getIcon(item.name);
 					const itemImg = getAccessoryImage(item.name);
+
+					if (item.isComingSoon) {
+						return (
+							<div
+								key={index}
+								className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none ${
+									isDarkTheme
+										? "bg-slate-900/40 border-slate-800/80 text-slate-400"
+										: "bg-slate-50/80 border-slate-200 text-slate-500"
+								}`}
+							>
+								{/* Top Image Section with Blur */}
+								<div className="w-full h-52 md:h-80 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+									<img 
+										src={itemImg} 
+										alt={item.name}
+										className="w-full h-full object-cover filter blur-[6px] grayscale scale-110 opacity-40"
+									/>
+									<div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px]"></div>
+									
+									{/* Category badge */}
+									<div className="absolute top-4 left-4 z-10">
+										<span className="inline-flex items-center gap-1.5 text-[9px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-md bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-sm">
+											<span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+											Próximamente
+										</span>
+									</div>
+									
+									{/* Lock Icon */}
+									<div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-amber-300 border border-amber-500/30 shadow-sm text-xs">
+										<FaLock />
+									</div>
+									
+									{/* Center Teaser Stamp */}
+									<div className="absolute inset-0 flex items-center justify-center z-10">
+										<span className="px-5 py-2 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-extrabold uppercase tracking-wider shadow-lg">
+											En Fase de Desarrollo
+										</span>
+									</div>
+
+									{item.characteristics && item.characteristics !== "-" && (
+										<div className="absolute bottom-4 left-4 right-4 z-10">
+											<p className="text-[11px] font-bold text-slate-300 drop-shadow-md line-clamp-1">
+												✨ {item.characteristics}
+											</p>
+										</div>
+									)}
+								</div>
+
+								{/* Content Section */}
+								<div className="p-2 md:p-4 flex flex-col flex-grow w-full z-10 relative">
+									<h3 className={`text-xl font-extrabold tracking-tight mb-3 ${
+										isDarkTheme ? "text-slate-200" : "text-slate-800"
+									}`}>
+										{item.name}
+									</h3>
+
+									<p className={`text-sm line-clamp-3 font-medium leading-relaxed mb-6 ${
+										isDarkTheme ? "text-slate-400" : "text-slate-500"
+									}`}>
+										{item.description}
+									</p>
+
+									{/* Disabled Button */}
+									<div className="mt-auto pt-2">
+										<div className={`flex items-center justify-center w-full gap-2 px-5 py-3.5 rounded-2xl font-bold text-sm tracking-wide border cursor-not-allowed ${
+											isDarkTheme
+												? "bg-slate-800/40 border-slate-700/50 text-slate-500"
+												: "bg-slate-100 border-slate-200 text-slate-400"
+										}`}>
+											<FaLock size={12} className="opacity-70" />
+											<span>Próximamente disponible</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					}
 
 					return (
 						<button
