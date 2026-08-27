@@ -40,8 +40,8 @@ export function Nosotros() {
 	return (
 		<>
 			<SEO
-				title="Quiénes Somos | Fábrica de Maquinaria para Procesamiento de Agua"
-				description="Conozca la trayectoria de Alloatti SRL, empresa líder dirigida por ingenieros con más de 30 años de experiencia técnica en el diseño de envasadoras de agua y automatización."
+				title="Quiénes Somos | Trayectoria en Maquinaria"
+				description="Conozca la trayectoria de Alloatti SRL: más de 30 años de experiencia técnica en ingeniería y fabricación de envasadoras de agua y automatización."
 				keywords="trayectoria envasadoras, ingenieria industrial, automatizacion de bidones, fabricacion de maquinaria, ingenieros de agua, Alloatti SRL"
 				url="/nosotros"
 			/>

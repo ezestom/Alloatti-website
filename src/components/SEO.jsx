@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BASE_URL = "https://www.alloatti.com";
 
-export function SEO({ title, description, keywords, image, url, jsonLd }) {
+export function SEO({ title, description, keywords, image, url, jsonLd, noindex = false }) {
   const siteTitle = "Alloatti SRL";
   const fullTitle = `${title} | ${siteTitle}`;
   const defaultDescription = "Líderes en innovación de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones de agua potable.";
@@ -46,6 +46,7 @@ export function SEO({ title, description, keywords, image, url, jsonLd }) {
       <title>{fullTitle}</title>
       <meta name="description" content={description || defaultDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
       {/* Canonical */}
       <link rel="canonical" href={canonicalUrl} />
@@ -84,4 +85,5 @@ SEO.propTypes = {
   image: PropTypes.string,
   url: PropTypes.string,
   jsonLd: PropTypes.object,
+  noindex: PropTypes.bool,
 };

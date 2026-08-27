@@ -66,8 +66,8 @@ export function BidonesDescartables() {
 	return (
 		<>
 			<SEO 
-				title="Envasadoras de Bidones Descartables y de un Solo Uso" 
-				description="Líneas industriales automáticas y semiautomáticas de enjuague, llenado y roscado para bidones descartables de PET (6L, 8L y 10L). Rendimiento de 300 a 700 bidones/hora."
+				title="Envasadoras de Bidones Descartables y PET" 
+				description="Líneas automáticas y semiautomáticas de enjuague, llenado y roscado de bidones descartables PET (6L a 10L). Rendimiento de 300 a 700 bidones/hora."
 				keywords="envasadora de bidones descartables, llenadora de bidones PET, roscadora automatica, enjuagadora de bidones, planta embotelladora de agua, envasado de agua mineral"
 				url="/maquina-para-bidones-descartables"
 				jsonLd={productSchema}

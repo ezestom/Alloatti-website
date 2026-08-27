@@ -68,8 +68,8 @@ export function Accesorios() {
 	return (
 		<>
 			<SEO 
-				title="Accesorios y Automatización para Embotelladoras" 
-				description="Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas, paletizadores de bidones y conectividad con app."
+				title="Accesorios y Automatización para Envasadoras" 
+				description="Optimice su planta embotelladora: sacatapas automáticos, cargadores, elevadores Jirafa, tolvas rotativas y paletizadores industriales de bidones."
 				keywords="accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, paletizador de bidones, pantallas, conectividad"
 				url="/accesorios-para-maquinas"
 				jsonLd={productSchema}

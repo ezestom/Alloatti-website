@@ -9,6 +9,7 @@ export function Error(handleClick) {
 			<SEO
 				title="Página no encontrada"
 				description="Lo sentimos, la página que buscas no existe en Alloatti SRL. Regresa al inicio para explorar nuestra maquinaria industrial."
+				noindex={true}
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">

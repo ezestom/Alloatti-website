@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /maquinas/
 Allow: /
 
 Sitemap: https://www.alloatti.com/sitemap.xml

@@ -1323,6 +1323,7 @@ export function MaquinasPrecios() {
 				description="Lista de precios confidencial y cotizador de envasadoras de bidones retornables, descartables y accesorios. Exclusivo para clientes Alloatti."
 				url="/maquinas/precios"
 				jsonLd={productSchema}
+				noindex={true}
 			/>
 			{/* Custom styles for printing cotización */}
 			<style>{`

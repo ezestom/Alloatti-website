@@ -1504,9 +1504,10 @@ export function MaquinasPromociones() {
 	return (
 		<>
 			<SEO 
-				title="Simulador Plan Ahora 24 - Vendedores | Alloatti" 
-				description="Panel de simulación y presupuesto del Plan Ahora 24 para asesores comerciales."
+				title="Simulador Plan Ahora 24 - Vendedores" 
+				description="Simulador y cotizador del Plan Ahora 24 de Alloatti SRL. Calcule cuotas, financiación y condiciones para la compra de su línea envasadora de agua."
 				url="/maquinas/promociones"
+				noindex={true}
 			/>
 			
 			<style>{`

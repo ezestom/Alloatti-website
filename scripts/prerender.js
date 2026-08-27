@@ -12,8 +12,8 @@ const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
 const ROUTES = [
   {
     path: '/',
-    title: 'Fábrica de Envasadoras de Agua y Lavadoras de Bidones | Alloatti SRL',
-    description: 'Fábrica de máquinas lavadoras, llenadoras y tapadoras de bidones de agua de 10 a 20 litros. Más de 30 años de trayectoria en la automatización de plantas de agua.',
+    title: 'Fábrica de Envasadoras y Lavadoras de Bidones | Alloatti SRL',
+    description: 'Fábrica de máquinas lavadoras, llenadoras y tapadoras de bidones de 10 a 20 litros. Más de 30 años automatizando plantas embotelladoras de agua.',
     keywords: 'envasadoras de agua, envasadoras de bidones, lavadora de bidones de 20 litros, llenadora de bidones de agua, tapadora de bidones, maquinaria industrial para agua, Alloatti SRL, planta embotelladora, IVESS, CIMES',
     canonical: 'https://www.alloatti.com/',
     h1: 'Líderes en innovación y desarrollo de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones',
@@ -21,8 +21,8 @@ const ROUTES = [
   },
   {
     path: '/nosotros',
-    title: 'Quiénes Somos | Fábrica de Maquinaria para Procesamiento de Agua | Alloatti SRL',
-    description: 'Conozca la trayectoria de Alloatti SRL, empresa líder dirigida por ingenieros con más de 30 años de experiencia técnica en el diseño de envasadoras de agua y automatización.',
+    title: 'Quiénes Somos | Trayectoria en Maquinaria | Alloatti SRL',
+    description: 'Conozca la trayectoria de Alloatti SRL: más de 30 años de experiencia técnica en ingeniería y fabricación de envasadoras de agua y automatización.',
     keywords: 'trayectoria envasadoras, ingenieria industrial, automatizacion de bidones, fabricacion de maquinaria, ingenieros de agua, Alloatti SRL',
     canonical: 'https://www.alloatti.com/nosotros',
     h1: 'Nuestra empresa y trayectoria profesional',
@@ -39,8 +39,8 @@ const ROUTES = [
   },
   {
     path: '/maquina-para-bidones-descartables',
-    title: 'Envasadoras de Bidones Descartables y de un Solo Uso | Alloatti SRL',
-    description: 'Líneas industriales automáticas y semiautomáticas de enjuague, llenado y roscado para bidones descartables de PET (6L, 8L y 10L). Rendimiento de 300 a 700 bidones/hora.',
+    title: 'Envasadoras de Bidones Descartables y PET | Alloatti SRL',
+    description: 'Líneas automáticas y semiautomáticas de enjuague, llenado y roscado de bidones descartables PET (6L a 10L). Rendimiento de 300 a 700 bidones/hora.',
     keywords: 'envasadora de bidones descartables, llenadora de bidones PET, roscadora automatica, enjuagadora de bidones, planta embotelladora de agua, envasado de agua mineral',
     canonical: 'https://www.alloatti.com/maquina-para-bidones-descartables',
     h1: 'Maquinaria de Envasado para Bidones Descartables de un Solo Uso',
@@ -48,8 +48,8 @@ const ROUTES = [
   },
   {
     path: '/accesorios-para-maquinas',
-    title: 'Accesorios y Automatización para Embotelladoras | Alloatti SRL',
-    description: 'Optimice su planta embotelladora: sacatapas automáticos, cargadores de bidones, elevadores de tapas Jirafa, tolvas rotativas y conectividad con app Android.',
+    title: 'Accesorios y Automatización para Envasadoras | Alloatti SRL',
+    description: 'Optimice su planta embotelladora: sacatapas automáticos, cargadores, elevadores Jirafa, tolvas rotativas y paletizadores industriales de bidones.',
     keywords: 'accesorios industriales, sacatapas automatico, alimentador de tapas, elevador de tapas jirafa, tolva rotativa, prelavadora exterior, conectividad',
     canonical: 'https://www.alloatti.com/accesorios-para-maquinas',
     h1: 'Accesorios de Automatización y Periféricos para Embotelladoras',
@@ -85,7 +85,7 @@ const ROUTES = [
   {
     path: '/preguntas-frecuentes',
     title: 'Preguntas Frecuentes sobre Envasadoras de Agua | Alloatti SRL',
-    description: 'Respuestas a dudas comunes sobre la producción, materiales (acero inoxidable), tiempos de lavado, conectivida/App y soporte postventa de Alloatti.',
+    description: 'Respuestas a dudas comunes sobre la producción, materiales (acero inoxidable), tiempos de lavado, conectividad/App y soporte postventa de Alloatti.',
     keywords: 'preguntas frecuentes maquinas de agua, FAQ envasadoras, maquinas bidones, soporte tecnico, garantia envasadoras',
     canonical: 'https://www.alloatti.com/preguntas-frecuentes',
     h1: 'Preguntas Frecuentes - Centro de Ayuda Técnico',
@@ -98,24 +98,26 @@ const ROUTES = [
     keywords: 'cotizador, lista de precios envasadoras, presupuesto maquinas de agua',
     canonical: 'https://www.alloatti.com/maquinas/precios',
     h1: 'Lista de Precios y Cotizador de Equipamiento Industrial',
-    bodyText: 'Herramienta digital interactiva de cotización y lista oficial de precios exclusiva para asesores comerciales y clientes de Alloatti SRL. Permite configurar a medida la línea de embotellado, seleccionando modelos de bidón retornable (AT-120 a AT-960), descartable (AT-300D, AT-700D) y accesorios de automatización (cargadores, tolvas, jirafas, cintas transportadoras modulares por metro). El sistema calcula el valor neto estimado, el IVA del 10.5% y efectúa conversiones de dólares (USD) a pesos (ARS) basándose en la cotización oficial del Banco Nación Argentina (BNA), facilitando la generación inmediata de archivos listos para imprimir o compartir por WhatsApp.'
+    bodyText: 'Herramienta digital interactiva de cotización y lista oficial de precios exclusiva para asesores comerciales y clientes de Alloatti SRL. Permite configurar a medida la línea de embotellado, seleccionando modelos de bidón retornable (AT-120 a AT-960), descartable (AT-300D, AT-700D) y accesorios de automatización (cargadores, tolvas, jirafas, cintas transportadoras modulares por metro). El sistema calcula el valor neto estimado, el IVA del 10.5% y efectúa conversiones de dólares (USD) a pesos (ARS) basándose en la cotización oficial del Banco Nación Argentina (BNA), facilitando la generación inmediata de archivos listos para imprimir o compartir por WhatsApp.',
+    noindex: true
   },
   {
     path: '/maquinas/promociones',
     title: 'Simulador Plan Ahora 24 - Vendedores | Alloatti SRL',
-    description: 'Panel de simulación y presupuesto del Plan Ahora 24 para asesores comerciales.',
+    description: 'Simulador y cotizador del Plan Ahora 24 de Alloatti SRL. Calcule cuotas, financiación y condiciones para la compra de su línea envasadora de agua.',
     keywords: 'promociones, plan ahora 24, simulador de cuotas, financiacion de maquinaria',
     canonical: 'https://www.alloatti.com/maquinas/promociones',
     h1: 'Plan de Promociones y Financiamiento Directo Ahora 24',
-    bodyText: 'Simulador comercial interactivo del Plan Ahora 24 para asesores de venta de Alloatti SRL. Facilita la creación y envío de simulaciones de financiación directa de equipamiento industrial. El plan otorga un descuento del 5% sobre el precio de lista y financia el saldo restante en 24 cuotas fijas mensuales en la moneda seleccionada (ARS/USD), permitiendo calcular los montos estimados con o sin IVA, ofreciendo una vía rápida de exportación para la previsualización del cliente y comunicación vía WhatsApp.'
+    bodyText: 'Simulador comercial interactivo del Plan Ahora 24 para asesores de venta de Alloatti SRL. Facilita la creación y envío de simulaciones de financiación directa de equipamiento industrial. El plan otorga un descuento del 5% sobre el precio de lista y financia el saldo restante en 24 cuotas fijas mensuales en la moneda seleccionada (ARS/USD), permitiendo calcular los montos estimados con o sin IVA, ofreciendo una vía rápida de exportación para la previsualización del cliente y comunicación vía WhatsApp.',
+    noindex: true
   }
 ];
 
-// Generate navigation HTML for SEO crawlers (to solve "no outgoing links")
+// Generate navigation HTML for SEO crawlers (excluding private employee pages)
 function generateNavigationHtml() {
   let html = '<nav style="margin-top: 20px; padding: 10px; border-top: 1px solid #eee;">';
   html += '<p><strong>Mapa de Navegación del Sitio (SEO):</strong></p><ul style="line-height: 1.8;">';
-  ROUTES.forEach(r => {
+  ROUTES.filter(r => !r.noindex).forEach(r => {
     html += `<li><a href="${r.path}">${r.title.split(' | ')[0]}</a></li>`;
   });
   html += '</ul></nav>';
@@ -141,10 +143,12 @@ function prerender() {
     // 1. Inject Title (replace existing <title> tag)
     html = html.replace(/<title>.*?<\/title>/i, `<title>${route.title}</title>`);
 
-    // 2. Inject Meta Description and Keywords inside <head>
+    // 2. Inject Meta Description, Robots and Keywords inside <head>
+    const robotsTag = `<meta name="robots" content="${route.noindex ? 'noindex, nofollow' : 'index, follow'}" />`;
     const seoMetaTags = `
   <meta name="description" content="${route.description}" />
   <meta name="keywords" content="${route.keywords}" />
+  ${robotsTag}
   <link rel="canonical" href="${route.canonical}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="${route.title}" />
