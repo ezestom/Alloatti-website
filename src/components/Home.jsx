@@ -4,6 +4,7 @@ import { WithClose } from "./WithClose";
 import { useNavigate } from "react-router-dom";
 import { LogoCelular } from "./LogoCelular";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
+import { WelcomeVideoModal } from "./WelcomeVideoModal";
 import { PremiumFooter } from "./PremiumFooter";
 import { CardAccesories } from "./CardAccesories";
 import { accesorios } from "../machines_info/accesorios";
@@ -59,6 +60,7 @@ export function Home() {
 
 	return (
 		<>
+			<WelcomeVideoModal />
 			<section
 				className={`rounded-[16px] w-full absolute top-0 flex flex-col justify-center items-center transition-colors duration-500 ${
 					isDarkTheme ? "bg-[#1a1a1a]" : "bg-slate-50"

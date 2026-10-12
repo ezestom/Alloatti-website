@@ -13,9 +13,10 @@ import {
 	FaEyeSlash, 
 	FaSignOutAlt, 
 	FaPrint, 
-	FaFileInvoiceDollar,
-	FaShareAlt
+	FaFileInvoiceDollar, 
+	FaShareAlt 
 } from "react-icons/fa";
+import { QuotedItemTechnicalSheet } from "../components/QuotedItemTechnicalSheet";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -411,6 +412,8 @@ function ClientView({
 									<span>Especificación: {item.capacity}</span>
 								</div>
 							</div>
+
+							<QuotedItemTechnicalSheet item={item} />
 						</div>
 					))}
 				</div>

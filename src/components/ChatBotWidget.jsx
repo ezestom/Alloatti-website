@@ -17,3 +17,4 @@ export function ChatBotWidget() {
 		</>
 	);
 }
+// desactivado por el momento ver de volver a conectar con nueva api de AI
