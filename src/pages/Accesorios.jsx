@@ -36,7 +36,8 @@ const productSchema = {
 				"Pre-lavadora exterior",
 				"Pre-lavadora interior",
 				"Pre-lavadora mixta (interior y exterior)",
-				"Paletizador automático de bidones"
+				"Paletizador automático de bidones",
+				"Paletizador o enrackador de bidones (carga a piso y vehículos)"
 			],
 			"additionalProperty": [
 				{

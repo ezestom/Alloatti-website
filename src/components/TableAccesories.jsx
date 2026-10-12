@@ -13,6 +13,7 @@ import jirafaImg from "../img/accesories/jirafa_op.jpg";
 import tolvaImg from "../img/accesories/tolva_op.jpg";
 import sacatapasAutoImg from "../img/accesories/sacatapas_auto_op.jpg"
 import appImg from "../img/accesories/app_op.jpg";
+import cintaCargaCamionImg from "../img/accesories/cinta_carga_camion_op.jpg";
 import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog, FaBoxes, FaLock } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 
@@ -46,6 +47,7 @@ export function TableAccesories() {
 		sectionData9,
 		sectionData10,
 		sectionData11,
+		sectionData12,
 	} = accesorios;
 
 	const sectionDataArray = [
@@ -60,6 +62,7 @@ export function TableAccesories() {
 		sectionData9,
 		sectionData10,
 		sectionData11,
+		sectionData12,
 	];
 
 	useEffect(() => {
@@ -107,7 +110,7 @@ export function TableAccesories() {
 		if (n.includes("SOLO EXTERIOR")) return "Saneamiento Exterior";
 		if (n.includes("SOLO INTERIOR")) return "Saneamiento Interior";
 		if (n.includes("INTERIOR Y EXTERIOR")) return "Saneamiento Dual";
-		if (n.includes("PALETIZADOR")) return "Fin de Línea";
+		if (n.includes("PALETIZADOR") || n.includes("ENRACKADOR")) return "Fin de Línea";
 		if (n.includes("DETECTOR") || n.includes("PINCHADURAS")) return "Control de Calidad";
 		return "Periférico de Línea";
 	};
@@ -120,13 +123,14 @@ export function TableAccesories() {
 		if (n.includes("SACATAPAS")) return <FaEject />;
 		if (n.includes("PANTALLA")) return <FaTabletAlt />;
 		if (n.includes("PRE LAVADORA")) return <FaShower />;
-		if (n.includes("PALETIZADOR")) return <FaBoxes />;
+		if (n.includes("PALETIZADOR") || n.includes("ENRACKADOR")) return <FaBoxes />;
 		if (n.includes("DETECTOR") || n.includes("PINCHADURAS")) return <FaLock />;
 		return <FaCog />;
 	};
 
 	const getAccessoryImage = (name) => {
 		const n = name.toUpperCase().trim();
+		if (n.includes("ENRACKADOR")) return cintaCargaCamionImg;
 		if (n.includes("PALETIZADOR")) return paletizadoraImg;
 		if (n.includes("SOLO INTERIOR")) return prelavadoraAutoImg;
 		if (n.includes("PANTALLA") || n.includes("APP")) return appImg;
