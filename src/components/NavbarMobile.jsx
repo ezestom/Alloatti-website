@@ -68,9 +68,11 @@ export function NavbarMobile() {
 		"/accesorios-para-maquinas",
 	].includes(location.pathname);
 
-	const isSalesPath = ["/normas-de-calidad", "/ultimas-noticias"].includes(
-		location.pathname,
-	);
+	const isSalesPath = [
+		"/catalogo",
+		"/normas-de-calidad",
+		"/ultimas-noticias",
+	].includes(location.pathname);
 
 	const isTabActive = (item) => {
 		if (item.to === "/maquina-para-bidones-retornables") {
@@ -94,6 +96,20 @@ export function NavbarMobile() {
 					}`}>
 					{isSalesPath ? (
 						<>
+							<Link
+								to="/catalogo"
+								onClick={scrollToTop}
+								className={`whitespace-nowrap p-1.5 rounded-lg text-[9px] font-bold uppercase transition-all duration-300 shadow-sm border ${
+									location.pathname === "/catalogo"
+										? isDarkTheme
+											? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent scale-105 shadow-blue-500/30"
+											: "bg-gradient-to-r from-[#024ad8] to-[#1e60eb] text-white border-transparent scale-105 shadow-blue-500/20"
+										: isDarkTheme
+											? "bg-[#1a1a1a] border-slate-700 text-slate-400 hover:text-slate-200"
+											: "bg-white border-slate-200 text-slate-500 hover:text-slate-700"
+								}`}>
+								Catálogo
+							</Link>
 							<Link
 								to="/normas-de-calidad"
 								onClick={scrollToTop}
@@ -120,7 +136,7 @@ export function NavbarMobile() {
 											? "bg-[#1a1a1a] border-slate-700 text-slate-400 hover:text-slate-200"
 											: "bg-white border-slate-200 text-slate-500 hover:text-slate-700"
 								}`}>
-								Últimas Noticias
+								Noticias
 							</Link>
 						</>
 					) : (

@@ -69,7 +69,7 @@ function InputData() {
 	return (
 		<>
 			<form
-				id="form"
+				id="contact-form"
 				className="hp-card !p-8 md:!p-12 border-none shadow-2xl transition-all duration-500"
 				onSubmit={handleOnSubmit}>
 				

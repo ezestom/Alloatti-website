@@ -7,24 +7,18 @@ import welcomeVideo from "../videos/video_welcome_alloatti_2.mp4";
 const STORAGE_KEY = "alloatti_welcome_video_seen";
 
 export function WelcomeVideoModal() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isMuted, setIsMuted] = useState(true);
-	const [progress, setProgress] = useState(0);
-	const [isMounted, setIsMounted] = useState(false);
-	const videoRef = useRef(null);
-
-	// Check localStorage on mount
-	useEffect(() => {
-		setIsMounted(true);
+	const [isOpen, setIsOpen] = useState(() => {
+		if (typeof window === "undefined") return false;
 		try {
-			const hasSeen = localStorage.getItem(STORAGE_KEY);
-			if (!hasSeen) {
-				setIsOpen(true);
-			}
+			return localStorage.getItem(STORAGE_KEY) !== "true";
 		} catch (error) {
 			console.warn("No se pudo acceder a localStorage:", error);
+			return false;
 		}
-	}, []);
+	});
+	const [isMuted, setIsMuted] = useState(true);
+	const videoRef = useRef(null);
+	const progressBarRef = useRef(null);
 
 	// Lock body scroll while the video is open
 	useEffect(() => {
@@ -54,20 +48,41 @@ export function WelcomeVideoModal() {
 		}
 	}, [isOpen]);
 
+	// Smooth 60fps progress bar animation via requestAnimationFrame
+	useEffect(() => {
+		if (!isOpen) return;
+
+		let animationFrameId;
+
+		const loop = () => {
+			const video = videoRef.current;
+			const bar = progressBarRef.current;
+
+			if (video && bar && video.duration > 0) {
+				const ratio = Math.min(Math.max(video.currentTime / video.duration, 0), 1);
+				bar.style.transform = `scaleX(${ratio})`;
+			}
+
+			if (video && !video.ended) {
+				animationFrameId = requestAnimationFrame(loop);
+			}
+		};
+
+		animationFrameId = requestAnimationFrame(loop);
+
+		return () => {
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId);
+			}
+		};
+	}, [isOpen]);
+
 	const handleClose = () => {
 		setIsOpen(false);
 		try {
 			localStorage.setItem(STORAGE_KEY, "true");
 		} catch (error) {
 			console.warn("No se pudo guardar en localStorage:", error);
-		}
-	};
-
-	const handleTimeUpdate = () => {
-		if (videoRef.current && videoRef.current.duration) {
-			const current = videoRef.current.currentTime;
-			const total = videoRef.current.duration;
-			setProgress((current / total) * 100);
 		}
 	};
 
@@ -80,10 +95,10 @@ export function WelcomeVideoModal() {
 		}
 	};
 
-	if (!isMounted) return null;
+	if (typeof document === "undefined") return null;
 
 	return createPortal(
-		<AnimatePresence>
+		<AnimatePresence initial={false}>
 			{isOpen && (
 				<motion.div
 					key="welcome-video-backdrop"
@@ -166,17 +181,17 @@ export function WelcomeVideoModal() {
 								autoPlay
 								playsInline
 								muted={isMuted}
-								onTimeUpdate={handleTimeUpdate}
 								onEnded={handleClose}
 								className="w-full h-full object-contain"
 							/>
 						</div>
 
-						{/* Bottom progress bar */}
+						{/* Bottom progress bar - 100% fluid, continuous GPU-accelerated motion */}
 						<div className="w-full h-1 bg-white/10 relative overflow-hidden">
 							<div
-								className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-[width] duration-100 ease-linear"
-								style={{ width: `${progress}%` }}
+								ref={progressBarRef}
+								className="h-full w-full bg-gradient-to-r from-blue-500 to-cyan-400 origin-left will-change-transform"
+								style={{ transform: "scaleX(0)" }}
 							/>
 						</div>
 					</motion.div>

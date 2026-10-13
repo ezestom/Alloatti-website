@@ -16,6 +16,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/factory.svg" />
   
+  <!-- Theme Initialization to prevent FOUC -->
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (_) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+
   <!-- Ahrefs Analytics -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="6JFea3HcWe8McA7FahSNEA" async></script>
 </head>

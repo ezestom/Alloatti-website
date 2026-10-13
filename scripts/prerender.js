@@ -65,13 +65,22 @@ const ROUTES = [
     bodyText: 'La maquinaria de Alloatti SRL se diseña y fabrica bajo estrictos lineamientos inspirados en las directrices de sanidad e higiene de IVESS y CIMES. Garantizamos la máxima pureza del agua previniendo la contaminación cruzada mediante cinco pilares fundamentales: 1) Ciclo de lavado activo mínimo de 2 minutos (120 segundos) para sanitizar profundamente cada envase de retorno. 2) Lavado exterior rotativo a presión cubriendo toda la superficie física del bidón. 3) Picos de inyección interna a alta presión para desinfectar rincones críticos. 4) Puertas neumáticas de separación de etapas sin contacto que aíslan los tanques químicos sin rozar los bidones. 5) Picos de llenado por gravedad sin contacto físico directo con la boca del bidón.'
   },
   {
+    path: '/catalogo',
+    title: 'Catálogo Institucional de Envasadoras de Agua | Alloatti SRL',
+    description: 'Descargue el catálogo institucional y presentación técnica completa de Alloatti SRL. Conozca nuestra maquinaria para bidones retornables, descartables y periféricos.',
+    keywords: 'catalogo de envasadoras, catalogo institucional, envasadoras de agua, fichas tecnicas, maquinaria industrial, Alloatti SRL, presentacion tecnica',
+    canonical: 'https://www.alloatti.com/catalogo',
+    h1: 'Catálogo Institucional de Productos y Soluciones Industriales',
+    bodyText: 'Explore nuestra gama completa de soluciones de envasado, lavado y automatización para plantas embotelladoras de agua. Descargue la presentación técnica oficial con especificaciones mecánicas, diagramas de procesos, capacidades productivas de 120 a 1000 bidones por hora y compatibilidad con normativas de inocuidad alimentaria.'
+  },
+  {
     path: '/ultimas-noticias',
-    title: 'Catálogo de Envasadoras de Agua y Prensa | Alloatti SRL',
-    description: 'Descargue la presentación técnica y catálogo completo de productos Alloatti SRL. Nota de prensa sobre la industria de agua embotellada.',
-    keywords: 'catalogo de envasadoras, catalogo de productos, prensa, Infobae, presentacion tecnica, descargas',
+    title: 'Noticias del Rubro y Prensa de la Industria | Alloatti SRL',
+    description: 'Actualidad, tendencias y notas de prensa de la industria del agua embotellada y maquinaria de envasado. Entrevista destacada en Infobae y novedades del sector.',
+    keywords: 'noticias del rubro, prensa agua envasada, infobae agua de mesa, industria embotelladora, IVESS, CIMES, envasadoras de bidones, tendencias de envasado',
     canonical: 'https://www.alloatti.com/ultimas-noticias',
-    h1: 'Estrategia, Catálogo Institucional y Prensa',
-    bodyText: 'Acceda a recursos interactivos y material de prensa de Alloatti SRL. Descargue nuestra presentación técnica y catálogo institucional completo que recopila las especificaciones, dimensiones, layouts de planta y ventajas de toda nuestra maquinaria de acero inoxidable. Asimismo, compartimos notas editoriales destacadas en medios masivos, como el reportaje en Infobae sobre el mercado de agua embotellada, donde se analiza la importancia de la asepsia tecnológica para garantizar agua limpia y prevenir enfermedades en el consumo familiar.'
+    h1: 'Noticias del Rubro, Prensa y Actualidad del Sector',
+    bodyText: 'Manténgase al día con las últimas novedades, análisis y publicaciones del sector de agua envasada, normativas de calidad y avances tecnológicos en maquinaria de embotellado. Compartimos notas editoriales destacadas en medios nacionales como el informe especial en Infobae sobre el mercado de agua embotellada y la importancia de la tecnología para garantizar la pureza del agua potable.'
   },
   {
     path: '/contacto',

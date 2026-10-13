@@ -24,6 +24,7 @@ export function Navbar() {
 	].includes(location.pathname);
 
 	const isSalesOpen = [
+		"/catalogo",
 		"/normas-de-calidad",
 		"/ultimas-noticias"
 	].includes(location.pathname);
@@ -143,6 +144,14 @@ export function Navbar() {
 								<li>
 									<Link
 										onClick={scrollToTop}
+										to="/catalogo"
+										className="block rounded-[4px] px-4 py-2 text-xs font-medium text-slate-500 hover:text-[#024ad8] transition-colors border-l border-slate-100 dark:border-slate-800">
+										Catálogo Institucional
+									</Link>
+								</li>
+								<li>
+									<Link
+										onClick={scrollToTop}
 										to="/normas-de-calidad"
 										className="block rounded-[4px] px-4 py-2 text-xs font-medium text-slate-500 hover:text-[#024ad8] transition-colors border-l border-slate-100 dark:border-slate-800">
 										Normas de Calidad
@@ -153,7 +162,7 @@ export function Navbar() {
 										onClick={scrollToTop}
 										to="/ultimas-noticias"
 										className="block rounded-[4px] px-4 py-2 text-xs font-medium text-slate-500 hover:text-[#024ad8] transition-colors border-l border-slate-100 dark:border-slate-800">
-										Últimas Noticias
+										Noticias del Rubro
 									</Link>
 								</li>
 							</ul>

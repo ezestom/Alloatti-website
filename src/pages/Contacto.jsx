@@ -12,13 +12,27 @@ export function Contacto() {
 
 	useEffect(() => {
 		if (location.hash) {
-			const id = location.hash.replace("#", "");
-			const element = document.getElementById(id);
-			if (element) {
-				setTimeout(() => {
-					element.scrollIntoView({ behavior: "smooth" });
-				}, 100);
-			}
+			const rawId = location.hash.replace("#", "");
+			const targetId =
+				rawId === "form" || rawId === "presupuesto"
+					? "solicitud-presupuesto"
+					: rawId;
+
+			const scrollToElement = () => {
+				const element =
+					document.getElementById(targetId) ||
+					document.getElementById(rawId);
+				if (element) {
+					element.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
+			};
+
+			const timer1 = setTimeout(scrollToElement, 100);
+			const timer2 = setTimeout(scrollToElement, 350);
+			return () => {
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+			};
 		}
 	}, [location]);
 
@@ -101,7 +115,7 @@ export function Contacto() {
 
 
 
-					<div className="my-32" id="form">
+					<div className="my-28 scroll-mt-20 md:scroll-mt-24" id="solicitud-presupuesto">
 						<div className="hp-eyebrow hp-eyebrow-blue mb-8">Solicitud de Presupuesto</div>
 						<p className="hp-p mb-12">
 							Proporcionanos tus datos y los detalles de tu consulta. Nuestro equipo comercial se encargará de brindarte una propuesta integral y detallada.
