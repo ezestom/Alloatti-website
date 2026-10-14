@@ -14,7 +14,7 @@ import {
 	FaSignOutAlt, 
 	FaPrint, 
 	FaFileInvoiceDollar, 
-	FaShareAlt 
+	FaCopy 
 } from "react-icons/fa";
 import { QuotedItemTechnicalSheet } from "../components/QuotedItemTechnicalSheet";
 
@@ -197,11 +197,13 @@ function QuotationCard({
 						<button 
 							onClick={handleCopyLink}
 							className="p-2.5 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs uppercase transition-all flex items-center justify-center gap-1.5 border border-slate-200 dark:border-zinc-700">
-							Compartir
+							<FaCopy className="text-xs" />
+							Copiar
 						</button>
 						<button 
 							onClick={handlePrint}
 							className="p-2.5 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs uppercase transition-all flex items-center justify-center gap-1.5 border border-slate-200 dark:border-zinc-700">
+							<FaPrint className="text-xs" />
 							PDF / Imprimir
 						</button>
 					</div>
@@ -528,8 +530,8 @@ function ClientView({
 							<button 
 								onClick={handleCopyLink}
 								className="w-full py-3 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-slate-700 dark:text-slate-250 rounded-xl font-bold text-xs uppercase transition-all flex items-center justify-center gap-1.5 border border-slate-200 dark:border-zinc-700">
-								<FaShareAlt />
-								Compartir Cotización
+								<FaCopy />
+								Copiar Cotización
 							</button>
 
 							<button 

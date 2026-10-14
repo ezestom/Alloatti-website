@@ -106,6 +106,108 @@ export const memoriasTecnicas = {
 			control: "Control por PLC con pantalla táctil interactiva. Operación de carga y descarga secuenciada.",
 		},
 	},
+	"AT-180": {
+		modelo: "AT-180",
+		linea: "Línea automática para procesamiento de bidones retornables",
+		capacidad: "180 bidones retornables por hora",
+		construccion: "Acero inoxidable AISI 304",
+		suministros: {
+			potencia: "Trifásica industrial",
+			aireComprimido: "Línea neumática industrial",
+			control: "Control por PLC con pantalla táctil",
+			operacion: "Carga y descarga secuenciada",
+		},
+		lavadora: {
+			nombre: "Lavadora Industrial",
+			configuracion: "Dos líneas en paralelo",
+			construccion: "Acero inoxidable AISI 304",
+			etapas: [
+				{
+					numero: "1",
+					nombre: "Carga Manual",
+					detalle: "Carga manual de bidones a la línea de lavado.",
+					tiempo: "Manual",
+				},
+				{
+					numero: "2 a 4",
+					nombre: "Lavado Int. y Ext. (Picos Giratorios)",
+					detalle: "Cuatro etapas de lavado simultáneo interior y exterior con picos giratorios.",
+					tiempo: "2 min total",
+				},
+				{
+					numero: "5",
+					nombre: "Escurrido",
+					detalle: "Zona de escurrido y drenaje de solución.",
+					tiempo: "40 seg",
+				},
+				{
+					numero: "6 y 7",
+					nombre: "Enjuague Int. y Ext.",
+					detalle: "Dos etapas de enjuague interior y exterior.",
+					tiempo: "80 seg",
+				},
+				{
+					numero: "8",
+					nombre: "Enjuague Final (Agua de Llenado)",
+					detalle: "Enjuague interior con agua de llenado, tiempo programable desde el PLC.",
+					tiempo: "Prog. desde PLC",
+				},
+				{
+					numero: "9",
+					nombre: "Descarga Automática",
+					detalle: "Expulsión y transferencia automática hacia la zona de llenado.",
+					tiempo: "Automático",
+				},
+			],
+			bombas: [
+				{
+					etiqueta: "Lavado Interior y Exterior",
+					modelo: "PS1 70/30 o similar",
+				},
+				{
+					etiqueta: "Enjuague Interior y Exterior",
+					modelo: "PS1 70/30 o similar",
+				},
+			],
+			motoReductores: [
+				{
+					etiqueta: "Lavado exterior",
+					modelo: "Un NMRV 030",
+				},
+				{
+					etiqueta: "Cinta de transporte",
+					modelo: "Un NMRV 040",
+				},
+			],
+			cabinaSeguridad: [
+				{ item: "Cortinas", desc: "Levadizas para contención y seguridad" },
+				{ item: "Visibilidad", desc: "2 ventanas transparentes removibles para inspección" },
+				{ item: "Calentamiento", desc: "Por medio de la bomba de lavado (fuente de generación no incluida)" },
+				{ item: "Higiene", desc: "Programa de saneado integral automatizado" },
+			],
+		},
+		llenadora: {
+			nombre: "Llenadora y Tapadora",
+			construccion: "Acero inoxidable AISI 304",
+			dosificacionTapado: [
+				{ item: "Pico de llenado", desc: "1 pico de llenado de precisión sanitaria" },
+				{ item: "Pistón de tapado", desc: "1 pistón de tapado neumático a presión" },
+				{ item: "Alimentación de tapas", desc: "Tolva centrífuga automática" },
+			],
+			bomba: "Lowara CEA 120/3/A-V o similar",
+			motoReductores: [
+				{
+					etiqueta: "Cinta de transporte",
+					modelo: "NMRV 030",
+				},
+				{
+					etiqueta: "Tolva",
+					modelo: "NMRV 030",
+				},
+			],
+			control: "Control por PLC con pantalla táctil interactiva. Operación de carga y descarga secuenciada.",
+		},
+	},
 	"AT-240": {
 		modelo: "AT-240",
 		linea: "Línea para procesamiento de bidones retornables",

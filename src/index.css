@@ -361,3 +361,63 @@ body {
 .animate-pulse-gentle {
 	animation: pulse-gentle 3s infinite ease-in-out;
 }
+
+/* Sileo Toast - Styling & Dark Mode Contrast Fixes */
+[data-sileo-toast] {
+	font-family: inherit;
+}
+
+.dark [data-sileo-viewport] [data-sileo-canvas] [data-sileo-pill],
+.dark [data-sileo-viewport] [data-sileo-canvas] [data-sileo-body] {
+	fill: #0d131f !important;
+	stroke: #1e293b !important;
+	stroke-width: 1.5px !important;
+}
+
+.dark [data-sileo-viewport] [data-sileo-toast] {
+	filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.75));
+}
+
+.dark [data-sileo-viewport] [data-sileo-title] {
+	color: #f8fafc !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.01em;
+}
+
+.dark [data-sileo-viewport] [data-sileo-description] {
+	color: #94a3b8 !important;
+	font-weight: 500;
+}
+
+.dark [data-sileo-viewport] [data-sileo-badge][data-state="success"] {
+	color: #22c55e !important;
+	background-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+html:not(.dark) [data-sileo-viewport] [data-sileo-canvas] [data-sileo-pill],
+html:not(.dark) [data-sileo-viewport] [data-sileo-canvas] [data-sileo-body] {
+	fill: #ffffff !important;
+	stroke: #e2e8f0 !important;
+	stroke-width: 1.5px !important;
+}
+
+html:not(.dark) [data-sileo-viewport] [data-sileo-toast] {
+	filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
+}
+
+html:not(.dark) [data-sileo-viewport] [data-sileo-title] {
+	color: #0f172a !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.01em;
+}
+
+html:not(.dark) [data-sileo-viewport] [data-sileo-description] {
+	color: #475569 !important;
+	font-weight: 500;
+}
+
+html:not(.dark) [data-sileo-viewport] [data-sileo-badge][data-state="success"] {
+	color: #16a34a !important;
+	background-color: rgba(22, 163, 74, 0.12) !important;
+}
+

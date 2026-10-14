@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
-import welcomeVideo from "../videos/video_welcome_alloatti_2.mp4";
+import welcomeVideo from "../videos/video_welcome_alloatti_3.mp4";
 
 const STORAGE_KEY = "alloatti_welcome_video_seen";
 
@@ -128,7 +128,7 @@ export function WelcomeVideoModal() {
 							transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } 
 						}}
 						onClick={(e) => e.stopPropagation()}
-						className="relative w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-950 border border-white/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] flex flex-col group select-none"
+						className="relative w-full max-w-2xl md:max-w-3xl lg:max-w-5xl rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-950 border border-white/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] flex flex-col group select-none"
 					>
 						{/* Top bar with Controls */}
 						<div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 z-20 flex items-center justify-between pointer-events-none">

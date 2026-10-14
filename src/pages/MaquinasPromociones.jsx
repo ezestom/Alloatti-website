@@ -12,12 +12,12 @@ import {
 	FaEye,
 	FaEyeSlash,
 	FaSignOutAlt,
-	FaShareAlt,
 	FaPrint,
 	FaTag,
 	FaCog,
 	FaCheckCircle,
-	FaCalendarAlt
+	FaCalendarAlt,
+	FaCopy
 } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 import { sileo } from "sileo";
@@ -298,7 +298,8 @@ function QuotationCard({
 									? "bg-slate-150 dark:bg-zinc-800 text-slate-400 border-transparent cursor-not-allowed"
 									: "bg-slate-105 hover:bg-slate-200 dark:bg-zinc-805 dark:hover:bg-zinc-700 text-slate-705 dark:text-slate-200 border-slate-200 dark:border-zinc-700"
 							}`}>
-							Compartir
+							<FaCopy className="text-xs" />
+							Copiar
 						</button>
 						<button 
 							onClick={handlePrint}
@@ -308,6 +309,7 @@ function QuotationCard({
 									? "bg-slate-150 dark:bg-zinc-800 text-slate-400 border-transparent cursor-not-allowed"
 									: "bg-slate-105 hover:bg-slate-200 dark:bg-zinc-805 dark:hover:bg-zinc-700 text-slate-705 dark:text-slate-200 border-slate-200 dark:border-zinc-700"
 							}`}>
+							<FaPrint className="text-xs" />
 							Imprimir / PDF
 						</button>
 					</div>
@@ -720,8 +722,8 @@ function ClientView({
 										: "bg-slate-100 hover:bg-slate-205 dark:bg-zinc-855 dark:hover:bg-zinc-800 text-slate-705 dark:text-slate-200 border border-slate-250 dark:border-zinc-700"
 								}`}
 							>
-								<FaShareAlt />
-								Compartir Simulación
+								<FaCopy />
+								Copiar Simulación
 							</button>
 
 							<button 
