@@ -33,10 +33,13 @@ import foto23 from "../img/carousel/23.jpg";
 import foto24 from "../img/carousel/24.jpg";
 import foto25 from "../img/carousel/25.jpg";
 import foto26 from "../img/carousel/26.jpg";
+import foto27 from "../img/carousel/27.jpg";
+import foto28 from "../img/carousel/28.jpg";
+import foto29 from "../img/carousel/29.jpg";
 
 export function Nosotros() {
 	const carouselImages =
-		[foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20, foto21, foto22, foto23, foto24, foto25, foto26];
+		[foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20, foto21, foto22, foto23, foto24, foto25, foto26, foto27, foto28, foto29];
 	return (
 		<>
 			<SEO
@@ -73,24 +76,6 @@ export function Nosotros() {
 						</p>
 						<Data />
 
-						<div className="mt-12 mb-12 w-[calc(100vw-2rem)] md:w-auto -ml-4 md:ml-0 overflow-hidden rounded-2xl">
-							<CarouselAutoScroll>
-					
-								{[...Array(26)].map((_, idx) => (
-									<div
-										key={idx}
-										className="w-full h-full sm:min-h-[250px] bg-slate-100 dark:bg-slate-800/50 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-300 dark:border-slate-700 overflow-hidden">
-										{/* Cuando tengas las imágenes cargadas en el array, reemplaza este <span> por tu imagen */}
-										<img src={carouselImages[idx]} alt={`Carousel ${idx}`} className="w-full h-full object-cover rounded-lg" />
-
-										{/* <span className="text-slate-400 dark:text-slate-500 font-medium">
-											Foto {idx + 1}
-										</span> */}
-									</div>
-								))}
-							</CarouselAutoScroll>
-						</div>
-
 						<div className="mt-20 mb-20 border-l-4 border-[#024ad8] pl-8 text-left">
 							<p className="hp-p italic">
 								La visión liderada por ingenieros impulsa cada
@@ -99,9 +84,26 @@ export function Nosotros() {
 								soluciones que definen la industria.
 							</p>
 						</div>
+						<div className="mt-12 mb-12 w-[calc(100vw-2rem)] md:w-auto -ml-4 md:ml-0 overflow-hidden rounded-2xl">
+							<CarouselAutoScroll direction="forward" speed={0.75}>
+								{carouselImages.slice(0, 13).map((img, idx) => (
+									<div
+										key={idx}
+										className="group relative w-full h-56 sm:h-64 md:h-72 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
+										<img
+											src={img}
+											alt={`Instalaciones Alloatti ${idx + 1}`}
+											className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+											loading="lazy"
+										/>
+									</div>
+								))}
+							</CarouselAutoScroll>
+						</div>
+
 					</div>
 					<div className="flex flex-col items-start">
-						<div className="space-y-32 w-full">
+						<div className="space-y-20 w-full">
 							<div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 mt-12">
 								<Card
 									name={"Ing. Hector Alloatti"}
@@ -131,7 +133,25 @@ export function Nosotros() {
 								/>
 							</div>
 
-							<blockquote className="px-4 mb-20 border-y border-slate-100 dark:border-slate-800">
+							{/* Galería complementaria con desplazamiento en sentido contrario */}
+							<div className="w-[calc(100vw-2rem)] md:w-auto -ml-4 md:ml-0 overflow-hidden rounded-2xl">
+								<CarouselAutoScroll direction="backward" speed={0.75}>
+									{carouselImages.slice(13).map((img, idx) => (
+										<div
+											key={idx}
+											className="group relative w-full h-56 sm:h-64 md:h-72 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
+											<img
+												src={img}
+												alt={`Taller y Producción Alloatti ${idx + 14}`}
+												className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+												loading="lazy"
+											/>
+										</div>
+									))}
+								</CarouselAutoScroll>
+							</div>
+
+							<blockquote className="px-4 mb-20">
 								<p className="hp-p italic">
 									&ldquo;La combinación de pasión por la
 									ingeniería y el compromiso con la calidad

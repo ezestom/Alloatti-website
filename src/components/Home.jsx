@@ -45,9 +45,9 @@ export function Home() {
 		{
 			...enrackadorItem,
 			id: 2,
-			badge: "Fin de Línea",
+			badge: "Próximamente",
 			img: cintaCargaCamionImg,
-			isComingSoon: false,
+			isComingSoon: true,
 		},
 		{
 			...detectorItem,
@@ -435,7 +435,7 @@ export function Home() {
 											}`}
 										>
 											{/* Top Image Section with Blur */}
-											<div className="w-full h-48 md:h-52 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+											<div className="w-full h-48 md:h-72 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
 												<img 
 													src={item.img || paletizadoraImg} 
 													alt={item.name}
@@ -517,7 +517,7 @@ export function Home() {
 										}`}
 									>
 										{/* Top Image Section */}
-										<div className="w-full h-48 md:h-52 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+										<div className="w-full h-48 md:h-72 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
 											<img 
 												src={item.img || paletizadoraImg} 
 												alt={item.name}

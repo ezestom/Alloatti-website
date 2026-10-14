@@ -95,6 +95,7 @@ export const accesorios = {
 			characteristics: "Paletizado y enrackado en piso y vehículos hasta 4 niveles",
 			description:
 				"El equipo realiza el paletizado y enrackado de bidones de distintas capacidades, permitiendo operar tanto en el piso como directamente sobre vehículos de transporte. Cuenta con ajuste automático de altura hasta 4 niveles controlado por PLC, diseño robusto en acero inoxidable adaptable al layout de cada planta y una capacidad de hasta 1200 bidones por hora, minimizando significativamente el esfuerzo físico de los operarios.",
+			isComingSoon: true,
 		},
 	],
 	sectionData12: [
