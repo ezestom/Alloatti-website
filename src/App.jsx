@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster } from "sileo";
+import { useTheme } from "./context/ThemeContext.jsx";
 
 const Inicio = lazy(() => import("./pages/Inicio.jsx").then(m => ({ default: m.Inicio })));
 const Error = lazy(() => import("./pages/Error.jsx").then(m => ({ default: m.Error })));
@@ -17,9 +18,16 @@ const MaquinasPrecios = lazy(() => import("./pages/MaquinasPrecios.jsx").then(m 
 const MaquinasPromociones = lazy(() => import("./pages/MaquinasPromociones.jsx").then(m => ({ default: m.MaquinasPromociones }))); // Promociones Plan 24
 
 function App() {
+	const { isDarkTheme } = useTheme();
+
 	return (
 		<>
-			<Toaster position="bottom-center" />
+			<Toaster 
+				position="bottom-center"
+				options={{
+					fill: isDarkTheme ? "#0d131f" : "#ffffff",
+				}}
+			/>
 			<BrowserRouter>
 				<Suspense fallback={null}>
 					<Routes>
