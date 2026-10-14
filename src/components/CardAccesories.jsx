@@ -4,6 +4,47 @@ import { BsPlayCircle, BsWhatsapp } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import PropTypes from "prop-types";
 
+/**
+ * Extracts and converts different YouTube link formats (watch, share, shorts)
+ * into a safe embed URL for the iframe player.
+ */
+function getYouTubeEmbedUrl(url) {
+	if (!url) return null;
+	try {
+		// Handle youtu.be/VIDEO_ID
+		if (url.includes("youtu.be/")) {
+			const idWithQuery = url.split("youtu.be/")[1];
+			const [id, query] = idWithQuery.split("?");
+			const params = new URLSearchParams(query || "");
+			const time = params.get("t");
+			return `https://www.youtube-nocookie.com/embed/${id}${time ? `?start=${parseInt(time, 10)}` : ""}`;
+		}
+		// Handle youtube.com/shorts/VIDEO_ID
+		if (url.includes("/shorts/")) {
+			const idWithQuery = url.split("/shorts/")[1];
+			const [id] = idWithQuery.split("?");
+			return `https://www.youtube-nocookie.com/embed/${id}`;
+		}
+		// Handle youtube.com/watch?v=VIDEO_ID
+		if (url.includes("watch?v=") || url.includes("watch/?v=")) {
+			const parsed = new URL(url);
+			const id = parsed.searchParams.get("v");
+			const time = parsed.searchParams.get("t");
+			if (id) {
+				return `https://www.youtube-nocookie.com/embed/${id}${time ? `?start=${parseInt(time, 10)}` : ""}`;
+			}
+		}
+		// Fallback regex for standard 11-char YouTube ID
+		const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+		if (match && match[1]) {
+			return `https://www.youtube-nocookie.com/embed/${match[1]}`;
+		}
+	} catch (e) {
+		console.warn("No se pudo procesar la URL de YouTube:", url, e);
+	}
+	return null;
+}
+
 export function CardAccesories({
 	model,
 	img,
@@ -33,82 +74,96 @@ export function CardAccesories({
 	const wsMessage = `¡Hola! Vengo desde el catálogo web de Alloatti y deseo asesoramiento técnico y presupuesto para el accesorio: ${model}.`;
 	const wsUrl = `https://wa.me/${wsNumber}?text=${encodeURIComponent(wsMessage)}`;
 
+	const embedUrl = getYouTubeEmbedUrl(link);
+
 	return (
 		<div
-			className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-hp-fade"
+			className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md animate-hp-fade"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-title">
 			
-			<div className="relative w-full max-w-[80rem] max-h-[92vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
+			<div className="relative w-full h-[94vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
 				
 				{/* Close Button */}
 				<button
-					className="absolute top-4 right-4 z-10 p-2 bg-white/95 dark:bg-slate-800/95 text-slate-800 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 backdrop-blur-sm rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all"
+					className="absolute top-3.5 right-3.5 z-20 p-2 bg-white/95 dark:bg-slate-800/95 text-slate-800 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 backdrop-blur-sm rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all"
 					onClick={handleClose}
 					aria-label="Cerrar ventana">
 					<IoClose className="w-5 h-5" />
 				</button>
 
-				<div className="flex flex-col lg:flex-row h-full overflow-y-auto">
+				<div className="flex flex-col lg:flex-row-reverse h-full overflow-hidden">
 					
-					{/* Image Section */}
-					<div className="lg:w-1/2 h-64 lg:h-auto relative overflow-hidden min-h-[280px]">
+					{/* Left Column: Image Section */}
+					<div className="lg:w-1/2 h-56 sm:h-72 lg:h-auto relative overflow-hidden min-h-[240px] lg:min-h-[420px] shrink-0 bg-slate-950 flex flex-col justify-end">
 						<img
-							className="w-full h-full object-cover"
+							className="w-full h-full object-cover absolute inset-0 opacity-90 transition-transform duration-700 hover:scale-105"
 							src={img}
 							alt={model}
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent"></div>
-						<div className="absolute bottom-6 left-6 right-6 text-white hidden lg:block">
-							<span className="inline-flex items-center px-3 py-1 rounded-full text-[9px] font-extrabold tracking-widest uppercase bg-[#024ad8] mb-2 text-white shadow-md">
-								Accesorios y Opcionales
-							</span>
-							<p className="text-[11px] text-slate-200 font-semibold tracking-wide leading-relaxed">
+						<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+						
+						{/* Badges on image */}
+						<div className="relative z-10 p-5 sm:p-6 text-white">
+							<div className="flex flex-wrap items-center gap-1.5 mb-2">
+								<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase bg-blue-600 text-white shadow-md">
+									Accesorios y Opcionales
+								</span>
+								<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wide uppercase bg-slate-800/80 backdrop-blur-sm text-blue-300 border border-blue-500/30">
+									Acero Sanitario
+								</span>
+							</div>
+							<p className="text-[11px] text-slate-200 font-semibold tracking-wide leading-relaxed drop-shadow-sm hidden sm:block">
 								Aumente la automatización, eficiencia y seguridad de su planta embotelladora.
 							</p>
 						</div>
 					</div>
 
-					{/* Content Section */}
-					<div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between overflow-y-auto">
+					{/* Right Column: Content Section */}
+					<div className="lg:w-1/2 p-5 sm:p-7 flex flex-col justify-between overflow-y-auto">
 						<div>
-							<header className="mb-6">
-								<div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 mb-2">
+							<header className="mb-4 pr-10">
+								<div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 mb-1.5">
 									Equipamiento Opcional
 								</div>
-								<h3 id="modal-title" className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+								<h3 id="modal-title" className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
 									{model}
 								</h3>
 							</header>
 
 							{/* Characteristics Box */}
-							<div className="mb-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800/60 shadow-sm">
-								<h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+							<div className="mb-5 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800/60 shadow-sm">
+								<h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1.5">
 									Características Principales
 								</h4>
-								<p className="text-xs font-semibold text-slate-750 dark:text-slate-300 leading-relaxed">
+								<p className="text-xs font-semibold text-slate-700 dark:text-slate-300 leading-relaxed">
 									{characteristics}
 								</p>
 							</div>
 
-							{link && (
-								<div className="mb-6">
-									<a
-										href={link}
-										target="_blank"
-										rel="noreferrer"
-										className="inline-flex items-center gap-3 p-3 rounded-2xl bg-blue-50/50 hover:bg-blue-50 dark:bg-blue-950/20 dark:hover:bg-blue-950/30 text-xs font-bold text-[#024ad8] dark:text-blue-400 transition-colors border border-blue-100 dark:border-blue-900/30 group w-full">
-										<div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center group-hover:scale-110 transition-transform text-[#024ad8] dark:text-blue-300 text-sm">
-											<BsPlayCircle />
-										</div>
-										<span>Ver Video de Demostración del Accesorio</span>
-									</a>
+							{/* Video Embed Section */}
+							{embedUrl && (
+								<div className="mb-5">
+									<h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2 flex items-center gap-1.5">
+										<BsPlayCircle className="text-blue-600 dark:text-blue-400 text-xs" />
+										Video Demostrativo del Accesorio
+									</h4>
+									<div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 bg-black">
+										<iframe
+											className="w-full h-full"
+											src={embedUrl}
+											title={`Video demostrativo de ${model}`}
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+											loading="lazy"
+										/>
+									</div>
 								</div>
 							)}
 
 							{/* Description */}
-							<div className="mb-6">
+							<div className="mb-5">
 								<h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
 									Descripción Detallada
 								</h4>
@@ -118,7 +173,7 @@ export function CardAccesories({
 							</div>
 
 							{/* Value proposition box */}
-							<div className="mb-6 p-4 rounded-2xl bg-gradient-to-br from-blue-50/50 to-indigo-50/30 dark:from-slate-800/30 dark:to-indigo-950/10 border border-blue-100/60 dark:border-slate-800/50 shadow-sm">
+							<div className="mb-5 p-4 rounded-2xl bg-gradient-to-br from-blue-50/50 to-indigo-50/30 dark:from-slate-800/30 dark:to-indigo-950/10 border border-blue-100/60 dark:border-slate-800/50 shadow-sm">
 								<h4 className="text-[10px] font-extrabold text-[#024ad8] dark:text-blue-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
 									<span className="w-1.5 h-1.5 rounded-full bg-[#024ad8] dark:bg-blue-400 animate-pulse"></span>
 									Garantía y Compatibilidad Alloatti
@@ -178,3 +233,4 @@ CardAccesories.propTypes = {
 	description: PropTypes.string.isRequired,
 	link: PropTypes.string,
 };
+

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import LogoLigth from "../img/Alloatti-logo-light.png";
 import LogoDark from "../img/Alloatti-logo-dark.png";
 import { FaChevronDown } from "react-icons/fa";
@@ -14,20 +15,35 @@ import { Footer } from "../components/Footer";
 
 export function Navbar() {
 	const { isDarkTheme } = useTheme();
-
 	const location = useLocation();
 	
-	const isMachinesOpen = [
+	const isMachinesPath = [
 		"/maquina-para-bidones-retornables",
 		"/maquina-para-bidones-descartables",
 		"/accesorios-para-maquinas"
 	].includes(location.pathname);
 
-	const isSalesOpen = [
+	const isSalesPath = [
 		"/catalogo",
 		"/normas-de-calidad",
 		"/ultimas-noticias"
 	].includes(location.pathname);
+
+	// Abierto por defecto para captar la atención del cliente de inmediato
+	const [machinesOpen, setMachinesOpen] = useState(true);
+	const [salesOpen, setSalesOpen] = useState(isSalesPath);
+
+	useEffect(() => {
+		if (isMachinesPath) {
+			setMachinesOpen(true);
+		}
+	}, [isMachinesPath]);
+
+	useEffect(() => {
+		if (isSalesPath) {
+			setSalesOpen(true);
+		}
+	}, [isSalesPath]);
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -65,7 +81,8 @@ export function Navbar() {
 
 					<li>
 						<details 
-							open={isMachinesOpen}
+							open={machinesOpen}
+							onToggle={(e) => setMachinesOpen(e.currentTarget.open)}
 							className="group [&_summary::-webkit-details-marker]:hidden">
 							<summary className="flex cursor-pointer items-center justify-between rounded-[4px] px-4 py-3 text-slate-500 transition-all duration-300 hover:bg-[#024ad8] hover:text-white group relative overflow-hidden">
 								<span className="flex items-center gap-4 text-sm font-semibold">
@@ -129,7 +146,8 @@ export function Navbar() {
 
 					<li>
 						<details 
-							open={isSalesOpen}
+							open={salesOpen}
+							onToggle={(e) => setSalesOpen(e.currentTarget.open)}
 							className="group [&_summary::-webkit-details-marker]:hidden">
 							<summary className="flex cursor-pointer items-center justify-between rounded-[4px] px-4 py-3 text-slate-500 transition-all duration-300 hover:bg-[#024ad8] hover:text-white group relative overflow-hidden">
 								<span className="flex items-center gap-4 text-sm font-semibold">
