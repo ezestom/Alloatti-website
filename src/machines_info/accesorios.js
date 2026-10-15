@@ -5,7 +5,7 @@ export const accesorios = {
 			characteristics: "Capacidad 30 tapas",
 			description:
 				" El equipo distribuye y alinea las tapas en fila, asegurando que cada bidón reciba una tapa a la vez. Este sistema consta de un plato giratorio con la capacidad de acomodar hasta 30 tapas, junto con un canal descendente que facilita la colocación de las tapas frente a los bidones. Además, permite retirar una tapa por cada bidón de manera eficiente.",
-			link: "https://www.youtube.com/watch?v=bd2vrV8kAXM",
+			link: "https://youtu.be/C0le2pei4yg?si=pDEteZSFab4rtXZ9",
 		},
 	],
 	sectionData2: [
@@ -14,7 +14,7 @@ export const accesorios = {
 			characteristics: "Capacidad 500 tapas",
 			description:
 				"El equipo eleva las tapas para depositarlas en la tolva. Está compuesto por una cinta inclinada con la capacidad de elevar tapas desde una bolsa que contiene hasta 500 unidades. A medida que la tolva se queda sin tapas, la Jirafa se activa para rellenarla nuevamente con tapas, garantizando un suministro continuo.",
-			link: "https://youtu.be/__BRYqdbh9M?si=z3Nv1l8_nwdIu_Eu&t=210",
+			link: "https://youtu.be/C0le2pei4yg?si=pDEteZSFab4rtXZ9",
 		},
 	],
 	sectionData3: [
@@ -23,7 +23,7 @@ export const accesorios = {
 			characteristics: "Con cinta de carga a medida",
 			description:
 				"El equipo realiza la carga automática de bidones en la máquina lavadora. Este sistema comprende una cinta transportadora que lleva los bidones hasta una pala, la cual los eleva y los introduce en la lavadora. La longitud de la cinta es ajustable según los requisitos específicos de la planta del cliente, proporcionando flexibilidad para adaptarse a diferentes configuraciones.",
-			link: "https://www.youtube.com/watch?v=lj11J81N7PM",
+			link: "https://youtu.be/Gr31xcs8GjU?si=paOGLdX4EundnX5u",
 		},
 	],
 	sectionData4: [
@@ -32,7 +32,7 @@ export const accesorios = {
 			characteristics: "-",
 			description:
 				"El equipo facilita la extracción manual de tapas de los bidones mediante una pinza controlada por un botón pulsador. Para utilizarlo, se coloca manualmente el bidón en la abertura de la pinza, y al presionar el botón, la pinza se activa, extrayendo la tapa de manera sencilla y eficiente.",
-			link: "https://www.youtube.com/shorts/45l4_lqM-4w",
+			link: "https://youtu.be/kufZJdP6-20?si=a54wrgx8sJnBHGlg",
 		},
 	],
 	sectionData5: [
