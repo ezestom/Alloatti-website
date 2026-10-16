@@ -5,6 +5,7 @@ import "./Table.css";
 import imgDescartables from "../img/img_descartables.jpg";
 import { SEO } from "../components/SEO";
 import { PremiumFooter } from "../components/PremiumFooter";
+import { useTheme } from "../context/ThemeContext";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -59,6 +60,7 @@ const productSchema = {
 };
 
 export function BidonesDescartables() {
+	const { isDarkTheme } = useTheme();
 	const { sectionData1, sectionData2 } = bidonesDescartables;
 
 	const sectionDataArray = [sectionData1, sectionData2];
@@ -92,36 +94,46 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 hasta 700
 						bidones por hora.
 					</p>
-					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center my-14">
-						<div className="flex flex-col gap-8">
-							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
-								Tiempo de enjuague ajustable a su necesidad, asegurando
-								una limpieza completa del interior. Esta operación
-								asegura la sanitización del interior del bidón
-								cumpliendo los standares de calidad.
-							</p>
-							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
-								Adicionalmente, hemos diseñado nuestras líneas para
-								prevenir el contacto directo entre la boca del bidón y
-								el pico de llenado, eliminando cualquier posibilidad de
-								contaminación del bidón. En Alloatti, nos comprometemos
-								a ofrecer soluciones de calidad que garanticen la
-								seguridad y pureza de cada bidón procesado.
-							</p>
-						</div>
-						<div className="w-full">
-							<div className="group relative overflow-hidden rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40">
-								<img
-									src={imgDescartables}
-									alt="Línea de envasado para bidones descartables de agua Alloatti"
-									className="w-full h-auto object-cover transition-transform duration-700 ease-out"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent" />
-								<div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
-									<span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md bg-black/60 text-white border border-white/20 shadow-sm">
-										<span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-										Línea Automática en Planta
-									</span>
+					<div className={`relative rounded-3xl border overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 my-14 transition-colors duration-500 ${
+						isDarkTheme 
+							? "bg-[#292929] border-[#2a2a2a] shadow-[0_4px_25px_rgba(0,0,0,0.25)]" 
+							: "bg-white border-[#e8e8e8] shadow-[0_4px_25px_rgba(0,0,0,0.04)]"
+					}`}>
+						<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center">
+							<div className="flex flex-col gap-8">
+								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+									Tiempo de enjuague ajustable a su necesidad, asegurando
+									una limpieza completa del interior. Esta operación
+									asegura la sanitización del interior del bidón
+									cumpliendo los standares de calidad.
+								</p>
+								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+									Adicionalmente, hemos diseñado nuestras líneas para
+									prevenir el contacto directo entre la boca del bidón y
+									el pico de llenado, eliminando cualquier posibilidad de
+									contaminación del bidón. En Alloatti, nos comprometemos
+									a ofrecer soluciones de calidad que garanticen la
+									seguridad y pureza de cada bidón procesado.
+								</p>
+							</div>
+							<div className="w-full">
+								<div className={`group relative overflow-hidden rounded-2xl shadow-xl border transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40 ${
+									isDarkTheme 
+										? "border-[#383838] bg-[#1f1f1f]" 
+										: "border-slate-200/80 bg-slate-100"
+								}`}>
+									<img
+										src={imgDescartables}
+										alt="Línea de envasado para bidones descartables de agua Alloatti"
+										className="w-full h-auto object-cover transition-transform duration-700 ease-out"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent" />
+									<div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
+										<span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md bg-black/60 text-white border border-white/20 shadow-sm">
+											<span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+											Línea Automática en Planta
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>

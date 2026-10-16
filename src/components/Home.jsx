@@ -14,7 +14,6 @@ import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
 import heroMachine from "../img/machine_2_ps.jpg";
 import maquina from "../img/machine_3_ps.jpg";
 import pantalla from "../img/pantalla.jpg";
-import automatizationBg from "../img/automatization_bg.jpg";
 import { 
 	FaCheckCircle, 
 	FaWater, 
@@ -148,23 +147,9 @@ export function Home() {
 					{/* 2 & 3. COMBINED PRECISION ENGINEERING & TECHNOLOGY IN MOTION */}
 					<div className={`relative rounded-3xl border overflow-hidden p-6 sm:p-8 md:p-12 lg:p-16 mb-28 md:mb-36 transition-colors duration-500 ${
 						isDarkTheme 
-							? "bg-slate-900/40 border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
-							: "bg-white/95 border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.05)]"
+							? "bg-[#292929] border-[#2a2a2a] shadow-[0_4px_25px_rgba(0,0,0,0.25)]" 
+							: "bg-white border-[#e8e8e8] shadow-[0_4px_25px_rgba(0,0,0,0.04)]"
 					}`}>
-						{/* Background Image with slight blur & high-contrast theme overlay */}
-						<div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-							<img 
-								src={automatizationBg} 
-								alt="Automatización y tecnología" 
-								className="w-full h-full object-cover object-center filter blur-[12px] md:blur-[16px] scale-110 opacity-25 dark:opacity-30 transition-all duration-700"
-							/>
-							<div className={`absolute inset-0 ${
-								isDarkTheme 
-									? "bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/70 to-[#1a1a1a]/90" 
-									: "bg-gradient-to-b from-white/96 via-white/88 to-white/96"
-							}`} />
-						</div>
-
 						{/* Sections Content */}
 						<div className="relative z-10 flex flex-col">
 							{/* 2. PRECISION ENGINEERING SECTION */}
@@ -177,10 +162,10 @@ export function Home() {
 										className="w-full aspect-video object-cover rounded-[16px]"
 									/>
 									{/* Floating Quality Assurance Card */}
-									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start transition-colors duration-500 z-10 ${
 										isDarkTheme 
-											? "bg-zinc-900 border-[#333]" 
-											: "bg-white border-slate-100"
+											? "bg-[#1f1f1f] border-[#383838]" 
+											: "bg-white border-slate-200/80 shadow-slate-200/60"
 									}`}>
 										<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
 										<div>
@@ -210,7 +195,7 @@ export function Home() {
 									<div className="space-y-6">
 										{/* Bullet 1 */}
 										<div className="flex gap-4 items-start">
-											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-[#1f1f1f] border border-[#383838]" : "bg-blue-50"}`}>
 												<FaWater className="text-[#024ad8] text-lg" />
 											</div>
 											<div>
@@ -225,7 +210,7 @@ export function Home() {
 
 										{/* Bullet 2 */}
 										<div className="flex gap-4 items-start">
-											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-[#1f1f1f] border border-[#383838]" : "bg-blue-50"}`}>
 												<FaWrench className="text-[#024ad8] text-lg" />
 											</div>
 											<div>
@@ -265,10 +250,10 @@ export function Home() {
 										/>
 									</div>
 									{/* Floating Video Info Card */}
-									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start transition-colors duration-500 z-10 ${
 										isDarkTheme 
-											? "bg-zinc-900 border-[#333]" 
-											: "bg-white border-slate-100"
+											? "bg-[#1f1f1f] border-[#383838]" 
+											: "bg-white border-slate-200/80 shadow-slate-200/60"
 									}`}>
 										<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
 										<div className="text-left">
@@ -371,23 +356,9 @@ export function Home() {
 					{/* 5. LATEST DEVELOPMENTS SECTION */}
 					<section className={`relative rounded-3xl border overflow-hidden p-5 sm:p-7 lg:p-8 xl:p-12 mb-28 md:mb-36 transition-colors duration-500 ${
 						isDarkTheme 
-							? "bg-slate-900/40 border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
-							: "bg-white/95 border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.05)]"
+							? "bg-[#292929] border-[#2a2a2a] shadow-[0_4px_25px_rgba(0,0,0,0.25)]" 
+							: "bg-white border-[#e8e8e8] shadow-[0_4px_25px_rgba(0,0,0,0.04)]"
 					}`}>
-						{/* Background Image with slight blur & high-contrast theme overlay */}
-						<div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-							<img 
-								src={automatizationBg} 
-								alt="Automatización y final de línea" 
-								className="w-full h-full object-cover object-center filter blur-[12px] md:blur-[16px] scale-110 opacity-25 dark:opacity-30 transition-all duration-700"
-							/>
-							<div className={`absolute inset-0 ${
-								isDarkTheme 
-									? "bg-gradient-to-b from-[#1a1a1a]/85 via-[#1a1a1a]/75 to-[#1a1a1a]/90" 
-									: "bg-gradient-to-b from-white/96 via-white/90 to-white/96"
-							}`} />
-						</div>
-
 						{/* Section Content */}
 						<div className="relative z-10">
 							{/* Top Header & Context */}
@@ -410,10 +381,10 @@ export function Home() {
 									role="button"
 									tabIndex={0}
 									onKeyDown={(e) => e.key === "Enter" && navigate("/accesorios-para-maquinas#accesorios")}
-									className={`group cursor-pointer rounded-2xl border p-3.5 sm:p-4 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md flex items-center gap-3 sm:gap-4 text-left select-none w-full xl:w-auto xl:max-w-md shrink-0 shadow-sm ${
+									className={`group cursor-pointer rounded-2xl border p-3.5 sm:p-4 transition-all duration-300 hover:-translate-y-1 flex items-center gap-3 sm:gap-4 text-left select-none w-full xl:w-auto xl:max-w-md shrink-0 shadow-sm ${
 										isDarkTheme 
-											? "bg-slate-900/80 border-slate-700/80 hover:border-blue-500/50 hover:shadow-[0_12px_35px_rgba(2,74,216,0.25)]" 
-											: "bg-white/95 border-slate-200/90 hover:border-blue-500/40 hover:shadow-[0_12px_35px_rgba(2,74,216,0.12)] shadow-slate-200/50"
+											? "bg-[#1f1f1f] border-[#383838] hover:border-blue-500/50 hover:shadow-[0_12px_35px_rgba(2,74,216,0.25)]" 
+											: "bg-slate-50 border-slate-200/90 hover:border-blue-500/40 hover:shadow-[0_12px_35px_rgba(2,74,216,0.12)] shadow-slate-200/50"
 									}`}>
 									{/* Left Icon with subtle hover rotation */}
 									<div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-500 group-hover:rotate-45 shadow-sm ${
@@ -433,8 +404,8 @@ export function Home() {
 											</span>
 											<span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md border ${
 												isDarkTheme 
-													? "bg-slate-800/80 border-slate-700 text-slate-300" 
-													: "bg-slate-100 border-slate-200 text-slate-600"
+													? "bg-zinc-800 border-zinc-700 text-slate-300" 
+													: "bg-slate-200/70 border-slate-300/80 text-slate-700"
 											}`}>
 												+10 módulos
 											</span>
@@ -463,10 +434,10 @@ export function Home() {
 							{/* Highlights Features Grid */}
 							<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-3.5 xl:gap-6 mb-8 lg:mb-10 text-left">
 								{/* Bullet 1 */}
-								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
-									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 transition-all ${
+									isDarkTheme ? "bg-[#1f1f1f] border-[#383838] shadow-sm" : "bg-slate-50 border-slate-200/90 shadow-sm"
 								}`}>
-									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-[#292929] text-blue-400 border border-zinc-700/60" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
 										<FaBoxes className="text-base sm:text-base xl:text-lg" />
 									</div>
 									<div className="w-full min-w-0">
@@ -480,10 +451,10 @@ export function Home() {
 								</div>
 
 								{/* Bullet 2 */}
-								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
-									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 transition-all ${
+									isDarkTheme ? "bg-[#1f1f1f] border-[#383838] shadow-sm" : "bg-slate-50 border-slate-200/90 shadow-sm"
 								}`}>
-									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-[#292929] text-blue-400 border border-zinc-700/60" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
 										<FaLayerGroup className="text-base sm:text-base xl:text-lg" />
 									</div>
 									<div className="w-full min-w-0">
@@ -497,10 +468,10 @@ export function Home() {
 								</div>
 
 								{/* Bullet 3 */}
-								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
-									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 transition-all ${
+									isDarkTheme ? "bg-[#1f1f1f] border-[#383838] shadow-sm" : "bg-slate-50 border-slate-200/90 shadow-sm"
 								}`}>
-									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-[#292929] text-blue-400 border border-zinc-700/60" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
 										<BsLightningChargeFill className="text-base sm:text-base xl:text-lg" />
 									</div>
 									<div className="w-full min-w-0">
@@ -521,10 +492,10 @@ export function Home() {
 									return (
 										<div
 											key={idx}
-											className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none backdrop-blur-md ${
+											className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none ${
 												isDarkTheme
-													? "bg-slate-900/60 border-slate-800/80 text-slate-400"
-													: "bg-white/95 border-slate-200/90 text-slate-600 shadow-md shadow-slate-200/30"
+													? "bg-[#1f1f1f] border-[#383838] text-slate-400"
+													: "bg-slate-50 border-slate-200 text-slate-600 shadow-sm"
 											}`}
 										>
 											{/* Top Image Section with Blur */}
@@ -603,10 +574,10 @@ export function Home() {
 									<button
 										key={idx}
 										onClick={() => setSelectedAccesory(item)}
-										className={`w-full text-left group rounded-3xl border transition-all duration-500 overflow-hidden relative flex flex-col h-full shadow-sm hover:-translate-y-1 backdrop-blur-md ${
+										className={`w-full text-left group rounded-3xl border transition-all duration-500 overflow-hidden relative flex flex-col h-full shadow-sm hover:-translate-y-1 ${
 											isDarkTheme
-												? "bg-slate-900/80 border-slate-800 hover:border-[#024ad8]/50 hover:shadow-[0_12px_40px_rgba(2,74,216,0.15)]"
-												: "bg-white/95 border-slate-200/80 hover:border-[#024ad8]/30 hover:shadow-[0_12px_40px_rgba(2,74,216,0.1)]"
+												? "bg-[#1f1f1f] border-[#383838] hover:border-[#024ad8]/60 hover:shadow-[0_12px_40px_rgba(2,74,216,0.2)]"
+												: "bg-slate-50 border-slate-200/90 hover:border-[#024ad8]/40 hover:shadow-[0_12px_40px_rgba(2,74,216,0.12)]"
 										}`}
 									>
 										{/* Top Image Section */}

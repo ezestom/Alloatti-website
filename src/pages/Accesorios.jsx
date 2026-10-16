@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import { Base } from "../components/Base";
 import { TableAccesories } from "../components/TableAccesories";
 import { accesorios } from "../machines_info/accesorios";
-import { BlurVideo } from "../components/BlurVideo/BlurVideo";
-import pantalla from "../videos/pantalla.mp4";
+import imgAccesorios from "../img/img_accesorios.jpg";
 import { SEO } from "../components/SEO";
 import { PremiumFooter } from "../components/PremiumFooter";
+import { useTheme } from "../context/ThemeContext";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -68,6 +68,7 @@ const productSchema = {
 };
 
 export function Accesorios() {
+	const { isDarkTheme } = useTheme();
 	const location = useLocation();
 
 	useEffect(() => {
@@ -116,30 +117,50 @@ export function Accesorios() {
 						los tiempos de procesamiento y aumente
 						significativamente la productividad de su operación.
 					</p>
-					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center my-14">
-						<div className="flex flex-col gap-8">
-							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
-								Ofrecemos comodidades en diversas operaciones, como
-								retirar las tapas de los bidones antes de lavarlos,
-								realizar prelavados para eliminar la suciedad más
-								gruesa, organizar las tapas de manera eficiente y
-								visualizar el proceso productivo a distancia, entre
-								otras funciones.
-							</p>
-							<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
-								En Alloatti, valoramos la retroalimentación de nuestros
-								clientes, ya que nos permite conocer las necesidades
-								específicas de la industria del agua. Este proceso nos
-								impulsa a desarrollar nuevos accesorios que amplían las
-								posibilidades de su línea productiva, adaptándonos de
-								manera precisa a sus requerimientos.
-							</p>
-						</div>
-						<div className="w-full">
-							<BlurVideo
-								video={pantalla}
-								urlYoutube="https://www.youtube.com/embed/GdnEMfxbREI?si=S4LEKZBvpEB_jUuC&autoplay=1&mute=0"
-							/>
+					<div className={`relative rounded-3xl border overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 my-14 transition-colors duration-500 ${
+						isDarkTheme 
+							? "bg-[#292929] border-[#2a2a2a] shadow-[0_4px_25px_rgba(0,0,0,0.25)]" 
+							: "bg-white border-[#e8e8e8] shadow-[0_4px_25px_rgba(0,0,0,0.04)]"
+					}`}>
+						<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center">
+							<div className="flex flex-col gap-8">
+								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+									Ofrecemos comodidades en diversas operaciones, como
+									retirar las tapas de los bidones antes de lavarlos,
+									realizar prelavados para eliminar la suciedad más
+									gruesa, organizar las tapas de manera eficiente y
+									visualizar el proceso productivo a distancia, entre
+									otras funciones.
+								</p>
+								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+									En Alloatti, valoramos la retroalimentación de nuestros
+									clientes, ya que nos permite conocer las necesidades
+									específicas de la industria del agua. Este proceso nos
+									impulsa a desarrollar nuevos accesorios que amplían las
+									posibilidades de su línea productiva, adaptándonos de
+									manera precisa a sus requerimientos.
+								</p>
+							</div>
+							<div className="w-full">
+								<div className={`group relative overflow-hidden rounded-2xl shadow-xl border transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40 ${
+									isDarkTheme 
+										? "border-[#383838] bg-[#1f1f1f]" 
+										: "border-slate-200/80 bg-slate-100"
+								}`}>
+									<img
+										src={imgAccesorios}
+										alt="Módulos y accesorios de automatización para embotelladoras Alloatti"
+										className="w-full h-auto object-cover transition-transform duration-700 ease-out"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent" />
+									<div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
+										<span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md bg-black/60 text-white border border-white/20 shadow-sm">
+											<span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+											Módulos de Automatización
+										</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<figure className="my-10">
