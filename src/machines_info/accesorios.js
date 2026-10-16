@@ -50,7 +50,7 @@ export const accesorios = {
 			characteristics: "Conectividad a internet",
 			description:
 				"Dispositivo de pantalla táctil touch screen con conectividad a internet.Se conecta a su modem o router mediante cable de red. Dispone de una aplicación para Android en la cual se puede visualizar en vivo la información de la pantalla táctil e interactuar a distancia. Permite la consulta online de la producción de la maquinaria y diagnóstico de eventuales fallas que sucedan, entre otras funcionalidades.",
-			link: "https://www.youtube.com/watch?v=GdnEMfxbREI",
+			link: "https://youtu.be/GhkDyT3nnPc?si=IOk-aGaLiIPHX-iM",
 		},
 	],
 	sectionData7: [
