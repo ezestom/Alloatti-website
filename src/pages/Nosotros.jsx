@@ -74,7 +74,6 @@ export function Nosotros() {
 							<strong className="hp-strong">innovadoras</strong>{" "}
 							en cada una de nuestras operaciones industriales.
 						</p>
-						<Data />
 
 						<div className="mt-20 mb-20 border-l-4 border-[#024ad8] pl-8 text-left">
 							<p className="hp-p italic">
@@ -163,6 +162,7 @@ export function Nosotros() {
 							</blockquote>
 						</div>
 					</div>
+					<Data />
 					<PremiumFooter />
 				</article>
 			</section>
