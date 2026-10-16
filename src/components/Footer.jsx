@@ -5,9 +5,9 @@ import logo from "../img/e_logo_op.png"
 export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
-		<section
-			className={`absolute bottom-0 left-1/2 z-10 w-full max-w-2xl -translate-x-1/2 p-4 transition-colors duration-500 backdrop-blur-sm ${
-				isDarkTheme ? "bg-[#1a1a1a]" : "bg-white "
+		<div
+			className={`w-full pt-4 pb-6 mt-auto shrink-0 transition-colors duration-500 ${
+				isDarkTheme ? "bg-[#1a1a1a]" : "bg-white"
 			}`}>
 			<div className="flex flex-col items-center justify-center gap-1">
 
@@ -62,6 +62,6 @@ export function Footer() {
 					</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

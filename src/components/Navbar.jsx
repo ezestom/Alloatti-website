@@ -52,12 +52,12 @@ export function Navbar() {
 		});
 	};
 	return (
-		<div
-			className={`z-20 px-6 fixed min-h-screen w-full max-w-[280px] border-r transition-all duration-500 flex flex-col ${
+		<aside
+			className={`z-20 px-6 fixed top-0 left-0 h-screen h-[100dvh] w-full max-w-[280px] border-r transition-all duration-500 flex flex-col justify-between ${
 				isDarkTheme ? "bg-[#1a1a1a] border-slate-800 text-white" : "bg-white border-gray-100 text-[#1a1a1a]"
-			} overflow-y-auto scrollbar-hide`}>
+			} overflow-y-auto sidebar-scroll`}>
 			
-			<div className="pt-10 pb-6 flex justify-between items-center">
+			<div className="pt-8 pb-4 flex justify-between items-center shrink-0">
 				<Link to="/" onClick={scrollToTop} className="block w-full">
 					<img
 						src={isDarkTheme ? LogoDark : LogoLigth}
@@ -199,6 +199,6 @@ export function Navbar() {
 					</li>
 				</ul>
 			<Footer />
-		</div>
+		</aside>
 	);
 }

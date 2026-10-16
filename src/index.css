@@ -328,6 +328,31 @@ body {
 	background: #333333;
 }
 
+/* Sidebar Custom Scrollbar */
+.sidebar-scroll {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(150, 150, 150, 0.3) transparent;
+}
+.sidebar-scroll::-webkit-scrollbar {
+	width: 5px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+	background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+	background: rgba(150, 150, 150, 0.25);
+	border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+	background: rgba(150, 150, 150, 0.5);
+}
+.dark .sidebar-scroll::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.15);
+}
+.dark .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
 /* Premium Navigation Animations */
 @keyframes bounce-subtle {
 	0%,
