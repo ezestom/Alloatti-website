@@ -2,8 +2,7 @@ import { Base } from "../components/Base";
 import { Table } from "../components/Table";
 import { bidonesDescartables } from "../machines_info/bidonesDescartables";
 import "./Table.css";
-import { BlurVideo } from "../components/BlurVideo/BlurVideo";
-import cargador from "../videos/cargador.mp4";
+import imgDescartables from "../img/img_descartables.jpg";
 import { SEO } from "../components/SEO";
 import { PremiumFooter } from "../components/PremiumFooter";
 
@@ -111,10 +110,20 @@ export function BidonesDescartables() {
 							</p>
 						</div>
 						<div className="w-full">
-							<BlurVideo
-								video={cargador}
-								urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=rFlpPyrepISuX-uY&autoplay=1&mute=0"
-							/>
+							<div className="group relative overflow-hidden rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40">
+								<img
+									src={imgDescartables}
+									alt="Línea de envasado para bidones descartables de agua Alloatti"
+									className="w-full h-auto object-cover transition-transform duration-700 ease-out"
+								/>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent" />
+								<div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
+									<span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md bg-black/60 text-white border border-white/20 shadow-sm">
+										<span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+										Línea Automática en Planta
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</article>

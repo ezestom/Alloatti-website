@@ -53,31 +53,31 @@ export const accesorios = {
 			link: "https://youtu.be/GhkDyT3nnPc?si=IOk-aGaLiIPHX-iM",
 		},
 	],
-	sectionData7: [
+		sectionData7: [
+		{
+			name: "PRE LAVADORA INTERIOR Y EXTERIOR",
+			characteristics: "600 bidones retornables p/h",
+			description:
+				"El equipo facilita la ejecución de un prelavado a los bidones antes de ingresarlos a la máquina de lavado. Se compone de una cinta transportadora que dirige los bidones hacia el interior de una cabina. En esta cabina, se encuentran cepillos destinados al cepillado exterior de los bidones, así como una bomba que realiza el prelavado exterior. Además, se incorporan picos diseñados para el prelavado interior, los cuales penetran y lavan con fuerza todo el interior de los bidones. La duración del prelavado es ajustable, permitiendo su adaptación al ritmo de lavado de la máquina para una limpieza completa y eficiente.",
+			link: "https://youtu.be/4NspS9ktV0s?si=pu5Ov1TYuEzH7Dxe",
+		},
+	],
+		sectionData8: [
+		{
+			name: "PRE LAVADORA SOLO INTERIOR",
+			characteristics: "600 bidones retornables p/h",
+			description:
+				"El equipo facilita la ejecución de un prelavado a los bidones antes de ingresarlos a la máquina de lavado. Se compone de una cinta transportadora que dirige los bidones hacia el interior de una cabina. En esta cabina, se encuentran picos diseñados para realizar un prelavado interior de los bidones, asegurando una limpieza profunda al lavar con fuerza todo el interior de los recipientes. La duración del prelavado es ajustable, permitiendo su adaptación al ritmo de lavado de la máquina para una eficiencia óptima.",
+			link: "https://youtu.be/7mY3qTYimVQ?si=YTMMnPShoyxoCJ3G",
+		},
+	],
+	sectionData9: [
 		{
 			name: "PRE LAVADORA SOLO EXTERIOR",
 			characteristics: "600 bidones retornables p/h",
 			description:
 				"El equipo posibilita la realización de un prelavado a los bidones antes de introducirlos en la máquina de lavado. Se compone de una cinta transportadora que lleva los bidones al interior de una cabina equipada con cepillos para realizar el cepillado exterior de los bidones. Además, se incorpora una bomba para llevar a cabo el prelavado exterior. La duración del prelavado es ajustable para adecuarse al ritmo de lavado de la máquina, permitiendo una limpieza eficiente y personalizada.",
 			link: "https://www.youtube.com/watch?v=yLlcoZRyccM",
-		},
-	],
-	sectionData8: [
-		{
-			name: "PRE LAVADORA SOLO INTERIOR",
-			characteristics: "600 bidones retornables p/h",
-			description:
-				"El equipo facilita la ejecución de un prelavado a los bidones antes de ingresarlos a la máquina de lavado. Se compone de una cinta transportadora que dirige los bidones hacia el interior de una cabina. En esta cabina, se encuentran picos diseñados para realizar un prelavado interior de los bidones, asegurando una limpieza profunda al lavar con fuerza todo el interior de los recipientes. La duración del prelavado es ajustable, permitiendo su adaptación al ritmo de lavado de la máquina para una eficiencia óptima.",
-			link: "https://www.youtube.com/watch?v=X-KcX6Jqlik",
-		},
-	],
-	sectionData9: [
-		{
-			name: "PRE LAVADORA INTERIOR Y EXTERIOR",
-			characteristics: "600 bidones retornables p/h",
-			description:
-				"El equipo facilita la ejecución de un prelavado a los bidones antes de ingresarlos a la máquina de lavado. Se compone de una cinta transportadora que dirige los bidones hacia el interior de una cabina. En esta cabina, se encuentran cepillos destinados al cepillado exterior de los bidones, así como una bomba que realiza el prelavado exterior. Además, se incorporan picos diseñados para el prelavado interior, los cuales penetran y lavan con fuerza todo el interior de los bidones. La duración del prelavado es ajustable, permitiendo su adaptación al ritmo de lavado de la máquina para una limpieza completa y eficiente.",
-			link: "https://www.youtube.com/watch?v=xYFHJshns2s",
 		},
 	],
 	sectionData10: [
