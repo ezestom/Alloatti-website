@@ -147,7 +147,7 @@ export function TableAccesories() {
 
 	return (
 		<div className="my-12">
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 px-2">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 px-2 scroll-mt-24" id="accesorios">
 				{sectionDataArray.map((sectionData, index) => {
 					const item = sectionData[0];
 					const category = getCategoryName(item.name);

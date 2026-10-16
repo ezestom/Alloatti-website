@@ -88,7 +88,7 @@ export function Nosotros() {
 								{carouselImages.slice(0, 13).map((img, idx) => (
 									<div
 										key={idx}
-										className="group relative w-full h-56 sm:h-64 md:h-72 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
+										className="group relative w-full h-56 md:h-80 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
 										<img
 											src={img}
 											alt={`Instalaciones Alloatti ${idx + 1}`}
@@ -138,7 +138,7 @@ export function Nosotros() {
 									{carouselImages.slice(13).map((img, idx) => (
 										<div
 											key={idx}
-											className="group relative w-full h-56 sm:h-64 md:h-72 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
+											className="group relative w-full h-56 md:h-80 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
 											<img
 												src={img}
 												alt={`Taller y Producción Alloatti ${idx + 14}`}

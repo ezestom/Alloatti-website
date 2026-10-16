@@ -14,14 +14,16 @@ import bidonesCorriendo from "../videos/bidonesCorriendo.mp4";
 import heroMachine from "../img/machine_2_ps.jpg";
 import maquina from "../img/machine_3_ps.jpg";
 import pantalla from "../img/pantalla.jpg";
+import automatizationBg from "../img/automatization_bg.jpg";
 import { 
 	FaCheckCircle, 
 	FaWater, 
-	FaWrench,
-	FaFileInvoiceDollar,
-	FaBoxes,
-	FaLayerGroup,
-	FaLock
+	FaWrench, 
+	FaFileInvoiceDollar, 
+	FaBoxes, 
+	FaLayerGroup, 
+	FaLock,
+	FaCogs
 } from "react-icons/fa";
 import { BsBroadcast, BsLightningChargeFill } from "react-icons/bs";
 
@@ -143,121 +145,145 @@ export function Home() {
 						</div>
 					</div>
 
-					{/* 2. PRECISION ENGINEERING SECTION */}
-					<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-28 md:mb-36">
-						{/* Left Column: Image with Floating Card */}
-						<div className="relative rounded-[16px] group xl:mx-0 w-full">
+					{/* 2 & 3. COMBINED PRECISION ENGINEERING & TECHNOLOGY IN MOTION */}
+					<div className={`relative rounded-3xl border overflow-hidden p-6 sm:p-8 md:p-12 lg:p-16 mb-28 md:mb-36 transition-colors duration-500 ${
+						isDarkTheme 
+							? "bg-slate-900/40 border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
+							: "bg-white/95 border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.05)]"
+					}`}>
+						{/* Background Image with slight blur & high-contrast theme overlay */}
+						<div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
 							<img 
-								src={maquina} 
-								alt="Ingeniería de precisión en acero inoxidable" 
-								className="w-full aspect-video object-cover rounded-[16px]"
+								src={automatizationBg} 
+								alt="Automatización y tecnología" 
+								className="w-full h-full object-cover object-center filter blur-[12px] md:blur-[16px] scale-110 opacity-25 dark:opacity-30 transition-all duration-700"
 							/>
-							{/* Floating Quality Assurance Card */}
-							<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+							<div className={`absolute inset-0 ${
 								isDarkTheme 
-									? "bg-zinc-900 border-[#333]" 
-									: "bg-white border-slate-100"
-							}`}>
-								<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
-								<div>
-									<h4 className={`text-xs font-extrabold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-										Calidad Segura
-									</h4>
-									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-										Nuestros sistemas garantizan una esterilización del 99.9% mediante tecnología de boquillas de alta presión.
+									? "bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/70 to-[#1a1a1a]/90" 
+									: "bg-gradient-to-b from-white/96 via-white/88 to-white/96"
+							}`} />
+						</div>
+
+						{/* Sections Content */}
+						<div className="relative z-10 flex flex-col">
+							{/* 2. PRECISION ENGINEERING SECTION */}
+							<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-28 md:mb-36">
+								{/* Left Column: Image with Floating Card */}
+								<div className="relative rounded-[16px] group xl:mx-0 w-full">
+									<img 
+										src={maquina} 
+										alt="Ingeniería de precisión en acero inoxidable" 
+										className="w-full aspect-video object-cover rounded-[16px]"
+									/>
+									{/* Floating Quality Assurance Card */}
+									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+										isDarkTheme 
+											? "bg-zinc-900 border-[#333]" 
+											: "bg-white border-slate-100"
+									}`}>
+										<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
+										<div>
+											<h4 className={`text-xs font-extrabold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+												Calidad Segura
+											</h4>
+											<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+												Nuestros sistemas garantizan una esterilización del 99.9% mediante tecnología de boquillas de alta presión.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								{/* Right Column: Info & Bullets */}
+								<div className="flex flex-col">
+									<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
+										Innovación Técnica
+									</span>
+									<h2 className="hp-h2 mb-6 leading-tight">
+										Excelencia en ingeniería de precisión
+									</h2>
+									<p className="hp-p mb-8 text-base md:text-lg">
+										Nuestra misión es potenciar tu negocio con tecnología que optimiza tiempos y garantiza la máxima calidad en cada
+										bidón.
+									</p>
+									
+									<div className="space-y-6">
+										{/* Bullet 1 */}
+										<div className="flex gap-4 items-start">
+											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+												<FaWater className="text-[#024ad8] text-lg" />
+											</div>
+											<div>
+												<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+													Optimización Hídrica
+												</h3>
+												<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+													Reducción del 35% en el consumo de agua por ciclo de lavado con estándares industriales.
+												</p>
+											</div>
+										</div>
+
+										{/* Bullet 2 */}
+										<div className="flex gap-4 items-start">
+											<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
+												<FaWrench className="text-[#024ad8] text-lg" />
+											</div>
+											<div>
+												<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+													Mecánica de Alta Fidelidad
+												</h3>
+												<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+													Componentes robóticos de fácil mantenimiento diseñados para durar décadas.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							{/* 3. TECHNOLOGY IN MOTION (VIDEO SECTION) */}
+							<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-16 lg:mb-24">
+								{/* Left Column: Text */}
+								<div className="flex flex-col w-full">
+									<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
+										Tecnología en Movimiento
+									</span>
+									<h2 className="hp-h2 mb-6 leading-tight">
+										Nuestras líneas en acción
+									</h2>
+									<p className="hp-p mb-0 text-base md:text-lg">
+										Diseñamos sistemas que garantizan ciclos continuos de alta eficiencia. En este video puede observar el proceso automático de transporte y envasado de bidones en tiempo real, operando bajo las más estrictas normas de higiene.
 									</p>
 								</div>
-							</div>
-						</div>
 
-						{/* Right Column: Info & Bullets */}
-						<div className="flex flex-col">
-							<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
-								Innovación Técnica
-							</span>
-							<h2 className="hp-h2 mb-6 leading-tight">
-								Excelencia en ingeniería de precisión
-							</h2>
-							<p className="hp-p mb-8 text-base md:text-lg">
-								Nuestra misión es potenciar tu negocio con tecnología que optimiza tiempos y garantiza la máxima calidad en cada
-								bidón.
-							</p>
-							
-							<div className="space-y-6">
-								{/* Bullet 1 */}
-								<div className="flex gap-4 items-start">
-									<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
-										<FaWater className="text-[#024ad8] text-lg" />
+								{/* Right Column: Video */}
+								<div className="relative group mx-auto xl:mx-0 w-full">
+									<div className="rounded-[16px] overflow-hidden">
+										<BlurVideo
+											video={bidonesCorriendo}
+											urlYoutube="https://www.youtube.com/embed/vLdxcTmlY18?si=jsS8PxyHdDG5GYCz&autoplay=1&mute=0"
+										/>
 									</div>
-									<div>
-										<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-											Optimización Hídrica
-										</h3>
-										<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-											Reducción del 35% en el consumo de agua por ciclo de lavado con estándares industriales.
-										</p>
+									{/* Floating Video Info Card */}
+									<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
+										isDarkTheme 
+											? "bg-zinc-900 border-[#333]" 
+											: "bg-white border-slate-100"
+									}`}>
+										<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
+										<div className="text-left">
+											<h4 className={`text-xs font-extrabold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
+												Líneas de Producción en Vivo
+											</h4>
+											<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-450" : "text-slate-600"}`}>
+												Líneas con procesos automáticos continuos de lavado, llenado y tapado con estándares sanitarios certificados.
+											</p>
+										</div>
 									</div>
 								</div>
-
-								{/* Bullet 2 */}
-								<div className="flex gap-4 items-start">
-									<div className={`p-3 rounded-[8px] flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900" : "bg-blue-50"}`}>
-										<FaWrench className="text-[#024ad8] text-lg" />
-									</div>
-									<div>
-										<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-											Mecánica de Alta Fidelidad
-										</h3>
-										<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-											Componentes robóticos de fácil mantenimiento diseñados para durar décadas.
-										</p>
-									</div>
-								</div>
-							</div>
+							</section>
 						</div>
-					</section>
-
-					{/* 3. TECHNOLOGY IN MOTION (VIDEO SECTION) */}
-					<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-28 md:mb-36">
-						{/* Left Column: Text */}
-						<div className="flex flex-col w-full">
-							<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
-								Tecnología en Movimiento
-							</span>
-							<h2 className="hp-h2 mb-6 leading-tight">
-								Nuestras líneas en acción
-							</h2>
-							<p className="hp-p mb-0 text-base md:text-lg">
-								Diseñamos sistemas que garantizan ciclos continuos de alta eficiencia. En este video puede observar el proceso automático de transporte y envasado de bidones en tiempo real, operando bajo las más estrictas normas de higiene.
-							</p>
-						</div>
-
-						{/* Right Column: Video */}
-						<div className="relative group mx-auto xl:mx-0 w-full">
-							<div className="rounded-[16px] overflow-hidden">
-								<BlurVideo
-									video={bidonesCorriendo}
-									urlYoutube="https://www.youtube.com/embed/vLdxcTmlY18?si=jsS8PxyHdDG5GYCz&autoplay=1&mute=0"
-								/>
-							</div>
-							{/* Floating Video Info Card */}
-							<div className={`absolute !border-t-2 !border-t-[#024ad8] lg:-bottom-20 -bottom-12 left-6 right-6 p-2 md:p-6 rounded-[16px] border shadow-2xl flex gap-4 items-start backdrop-blur-md transition-colors duration-500 z-10 ${
-								isDarkTheme 
-									? "bg-zinc-900 border-[#333]" 
-									: "bg-white border-slate-100"
-							}`}>
-								<FaCheckCircle className="text-[#024ad8] shrink-0 text-xl mt-0.5" />
-								<div className="text-left">
-									<h4 className={`text-xs font-extrabold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-										Líneas de Producción en Vivo
-									</h4>
-									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-450" : "text-slate-600"}`}>
-										Líneas con procesos automáticos continuos de lavado, llenado y tapado con estándares sanitarios certificados.
-									</p>
-								</div>
-							</div>
-						</div>
-					</section>
+					</div>
 
 					{/* 4. PRODUCT LINE CARDS SECTION (KEEPING ORIGINAL HOME INFORMATION) */}
 					<section className="mb-28 md:mb-36 xl:mb-44">
@@ -343,83 +369,150 @@ export function Home() {
 					</section>
 
 					{/* 5. LATEST DEVELOPMENTS SECTION */}
-					<section className="mb-28 md:mb-36">
-						{/* Top Header & Context */}
-						<div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-10">
-							<div className="max-w-2xl text-left">
-								<span className="hp-eyebrow hp-eyebrow-blue mb-4 self-start">
-									Últimos Desarrollos
-								</span>
-								<h2 className="hp-h2 mb-4 leading-tight">
-									Automatización y final de línea
-								</h2>
-								<p className="hp-p text-base md:text-lg !my-0">
-									Soluciones modulares diseñadas para agilizar el despacho y maximizar la autonomía operativa.
-								</p>
-							</div>
-
-							<div className="flex flex-wrap gap-4 items-center">
-								<button
-									onClick={() => navigate("/accesorios-para-maquinas")}
-									className="hp-btn-primary !px-6 !py-3.5 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
-									Ver Accesorios <span className="transition-transform group-hover:translate-x-1">→</span>
-								</button>
-							</div>
+					<section className={`relative rounded-3xl border overflow-hidden p-5 sm:p-7 lg:p-8 xl:p-12 mb-28 md:mb-36 transition-colors duration-500 ${
+						isDarkTheme 
+							? "bg-slate-900/40 border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
+							: "bg-white/95 border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.05)]"
+					}`}>
+						{/* Background Image with slight blur & high-contrast theme overlay */}
+						<div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+							<img 
+								src={automatizationBg} 
+								alt="Automatización y final de línea" 
+								className="w-full h-full object-cover object-center filter blur-[12px] md:blur-[16px] scale-110 opacity-25 dark:opacity-30 transition-all duration-700"
+							/>
+							<div className={`absolute inset-0 ${
+								isDarkTheme 
+									? "bg-gradient-to-b from-[#1a1a1a]/85 via-[#1a1a1a]/75 to-[#1a1a1a]/90" 
+									: "bg-gradient-to-b from-white/96 via-white/90 to-white/96"
+							}`} />
 						</div>
 
-						{/* Highlights Features Grid */}
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
-							{/* Bullet 1 */}
-							<div className={`p-4 rounded-2xl border flex items-start gap-4 transition-colors ${
-								isDarkTheme ? "bg-slate-900/40 border-slate-800" : "bg-white border-slate-200/80 shadow-sm"
-							}`}>
-								<div className={`p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8]"}`}>
-									<FaBoxes className="text-lg" />
-								</div>
-								<div>
-									<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-										Paletizado y Enrackado
-									</h3>
-									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-										Carga continua en piso o sobre vehículos de transporte hasta 4 niveles y 1200 bidones/hora.
+						{/* Section Content */}
+						<div className="relative z-10">
+							{/* Top Header & Context */}
+							<div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 sm:gap-8 mb-8 lg:mb-10">
+								<div className="max-w-2xl text-left">
+									<span className="hp-eyebrow hp-eyebrow-blue mb-3 sm:mb-4 self-start">
+										Últimos Desarrollos
+									</span>
+									<h2 className="hp-h2 mb-3 sm:mb-4 leading-tight">
+										Automatización y final de línea
+									</h2>
+									<p className={`text-base md:text-lg !my-0 leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600 font-medium"}`}>
+										Soluciones modulares diseñadas para agilizar el despacho y maximizar la autonomía operativa.
 									</p>
+								</div>
+
+								{/* Interactive Accessories Showcase Hub */}
+								<div 
+									onClick={() => navigate("/accesorios-para-maquinas#accesorios")}
+									role="button"
+									tabIndex={0}
+									onKeyDown={(e) => e.key === "Enter" && navigate("/accesorios-para-maquinas#accesorios")}
+									className={`group cursor-pointer rounded-2xl border p-3.5 sm:p-4 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md flex items-center gap-3 sm:gap-4 text-left select-none w-full xl:w-auto xl:max-w-md shrink-0 shadow-sm ${
+										isDarkTheme 
+											? "bg-slate-900/80 border-slate-700/80 hover:border-blue-500/50 hover:shadow-[0_12px_35px_rgba(2,74,216,0.25)]" 
+											: "bg-white/95 border-slate-200/90 hover:border-blue-500/40 hover:shadow-[0_12px_35px_rgba(2,74,216,0.12)] shadow-slate-200/50"
+									}`}>
+									{/* Left Icon with subtle hover rotation */}
+									<div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-500 group-hover:rotate-45 shadow-sm ${
+										isDarkTheme 
+											? "bg-blue-600/20 text-blue-400 border border-blue-500/30 group-hover:bg-blue-600/30" 
+											: "bg-blue-50 text-[#024ad8] border border-blue-200/60 group-hover:bg-blue-100/80"
+									}`}>
+										<FaCogs className="text-xl" />
+									</div>
+
+									{/* Center Context & Microcopy */}
+									<div className="flex-1 min-w-0 pr-1">
+										<div className="flex items-center gap-2 mb-1">
+											<span className="inline-flex items-center gap-1.5 text-[9px] font-extrabold uppercase tracking-widest text-[#024ad8] dark:text-blue-400">
+												<span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+												Catálogo Integral
+											</span>
+											<span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md border ${
+												isDarkTheme 
+													? "bg-slate-800/80 border-slate-700 text-slate-300" 
+													: "bg-slate-100 border-slate-200 text-slate-600"
+											}`}>
+												+10 módulos
+											</span>
+										</div>
+										<h4 className={`text-xs sm:text-sm font-extrabold tracking-tight transition-colors duration-200 group-hover:text-[#024ad8] truncate ${
+											isDarkTheme ? "text-white" : "text-slate-900"
+										}`}>
+											Accesorios y Automatización
+										</h4>
+										<p className={`text-[11px] leading-tight truncate ${
+											isDarkTheme ? "text-slate-400" : "text-slate-500 font-medium"
+										}`}>
+											Sacatapas, cintas, tolvas y periféricos
+										</p>
+									</div>
+
+									{/* Right Action Button Pill */}
+									<div className="shrink-0 flex items-center gap-1.5 bg-[#024ad8] text-white px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md shadow-blue-600/25 group-hover:bg-[#0e3191] group-hover:shadow-blue-600/40 transition-all duration-300">
+										<span className="hidden sm:inline">Ver todos <br /> los accesorios</span>
+										<span className="sm:hidden font-bold">Catálogo</span>
+										<span className="transition-transform duration-300 group-hover:translate-x-1 font-black">→</span>
+									</div>
 								</div>
 							</div>
 
-							{/* Bullet 2 */}
-							<div className={`p-4 rounded-2xl border flex items-start gap-4 transition-colors ${
-								isDarkTheme ? "bg-slate-900/40 border-slate-800" : "bg-white border-slate-200/80 shadow-sm"
-							}`}>
-								<div className={`p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8]"}`}>
-									<FaLayerGroup className="text-lg" />
+							{/* Highlights Features Grid */}
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-3.5 xl:gap-6 mb-8 lg:mb-10 text-left">
+								{/* Bullet 1 */}
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
+									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+										<FaBoxes className="text-base sm:text-base xl:text-lg" />
+									</div>
+									<div className="w-full min-w-0">
+										<h3 className={`text-xs sm:text-[11px] lg:text-xs xl:text-sm font-bold uppercase tracking-wider mb-1 leading-snug break-words ${isDarkTheme ? "text-white" : "text-slate-900"}`}>
+											Paletizado y Enrackado
+										</h3>
+										<p className={`text-xs sm:text-[11px] lg:text-xs leading-relaxed font-medium ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+											Carga continua en piso o sobre vehículos de transporte hasta 4 niveles y 1200 bidones/hora.
+										</p>
+									</div>
 								</div>
-								<div>
-									<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-										Estructura Modular
-									</h3>
-									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-										Construcción en acero inoxidable adaptable al layout y requerimientos específicos de tu planta.
-									</p>
-								</div>
-							</div>
 
-							{/* Bullet 3 */}
-							<div className={`p-4 rounded-2xl border flex items-start gap-4 transition-colors ${
-								isDarkTheme ? "bg-slate-900/40 border-slate-800" : "bg-white border-slate-200/80 shadow-sm"
-							}`}>
-								<div className={`p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8]"}`}>
-									<BsLightningChargeFill className="text-lg" />
+								{/* Bullet 2 */}
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
+									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+										<FaLayerGroup className="text-base sm:text-base xl:text-lg" />
+									</div>
+									<div className="w-full min-w-0">
+										<h3 className={`text-xs sm:text-[11px] lg:text-xs xl:text-sm font-bold uppercase tracking-wider mb-1 leading-snug break-words ${isDarkTheme ? "text-white" : "text-slate-900"}`}>
+											Estructura Modular
+										</h3>
+										<p className={`text-xs sm:text-[11px] lg:text-xs leading-relaxed font-medium ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+											Construcción en acero inoxidable adaptable al layout y requerimientos específicos de tu planta.
+										</p>
+									</div>
 								</div>
-								<div>
-									<h3 className={`text-sm font-bold uppercase tracking-wider mb-1 ${isDarkTheme ? "text-white" : "text-[#1a1a1a]"}`}>
-										Automatización PLC
-									</h3>
-									<p className={`text-xs leading-relaxed ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
-										Ajuste de altura automático que agiliza el despacho y minimiza el esfuerzo físico de los operarios.
-									</p>
+
+								{/* Bullet 3 */}
+								<div className={`p-3.5 sm:p-3 lg:p-3.5 xl:p-4 rounded-2xl border flex flex-row sm:flex-col xl:flex-row items-start gap-2.5 sm:gap-3 xl:gap-4 backdrop-blur-md transition-all ${
+									isDarkTheme ? "bg-slate-900/60 border-slate-800/80 shadow-sm" : "bg-white/95 border-slate-200/90 shadow-md shadow-slate-200/40"
+								}`}>
+									<div className={`p-2.5 sm:p-2.5 xl:p-3 rounded-xl flex items-center justify-center shrink-0 ${isDarkTheme ? "bg-zinc-900 text-blue-400" : "bg-blue-50 text-[#024ad8] border border-blue-100/80"}`}>
+										<BsLightningChargeFill className="text-base sm:text-base xl:text-lg" />
+									</div>
+									<div className="w-full min-w-0">
+										<h3 className={`text-xs sm:text-[11px] lg:text-xs xl:text-sm font-bold uppercase tracking-wider mb-1 leading-snug break-words ${isDarkTheme ? "text-white" : "text-slate-900"}`}>
+											Automatización PLC
+										</h3>
+										<p className={`text-xs sm:text-[11px] lg:text-xs leading-relaxed font-medium ${isDarkTheme ? "text-slate-400" : "text-slate-600"}`}>
+											Ajuste de altura automático que agiliza el despacho y minimiza el esfuerzo físico de los operarios.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
 						{/* 3 Cards Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -428,10 +521,10 @@ export function Home() {
 									return (
 										<div
 											key={idx}
-											className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none ${
+											className={`w-full text-left rounded-3xl border-2 border-dashed transition-all duration-500 overflow-hidden relative flex flex-col h-full select-none backdrop-blur-md ${
 												isDarkTheme
-													? "bg-slate-900/40 border-slate-800/80 text-slate-400"
-													: "bg-slate-50/80 border-slate-200 text-slate-500"
+													? "bg-slate-900/60 border-slate-800/80 text-slate-400"
+													: "bg-white/95 border-slate-200/90 text-slate-600 shadow-md shadow-slate-200/30"
 											}`}
 										>
 											{/* Top Image Section with Blur */}
@@ -510,10 +603,10 @@ export function Home() {
 									<button
 										key={idx}
 										onClick={() => setSelectedAccesory(item)}
-										className={`w-full text-left group rounded-3xl border transition-all duration-500 overflow-hidden relative flex flex-col h-full shadow-sm hover:-translate-y-1 ${
+										className={`w-full text-left group rounded-3xl border transition-all duration-500 overflow-hidden relative flex flex-col h-full shadow-sm hover:-translate-y-1 backdrop-blur-md ${
 											isDarkTheme
-												? "bg-slate-900/60 border-slate-800 hover:border-[#024ad8]/50 hover:shadow-[0_12px_40px_rgba(2,74,216,0.15)]"
-												: "bg-white border-slate-200/80 hover:border-[#024ad8]/30 hover:shadow-[0_12px_40px_rgba(2,74,216,0.1)]"
+												? "bg-slate-900/80 border-slate-800 hover:border-[#024ad8]/50 hover:shadow-[0_12px_40px_rgba(2,74,216,0.15)]"
+												: "bg-white/95 border-slate-200/80 hover:border-[#024ad8]/30 hover:shadow-[0_12px_40px_rgba(2,74,216,0.1)]"
 										}`}
 									>
 										{/* Top Image Section */}
@@ -583,7 +676,8 @@ export function Home() {
 								);
 							})}
 						</div>
-					</section>
+					</div>
+				</section>
 
 					{/* 6. SMART SOLUTIONS 4.0 SECTION */}
 					<section className="grid grid-cols-1 xl:grid-cols-2 gap-16 md:gap-20 items-center mb-28 md:mb-36">

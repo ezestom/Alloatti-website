@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Base } from "../components/Base";
 import { TableAccesories } from "../components/TableAccesories";
 import { accesorios } from "../machines_info/accesorios";
@@ -66,6 +68,27 @@ const productSchema = {
 };
 
 export function Accesorios() {
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			const targetId = location.hash.replace("#", "");
+			const scrollToElement = () => {
+				const element = document.getElementById(targetId);
+				if (element) {
+					element.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
+			};
+
+			const timer1 = setTimeout(scrollToElement, 100);
+			const timer2 = setTimeout(scrollToElement, 350);
+			return () => {
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+			};
+		}
+	}, [location]);
+
 	return (
 		<>
 			<SEO 
