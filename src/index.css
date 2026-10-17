@@ -353,6 +353,14 @@ body {
 	background: rgba(255, 255, 255, 0.3);
 }
 
+/* Optimización para pantallas bajas / Notebooks (altura <= 760px) */
+@media (max-height: 760px) {
+	.sidebar-scroll {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+}
+
 /* Premium Navigation Animations */
 @keyframes bounce-subtle {
 	0%,

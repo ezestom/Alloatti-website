@@ -6,7 +6,7 @@ export function Footer() {
 	const { isDarkTheme } = useTheme();
 	return (
 		<div
-			className={`w-full pt-4 pb-6 mt-auto shrink-0 transition-colors duration-500 ${
+			className={`w-full pt-2 pb-3.5 xl:pt-4 xl:pb-6 mt-auto shrink-0 transition-colors duration-500 ${
 				isDarkTheme ? "bg-[#1a1a1a]" : "bg-white"
 			}`}>
 			<div className="flex flex-col items-center justify-center gap-1">

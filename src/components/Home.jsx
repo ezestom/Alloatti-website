@@ -70,37 +70,37 @@ export function Home() {
 					<WithClose />
 
 					{/* 1. HERO SECTION REDESIGNED TO 2 COLUMNS */}
-					<div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-16 items-center min-h-[85vh] mb-28 md:mb-36">
+					<div className="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-16 items-center min-h-[75vh] xl:min-h-[85vh] mb-20 md:mb-28 xl:mb-36">
 						{/* Left Column: Text Content */}
-						<div className="xl:col-span-6 flex flex-col items-start text-left w-full gap-2 lg:gap-6">
+						<div className="xl:col-span-6 flex flex-col items-start text-left w-full gap-2 lg:gap-4 xl:gap-6">
 							<LogoCelular />
 							
 							<span className="hp-eyebrow hp-eyebrow-blue">
 								Excelencia en Ingeniería
 							</span>
 
-							<h1 className={`text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight ${
+							<h1 className={`text-3xl md:text-4xl xl:text-5xl font-extrabold tracking-tight ${
 								isDarkTheme ? "text-white" : "text-[#1a1a1a]"
 							}`}>
 								<span className="text-[#024ad8] block mb-2">Líderes en innovación y desarrollo:</span>
-								<span className="text-2xl md:text-3xl lg:text-4xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
+								<span className="text-2xl md:text-3xl xl:text-4xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
 							</h1>
 
-							<p className={`text-sm md:text-base xl:text-lg mb-8 leading-relaxed max-w-xl ${
+							<p className={`text-sm md:text-base xl:text-lg mb-6 xl:mb-8 leading-relaxed max-w-xl ${
 								isDarkTheme ? "text-slate-400" : "text-slate-600"
 							}`}>
 								Nos especializamos en diseñar y fabricar maquinaria de última generación para la industria del agua, adaptándonos a las necesidades específicas de cada cliente.
 							</p>
 
-							<div className="flex flex-wrap gap-4">
+							<div className="flex flex-wrap gap-3.5 xl:gap-4">
 								<button
 									onClick={() => navigate("/contacto#form")}
-									className="hp-btn-primary !px-8 !py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 transition-all flex items-center gap-2">
+									className="hp-btn-primary !px-6 !py-3 xl:!px-8 xl:!py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 transition-all flex items-center gap-2">
 									<FaFileInvoiceDollar size={16} /> Solicitar Presupuesto
 								</button>
 								<button
 									onClick={() => navigate("/nosotros")}
-									className="hp-btn-outline !px-8 !py-4 transition-all">
+									className="hp-btn-outline !px-6 !py-3 xl:!px-8 xl:!py-4 transition-all">
 									Conócenos
 								</button>
 							</div>
@@ -111,7 +111,7 @@ export function Home() {
 							<img 
 								src={heroMachine} 
 								alt="Líderes en innovación y desarrollo de envasadoras" 
-								className="w-full aspect-video object-cover rounded-[16px] shadow-2xl lg:min-h-[55vh] min-h-[30vh]"
+								className="w-full aspect-video object-cover rounded-[16px] shadow-2xl lg:min-h-[42vh] xl:min-h-[55vh] min-h-[30vh]"
 							/>
 							{/* Floating Stats Card */}
 							<div>
