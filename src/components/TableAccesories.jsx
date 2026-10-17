@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
 import { GridPattern } from "./GridPattern";
@@ -324,19 +324,17 @@ export function TableAccesories() {
 				})}
 			</div>
 
-			<AnimatePresence>
-				{selectedAccesory && (
-					<CardAccesories
-						key={selectedAccesory.name}
-						model={selectedAccesory.name}
-						characteristics={selectedAccesory.characteristics}
-						description={selectedAccesory.description}
-						link={selectedAccesory.link}
-						img={getAccessoryImage(selectedAccesory.name)}
-						onClose={handleCardClose}
-					/>
-				)}
-			</AnimatePresence>
+			{selectedAccesory && (
+				<CardAccesories
+					key={selectedAccesory.name}
+					model={selectedAccesory.name}
+					characteristics={selectedAccesory.characteristics}
+					description={selectedAccesory.description}
+					link={selectedAccesory.link}
+					img={getAccessoryImage(selectedAccesory.name)}
+					onClose={handleCardClose}
+				/>
+			)}
 		</div>
 	);
 }

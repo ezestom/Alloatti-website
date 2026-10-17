@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import { WithClose } from "./WithClose";
 import { useNavigate } from "react-router-dom";
@@ -757,19 +757,17 @@ export function Home() {
 
 
 					{/* Modal for detail view */}
-					<AnimatePresence>
-						{selectedAccesory && (
-							<CardAccesories
-								key={selectedAccesory.name}
-								model={selectedAccesory.name}
-								img={selectedAccesory.img || paletizadoraImg}
-								characteristics={selectedAccesory.characteristics}
-								description={selectedAccesory.description}
-								link={selectedAccesory.link}
-								onClose={() => setSelectedAccesory(null)}
-							/>
-						)}
-					</AnimatePresence>
+					{selectedAccesory && (
+						<CardAccesories
+							key={selectedAccesory.name}
+							model={selectedAccesory.name}
+							img={selectedAccesory.img || paletizadoraImg}
+							characteristics={selectedAccesory.characteristics}
+							description={selectedAccesory.description}
+							link={selectedAccesory.link}
+							onClose={() => setSelectedAccesory(null)}
+						/>
+					)}
 
 					{/* 7. PREMIUM SITE FOOTER */}
 					<PremiumFooter />

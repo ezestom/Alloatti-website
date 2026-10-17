@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { OpenEmail } from "./OpenEmail";
 import { BsPlayCircle, BsWhatsapp } from "react-icons/bs";
@@ -55,12 +55,19 @@ export function CardAccesories({
 	description,
 	link,
 }) {
+	const [isClosing, setIsClosing] = useState(false);
+
+	const handleClose = () => {
+		if (isClosing) return;
+		setIsClosing(true);
+	};
+
 	useEffect(() => {
 		// Prevent scrolling when modal is open
 		document.body.style.overflow = "hidden";
 		const handleKeyDown = (e) => {
 			if (e.key === "Escape") {
-				onClose();
+				handleClose();
 			}
 		};
 		window.addEventListener("keydown", handleKeyDown);
@@ -68,7 +75,7 @@ export function CardAccesories({
 			document.body.style.overflow = "auto";
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [onClose]);
+	}, [isClosing]);
 
 	const wsNumber = "5491168641122";
 	const wsMessage = `¡Hola! Vengo desde el catálogo web de Alloatti y deseo asesoramiento técnico y presupuesto para el accesorio: ${model}.`;
@@ -80,11 +87,15 @@ export function CardAccesories({
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{ duration: 0.25 }}
+			animate={{ opacity: isClosing ? 0 : 1 }}
+			transition={{ duration: 0 }}
+			onAnimationComplete={() => {
+				if (isClosing) {
+					onClose();
+				}
+			}}
 			onClick={(e) => {
-				if (e.target === e.currentTarget) onClose();
+				if (e.target === e.currentTarget) handleClose();
 			}}
 			className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md"
 			role="dialog"
@@ -93,15 +104,14 @@ export function CardAccesories({
 			
 			<motion.div
 				initial={{ opacity: 0, scale: 0.96 }}
-				animate={{ opacity: 1, scale: 1 }}
-				exit={{ opacity: 0, scale: 0.96 }}
-				transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+				animate={{ opacity: isClosing ? 0 : 1, scale: isClosing ? 0 : 1 }}
+				transition={{ type: "spring", stiffness: 450, damping: 35 }}
 				className="relative w-full h-[94vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
 				
 				{/* Close Button */}
 				<button
 					className="absolute top-3.5 right-3.5 z-20 p-2 bg-white/95 dark:bg-slate-800/95 text-slate-800 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 backdrop-blur-sm rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all"
-					onClick={onClose}
+					onClick={handleClose}
 					aria-label="Cerrar ventana">
 					<IoClose className="w-5 h-5" />
 				</button>
@@ -111,7 +121,7 @@ export function CardAccesories({
 					{/* Left Column: Image Section */}
 					<div className="lg:w-1/2 h-56 sm:h-72 lg:h-auto relative overflow-hidden min-h-[240px] lg:min-h-[420px] shrink-0 bg-slate-950 flex flex-col justify-end">
 						<motion.img
-							layoutId={`accessory-image-${accessorySlug}`}
+							layoutId={isClosing ? undefined : `accessory-image-${accessorySlug}`}
 							transition={{ type: "spring", stiffness: 300, damping: 30 }}
 							className="w-full h-full object-cover absolute inset-0 opacity-90"
 							src={img}
