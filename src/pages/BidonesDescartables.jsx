@@ -6,6 +6,7 @@ import imgDescartables from "../img/img_descartables.jpg";
 import { SEO } from "../components/SEO";
 import { PremiumFooter } from "../components/PremiumFooter";
 import { useTheme } from "../context/ThemeContext";
+import { GridPattern } from "../components/GridPattern";
 
 const productSchema = {
 	"@context": "https://schema.org",
@@ -75,7 +76,7 @@ export function BidonesDescartables() {
 			/>
 			<Base />
 			<section className="w-full absolute left-0 top-12 flex justify-center items-center flex-col">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2">
+				<article className="rounded-[16px] w-full max-w-7xl lg:pl-[290px] px-2 mb-20 animate-hp-fade">
 
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
@@ -86,7 +87,7 @@ export function BidonesDescartables() {
 						</div>
 						<h1 className="hp-h1">Maquinaria de Envasado para Bidones Descartables</h1>
 					</header>
-					<p className="hp-p my-20">
+					<p className="hp-p my-4 xl:my-6">
 						Nuestras avanzadas líneas para bidones descartables
 						representan la excelencia en maquinaria dedicada al
 						enjuague, llenado y roscado de bidones. Construidas con
@@ -94,20 +95,21 @@ export function BidonesDescartables() {
 						producción abarcan capacidades desde 300 hasta 700
 						bidones por hora.
 					</p>
-					<div className={`relative rounded-3xl border overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 my-14 transition-colors duration-500 ${
+					<div className={`relative rounded-3xl border overflow-hidden p-4 sm:p-6 xl:p-7 my-5 xl:my-6 transition-colors duration-500 ${
 						isDarkTheme 
 							? "bg-[#292929] border-[#2a2a2a] shadow-[0_4px_25px_rgba(0,0,0,0.25)]" 
 							: "bg-white border-[#e8e8e8] shadow-[0_4px_25px_rgba(0,0,0,0.04)]"
 					}`}>
-						<div className="grid grid-cols-1 2xl:grid-cols-2 gap-10 items-center">
-							<div className="flex flex-col gap-8">
-								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+						<GridPattern />
+						<div className="relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-4 items-center">
+							<div className="xl:col-span-6 flex flex-col gap-3.5 xl:gap-4">
+								<p className="hp-p border-l-4 border-[#024ad8] pl-5 !my-0 text-sm xl:text-base">
 									Tiempo de enjuague ajustable a su necesidad, asegurando
 									una limpieza completa del interior. Esta operación
 									asegura la sanitización del interior del bidón
 									cumpliendo los standares de calidad.
 								</p>
-								<p className="hp-p border-l-4 border-[#024ad8] pl-6 !my-0">
+								<p className="hp-p border-l-4 border-[#024ad8] pl-5 !my-0 text-sm xl:text-base">
 									Adicionalmente, hemos diseñado nuestras líneas para
 									prevenir el contacto directo entre la boca del bidón y
 									el pico de llenado, eliminando cualquier posibilidad de
@@ -116,8 +118,8 @@ export function BidonesDescartables() {
 									seguridad y pureza de cada bidón procesado.
 								</p>
 							</div>
-							<div className="w-full">
-								<div className={`group relative overflow-hidden rounded-2xl shadow-xl border transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40 ${
+							<div className="xl:col-span-6 w-full">
+								<div className={`group relative overflow-hidden rounded-2xl shadow-xl border h-[240px] sm:h-[280px] xl:h-[320px] transition-all duration-300 hover:shadow-2xl hover:border-blue-500/40 ${
 									isDarkTheme 
 										? "border-[#383838] bg-[#1f1f1f]" 
 										: "border-slate-200/80 bg-slate-100"
@@ -125,7 +127,7 @@ export function BidonesDescartables() {
 									<img
 										src={imgDescartables}
 										alt="Línea de envasado para bidones descartables de agua Alloatti"
-										className="w-full h-auto object-cover transition-transform duration-700 ease-out"
+										className="w-full h-full object-cover transition-transform duration-700 ease-out"
 									/>
 									<div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent" />
 									<div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
@@ -139,14 +141,14 @@ export function BidonesDescartables() {
 						</div>
 					</div>
 				</article>
-					<div className="table-container lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-8 md:px-0">
-						{sectionDataArray.map((section, index) => (
-							<Table key={index} data={section} />
-						))}
-					</div>
-					<div className="w-full lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-4 md:px-0">
-						<PremiumFooter />
-					</div>
+				<div className="table-container w-full max-w-7xl lg:pl-[290px] xl:pl-[300px] px-4 md:px-8 mb-16">
+					{sectionDataArray.map((section, index) => (
+						<Table key={index} data={section} />
+					))}
+				</div>
+				<div className="w-full max-w-7xl lg:pl-[290px] xl:pl-[300px] px-4 md:px-8 mb-20">
+					<PremiumFooter />
+				</div>
 			</section>
 		</>
 	);

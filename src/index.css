@@ -90,7 +90,13 @@ body {
 
 /* Page Headers & Typography */
 .hp-page-header {
-	margin-bottom: 48px;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+	.hp-page-header {
+		margin-bottom: 24px;
+	}
 }
 
 .hp-eyebrow {
@@ -103,7 +109,7 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 	transition: all 0.3s;
 }
 
@@ -118,9 +124,9 @@ body {
 }
 
 .hp-h1 {
-	font-size: 40px;
-	font-weight: 500;
-	line-height: 1.1;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.15;
 	letter-spacing: -0.02em;
 	color: var(--text-main);
 	position: relative;
@@ -129,7 +135,19 @@ body {
 
 @media (min-width: 768px) {
 	.hp-h1 {
-		font-size: 56px;
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.hp-h1 {
+		font-size: 38px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.hp-h1 {
+		font-size: 46px;
 	}
 }
 
@@ -146,25 +164,37 @@ body {
 }
 
 .hp-h2 {
-	font-size: 32px;
-	font-weight: 500;
+	font-size: 22px;
+	font-weight: 600;
 	line-height: 1.2;
 	letter-spacing: -0.01em;
 	color: var(--text-main);
-	margin-bottom: 24px;
+	margin-bottom: 14px;
 }
 
 @media (min-width: 768px) {
 	.hp-h2 {
-		font-size: 48px;
+		font-size: 26px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.hp-h2 {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.hp-h2 {
+		font-size: 38px;
 	}
 }
 
 .hp-p-intro {
-	font-size: 20px;
+	font-size: 17px;
 	line-height: 1.6;
 	color: #475569; /* slate-600 */
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 	text-wrap: balance;
 }
 
@@ -174,15 +204,21 @@ body {
 
 @media (min-width: 768px) {
 	.hp-p-intro {
+		font-size: 19px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.hp-p-intro {
 		font-size: 24px;
 	}
 }
 
 .hp-p {
-	font-size: 16px;
-	line-height: 1.7;
+	font-size: 15px;
+	line-height: 1.65;
 	color: #475569; /* slate-600 */
-	margin-bottom: 16px;
+	margin-bottom: 14px;
 }
 
 .dark .hp-p {
@@ -191,8 +227,14 @@ body {
 
 @media (min-width: 768px) {
 	.hp-p {
+		font-size: 16px;
+		text-wrap: pretty;
+	}
+}
+
+@media (min-width: 1600px) {
+	.hp-p {
 		font-size: 18px;
-		text-wrap:pretty;
 	}
 }
 
@@ -211,8 +253,20 @@ body {
 	background-color: var(--hp-blue);
 }
 
+.hp-grid-pattern {
+	background-image: linear-gradient(to right, #8080800a 1px, transparent 1px), linear-gradient(to bottom, #8080800a 1px, transparent 1px);
+	background-size: 14px 24px;
+}
+
+.dark .hp-grid-pattern {
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+	background-size: 14px 24px;
+}
+
 .hp-card {
 	background-color: #ffffff;
+	background-image: linear-gradient(to right, #8080800a 1px, transparent 1px), linear-gradient(to bottom, #8080800a 1px, transparent 1px);
+	background-size: 14px 24px;
 	border: 1px solid #e8e8e8;
 	border-radius: var(--rounded-card);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
@@ -223,6 +277,8 @@ body {
 
 .dark .hp-card {
 	background-color: #292929;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+	background-size: 14px 24px;
 	border-color: #2a2a2a;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }

@@ -14,7 +14,7 @@ export function Normas() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-32 px-2">
+				<article className="rounded-[16px] w-full max-w-7xl lg:pl-[290px] px-2 mb-20 animate-hp-fade">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -24,7 +24,7 @@ export function Normas() {
 						</div>
 						<h1 className="hp-h1">Normas de Calidad</h1>
 					</header>
-					<p className="hp-p my-20">
+					<p className="hp-p my-8 xl:my-10">
 						Contamos con una estrecha relación con IVESS y CIMES,
 						normativas que garantizan la máxima calidad y pureza del
 						agua. Estas normas definen los estándares a cumplir para
@@ -34,7 +34,7 @@ export function Normas() {
 						nuestras máquinas:
 					</p>
 					
-					<div className="space-y-12 mb-20 px-2">
+					<div className="space-y-8 mb-14 px-2">
 						<p className="hp-p">
 							<strong className="hp-strong">~ Duración óptima del lavado:</strong>{" "}
 							Se garantiza un tiempo mínimo de 2 minutos para cada

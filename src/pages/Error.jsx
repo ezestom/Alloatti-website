@@ -13,7 +13,7 @@ export function Error(handleClick) {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2 flex flex-col items-start justify-start">
+				<article className="w-full max-w-7xl lg:pl-[290px] xl:pl-[300px] px-4 md:px-8 mb-20 flex flex-col items-start justify-start">
 					<div className="mt-16 text-left">
 						<div className="max-w-4xl mb-16">
 							<div className="hp-eyebrow hp-eyebrow-blue mb-4">

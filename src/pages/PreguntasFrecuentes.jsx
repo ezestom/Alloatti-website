@@ -67,7 +67,7 @@ export function PreguntasFrecuentes() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2">
+				<article className="rounded-[16px] w-full max-w-7xl lg:pl-[290px] px-2 mb-20 animate-hp-fade">
 					<header className="hp-page-header">
 							<div className="hp-eyebrow hp-eyebrow-blue">
 								<svg
@@ -85,15 +85,15 @@ export function PreguntasFrecuentes() {
 							</div>
 							<h1 className="hp-h1">Preguntas Frecuentes</h1>
 						</header>
-						<p className="hp-p my-20">
+						<p className="hp-p my-8 xl:my-10">
 							Explora nuestras{" "}
 							<strong className="hp-strong">
 								preguntas frecuentes
 							</strong>{" "}
-							y y encontrá información clara sobre nuestros
+							y encontrá información clara sobre nuestros
 							productos, servicios y maquinaria.
 						</p>
-						<div className="grid grid-cols-3 gap-2 sm:gap-4 my-12">
+						<div className="grid grid-cols-3 gap-2 sm:gap-4 my-8 xl:my-10">
 							{images.map((image, index) => (
 								<div
 									key={index}

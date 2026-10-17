@@ -46,7 +46,7 @@ export function Contacto() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2">
+				<article className="rounded-[16px] w-full max-w-7xl lg:pl-[290px] px-2 mb-20 animate-hp-fade">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -56,7 +56,7 @@ export function Contacto() {
 						</div>
 						<h1 className="hp-h1">Contactanos</h1>
 					</header>
-					<p className="hp-p my-20">
+					<p className="hp-p my-8 xl:my-10">
 						¿Tenés alguna pregunta sobre nuestra maquinaria para el
 						procesamiento de bidones retornables y descartables? No
 						dudes en ponerte en contacto con nosotros. Estamos aquí
@@ -65,8 +65,8 @@ export function Contacto() {
 						escuchar de vos!
 					</p>
 
-										{/* Map Section */}
-					<section className="mt-16">
+					{/* Map Section */}
+					<section className="mt-10 xl:mt-12">
 						<div className="hp-card p-6 md:p-8 flex flex-col gap-6 shadow-xl border border-slate-100 dark:border-slate-800 transition-all duration-500">
 							<div>
 								<span className="bg-blue-100 dark:bg-blue-900/30 text-[#024ad8] dark:text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-4 inline-block">

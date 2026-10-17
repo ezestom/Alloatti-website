@@ -1,5 +1,6 @@
 import machine from "../img/wallpaper_machine2.jpg";
 import { CardMachines } from "./CardMachines";
+import { GridPattern } from "./GridPattern";
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import PropTypes from "prop-types";
@@ -80,35 +81,116 @@ export function Table({ data }) {
 				<div className="h-[3px] w-full bg-gradient-to-r from-[#024ad8] via-[#024ad8] to-[#0e3191] opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
 
 				{/* Card Content */}
-				<div className="p-6 md:p-8 bg-gray-200 dark:bg-slate-900/40">
-					{/* Header Row: Model + Open Icon */}
-					<div className="flex items-start justify-between gap-4 mb-6">
-						<div className="flex-1">
-							<div className="flex items-center gap-3 mb-2">
-								<span className={`text-xs font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full ${
-									isDarkTheme
-										? "bg-[#024ad8]/15 text-blue-400"
-										: "bg-[#024ad8]/8 text-[#024ad8]"
+				<div className="p-6 md:p-8 bg-gray-200 dark:bg-slate-900/40 relative">
+					<GridPattern />
+					<div className="relative z-10">
+						{/* Header Row: Model + Open Icon */}
+						<div className="flex items-start justify-between gap-4 mb-6">
+							<div className="flex-1">
+								<div className="flex items-center gap-3 mb-2">
+									<span className={`text-xs font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full ${
+										isDarkTheme
+											? "bg-[#024ad8]/15 text-blue-400"
+											: "bg-[#024ad8]/8 text-[#024ad8]"
+									}`}>
+										{machineData.modelo}
+									</span>
+								</div>
+								<h3 className={`text-xl md:text-2xl font-bold tracking-tight leading-tight ${
+									isDarkTheme ? "text-white" : "text-[#1a1a1a]"
 								}`}>
-									{machineData.modelo}
-								</span>
+									Máquina de producción de{" "}
+									<span className="text-[#024ad8]">{machineData.producción_max}</span>
+								</h3>
 							</div>
-							<h3 className={`text-xl md:text-2xl font-bold tracking-tight leading-tight ${
-								isDarkTheme ? "text-white" : "text-[#1a1a1a]"
+
+							{/* Open indicator */}
+							<div className={`flex-shrink-0 w-10 h-10 rounded-[10px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
+								isDarkTheme
+									? "bg-[#024ad8]/15 group-hover:bg-[#024ad8]/25"
+									: "bg-[#024ad8]/8 group-hover:bg-[#024ad8]/15"
 							}`}>
-								Máquina de producción de{" "}
-								<span className="text-[#024ad8]">{machineData.producción_max}</span>
-							</h3>
+								<svg
+									className="w-4 h-4 text-[#024ad8] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								>
+									<path d="M7 17L17 7" />
+									<path d="M7 7h10v10" />
+								</svg>
+							</div>
 						</div>
 
-						{/* Open indicator */}
-						<div className={`flex-shrink-0 w-10 h-10 rounded-[10px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
-							isDarkTheme
-								? "bg-[#024ad8]/15 group-hover:bg-[#024ad8]/25"
-								: "bg-[#024ad8]/8 group-hover:bg-[#024ad8]/15"
+						{/* Key Specs Grid */}
+						<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+							{keySpecs.map((spec, idx) => (
+								<div
+									key={idx}
+									className={`flex items-center gap-3 px-4 py-3 rounded-[12px] transition-colors duration-300 ${
+										isDarkTheme
+											? "bg-white/[0.03]"
+											: "bg-slate-50"
+									}`}
+								>
+									<span className="text-lg">{spec.icon}</span>
+									<div>
+										<p className={`text-[10px] font-bold uppercase tracking-[0.12em] ${
+											isDarkTheme ? "text-slate-500" : "text-slate-400"
+										}`}>
+											{spec.label}
+										</p>
+										<p className={`text-sm font-semibold ${
+											isDarkTheme ? "text-slate-200" : "text-slate-700"
+										}`}>
+											{spec.value}
+										</p>
+									</div>
+								</div>
+							))}
+						</div>
+
+						{/* Detail Specs Row */}
+						<div className={`flex flex-wrap gap-x-6 gap-y-2 pt-5 border-t ${
+							isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"
 						}`}>
+							{visibleKeys.map((key, idx) => {
+								if (["modelo", "producción_max", "tiempo_lavado", "tiempo_enjuague", "construida"].includes(key)) return null;
+								return (
+									<div key={idx} className="flex items-center gap-2">
+										<span className={`text-[10px] font-bold uppercase tracking-wider ${
+											isDarkTheme ? "text-slate-500" : "text-slate-400"
+										}`}>
+											{key.replace(/_/g, " ")}:
+										</span>
+										<span className={`text-sm font-medium ${
+											isDarkTheme ? "text-slate-300" : "text-slate-600"
+										}`}>
+											{machineData[key]}
+										</span>
+									</div>
+								);
+							})}
+						</div>
+
+						{/* CTA hint */}
+						<div className="flex items-center gap-2 mt-5">
+							<span className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 ${
+								isDarkTheme
+									? "text-slate-500 group-hover:text-blue-400"
+									: "text-slate-400 group-hover:text-[#024ad8]"
+							}`}>
+								Ver especificaciones completas
+							</span>
 							<svg
-								className="w-4 h-4 text-[#024ad8] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+								className={`w-3.5 h-3.5 transition-all duration-300 group-hover:translate-x-1 ${
+									isDarkTheme
+										? "text-slate-500 group-hover:text-blue-400"
+										: "text-slate-400 group-hover:text-[#024ad8]"
+								}`}
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -116,88 +198,10 @@ export function Table({ data }) {
 								strokeLinecap="round"
 								strokeLinejoin="round"
 							>
-								<path d="M7 17L17 7" />
-								<path d="M7 7h10v10" />
+								<path d="M5 12h14" />
+								<path d="M12 5l7 7-7 7" />
 							</svg>
 						</div>
-					</div>
-
-					{/* Key Specs Grid */}
-					<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-						{keySpecs.map((spec, idx) => (
-							<div
-								key={idx}
-								className={`flex items-center gap-3 px-4 py-3 rounded-[12px] transition-colors duration-300 ${
-									isDarkTheme
-										? "bg-white/[0.03]"
-										: "bg-slate-50"
-								}`}
-							>
-								<span className="text-lg">{spec.icon}</span>
-								<div>
-									<p className={`text-[10px] font-bold uppercase tracking-[0.12em] ${
-										isDarkTheme ? "text-slate-500" : "text-slate-400"
-									}`}>
-										{spec.label}
-									</p>
-									<p className={`text-sm font-semibold ${
-										isDarkTheme ? "text-slate-200" : "text-slate-700"
-									}`}>
-										{spec.value}
-									</p>
-								</div>
-							</div>
-						))}
-					</div>
-
-					{/* Detail Specs Row */}
-					<div className={`flex flex-wrap gap-x-6 gap-y-2 pt-5 border-t ${
-						isDarkTheme ? "border-[#2a2a2a]" : "border-[#e8e8e8]"
-					}`}>
-						{visibleKeys.map((key, idx) => {
-							if (["modelo", "producción_max", "tiempo_lavado", "tiempo_enjuague", "construida"].includes(key)) return null;
-							return (
-								<div key={idx} className="flex items-center gap-2">
-									<span className={`text-[10px] font-bold uppercase tracking-wider ${
-										isDarkTheme ? "text-slate-500" : "text-slate-400"
-									}`}>
-										{key.replace(/_/g, " ")}:
-									</span>
-									<span className={`text-sm font-medium ${
-										isDarkTheme ? "text-slate-300" : "text-slate-600"
-									}`}>
-										{machineData[key]}
-									</span>
-								</div>
-							);
-						})}
-					</div>
-
-					{/* CTA hint */}
-					<div className="flex items-center gap-2 mt-5">
-						<span className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 ${
-							isDarkTheme
-								? "text-slate-500 group-hover:text-blue-400"
-								: "text-slate-400 group-hover:text-[#024ad8]"
-						}`}>
-							Ver especificaciones completas
-						</span>
-						<svg
-							className={`w-3.5 h-3.5 transition-all duration-300 group-hover:translate-x-1 ${
-								isDarkTheme
-									? "text-slate-500 group-hover:text-blue-400"
-									: "text-slate-400 group-hover:text-[#024ad8]"
-							}`}
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2.5"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-						>
-							<path d="M5 12h14" />
-							<path d="M12 5l7 7-7 7" />
-						</svg>
 					</div>
 				</div>
 			</button>

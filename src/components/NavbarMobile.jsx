@@ -44,7 +44,7 @@ export function NavbarMobile() {
 		},
 		{
 			to: "/preguntas-frecuentes",
-			label: "FAQ",
+			label: "Preguntas",
 			icon: BsQuestionSquare,
 			activeIcon: BsQuestionSquareFill,
 		},

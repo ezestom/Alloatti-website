@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
+import { GridPattern } from "./GridPattern";
 import { useTheme } from "../context/ThemeContext";
 import defaultImg from "../img/machine_5_ps.jpg";
 import paletizadoraImg from "../img/accesories/paletizadora_op.jpg";
@@ -164,8 +165,9 @@ export function TableAccesories() {
 										: "bg-slate-50/80 border-slate-200 text-slate-500"
 								}`}
 							>
+								<GridPattern />
 								{/* Top Image Section with Blur */}
-								<div className="w-full h-52 md:h-80 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+								<div className="w-full h-48 sm:h-56 xl:h-60 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
 									<img 
 										src={itemImg} 
 										alt={item.name}
@@ -242,8 +244,9 @@ export function TableAccesories() {
 									: "bg-white border-slate-200/80 hover:border-[#024ad8]/30 hover:shadow-[0_12px_40px_rgba(2,74,216,0.1)]"
 							}`}
 						>
+							<GridPattern />
 							{/* Top Image Section */}
-							<div className="w-full h-52 md:h-80 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+							<div className="w-full h-48 sm:h-56 xl:h-60 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
 								<img 
 									src={itemImg} 
 									alt={item.name}

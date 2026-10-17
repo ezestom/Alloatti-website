@@ -10,15 +10,15 @@ export function Card({
 	location,
 }) {
 	return (
-		<div className="hp-card p-4 md:p-8 flex flex-col md:flex-row gap-8 items-start hover:border-[#024ad8]/30">
+		<div className="hp-card p-4 sm:p-5 xl:p-6 flex flex-col sm:flex-row gap-5 xl:gap-6 items-start hover:border-[#024ad8]/30 transition-all">
 			<div className="shrink-0 relative">
 				<img
 					alt={name}
 					src={photo}
-					className="h-40 w-40 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
+					className="h-28 w-28 sm:h-32 sm:w-32 xl:h-36 xl:w-36 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800 shadow-md"
 				/>
-				<div className="absolute bottom-2 right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+				<div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 bg-[#024ad8] text-white p-1.5 rounded-full shadow-lg">
+					<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
 						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
 					</svg>
 				</div>

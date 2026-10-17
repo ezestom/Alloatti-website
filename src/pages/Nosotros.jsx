@@ -50,7 +50,7 @@ export function Nosotros() {
 			/>
 			<Base />
 			<section className="w-full absolute top-12 flex justify-center items-center">
-				<article className="lg:w-4/6 lg:ml-[300px] sm:ml-0 mb-20 px-2">
+				<article className="rounded-[16px] w-full max-w-7xl lg:pl-[290px] px-2 mb-20 animate-hp-fade">
 					<header className="hp-page-header">
 						<div className="hp-eyebrow hp-eyebrow-blue">
 							<svg width="12" height="12" viewBox="0 0 24 24">
@@ -64,8 +64,8 @@ export function Nosotros() {
 						<h1 className="hp-h1">Nuestra empresa</h1>
 					</header>
 
-					<div className="mt-16 text-left">
-						<p className="hp-p mb-12">
+					<div className="mt-6 text-left">
+						<p className="hp-p mb-4">
 							<strong className="hp-strong">Alloatti SRL</strong>{" "}
 							es una empresa dirigida por{" "}
 							<strong className="hp-strong">ingenieros</strong>,
@@ -75,20 +75,20 @@ export function Nosotros() {
 							en cada una de nuestras operaciones industriales.
 						</p>
 
-						<div className="mt-20 mb-20 border-l-4 border-[#024ad8] pl-8 text-left">
-							<p className="hp-p italic">
+						<div className="mt-5 mb-5 border-l-4 border-[#024ad8] pl-5 text-left">
+							<p className="hp-p italic text-sm xl:text-base">
 								La visión liderada por ingenieros impulsa cada
 								aspecto de nuestras operaciones. Nuestro equipo
 								está dedicado a superar desafíos y ofrecer
 								soluciones que definen la industria.
 							</p>
 						</div>
-						<div className="mt-12 mb-12 w-[calc(100vw-2rem)] md:w-auto -ml-4 md:ml-0 overflow-hidden rounded-2xl">
+						<div className="mt-6 mb-6 w-full overflow-hidden rounded-2xl">
 							<CarouselAutoScroll direction="forward" speed={0.75}>
 								{carouselImages.slice(0, 13).map((img, idx) => (
 									<div
 										key={idx}
-										className="group relative w-full h-56 md:h-80 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
+										className="group relative w-full h-48 sm:h-56 md:h-72 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-500/40">
 										<img
 											src={img}
 											alt={`Instalaciones Alloatti ${idx + 1}`}
@@ -102,8 +102,8 @@ export function Nosotros() {
 
 					</div>
 					<div className="flex flex-col items-start">
-						<div className="space-y-20 w-full">
-							<div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 mt-12">
+						<div className="space-y-8 xl:space-y-12 w-full">
+							<div className="grid grid-cols-1 xl:grid-cols-2 gap-5 xl:gap-6 mt-6">
 								<Card
 									name={"Ing. Hector Alloatti"}
 									photo={hector}
