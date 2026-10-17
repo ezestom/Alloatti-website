@@ -72,7 +72,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/"
-							className="flex items-center justify-start gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs xl:text-sm font-semibold transition-all duration-300 hover:bg-[#024ad8] hover:text-white group relative overflow-hidden">
+							className="flex items-center justify-start gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs font-semibold transition-all duration-300 hover:bg-[#024ad8] hover:text-white group relative overflow-hidden">
 							<AiFillHome className="text-lg xl:text-xl group-hover:scale-110 transition-transform shrink-0" />
 							<span>Inicio</span>
 							<div className="absolute left-0 top-0 h-full w-1 bg-[#024ad8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -126,7 +126,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/nosotros"
-							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs xl:text-sm font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
+							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
 							<BsBriefcaseFill className="text-lg xl:text-xl group-hover:scale-110 transition-transform shrink-0" />
 							<span>Nosotros</span>
 							<div className="absolute left-0 top-0 h-full w-1 bg-[#024ad8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -137,7 +137,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/preguntas-frecuentes"
-							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs xl:text-sm font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
+							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
 							<BsFillQuestionSquareFill className="text-lg xl:text-xl group-hover:scale-110 transition-transform shrink-0" />
 							<span>Preguntas</span>
 							<div className="absolute left-0 top-0 h-full w-1 bg-[#024ad8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -150,7 +150,7 @@ export function Navbar() {
 							onToggle={(e) => setSalesOpen(e.currentTarget.open)}
 							className="group [&_summary::-webkit-details-marker]:hidden">
 							<summary className="flex cursor-pointer items-center justify-between rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-slate-500 transition-all duration-300 hover:bg-[#024ad8] hover:text-white group relative overflow-hidden">
-								<span className="flex items-center gap-3.5 xl:gap-4 text-xs xl:text-sm font-semibold">
+								<span className="flex items-center gap-3.5 xl:gap-4 text-xs font-semibold">
 									<GiNetworkBars className="text-lg xl:text-xl group-hover:scale-110 transition-transform shrink-0" />
 									<span>Ventas</span>
 								</span>
@@ -191,7 +191,7 @@ export function Navbar() {
 						<Link
 							onClick={scrollToTop}
 							to="/contacto"
-							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs xl:text-sm font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
+							className="flex items-center gap-3.5 xl:gap-4 rounded-[4px] px-3 xl:px-4 py-2 xl:py-2.5 text-xs font-semibold text-slate-500 hover:bg-[#024ad8] hover:text-white transition-all duration-300 group relative overflow-hidden">
 							<BsFillChatRightTextFill className="text-lg xl:text-xl group-hover:scale-110 transition-transform shrink-0" />
 							<span>Contacto</span>
 							<div className="absolute left-0 top-0 h-full w-1 bg-[#024ad8] opacity-0 group-hover:opacity-100 transition-opacity"></div>

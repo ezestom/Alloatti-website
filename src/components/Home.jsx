@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import { WithClose } from "./WithClose";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import { WelcomeVideoModal } from "./WelcomeVideoModal";
 import { PremiumFooter } from "./PremiumFooter";
 import { GridPattern } from "./GridPattern";
 import { CardAccesories } from "./CardAccesories";
+import { slugify } from "../utils/slugify";
 import { accesorios } from "../machines_info/accesorios";
 import paletizadoraImg from "../img/accesories/paletizadora_op.jpg";
 import cintaCargaCamionImg from "../img/accesories/cinta_carga_camion_op.jpg";
@@ -80,11 +82,11 @@ export function Home() {
 								Excelencia en Ingeniería
 							</span>
 
-							<h1 className={`text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold tracking-tight ${
+							<h1 className={`text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-semibold tracking-tight ${
 								isDarkTheme ? "text-white" : "text-[#1a1a1a]"
 							}`}>
-								<span className="text-[#024ad8] block pb-2 font-bold">Líderes en innovación y desarrollo:</span>
-								<span className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
+								<span className="text-[#024ad8] block pb-2 font-bold">Líderes en innovación <br /> y desarrollo:</span>
+								<span className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl">de máquinas lavadoras, enjuagadoras, llenadoras y tapadoras de bidones</span>
 							</h1>
 
 							<p className={`text-xs sm:text-sm md:text-base xl:text-lg mb-4 xl:mb-6 leading-relaxed max-w-xl ${
@@ -597,11 +599,19 @@ export function Home() {
 										<div className="w-full h-48 md:h-72 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
 											<img 
 												src={item.img || paletizadoraImg} 
+												alt=""
+												aria-hidden="true"
+												className="w-full h-full object-cover opacity-40 absolute inset-0 filter blur-[1px]"
+											/>
+											<motion.img 
+												layoutId={`accessory-image-${slugify(item.name)}`}
+												transition={{ type: "spring", stiffness: 300, damping: 30 }}
+												src={item.img || paletizadoraImg} 
 												alt={item.name}
-												className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+												className="w-full h-full object-cover relative z-0 transition-transform duration-700 ease-out group-hover:scale-105"
 											/>
 											{/* Gradient overlay */}
-											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-slate-900/30 opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-slate-900/30 opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
 											
 											{/* Category badge */}
 											<div className="absolute top-3.5 left-3.5 z-10">
@@ -747,16 +757,19 @@ export function Home() {
 
 
 					{/* Modal for detail view */}
-					{selectedAccesory && (
-						<CardAccesories
-							model={selectedAccesory.name}
-							img={selectedAccesory.img || paletizadoraImg}
-							characteristics={selectedAccesory.characteristics}
-							description={selectedAccesory.description}
-							link={selectedAccesory.link}
-							onClose={() => setSelectedAccesory(null)}
-						/>
-					)}
+					<AnimatePresence>
+						{selectedAccesory && (
+							<CardAccesories
+								key={selectedAccesory.name}
+								model={selectedAccesory.name}
+								img={selectedAccesory.img || paletizadoraImg}
+								characteristics={selectedAccesory.characteristics}
+								description={selectedAccesory.description}
+								link={selectedAccesory.link}
+								onClose={() => setSelectedAccesory(null)}
+							/>
+						)}
+					</AnimatePresence>
 
 					{/* 7. PREMIUM SITE FOOTER */}
 					<PremiumFooter />

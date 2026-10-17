@@ -56,7 +56,7 @@ export function Contacto() {
 						</div>
 						<h1 className="hp-h1">Contactanos</h1>
 					</header>
-					<p className="hp-p my-8 xl:my-10">
+					<p className="hp-p my-4 xl:my-6">
 						¿Tenés alguna pregunta sobre nuestra maquinaria para el
 						procesamiento de bidones retornables y descartables? No
 						dudes en ponerte en contacto con nosotros. Estamos aquí

@@ -31,7 +31,7 @@ export function Catalogo() {
 						<h1 className="hp-h1">Catálogo Institucional</h1>
 					</header>
 
-					<p className="hp-p-intro mb-8">
+					<p className="hp-p my-4 xl:my-6">
 						Descubra nuestra ingeniería aplicada y explore el{" "}
 						<strong className="hp-strong">catálogo completo de soluciones</strong>{" "}
 						de envasado, lavado y automatización para plantas embotelladoras de agua.

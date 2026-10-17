@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { accesorios } from "../machines_info/accesorios";
 import { CardAccesories } from "./CardAccesories";
 import { GridPattern } from "./GridPattern";
 import { useTheme } from "../context/ThemeContext";
+import { slugify } from "../utils/slugify";
 import defaultImg from "../img/machine_5_ps.jpg";
 import paletizadoraImg from "../img/accesories/paletizadora_op.jpg";
 import prelavadoraAutoImg from "../img/accesories/prelavadora_auto_op.jpg";
@@ -17,19 +19,6 @@ import appImg from "../img/accesories/app_op.jpg";
 import cintaCargaCamionImg from "../img/accesories/cinta_carga_camion_op.jpg";
 import { FaCompactDisc, FaArrowUp, FaInbox, FaEject, FaTabletAlt, FaShower, FaCog, FaBoxes, FaLock } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
-
-const slugify = (text) => {
-	if (!text) return "";
-	return text
-		.toString()
-		.toLowerCase()
-		.trim()
-		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "")
-		.replace(/\s+/g, "-")
-		.replace(/[^\w-]+/g, "")
-		.replace(/--+/g, "-");
-};
 
 export function TableAccesories() {
 	const [selectedAccesory, setSelectedAccesory] = useState(null);
@@ -249,11 +238,19 @@ export function TableAccesories() {
 							<div className="w-full h-48 sm:h-56 xl:h-60 relative overflow-hidden bg-slate-100 dark:bg-slate-800">
 								<img 
 									src={itemImg} 
+									alt=""
+									aria-hidden="true"
+									className="w-full h-full object-cover opacity-40 absolute inset-0 filter blur-[1px]"
+								/>
+								<motion.img 
+									layoutId={`accessory-image-${slugify(item.name)}`}
+									transition={{ type: "spring", stiffness: 300, damping: 30 }}
+									src={itemImg} 
 									alt={item.name}
-									className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+									className="w-full h-full object-cover relative z-0 transition-transform duration-700 ease-out group-hover:scale-105"
 								/>
 								{/* Gradient overlay for better text contrast */}
-								<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-slate-900/30 opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+								<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-slate-900/30 opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
 								
 								{/* Category badge floating on top-left */}
 								<div className="absolute top-4 left-4 z-10">
@@ -327,17 +324,19 @@ export function TableAccesories() {
 				})}
 			</div>
 
-			{selectedAccesory && (
-				<CardAccesories
-					model={selectedAccesory.name}
-					characteristics={selectedAccesory.characteristics}
-					description={selectedAccesory.description}
-					link={selectedAccesory.link}
-					img={getAccessoryImage(selectedAccesory.name)}
-					isOpen={true}
-					onClose={handleCardClose}
-				/>
-			)}
+			<AnimatePresence>
+				{selectedAccesory && (
+					<CardAccesories
+						key={selectedAccesory.name}
+						model={selectedAccesory.name}
+						characteristics={selectedAccesory.characteristics}
+						description={selectedAccesory.description}
+						link={selectedAccesory.link}
+						img={getAccessoryImage(selectedAccesory.name)}
+						onClose={handleCardClose}
+					/>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }

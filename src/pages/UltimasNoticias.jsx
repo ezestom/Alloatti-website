@@ -78,7 +78,7 @@ export function UltimasNoticias() {
 						<h1 className="hp-h1">Noticias del Rubro</h1>
 					</header>
 
-					<p className="hp-p-intro mb-8">
+					<p className="hp-p my-4 xl:my-6">
 						Manténgase al día con las últimas{" "}
 						<strong className="hp-strong">novedades, análisis y notas de prensa</strong>{" "}
 						del sector de agua envasada, normativas de calidad sanitaria e innovaciones tecnológicas en plantas embotelladoras.

@@ -65,7 +65,7 @@ export function Nosotros() {
 					</header>
 
 					<div className="mt-6 text-left">
-						<p className="hp-p mb-4">
+						<p className="hp-p my-4 xl:my-6">
 							<strong className="hp-strong">Alloatti SRL</strong>{" "}
 							es una empresa dirigida por{" "}
 							<strong className="hp-strong">ingenieros</strong>,

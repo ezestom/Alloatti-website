@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { OpenEmail } from "./OpenEmail";
 import { BsPlayCircle, BsWhatsapp } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import PropTypes from "prop-types";
+import { slugify } from "../utils/slugify";
 
 /**
  * Extracts and converts different YouTube link formats (watch, share, shorts)
@@ -53,42 +55,53 @@ export function CardAccesories({
 	description,
 	link,
 }) {
-	const [isShow, setIsShow] = useState(true);
-
 	useEffect(() => {
 		// Prevent scrolling when modal is open
 		document.body.style.overflow = "hidden";
+		const handleKeyDown = (e) => {
+			if (e.key === "Escape") {
+				onClose();
+			}
+		};
+		window.addEventListener("keydown", handleKeyDown);
 		return () => {
 			document.body.style.overflow = "auto";
+			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, []);
-
-	const handleClose = () => {
-		setIsShow(false);
-		onClose();
-	};
-
-	if (!isShow) return null;
+	}, [onClose]);
 
 	const wsNumber = "5491168641122";
 	const wsMessage = `¡Hola! Vengo desde el catálogo web de Alloatti y deseo asesoramiento técnico y presupuesto para el accesorio: ${model}.`;
 	const wsUrl = `https://wa.me/${wsNumber}?text=${encodeURIComponent(wsMessage)}`;
 
 	const embedUrl = getYouTubeEmbedUrl(link);
+	const accessorySlug = slugify(model);
 
 	return (
-		<div
-			className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md animate-hp-fade"
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.25 }}
+			onClick={(e) => {
+				if (e.target === e.currentTarget) onClose();
+			}}
+			className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-title">
 			
-			<div className="relative w-full h-[94vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
+			<motion.div
+				initial={{ opacity: 0, scale: 0.96 }}
+				animate={{ opacity: 1, scale: 1 }}
+				exit={{ opacity: 0, scale: 0.96 }}
+				transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+				className="relative w-full h-[94vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800/80">
 				
 				{/* Close Button */}
 				<button
 					className="absolute top-3.5 right-3.5 z-20 p-2 bg-white/95 dark:bg-slate-800/95 text-slate-800 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 backdrop-blur-sm rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all"
-					onClick={handleClose}
+					onClick={onClose}
 					aria-label="Cerrar ventana">
 					<IoClose className="w-5 h-5" />
 				</button>
@@ -97,15 +110,21 @@ export function CardAccesories({
 					
 					{/* Left Column: Image Section */}
 					<div className="lg:w-1/2 h-56 sm:h-72 lg:h-auto relative overflow-hidden min-h-[240px] lg:min-h-[420px] shrink-0 bg-slate-950 flex flex-col justify-end">
-						<img
-							className="w-full h-full object-cover absolute inset-0 opacity-90 transition-transform duration-700 hover:scale-105"
+						<motion.img
+							layoutId={`accessory-image-${accessorySlug}`}
+							transition={{ type: "spring", stiffness: 300, damping: 30 }}
+							className="w-full h-full object-cover absolute inset-0 opacity-90"
 							src={img}
 							alt={model}
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+						<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
 						
 						{/* Badges on image */}
-						<div className="relative z-10 p-5 sm:p-6 text-white">
+						<motion.div 
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ delay: 0.15, duration: 0.25 }}
+							className="relative z-10 p-5 sm:p-6 text-white pointer-events-none">
 							<div className="flex flex-wrap items-center gap-1.5 mb-2">
 								<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase bg-blue-600 text-white shadow-md">
 									Accesorios y Opcionales
@@ -117,11 +136,15 @@ export function CardAccesories({
 							<p className="text-[11px] text-slate-200 font-semibold tracking-wide leading-relaxed drop-shadow-sm hidden sm:block">
 								Aumente la automatización, eficiencia y seguridad de su planta embotelladora.
 							</p>
-						</div>
+						</motion.div>
 					</div>
 
 					{/* Right Column: Content Section */}
-					<div className="lg:w-1/2 p-5 sm:p-7 flex flex-col justify-between overflow-y-auto">
+					<motion.div 
+						initial={{ opacity: 0, y: 12 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.08, duration: 0.28 }}
+						className="lg:w-1/2 p-5 sm:p-7 flex flex-col justify-between overflow-y-auto">
 						<div>
 							<header className="mb-4 pr-10">
 								<div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 mb-1.5">
@@ -218,10 +241,10 @@ export function CardAccesories({
 								className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold py-3.5 px-5 rounded-2xl shadow-lg shadow-slate-950/10 hover:shadow-slate-950/20 active:scale-[0.98] transition-all text-xs lg:text-sm tracking-wide border border-transparent dark:border-slate-200"
 							/>
 						</div>
-					</div>
+					</motion.div>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 }
 

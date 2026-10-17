@@ -126,7 +126,7 @@ body {
 .hp-h1 {
 	font-size: 26px;
 	font-weight: 600;
-	line-height: 1.15;
+	line-height: 2;
 	letter-spacing: -0.02em;
 	color: var(--text-main);
 	position: relative;
@@ -135,19 +135,19 @@ body {
 
 @media (min-width: 768px) {
 	.hp-h1 {
-		font-size: 32px;
+		font-size: 24px;
 	}
 }
 
 @media (min-width: 1280px) {
 	.hp-h1 {
-		font-size: 38px;
+		font-size: 36px;
 	}
 }
 
 @media (min-width: 1600px) {
 	.hp-h1 {
-		font-size: 46px;
+		font-size: 36px;
 	}
 }
 
@@ -174,7 +174,7 @@ body {
 
 @media (min-width: 768px) {
 	.hp-h2 {
-		font-size: 26px;
+		font-size: 30px;
 	}
 }
 
@@ -186,7 +186,7 @@ body {
 
 @media (min-width: 1600px) {
 	.hp-h2 {
-		font-size: 38px;
+		font-size: 30px;
 	}
 }
 

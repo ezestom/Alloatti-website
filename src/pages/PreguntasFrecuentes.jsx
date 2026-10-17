@@ -85,7 +85,7 @@ export function PreguntasFrecuentes() {
 							</div>
 							<h1 className="hp-h1">Preguntas Frecuentes</h1>
 						</header>
-						<p className="hp-p my-8 xl:my-10">
+						<p className="hp-p my-4 xl:my-6">
 							Explora nuestras{" "}
 							<strong className="hp-strong">
 								preguntas frecuentes
@@ -93,7 +93,7 @@ export function PreguntasFrecuentes() {
 							y encontrá información clara sobre nuestros
 							productos, servicios y maquinaria.
 						</p>
-						<div className="grid grid-cols-3 gap-2 sm:gap-4 my-8 xl:my-10">
+						<div className="grid grid-cols-3 gap-2 sm:gap-4 my-4">
 							{images.map((image, index) => (
 								<div
 									key={index}
@@ -109,7 +109,7 @@ export function PreguntasFrecuentes() {
 						</div>
 				
 
-					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-20">
+					<p className="hp-p border-l-4 border-[#024ad8] pl-8 my-12">
 						Accedé rápidamente a respuestas sobre máquinas,
 						procesos, entregas y soporte técnico.
 					</p>

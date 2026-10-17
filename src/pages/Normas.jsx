@@ -24,7 +24,7 @@ export function Normas() {
 						</div>
 						<h1 className="hp-h1">Normas de Calidad</h1>
 					</header>
-					<p className="hp-p my-8 xl:my-10">
+					<p className="hp-p my-4 xl:my-6">
 						Contamos con una estrecha relación con IVESS y CIMES,
 						normativas que garantizan la máxima calidad y pureza del
 						agua. Estas normas definen los estándares a cumplir para
